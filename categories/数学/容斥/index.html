@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Category: 容斥 | TaoSama&#39;s Blog - ACMer, C/C++, 算法竞赛</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="ACMer, C/C++, 算法竞赛">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TaoSama&#39;s Blog">
+<meta property="og:url" content="http://TaoSama.github.io/categories/数学/容斥/index.html">
+<meta property="og:site_name" content="TaoSama&#39;s Blog">
+<meta property="og:description" content="ACMer, C/C++, 算法竞赛">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="TaoSama&#39;s Blog">
+<meta name="twitter:description" content="ACMer, C/C++, 算法竞赛">
+<meta name="twitter:creator" content="@lwt1367">
+<link rel="publisher" href="115031676619400074158">
+<meta property="fb:admins" content="lwt1367">
+  
+    <link rel="alternate" href="/atom.xml" title="TaoSama&#39;s Blog" type="application/atom+xml">
+  
+
+  <!-- favicons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/css/images/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/css/images/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/css/images/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/css/images/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/css/images/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/css/images/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/css/images/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/css/images/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/css/images/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/css/images/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/css/images/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/css/images/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/css/images/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/css/images/manifest.json">
+  <link rel="mask-icon" href="/css/images/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/css/images/favicon.ico">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="msapplication-TileImage" content="/css/images/mstile-144x144.png">
+  <meta name="msapplication-config" content="/css/images/browserconfig.xml">
+  <meta name="theme-color" content="#3B74AC">
+  <!-- end of icons -->
+  <link href="http://fonts.lug.ustc.edu.cn/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link href="/css/duoshuo.css" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="/css/style.css">
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">TaoSama&#39;s Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Reborn and Walk Alone</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon" style="margin-left: 13px;"></a>
+        
+          <a class="main-nav-link" href="/">主页</a>
+        
+          <a class="main-nav-link" href="/archives">文章</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      <nav id="sub-nav">
+		<a class="nav-icon" href="http://weibo.com/3863360617" title="微博" target="_blank">&#61834;</a>
+		<!--
+		<a class="nav-icon" href="http://www.renren.com/287137027" title="人人" target="_blank">&#61835;</a>
+		<a class="nav-icon" href="http://user.qzone.qq.com/525969441" title="QQ空间" target="_blank">&#61910;</a>
+		-->
+		<a class="nav-icon" href="https://www.facebook.com/lwt1367" title="Facebook" target="_blank">&#62000;</a>
+		<a class="nav-icon" href="https://twitter.com/lwt1367" title="Twitter" target="_blank">&#61593;</a>
+		<a class="nav-icon" href="http://www.linkedin.com/in/lwt1367" title="LinkedIn" target="_blank">&#61665;</a>
+		<a class="nav-icon" href="https://github.com/TaoSama" title="GitHub" target="_blank">&#61595;</a>
+		<a class="nav-icon" href="https://plus.google.com/115031676619400074158" title="Google+" target="_blank">&#61653;</a>
+        
+          <a id="nav-rss-link" class="nav-icon" style="font-size: 22px; width: 22px; height: 22px; padding: 20px 5px;" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" style="font-size: 19px; width: 19px; height: 19px; padding: 20px 5px;" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://TaoSama.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2016" class="archive-year">2016</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2016/09/23/51nod 1610 路径计数（dp、容斥原理）/" class="archive-article-date">
+  <time datetime="2016-09-22T16:52:10.000Z" itemprop="datePublished">09-23</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2016/09/23/51nod 1610 路径计数（dp、容斥原理）/">51nod 1610 路径计数（dp、容斥）</a>
+    </h1>
+  
+
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2016/09/22/IFrog 1032 - A-B（容斥原理）/" class="archive-article-date">
+  <time datetime="2016-09-22T12:45:10.000Z" itemprop="datePublished">09-22</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2016/09/22/IFrog 1032 - A-B（容斥原理）/">IFrog 1032 - A-B（容斥）</a>
+    </h1>
+  
+
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2016/09/21/Codeforces 451E. Devu and Flowers（容斥原理）/" class="archive-article-date">
+  <time datetime="2016-09-21T12:09:10.000Z" itemprop="datePublished">09-21</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2016/09/21/Codeforces 451E. Devu and Flowers（容斥原理）/">Codeforces 451E. Devu and Flowers（容斥）</a>
+    </h1>
+  
+
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2016/08/05/HDU 5794 A Simple Chess（dp、容斥、Lucas）/" class="archive-article-date">
+  <time datetime="2016-08-05T08:54:10.000Z" itemprop="datePublished">08-05</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2016/08/05/HDU 5794 A Simple Chess（dp、容斥、Lucas）/">HDU 5794 A Simple Chess（dp、容斥、Lucas）</a>
+    </h1>
+  
+
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2016/04/28/HDU 5297 Y sequence (容斥、迭代)/" class="archive-article-date">
+  <time datetime="2016-04-27T17:33:10.000Z" itemprop="datePublished">04-28</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2016/04/28/HDU 5297 Y sequence (容斥、迭代)/">HDU 5297 Y sequence (容斥、迭代)</a>
+    </h1>
+  
+
+    </header>
+  </div>
+</article>
+  
+  
+    </div></section>
+  
+
+</section>
+        
+          
+<aside id="sidebar">
+
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title">关于我</h3>
+  <ul class="widget about-me">
+    <li><img class="author" title="About me" src="/css/images/avatar.png" /></li>
+    
+    <li><a href="/about/" style="color:orange">老顽童</a></li>
+    
+    <li><a href="http://codeforces.com/profile/TaoSama" style="color:purple">TaoSama</a></li>
+    
+    <li>迷茫的搬砖工 / 永不退役的ACMer</li>
+    
+  </ul>
+</div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">推荐文章</h3>
+    <div class="widget">
+      <ul>
+        
+        
+          
+          <li>
+            <a href="/2016/05/02/%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%B0%8F%E7%BB%93/" target="_blank">1. 常见错误小结</a>
+          </li>
+        
+          
+          <li>
+            <a href="/2016/03/09/Hello%20World%20%E2%80%94%E2%80%94%20%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%8E%86%E7%A8%8B/" target="_blank">2. Hello World —— 博客搭建历程</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">友情链接</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="http://blog.csdn.net/lwt36/" target="_blank">我的CSDN</a>
+          </li>
+        
+          <li>
+            <a href="http://www.zhihu.com/people/ye-zhu-shui-han/" target="_blank">我的知乎</a>
+          </li>
+        
+          <li>
+            <a href="http://notdeep.github.io/" target="_blank">果姐姐</a>
+          </li>
+        
+          <li>
+            <a href="https://cloverii.github.io/" target="_blank">WMW</a>
+          </li>
+        
+          <li>
+            <a href="http://blog.luoxinchen.me/" target="_blank">Mathon</a>
+          </li>
+        
+          <li>
+            <a href="http://www.cnblogs.com/forever97/" target="_blank">forever97</a>
+          </li>
+        
+          <li>
+            <a href="http://liziyang96.com/" target="_blank">liziy</a>
+          </li>
+        
+          <li>
+            <a href="http://blog.csdn.net/viphong" target="_blank">liuyuhong</a>
+          </li>
+        
+          <li>
+            <a href="http://blog.csdn.net/a1s4z5/" target="_blank">QAQ</a>
+          </li>
+        
+          <li>
+            <a href="http://blog.csdn.net/qwb492859377" target="_blank">qwb</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/">Doing</a><span class="category-list-count">12</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Blog/">Blog</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/CPP/">CPP</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Interview/">Interview</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Life/">Life</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Machine-Learning/">Machine Learning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Python/">Python</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/">动态规划</a><span class="category-list-count">27</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/bitset优化/">bitset优化</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/数位dp/">数位dp</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/数据结构优化/">数据结构优化</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/斜率优化/">斜率优化</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/最长上升子序列/">最长上升子序列</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/树形dp/">树形dp</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/概率-期望dp/">概率/期望dp</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/状压dp/">状压dp</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/矩阵优化/">矩阵优化</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/线性dp/">线性dp</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/">图论</a><span class="category-list-count">26</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/图论/LCA/">LCA</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/二分图/">二分图</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/拓扑排序/">拓扑排序</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/最大团/">最大团</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/最小生成树/">最小生成树</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/最短路/">最短路</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/生成树计数/">生成树计数</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/网络流/">网络流</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/连通图/">连通图</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/套题/">套题</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/字符串/">字符串</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/字符串/AC自动机/">AC自动机</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/字符串/Manacher-回文树/">Manacher/回文树</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/字符串/SA-SAM/">SA/SAM</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/小结/">小结</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/">思维</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/思维/分治/">分治</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/扫描线/">扫描线</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/数形结合/">数形结合</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/离线思想/">离线思想</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/贪心/">贪心</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/思维/贪心/区间贪心/">区间贪心</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/逆向思维/">逆向思维</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/">技巧</a><span class="category-list-count">17</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/two-pointers/">two pointers</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/xor/">xor</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/反转问题/">反转问题</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/哈希/">哈希</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/折半搜索/">折半搜索</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/">数学</a><span class="category-list-count">26</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/数学/CRT/">CRT</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/FFT-NTT-FWT/">FFT/NTT/FWT</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/博弈/">博弈</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/容斥/">容斥</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/概率-期望/">概率/期望</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/组合数学/">组合数学</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/贡献/">贡献</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/高斯消元/">高斯消元</a><span class="category-list-count">4</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/">数据结构</a><span class="category-list-count">18</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/主席树/">主席树</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/二叉搜索树/">二叉搜索树</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/可持久化Trie/">可持久化Trie</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/并查集/">并查集</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/树上莫队/">树上莫队</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/树状数组/">树状数组</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/线段树/">线段树</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/">暴力</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/大模拟/">大模拟</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/小模拟/">小模拟</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/搜索/">搜索</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/搜索/dfs-bfs/">dfs/bfs</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/搜索/二-三分搜索/">二/三分搜索</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/签到/">签到</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/">计算几何</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/三维几何/">三维几何</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/扫描线/">扫描线</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/数值积分/">数值积分</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/旋转卡壳/">旋转卡壳</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/极角扫描/">极角扫描</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/极角排序/">极角排序</a><span class="category-list-count">1</span></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">2017年 06月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">2017年 05月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">2017年 04月</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">2017年 03月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">2017年 02月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">2016年 09月</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">2016年 08月</a><span class="archive-list-count">42</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">2016年 07月</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">2016年 06月</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">2016年 05月</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">2016年 04月</a><span class="archive-list-count">41</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">2016年 03月</a><span class="archive-list-count">42</span></li></ul>
+    </div>
+  </div>
+
+
+  
+     
+	 
+	  <div class="widget-wrap">
+		<h3 class="widget-title">最近评论</h3>
+		<div class="widget">
+		  <!-- 多说最新评论 start -->
+		  <div class="ds-recent-comments" data-num-items="5" data-show-avatars="0" data-show-time="1" data-show-title="1" data-show-admin="1" data-excerpt-length="70"></div>
+		  <!-- 多说最新评论 end -->
+		  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+		  <script type="text/javascript">
+			var duoshuoQuery = {short_name:"TaoSama"};
+			(function() {
+			  var ds = document.createElement('script');
+			  ds.type = 'text/javascript';ds.async = true;
+			  ds.src = '/js/ds_embed.js';
+			  <!--
+			  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+			  -->
+			  ds.charset = 'UTF-8';
+			  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+			})();
+		  </script>
+		  <!-- 多说公共JS代码 end -->
+		</div>
+	  </div>
+	
+
+  
+
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <img src="/css/images/umaru.png" style="position:fixed; right:0; bottom:0; width:70px">
+  <div class="outer">
+    <div id="footer-info" style="text-align:center; border:0;">
+	   <div style="font-family: FontAwesome;font-size: 20px;">
+		<a href="http://weibo.com/3863360617" title="微博" target="_blank">&#61834;</a>&nbsp;
+		<!--
+		<a href="http://www.renren.com/287137027" title="人人" target="_blank">&#61835;</a>&nbsp; 
+		<a href="http://user.qzone.qq.com/525969441" title="QQ空间" target="_blank">&#61910;</a>&nbsp;
+		-->
+		<a href="https://www.facebook.com/lwt1367" title="Facebook" target="_blank">&#62000;</a>&nbsp;
+		<a href="https://twitter.com/lwt1367" title="Twitter" target="_blank">&#61593;</a>&nbsp;
+		<a href="http://www.linkedin.com/in/lwt1367" title="LinkedIn" target="_blank">&#61665;</a>&nbsp;
+		<a href="https://github.com/TaoSama" title="GitHub" target="_blank">&#61595;</a>&nbsp;
+		<a href="https://plus.google.com/115031676619400074158" title="Google+" target="_blank">&#61653;</a>
+	   </div>
+	   <div style="font-size: 15px;">
+		<a href="/sitemap.xml">Sitemap</a>&nbsp;
+		<a href="/atom.xml">RSS</a>&nbsp;
+		<a href="mailto:lwt1367@gmail.com" target="_blank">Contact</a>
+		<br>
+		Copyright &copy; 2016-2017 
+	    <a href="/" target="_blank"> TaoSama </a>
+		<br>
+		Powered by <a href="https://hexo.io/zh-cn/docs/index.html" target="_blank">Hexo</a>
+	    &nbsp;|&nbsp;
+	    Theme by <a href="https://github.com/TaoSama/landscape" target="_blank">landscape</a>
+	    &nbsp;|&nbsp;
+	    <span id="busuanzi_container_site_pv">
+		总访问量 <a href="http://service.ibruce.info/" target="_blank"><span id="busuanzi_value_site_pv"></span></a> 次
+	    </span>
+	    <span id="busuanzi_container_site_uv">
+		<a href="http://service.ibruce.info/" target="_blank"><span id="busuanzi_value_site_uv"></span></a> 人
+	    </span>
+	   </div>
+	</div>
+  </div>
+  <!-- 为超链接加上target='_blank'属性 -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('a[href^="http"]').each(function() {
+			$(this).attr('target', '_blank');
+		});
+	});
+  </script>
+  <!-- 不蒜子js -->
+  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">主页</a>
+  
+    <a href="/archives" class="mobile-nav-link">文章</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"TaoSama"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = '/js/ds_embed.js';
+		<!-- ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js'; -->
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+
+<script src="http://lib.sinaapp.com/js/jquery/2.0.3/jquery-2.0.3.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof jQuery == 'undefined') {
+  document.write(unescape("%3Cscript src='/js/jquery-2.0.3.min.js' type='text/javascript'%3E%3C/script%3E"));
+}
+// ]]>
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+<div class="bottom-btn">
+
+	<a class="icon-gotop" href="javascript:void(0)" title="返回顶部"></a>
+	<script src="/js/gotop.js"></script>
+	<!--
+	<script src="/js/gotop.js"></script>
+	-->
+
+</div>
+
+
+<script src="/js/script.js"></script>
+<!-- Baidu Share Start --->
+<script>window._bd_share_config={"common":{"bdWbuid":3863360617,"bdText":"","bdMini":"2","bdMiniList":["douban","kaixin001","tieba","tsohu","sqq","youdao","qingbiji","mail","linkedin","mshare","copy","print"],"bdStyle":"1","bdSize":"24"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<!-- Baidu Share End --->
+
+
+<! -- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+                processEscapes: true
+                    
+}
+  
+        });
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+                  
+}
+    
+        });
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Queue(function() {
+            var all = MathJax.Hub.getAllJax(), i;
+            for(i=0; i < all.length; i += 1) {
+                            all[i].SourceElement().parentNode.className += ' has-jax';
+                                    
+            }
+                
+        });
+</script>
+
+<script type="text/javascript" src="http://cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

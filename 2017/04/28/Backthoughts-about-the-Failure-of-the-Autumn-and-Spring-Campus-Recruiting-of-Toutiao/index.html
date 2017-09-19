@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>头条秋招春招失败的思考 | TaoSama&#39;s Blog - ACMer, C/C++, 算法竞赛</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="毕设交了一波初稿，总算回来填坑了。回头想想，不得不说头条面试反映了我的心境变化。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="头条秋招春招失败的思考">
+<meta property="og:url" content="http://TaoSama.github.io/2017/04/28/Backthoughts-about-the-Failure-of-the-Autumn-and-Spring-Campus-Recruiting-of-Toutiao/index.html">
+<meta property="og:site_name" content="TaoSama&#39;s Blog">
+<meta property="og:description" content="毕设交了一波初稿，总算回来填坑了。回头想想，不得不说头条面试反映了我的心境变化。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-09-19T14:48:07.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="头条秋招春招失败的思考">
+<meta name="twitter:description" content="毕设交了一波初稿，总算回来填坑了。回头想想，不得不说头条面试反映了我的心境变化。">
+<meta name="twitter:creator" content="@lwt1367">
+<link rel="publisher" href="115031676619400074158">
+<meta property="fb:admins" content="lwt1367">
+  
+    <link rel="alternate" href="/atom.xml" title="TaoSama&#39;s Blog" type="application/atom+xml">
+  
+
+  <!-- favicons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/css/images/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/css/images/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/css/images/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/css/images/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/css/images/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/css/images/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/css/images/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/css/images/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/css/images/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/css/images/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/css/images/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/css/images/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/css/images/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/css/images/manifest.json">
+  <link rel="mask-icon" href="/css/images/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/css/images/favicon.ico">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="msapplication-TileImage" content="/css/images/mstile-144x144.png">
+  <meta name="msapplication-config" content="/css/images/browserconfig.xml">
+  <meta name="theme-color" content="#3B74AC">
+  <!-- end of icons -->
+  <link href="http://fonts.lug.ustc.edu.cn/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link href="/css/duoshuo.css" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="/css/style.css">
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">TaoSama&#39;s Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Reborn and Walk Alone</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon" style="margin-left: 13px;"></a>
+        
+          <a class="main-nav-link" href="/">主页</a>
+        
+          <a class="main-nav-link" href="/archives">文章</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      <nav id="sub-nav">
+		<a class="nav-icon" href="http://weibo.com/3863360617" title="微博" target="_blank">&#61834;</a>
+		<!--
+		<a class="nav-icon" href="http://www.renren.com/287137027" title="人人" target="_blank">&#61835;</a>
+		<a class="nav-icon" href="http://user.qzone.qq.com/525969441" title="QQ空间" target="_blank">&#61910;</a>
+		-->
+		<a class="nav-icon" href="https://www.facebook.com/lwt1367" title="Facebook" target="_blank">&#62000;</a>
+		<a class="nav-icon" href="https://twitter.com/lwt1367" title="Twitter" target="_blank">&#61593;</a>
+		<a class="nav-icon" href="http://www.linkedin.com/in/lwt1367" title="LinkedIn" target="_blank">&#61665;</a>
+		<a class="nav-icon" href="https://github.com/TaoSama" title="GitHub" target="_blank">&#61595;</a>
+		<a class="nav-icon" href="https://plus.google.com/115031676619400074158" title="Google+" target="_blank">&#61653;</a>
+        
+          <a id="nav-rss-link" class="nav-icon" style="font-size: 22px; width: 22px; height: 22px; padding: 20px 5px;" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" style="font-size: 19px; width: 19px; height: 19px; padding: 20px 5px;" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://TaoSama.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Backthoughts-about-the-Failure-of-the-Autumn-and-Spring-Campus-Recruiting-of-Toutiao" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      头条秋招春招失败的思考
+    </h1>
+  
+
+      </header>
+    
+  <div class="article-meta">
+    <a href="/2017/04/28/Backthoughts-about-the-Failure-of-the-Autumn-and-Spring-Campus-Recruiting-of-Toutiao/" class="article-date">
+  <time datetime="2017-04-28T09:20:10.000Z" itemprop="datePublished">2017-4-28 周五  17:20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Doing/">Doing</a>►<a class="article-category-link" href="/categories/Doing/Interview/">Interview</a>
+  </div>
+
+  </div>
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+      	
+      		<div id="toc" class="toc-article">
+      		<strong class="toc-title">Contents</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#秋招后台岗"><span class="toc-number">1.</span> <span class="toc-text">秋招后台岗</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一面"><span class="toc-number">1.1.</span> <span class="toc-text">一面</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#数组中乘积最大连续子数组"><span class="toc-number">1.1.1.</span> <span class="toc-text">数组中乘积最大连续子数组</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二面"><span class="toc-number">1.2.</span> <span class="toc-text">二面</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#写个类似单调栈的玩意儿"><span class="toc-number">1.2.1.</span> <span class="toc-text">写个类似单调栈的玩意儿</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#微信怎么拉取朋友圈信息"><span class="toc-number">1.2.2.</span> <span class="toc-text">微信怎么拉取朋友圈信息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#服务器很少，流量很大，怎么负载均衡啊"><span class="toc-number">1.2.3.</span> <span class="toc-text">服务器很少，流量很大，怎么负载均衡啊</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三面"><span class="toc-number">1.3.</span> <span class="toc-text">三面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#然后就没然后了啊"><span class="toc-number">1.4.</span> <span class="toc-text">然后就没然后了啊</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#春招算法岗"><span class="toc-number">2.</span> <span class="toc-text">春招算法岗</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一面-1"><span class="toc-number">2.1.</span> <span class="toc-text">一面</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#二叉树最长路径长度"><span class="toc-number">2.1.1.</span> <span class="toc-text">二叉树最长路径长度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#脑筋急转弯"><span class="toc-number">2.1.2.</span> <span class="toc-text">脑筋急转弯</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二面-1"><span class="toc-number">2.2.</span> <span class="toc-text">二面</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#复杂链表的复制"><span class="toc-number">2.2.1.</span> <span class="toc-text">复杂链表的复制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#机器学习"><span class="toc-number">2.2.2.</span> <span class="toc-text">机器学习</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#一个奇怪的题"><span class="toc-number">2.2.3.</span> <span class="toc-text">一个奇怪的题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三面-1"><span class="toc-number">2.3.</span> <span class="toc-text">三面</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#24点游戏"><span class="toc-number">2.3.1.</span> <span class="toc-text">24点游戏</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#然后就又没然后了啊"><span class="toc-number">2.4.</span> <span class="toc-text">然后就又没然后了啊</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#后记"><span class="toc-number">3.</span> <span class="toc-text">后记</span></a></li></ol>
+		
+      		</div>
+      	
+        <p>毕设交了一波初稿，总算回来填坑了。回头想想，不得不说头条面试反映了我的心境变化。</p>
+<a id="more"></a>
+<h2 id="秋招后台岗"><a href="#秋招后台岗" class="headerlink" title="秋招后台岗"></a>秋招后台岗</h2><h3 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h3><p>记得有2个题，其中一个应该非常水的题，没啥印象了。</p>
+<h4 id="数组中乘积最大连续子数组"><a href="#数组中乘积最大连续子数组" class="headerlink" title="数组中乘积最大连续子数组"></a>数组中乘积最大连续子数组</h4><p>这个现在就是一眼的dp，只怪刷了那么多题的我还是刷题太少了。</p>
+<ul>
+<li>Old Solution<br>直接暴力是$O(n^3)$的，所以就显然的前缀积优化到$O(n^2)$<br>蓝儿因为有$0$，这里就会有些问题，为了避免除$0$要做一些处理<br>不过实际上只要乘了$0$这一段乘积就是$0$了，所以把所有$0$的位置抠出来就可以了<br>然后枚举每一段，就不会有事了，答案初始化为$0$就可以了，前提是有一个$0$。。</li>
+<li>New Solution<br>很简单的dp啊，，$f[i][0/1]:$=到$i$这个位置的连续乘积最大值/最小值<br>就是套用最大连续子段和的套路，这破题我还被问过两遍<br>$HR$又做了一个更复杂的的树形的，不过那个时候我一眼秒了。。<br>就因为有负数嘛，所以就简单的维护下最小值就好了。。</li>
+</ul>
+<h3 id="二面"><a href="#二面" class="headerlink" title="二面"></a>二面</h3><h4 id="写个类似单调栈的玩意儿"><a href="#写个类似单调栈的玩意儿" class="headerlink" title="写个类似单调栈的玩意儿"></a>写个类似单调栈的玩意儿</h4><p>印象中应该让写了一个支持<code>push</code>,<code>pop</code>,<code>getMin</code>的栈，所有操作$O(1)$</p>
+<ul>
+<li>Solution<br>这东西也很简单啊，就维护数字栈的之后再顺手维护一个单调栈，细节注意一下就好了<br>我当时并没有想到单调栈，可能平时用的不多。不过还是有脑子的，随便一想就想到了。<br>我记得这个破题剑指offer上有吧，虽然一直没注意。</li>
+</ul>
+<h4 id="微信怎么拉取朋友圈信息"><a href="#微信怎么拉取朋友圈信息" class="headerlink" title="微信怎么拉取朋友圈信息"></a>微信怎么拉取朋友圈信息</h4><p>这东西我真不会啊，就xjb说了一下，本地存个跟帐号有关的hashvalue表示已经拉取了多少<br>每次拉取的时候，服务器也生成一个，比对一下，不适最新的就拉取就好了。<br>当然你问我什么别人点赞评论啥的，我真的不会啊。。</p>
+<h4 id="服务器很少，流量很大，怎么负载均衡啊"><a href="#服务器很少，流量很大，怎么负载均衡啊" class="headerlink" title="服务器很少，流量很大，怎么负载均衡啊"></a>服务器很少，流量很大，怎么负载均衡啊</h4><p>不会啊，xjb扯淡啊，就随手说了一下缓存服务器，Nginx啥的(这东西我tm就听过名字。<br><del>讲道理啊，为啥不买设备啊喂！(大雾</del></p>
+<h3 id="三面"><a href="#三面" class="headerlink" title="三面"></a>三面</h3><p>哇，这面跑不了啊，直接就问我后台技术栈啥的。<br>骗不过去了啊。然后就不知道啊。有点绝望啊。<br>意识不清醒了啊，打完比赛找不到工作一同交织在一起啊。<br>然后面试官问我读不读研啊。然后脑子一抽说想读啊。<br>然后我还耿直的去问头条有没有quit工作去读研啊<br><del>没见过比我更sb的人了</del><br>主要还是比赛打炸了，心态太差了。几个月都没调好。</p>
+<h3 id="然后就没然后了啊"><a href="#然后就没然后了啊" class="headerlink" title="然后就没然后了啊"></a>然后就没然后了啊</h3><h2 id="春招算法岗"><a href="#春招算法岗" class="headerlink" title="春招算法岗"></a>春招算法岗</h2><h3 id="一面-1"><a href="#一面-1" class="headerlink" title="一面"></a>一面</h3><p>扯扯淡啊，自我介绍啥的啊，ACM打的怎么样啊。。</p>
+<h4 id="二叉树最长路径长度"><a href="#二叉树最长路径长度" class="headerlink" title="二叉树最长路径长度"></a>二叉树最长路径长度</h4><p>一看就当普通树做了啊，然后就无脑说两次dfs求直径就好了啊。<br>他说能不能一次啊，那就无脑dp求一下直径啊。<br>他说还能不能再简单一点啊。 <del>(dp还不简单啊</del><br>哇 我又看了一下题，发现二叉树。<br>然后我就说那简化一下啊。</p>
+<ul>
+<li>Code<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span></div><div class="line">    Node* ls, *rs;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF = INT_MAX / <span class="number">2</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> maxd = -INF;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">dfs</span><span class="params">(Node* cur)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(cur == <span class="literal">nullptr</span>) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span> ldep = dfs(cur-&gt;ls);</div><div class="line">    <span class="keyword">int</span> rdep = dfs(cur-&gt;rs);</div><div class="line">   	maxd = max(maxd, ldep + rdep + <span class="number">1</span>);</div><div class="line">    <span class="keyword">return</span> max(ldep, rdep) + <span class="number">1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="脑筋急转弯"><a href="#脑筋急转弯" class="headerlink" title="脑筋急转弯"></a>脑筋急转弯</h4><p>有25个人，跑道一次只能跑5个人，问最少跑几次能得到冠亚季军啊。</p>
+<ul>
+<li>Solution<br>一眼看穿是多路归并啊，然后算了一下是8啊。。</li>
+</ul>
+<h3 id="二面-1"><a href="#二面-1" class="headerlink" title="二面"></a>二面</h3><p>不记得问了啥啊，就扔了一个题，然后问了点儿机器学习的东西</p>
+<h4 id="复杂链表的复制"><a href="#复杂链表的复制" class="headerlink" title="复杂链表的复制"></a>复杂链表的复制</h4><ul>
+<li><p>Description<br>有一个链表L,其每个节点有2个指针，一个指针next指向链表的下个节点，另一个random随机指向链表中的任一个节点，可能是自己或者为空，写一个程序，复制这个链表</p>
+</li>
+<li><p>Solution<br>剑指offer上有啊，看了一眼思路啊当时就，然后很慌啊。<br>不过面了那么多面试啊，一下子就冷静了啊。然后就会了啊。<br>就后面拷贝一份搞一搞啊。</p>
+</li>
+<li><p>Code</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span></div><div class="line">    <span class="keyword">int</span> val;</div><div class="line">    Node *nxt, *random;</div><div class="line">    Node()&#123;&#125;</div><div class="line">    Node(<span class="keyword">int</span> val, Node *nxt, Node *random): val(val), nxt(nxt), random(random)&#123;&#125;</div><div class="line">    </div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="function">Node* <span class="title">copyComplexList</span><span class="params">(Node *head)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(head == <span class="literal">nullptr</span>) <span class="keyword">return</span> <span class="literal">nullptr</span>;</div><div class="line">    </div><div class="line">    <span class="keyword">for</span>(Node *cur = head; cur != <span class="literal">nullptr</span>; cur = cur-&gt;nxt-&gt;nxt)&#123;</div><div class="line">        Node *copied = <span class="keyword">new</span> Node(cur-&gt;val, cur-&gt;nxt, cur-&gt;random);</div><div class="line">        cur-&gt;nxt = copied;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span>(Node *cur = head-&gt;nxt; cur != <span class="literal">nullptr</span>; cur = cur-&gt;nxt-&gt;nxt)&#123;</div><div class="line">        cur-&gt;random = cur-&gt;random-&gt;nxt;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    Node *nHead = head-&gt;nxt;</div><div class="line">    <span class="keyword">for</span>(Node *cur = head; cur != <span class="literal">nullptr</span>; cur = cur-&gt;nxt)&#123;</div><div class="line">        Node *copied = cur-&gt;nxt;</div><div class="line">        Node *copiedNxt = copied-&gt;nxt-&gt;nxt;</div><div class="line">        Node *curNxt = cur-&gt;nxt-&gt;nxt;</div><div class="line">        cur-&gt;nxt = curNxt;</div><div class="line">        copied-&gt;nxt = copiedNxt;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> nHead;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a>机器学习</h4><ul>
+<li>手推一下LR吧<br>就直接把Hypothesis Function，Cost Function写一写，Gradient Decent推一推啊。<br>然后我就推了一下啊，sigmoid函数的导数差点不会推啊。。有惊无险啊</li>
+<li>正则参数$\lambda$选取的影响啊<br>大了会overfitting啊，小了会underfitting啊。</li>
+</ul>
+<h4 id="一个奇怪的题"><a href="#一个奇怪的题" class="headerlink" title="一个奇怪的题"></a>一个奇怪的题</h4><ul>
+<li><p>Description<br>对一个数组，有n个数据，找一个索引的位置k，使前k个数的方差var(k)和后面n-k个数的方差var(n-k)之和最小。</p>
+</li>
+<li><p>Solution<br>不知道能不能$O(1)$啊，不会做啊，就暴力展开了一下方差啊<br>然后$O(n)$枚举$k$，$O(1)$算答案，总复杂度$O(n)$</p>
+</li>
+<li><p>Code</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment">var = \sum_&#123;i=1&#125;^n (x_i - avg)^2 </span></div><div class="line"><span class="comment">= \sum_&#123;i=1&#125;^n (x_i ^ 2 + avg^2 - 2*x_i*avg)</span></div><div class="line"><span class="comment">= \sum_&#123;i=1&#125;^n (x_i ^ 2 + (sum / n)^2 - 2 * x_i * (sum / n))</span></div><div class="line"><span class="comment">= \sum_&#123;i=1&#125;^n x_i^2 + sum^2 /n - 2*sum^2/n= \sum_&#123;i=1&#125;^n x_i^2 - sum^2/n</span></div><div class="line"><span class="comment">*/</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">findIndex</span><span class="params">(<span class="keyword">const</span> <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; v)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> preSqSum = <span class="number">0</span>, totSqSum = <span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span> preSum = <span class="number">0</span>, totSum = <span class="number">0</span>;</div><div class="line">    pair&lt;<span class="keyword">double</span>, <span class="keyword">int</span>&gt; varAndIdx = &#123;<span class="number">-1</span>, <span class="number">-1</span>&#125;;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; v.size(); ++i)&#123;</div><div class="line">        totSqSum += v[i] * v[i];</div><div class="line">        totSum += v[i];</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; v.size(); ++i)&#123;</div><div class="line">        preSum += v[i];</div><div class="line">        preSqSum += v[i] * v[i];</div><div class="line">        <span class="keyword">int</span> sufSqSum = totSqSum - preSqSum;</div><div class="line">        <span class="keyword">int</span> sufSum = totSum - preSum;</div><div class="line">        <span class="keyword">double</span> preVar = preSqSum - <span class="number">1.0</span> * preSum * preSum / (i + <span class="number">1</span>);</div><div class="line">        <span class="keyword">double</span> sufVar = sufSqSum - <span class="number">1.0</span> * sufSum * sufSum/ (v.size() - i - <span class="number">1</span>);</div><div class="line">        varAndIdx = max(varAndIdx, &#123;preVar + sufVar, i&#125;);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> varAndIdx.second;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="三面-1"><a href="#三面-1" class="headerlink" title="三面"></a>三面</h3><h4 id="24点游戏"><a href="#24点游戏" class="headerlink" title="24点游戏"></a>24点游戏</h4><ul>
+<li><p>Description<br>给定4个整数0～9，给出是否能计算得到24，加减乘除括号，普通算术运算。精度他说<code>1e-5</code></p>
+</li>
+<li><p>Solution<br>以前写过啊，蓝儿没脑子了啊，连面了两面。<br>就选择写暴力搜索所有表达式啊。<br>然后就因为<code>string v = &quot;&quot; + toChar(a) + toChar(b) + toChar(c) + toChar(d);</code><br>这个垃圾代码不CE挂了啊。。我以为会CE的啊。结果最后半天才反应到这里。<br>写了半个多小时，面试官他写了一个都写完了啊。。难受啊。。<br>我当时好怂啊，不自信啊。。结果面试结束后几分钟就调通了啊。</p>
+</li>
+<li><p>My Code<br>找不到最终版本了，就扔个有点小问题的吧。纪念一下我这个“C++大师”</p>
+</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="built_in">string</span> op = <span class="string">"+-*/"</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">getPriority</span><span class="params">(<span class="keyword">char</span> c)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span>(c == <span class="string">'+'</span> || c == <span class="string">'-'</span>) <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(c == <span class="string">'*'</span> || c == <span class="string">'/'</span>) <span class="keyword">return</span> <span class="number">2</span>;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; inToPost(<span class="keyword">const</span> <span class="built_in">string</span>&amp; expr) &#123;</div><div class="line">    <span class="built_in">stack</span>&lt;<span class="keyword">char</span>&gt; opr;</div><div class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; ret;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; expr.size(); ++i) &#123;</div><div class="line">        <span class="keyword">char</span> c = expr[i];</div><div class="line">        <span class="keyword">if</span>(c == <span class="string">'('</span>) opr.push(c);</div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(c == <span class="string">')'</span>) &#123;</div><div class="line">            <span class="keyword">while</span>(<span class="literal">true</span>) &#123;</div><div class="line">                <span class="keyword">char</span> top = opr.top(); opr.pop();</div><div class="line">                <span class="keyword">if</span>(top == <span class="string">'('</span>) <span class="keyword">break</span>;</div><div class="line">                ret.push_back(<span class="built_in">string</span>(<span class="number">1</span>, top));</div><div class="line">            &#125;</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">isdigit</span>(c)) &#123;</div><div class="line">            <span class="built_in">string</span> digit;</div><div class="line">            <span class="keyword">for</span>(; i &lt; expr.size() &amp;&amp; <span class="built_in">isdigit</span>(expr[i]); ++i) digit += expr[i];</div><div class="line">            ret.push_back(digit);</div><div class="line">            --i;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">int</span> curP = getPriority(c);</div><div class="line">            <span class="keyword">for</span>(; opr.size() &amp;&amp; getPriority(opr.top()) &gt;= curP; opr.pop())</div><div class="line">                ret.push_back(<span class="built_in">string</span>(<span class="number">1</span>, opr.top()));</div><div class="line">            opr.push(c);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span>(; opr.size(); opr.pop()) ret.push_back(<span class="built_in">string</span>(<span class="number">1</span>, opr.top()));</div><div class="line">    <span class="keyword">return</span> ret;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">double</span> <span class="title">calc</span><span class="params">(<span class="keyword">const</span> <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&amp; post)</span> </span>&#123;</div><div class="line">    <span class="built_in">stack</span>&lt;<span class="keyword">double</span>&gt; opd;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; s : post) &#123;</div><div class="line">        <span class="keyword">if</span>(<span class="built_in">isdigit</span>(s[<span class="number">0</span>])) opd.push(stod(s));</div><div class="line">        <span class="keyword">else</span> &#123;</div><div class="line">            assert(opd.size());</div><div class="line">            <span class="keyword">double</span> y = opd.top(); opd.pop();</div><div class="line">            assert(opd.size());</div><div class="line">            <span class="keyword">double</span> x = opd.top(); opd.pop();</div><div class="line">            <span class="keyword">if</span>(s[<span class="number">0</span>] == <span class="string">'+'</span>) opd.push(x + y);</div><div class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(s[<span class="number">0</span>] == <span class="string">'-'</span>) opd.push(x - y);</div><div class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(s[<span class="number">0</span>] == <span class="string">'*'</span>) opd.push(x * y);</div><div class="line">            <span class="keyword">else</span> opd.push(x / y);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> opd.top();</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> dep, <span class="keyword">bool</span> lftBracketed, <span class="built_in">string</span> s)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span>(dep == s.size()) &#123;</div><div class="line">        <span class="keyword">if</span>(lftBracketed) s += <span class="string">')'</span>;</div><div class="line"><span class="comment">//        cout &lt;&lt; s &lt;&lt; endl;</span></div><div class="line">        <span class="keyword">if</span>(<span class="built_in">abs</span>(calc(inToPost(s)) - <span class="number">24</span>) &lt; <span class="number">1e-5</span>) <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span>(<span class="built_in">isdigit</span>(s[dep])) &#123;</div><div class="line">        <span class="keyword">if</span>(dep &gt; <span class="number">0</span>) &#123;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; ++i) &#123;</div><div class="line">                <span class="built_in">string</span> ns = s;</div><div class="line">                ns.insert(dep, <span class="number">1</span>, op[i]);</div><div class="line">                <span class="keyword">if</span>(check(dep + <span class="number">2</span>, lftBracketed, ns)) <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">                <span class="keyword">if</span>(lftBracketed) &#123;</div><div class="line">                    ns.insert(dep + <span class="number">2</span>, <span class="number">1</span>, <span class="string">')'</span>);</div><div class="line">                    <span class="keyword">if</span>(check(dep + <span class="number">3</span>, <span class="number">0</span>, ns)) <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">                &#125; <span class="keyword">else</span> &#123;</div><div class="line">                    ns.insert(dep + <span class="number">1</span>, <span class="number">1</span>, <span class="string">'('</span>);</div><div class="line">                    <span class="keyword">if</span>(check(dep + <span class="number">3</span>, <span class="number">1</span>, ns)) <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span>(check(dep + <span class="number">1</span>, lftBracketed, s)) <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span>(check(dep + <span class="number">1</span>, lftBracketed, s)) <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">twentyFour</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b, <span class="keyword">int</span> c, <span class="keyword">int</span> d)</span> </span>&#123;</div><div class="line">    <span class="keyword">auto</span> toChar = [](<span class="keyword">int</span> x) &#123;<span class="keyword">return</span> <span class="keyword">char</span>(<span class="string">'0'</span> + x);&#125;;</div><div class="line">    <span class="built_in">string</span> v = <span class="built_in">string</span>(<span class="string">""</span>) + toChar(a) + toChar(b) + toChar(c) + toChar(d);</div><div class="line">    sort(v.begin(), v.end());</div><div class="line"></div><div class="line">    <span class="keyword">bool</span> ok = <span class="literal">false</span>;</div><div class="line">    <span class="keyword">do</span> &#123;</div><div class="line">        ok |= check(<span class="number">0</span>, <span class="number">0</span>, v);</div><div class="line">    &#125; <span class="keyword">while</span>(!ok &amp;&amp; next_permutation(v.begin(), v.end()));</div><div class="line">    <span class="keyword">return</span> ok;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="built_in">string</span> test = <span class="string">"5*5-5/5"</span>;</div><div class="line">    <span class="comment">//cout &lt;&lt; calc(test) &lt;&lt; endl;</span></div><div class="line">    <span class="built_in">cout</span> &lt;&lt; (calc(inToPost(test))) &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    <span class="built_in">cout</span> &lt;&lt; twentyFour(<span class="number">5</span>, <span class="number">5</span>, <span class="number">5</span>, <span class="number">5</span>) &lt;&lt; <span class="built_in">endl</span>;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>Interviewer’s Code<br>没仔细读这个代码啊，改天研究一下正确性，写一个bugfree的24点感觉不容易啊。。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> itertools</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">isEqual</span><span class="params">(v0, v1)</span>:</span></div><div class="line">    <span class="keyword">return</span> abs(v0 - v1) &lt; <span class="number">1e-6</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">expresssion</span><span class="params">(code, v0, v1)</span>:</span></div><div class="line">    <span class="keyword">if</span> code == <span class="number">0</span>:</div><div class="line">        <span class="keyword">return</span> v0 + v1</div><div class="line">    <span class="keyword">elif</span> code == <span class="number">1</span>:</div><div class="line">        <span class="keyword">return</span> v0 - v1</div><div class="line">    <span class="keyword">elif</span> code == <span class="number">2</span>:</div><div class="line">        <span class="keyword">return</span> v1 - v0</div><div class="line">    <span class="keyword">elif</span> code == <span class="number">3</span>:</div><div class="line">        <span class="keyword">return</span> v0 * v1</div><div class="line">    <span class="keyword">elif</span> code == <span class="number">4</span>:</div><div class="line">        <span class="keyword">if</span> isEqual(v1, <span class="number">0</span>):</div><div class="line">            <span class="keyword">return</span> float(<span class="string">'NaN'</span>)</div><div class="line">        <span class="keyword">return</span> float(v0)/v1</div><div class="line">    <span class="keyword">elif</span> code == <span class="number">5</span>:</div><div class="line">        <span class="keyword">if</span> isEqual(v0, <span class="number">0</span>):</div><div class="line">            <span class="keyword">return</span> float(<span class="string">'NaN'</span>)</div><div class="line">        <span class="keyword">return</span> float(v1)/v0</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">printExpr</span><span class="params">(code, v0, v1)</span>:</span></div><div class="line">    <span class="keyword">if</span> code == <span class="number">0</span>:</div><div class="line">        <span class="keyword">print</span> <span class="string">'%s+%s'</span> %(v0, v1)</div><div class="line">    <span class="keyword">if</span> code == <span class="number">1</span>:</div><div class="line">        <span class="keyword">print</span> <span class="string">'%s-%s'</span> %(v0, v1)</div><div class="line">    <span class="keyword">if</span> code == <span class="number">2</span>:</div><div class="line">        <span class="keyword">print</span> <span class="string">'%s-%s'</span> % (v1, v0)</div><div class="line">    <span class="keyword">if</span> code == <span class="number">3</span>:</div><div class="line">        <span class="keyword">print</span> <span class="string">'%s*%s'</span> % (v0, v1)</div><div class="line">    <span class="keyword">if</span> code == <span class="number">4</span>:</div><div class="line">        <span class="keyword">print</span> <span class="string">'%s/%s'</span> % (v0, v1)</div><div class="line">    <span class="keyword">if</span> code == <span class="number">5</span>:</div><div class="line">        <span class="keyword">print</span> <span class="string">'%s/%s'</span> %(v1, v0)</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">search</span><span class="params">(a, v)</span>:</span></div><div class="line">    <span class="keyword">if</span> len(a) == <span class="number">1</span>:</div><div class="line">        <span class="keyword">return</span> isEqual(a[<span class="number">0</span>], v)</div><div class="line">    <span class="keyword">elif</span> len(a) == <span class="number">2</span>:</div><div class="line">        <span class="keyword">for</span> code <span class="keyword">in</span> range(<span class="number">6</span>):</div><div class="line">            <span class="keyword">if</span> isEqual(expresssion(code, a[<span class="number">0</span>], a[<span class="number">1</span>]), v):</div><div class="line">                printExpr(code, a[<span class="number">0</span>], a[<span class="number">1</span>])</div><div class="line">                <span class="keyword">return</span> <span class="keyword">True</span></div><div class="line">        <span class="keyword">return</span> <span class="keyword">False</span></div><div class="line">    <span class="keyword">elif</span> len(a) == <span class="number">3</span>:</div><div class="line">        <span class="keyword">for</span> b <span class="keyword">in</span> itertools.permutations(a):</div><div class="line">            <span class="keyword">for</span> code <span class="keyword">in</span> range(<span class="number">6</span>):</div><div class="line">                <span class="keyword">if</span> search([expresssion(code, b[<span class="number">0</span>], b[<span class="number">1</span>]), b[<span class="number">2</span>]], v):</div><div class="line">                    printExpr(code, b[<span class="number">0</span>], b[<span class="number">1</span>])</div><div class="line">                    <span class="keyword">return</span> <span class="keyword">True</span></div><div class="line">        <span class="keyword">return</span> <span class="keyword">False</span></div><div class="line">    <span class="keyword">elif</span> len(a) == <span class="number">4</span>:</div><div class="line">        <span class="keyword">for</span> b <span class="keyword">in</span> itertools.permutations(a):</div><div class="line">            <span class="keyword">for</span> code <span class="keyword">in</span> range(<span class="number">6</span>):</div><div class="line">                <span class="keyword">if</span> search([expresssion(code, b[<span class="number">0</span>], b[<span class="number">1</span>]), b[<span class="number">2</span>], b[<span class="number">3</span>]], v):</div><div class="line">                    printExpr(code, b[<span class="number">0</span>], b[<span class="number">1</span>])</div><div class="line">                    <span class="keyword">return</span> <span class="keyword">True</span></div><div class="line">        <span class="keyword">return</span> <span class="keyword">False</span></div><div class="line">    <span class="keyword">elif</span> len(a) == <span class="number">4</span>:</div><div class="line">        <span class="keyword">for</span> b <span class="keyword">in</span> itertools.permutations(a):</div><div class="line">            <span class="keyword">for</span> code <span class="keyword">in</span> range(<span class="number">6</span>):</div><div class="line">                <span class="keyword">if</span> search([expresssion(code, b[<span class="number">0</span>], b[<span class="number">1</span>]), b[<span class="number">2</span>], b[<span class="number">3</span>]], v):</div><div class="line">                    printExpr(code, b[<span class="number">0</span>], b[<span class="number">1</span>])</div><div class="line">                    <span class="keyword">return</span> <span class="keyword">True</span></div><div class="line">        <span class="keyword">return</span> <span class="keyword">False</span></div><div class="line"><span class="keyword">print</span> search([<span class="number">3</span>, <span class="number">3</span>, <span class="number">8</span>, <span class="number">8</span>], <span class="number">24</span>)</div></pre></td></tr></table></figure>
+<h3 id="然后就又没然后了啊"><a href="#然后就又没然后了啊" class="headerlink" title="然后就又没然后了啊"></a>然后就又没然后了啊</h3><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>好好学习辣！然后要自信！失败了并不会失去什么。</p>
+
+      
+	  
+  <div class="article-statement">
+    <hr> 
+    1. 除非注明，本博文即为原创，转载请注明链接地址 <br>
+    2. 本博文只代表博主当时的观点或结论，请不要恶意攻击 <br>
+    3. 如果本文帮到了您，不妨点一下 <a>下面</a> 的 <a>分享到</a> 按钮，让更多的人看到 <br>
+	<!-- ，或者 <a href='/about/index.html#zan-shang'>小额赞赏</a> 我。-->
+  </div>
+
+
+
+    </div>
+    <footer class="article-footer">
+	  
+	    <div class="bdsharebuttonbox"><a>分享到：</a> <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook">Facebook</a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter">Twitter</a><a href="#" class="bds_more" data-cmd="more">其他平台</a></div>
+      
+      
+        <a href="http://TaoSama.github.io/2017/04/28/Backthoughts-about-the-Failure-of-the-Autumn-and-Spring-Campus-Recruiting-of-Toutiao/#ds-thread" class="ds-thread-count article-comment-link" data-thread-key="2017/04/28/Backthoughts-about-the-Failure-of-the-Autumn-and-Spring-Campus-Recruiting-of-Toutiao/">文章评论</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/04/28/Backthoughts-during-These-Days/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">
+        
+          Backthoughts during These Days
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/04/28/WAPS-Interview/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">WAPS Interview</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+
+<!-- 多说评论框 start -->
+	<div id="ds-thread" class="ds-thread" data-thread-key="2017/04/28/Backthoughts-about-the-Failure-of-the-Autumn-and-Spring-Campus-Recruiting-of-Toutiao/" data-title="头条秋招春招失败的思考" data-url="http://TaoSama.github.io/2017/04/28/Backthoughts-about-the-Failure-of-the-Autumn-and-Spring-Campus-Recruiting-of-Toutiao/" data-author-key="233"></div>
+<!-- 多说评论框 end -->
+</section>
+</section>
+        
+          
+<aside id="sidebar">
+
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title">关于我</h3>
+  <ul class="widget about-me">
+    <li><img class="author" title="About me" src="/css/images/avatar.png" /></li>
+    
+    <li><a href="/about/" style="color:orange">老顽童</a></li>
+    
+    <li><a href="http://codeforces.com/profile/TaoSama" style="color:purple">TaoSama</a></li>
+    
+    <li>迷茫的搬砖工 / 永不退役的ACMer</li>
+    
+  </ul>
+</div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">推荐文章</h3>
+    <div class="widget">
+      <ul>
+        
+        
+          
+          <li>
+            <a href="/2016/05/02/%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%B0%8F%E7%BB%93/" target="_blank">1. 常见错误小结</a>
+          </li>
+        
+          
+          <li>
+            <a href="/2016/03/09/Hello%20World%20%E2%80%94%E2%80%94%20%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%8E%86%E7%A8%8B/" target="_blank">2. Hello World —— 博客搭建历程</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">友情链接</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="http://blog.csdn.net/lwt36/" target="_blank">我的CSDN</a>
+          </li>
+        
+          <li>
+            <a href="http://www.zhihu.com/people/ye-zhu-shui-han/" target="_blank">我的知乎</a>
+          </li>
+        
+          <li>
+            <a href="http://notdeep.github.io/" target="_blank">果姐姐</a>
+          </li>
+        
+          <li>
+            <a href="https://cloverii.github.io/" target="_blank">WMW</a>
+          </li>
+        
+          <li>
+            <a href="http://blog.luoxinchen.me/" target="_blank">Mathon</a>
+          </li>
+        
+          <li>
+            <a href="http://www.cnblogs.com/forever97/" target="_blank">forever97</a>
+          </li>
+        
+          <li>
+            <a href="http://liziyang96.com/" target="_blank">liziy</a>
+          </li>
+        
+          <li>
+            <a href="http://blog.csdn.net/viphong" target="_blank">liuyuhong</a>
+          </li>
+        
+          <li>
+            <a href="http://blog.csdn.net/a1s4z5/" target="_blank">QAQ</a>
+          </li>
+        
+          <li>
+            <a href="http://blog.csdn.net/qwb492859377" target="_blank">qwb</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/">Doing</a><span class="category-list-count">12</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Blog/">Blog</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/CPP/">CPP</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Interview/">Interview</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Life/">Life</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Machine-Learning/">Machine Learning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Python/">Python</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/">动态规划</a><span class="category-list-count">27</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/bitset优化/">bitset优化</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/数位dp/">数位dp</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/数据结构优化/">数据结构优化</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/斜率优化/">斜率优化</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/最长上升子序列/">最长上升子序列</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/树形dp/">树形dp</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/概率-期望dp/">概率/期望dp</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/状压dp/">状压dp</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/矩阵优化/">矩阵优化</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/线性dp/">线性dp</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/">图论</a><span class="category-list-count">26</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/图论/LCA/">LCA</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/二分图/">二分图</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/拓扑排序/">拓扑排序</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/最大团/">最大团</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/最小生成树/">最小生成树</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/最短路/">最短路</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/生成树计数/">生成树计数</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/网络流/">网络流</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/连通图/">连通图</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/套题/">套题</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/字符串/">字符串</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/字符串/AC自动机/">AC自动机</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/字符串/Manacher-回文树/">Manacher/回文树</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/字符串/SA-SAM/">SA/SAM</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/小结/">小结</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/">思维</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/思维/分治/">分治</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/扫描线/">扫描线</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/数形结合/">数形结合</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/离线思想/">离线思想</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/贪心/">贪心</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/思维/贪心/区间贪心/">区间贪心</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/逆向思维/">逆向思维</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/">技巧</a><span class="category-list-count">17</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/two-pointers/">two pointers</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/xor/">xor</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/反转问题/">反转问题</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/哈希/">哈希</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/折半搜索/">折半搜索</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/">数学</a><span class="category-list-count">26</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/数学/CRT/">CRT</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/FFT-NTT-FWT/">FFT/NTT/FWT</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/博弈/">博弈</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/容斥/">容斥</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/概率-期望/">概率/期望</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/组合数学/">组合数学</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/贡献/">贡献</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/高斯消元/">高斯消元</a><span class="category-list-count">4</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/">数据结构</a><span class="category-list-count">18</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/主席树/">主席树</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/二叉搜索树/">二叉搜索树</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/可持久化Trie/">可持久化Trie</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/并查集/">并查集</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/树上莫队/">树上莫队</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/树状数组/">树状数组</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/线段树/">线段树</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/">暴力</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/大模拟/">大模拟</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/小模拟/">小模拟</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/搜索/">搜索</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/搜索/dfs-bfs/">dfs/bfs</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/搜索/二-三分搜索/">二/三分搜索</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/签到/">签到</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/">计算几何</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/三维几何/">三维几何</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/扫描线/">扫描线</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/数值积分/">数值积分</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/旋转卡壳/">旋转卡壳</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/极角扫描/">极角扫描</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/极角排序/">极角排序</a><span class="category-list-count">1</span></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">2017年 06月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">2017年 05月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">2017年 04月</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">2017年 03月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">2017年 02月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">2016年 09月</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">2016年 08月</a><span class="archive-list-count">42</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">2016年 07月</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">2016年 06月</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">2016年 05月</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">2016年 04月</a><span class="archive-list-count">41</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">2016年 03月</a><span class="archive-list-count">42</span></li></ul>
+    </div>
+  </div>
+
+
+  
+     
+	 
+	  <div class="widget-wrap">
+		<h3 class="widget-title">最近评论</h3>
+		<div class="widget">
+		  <!-- 多说最新评论 start -->
+		  <div class="ds-recent-comments" data-num-items="5" data-show-avatars="0" data-show-time="1" data-show-title="1" data-show-admin="1" data-excerpt-length="70"></div>
+		  <!-- 多说最新评论 end -->
+		  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+		  <script type="text/javascript">
+			var duoshuoQuery = {short_name:"TaoSama"};
+			(function() {
+			  var ds = document.createElement('script');
+			  ds.type = 'text/javascript';ds.async = true;
+			  ds.src = '/js/ds_embed.js';
+			  <!--
+			  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+			  -->
+			  ds.charset = 'UTF-8';
+			  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+			})();
+		  </script>
+		  <!-- 多说公共JS代码 end -->
+		</div>
+	  </div>
+	
+
+  
+
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <img src="/css/images/umaru.png" style="position:fixed; right:0; bottom:0; width:70px">
+  <div class="outer">
+    <div id="footer-info" style="text-align:center; border:0;">
+	   <div style="font-family: FontAwesome;font-size: 20px;">
+		<a href="http://weibo.com/3863360617" title="微博" target="_blank">&#61834;</a>&nbsp;
+		<!--
+		<a href="http://www.renren.com/287137027" title="人人" target="_blank">&#61835;</a>&nbsp; 
+		<a href="http://user.qzone.qq.com/525969441" title="QQ空间" target="_blank">&#61910;</a>&nbsp;
+		-->
+		<a href="https://www.facebook.com/lwt1367" title="Facebook" target="_blank">&#62000;</a>&nbsp;
+		<a href="https://twitter.com/lwt1367" title="Twitter" target="_blank">&#61593;</a>&nbsp;
+		<a href="http://www.linkedin.com/in/lwt1367" title="LinkedIn" target="_blank">&#61665;</a>&nbsp;
+		<a href="https://github.com/TaoSama" title="GitHub" target="_blank">&#61595;</a>&nbsp;
+		<a href="https://plus.google.com/115031676619400074158" title="Google+" target="_blank">&#61653;</a>
+	   </div>
+	   <div style="font-size: 15px;">
+		<a href="/sitemap.xml">Sitemap</a>&nbsp;
+		<a href="/atom.xml">RSS</a>&nbsp;
+		<a href="mailto:lwt1367@gmail.com" target="_blank">Contact</a>
+		<br>
+		Copyright &copy; 2016-2017 
+	    <a href="/" target="_blank"> TaoSama </a>
+		<br>
+		Powered by <a href="https://hexo.io/zh-cn/docs/index.html" target="_blank">Hexo</a>
+	    &nbsp;|&nbsp;
+	    Theme by <a href="https://github.com/TaoSama/landscape" target="_blank">landscape</a>
+	    &nbsp;|&nbsp;
+	    <span id="busuanzi_container_site_pv">
+		总访问量 <a href="http://service.ibruce.info/" target="_blank"><span id="busuanzi_value_site_pv"></span></a> 次
+	    </span>
+	    <span id="busuanzi_container_site_uv">
+		<a href="http://service.ibruce.info/" target="_blank"><span id="busuanzi_value_site_uv"></span></a> 人
+	    </span>
+	   </div>
+	</div>
+  </div>
+  <!-- 为超链接加上target='_blank'属性 -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('a[href^="http"]').each(function() {
+			$(this).attr('target', '_blank');
+		});
+	});
+  </script>
+  <!-- 不蒜子js -->
+  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">主页</a>
+  
+    <a href="/archives" class="mobile-nav-link">文章</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"TaoSama"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = '/js/ds_embed.js';
+		<!-- ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js'; -->
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+
+<script src="http://lib.sinaapp.com/js/jquery/2.0.3/jquery-2.0.3.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof jQuery == 'undefined') {
+  document.write(unescape("%3Cscript src='/js/jquery-2.0.3.min.js' type='text/javascript'%3E%3C/script%3E"));
+}
+// ]]>
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+<div class="bottom-btn">
+
+	<a class="icon-gotop" href="javascript:void(0)" title="返回顶部"></a>
+	<script src="/js/gotop.js"></script>
+	<!--
+	<script src="/js/gotop.js"></script>
+	-->
+
+</div>
+
+
+<script src="/js/script.js"></script>
+<!-- Baidu Share Start --->
+<script>window._bd_share_config={"common":{"bdWbuid":3863360617,"bdText":"","bdMini":"2","bdMiniList":["douban","kaixin001","tieba","tsohu","sqq","youdao","qingbiji","mail","linkedin","mshare","copy","print"],"bdStyle":"1","bdSize":"24"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<!-- Baidu Share End --->
+
+
+<! -- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+                processEscapes: true
+                    
+}
+  
+        });
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+                  
+}
+    
+        });
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Queue(function() {
+            var all = MathJax.Hub.getAllJax(), i;
+            for(i=0; i < all.length; i += 1) {
+                            all[i].SourceElement().parentNode.className += ' has-jax';
+                                    
+            }
+                
+        });
+</script>
+
+<script type="text/javascript" src="http://cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /fancybox/
+Disallow: /archives/
+Disallow: /tags/
+Disallow: /test/
+Disallow: /categories/
+Sitemap: http://taosama.com/sitemap.xml
