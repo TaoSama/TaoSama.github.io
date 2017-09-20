@@ -4,148 +4,12 @@
 
     
   <url>
-    <loc>http://TaoSama.github.io/2016/05/09/HDU%205375%20Gray%20code%EF%BC%88%E7%BA%BF%E6%80%A7dp%EF%BC%89/</loc>
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    <loc>http://TaoSama.github.io/2017/08/25/most-useful-shell-commands/</loc>
+    <lastmod>2017-09-20T09:38:12.000Z</lastmod>
     <data>
         <display>
-        <title>HDU 5375 Gray code（线性dp）</title>
-        <pubTime>2016-05-09T08:42:10.000Z</pubTime>
-        
-        <tag>dp</tag>
-         
-         
-           
-             
-              <breadCrumb title="动态规划" url="http://TaoSama.github.io/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
-          
-             
-              <breadCrumb title="线性dp" url="http://TaoSama.github.io/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E7%BA%BF%E6%80%A7dp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://TaoSama.github.io/2016/06/12/2016%20%E8%AE%A1%E8%92%9C%E4%B9%8B%E9%81%93%20%20%E5%BE%AE%E8%BD%AF%E7%9A%84%E5%91%98%E5%B7%A5%E7%A6%8F%E5%88%A9%20%EF%BC%88%E7%AE%80%E5%8D%95%E3%80%81%E4%B8%AD%E7%AD%89%EF%BC%89%EF%BC%88dp%EF%BC%89/</loc>
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>2016 计蒜之道  微软的员工福利 （简单、中等）（dp）</title>
-        <pubTime>2016-06-12T10:42:10.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="动态规划" url="http://TaoSama.github.io/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
-          
-             
-              <breadCrumb title="树形dp" url="http://TaoSama.github.io/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E6%A0%91%E5%BD%A2dp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://TaoSama.github.io/2016/09/23/51nod%201610%20%E8%B7%AF%E5%BE%84%E8%AE%A1%E6%95%B0%EF%BC%88dp%E3%80%81%E5%AE%B9%E6%96%A5%E5%8E%9F%E7%90%86%EF%BC%89/</loc>
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>51nod 1610 路径计数（dp、容斥）</title>
-        <pubTime>2016-09-22T16:52:10.000Z</pubTime>
-        
-        <tag>容斥</tag>
-         
-         
-           
-             
-              <breadCrumb title="数学" url="http://TaoSama.github.io/categories/%E6%95%B0%E5%AD%A6/"/>
-          
-             
-              <breadCrumb title="容斥" url="http://TaoSama.github.io/categories/%E6%95%B0%E5%AD%A6/%E5%AE%B9%E6%96%A5/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://TaoSama.github.io/2016/07/24/51nod%201532%20%E5%B8%A6%E5%8F%AF%E9%80%89%E5%AD%97%E7%AC%A6%E7%9A%84%E5%A4%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%EF%BC%88dp%E3%80%81bitset%E4%BC%98%E5%8C%96%EF%BC%89/</loc>
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>51nod 1532 带可选字符的多字符串匹配（dp、bitset优化）</title>
-        <pubTime>2016-07-24T15:14:10.000Z</pubTime>
-        
-        <tag>bitset</tag>
-         
-         
-           
-             
-              <breadCrumb title="动态规划" url="http://TaoSama.github.io/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
-          
-             
-              <breadCrumb title="bitset优化" url="http://TaoSama.github.io/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/bitset%E4%BC%98%E5%8C%96/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://TaoSama.github.io/2016/08/26/AIM%20Tech%20Round%203%20(Div.%201)%20C.%20Centroids%EF%BC%88%E6%A0%91%E5%BD%A2dp%EF%BC%89/</loc>
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>AIM Tech Round 3 (Div. 1) C. Centroids（树形dp）</title>
-        <pubTime>2016-08-26T07:36:10.000Z</pubTime>
-        
-        <tag>树形dp</tag>
-         
-         
-           
-             
-              <breadCrumb title="动态规划" url="http://TaoSama.github.io/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
-          
-             
-              <breadCrumb title="树形dp" url="http://TaoSama.github.io/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E6%A0%91%E5%BD%A2dp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://TaoSama.github.io/2016/08/26/AIM%20Tech%20Round%203%20(Div.%201)%20D.%20Incorrect%20Flow%EF%BC%88%E6%9C%89%E6%BA%90%E6%B1%87%E5%8F%AF%E8%A1%8C%E8%B4%B9%E7%94%A8%E6%B5%81%EF%BC%89/</loc>
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>AIM Tech Round 3 (Div. 1) D. Incorrect Flow（有源汇可行费用流）</title>
-        <pubTime>2016-08-26T08:36:10.000Z</pubTime>
-        
-        <tag>可行流</tag>
-         
-         
-           
-             
-              <breadCrumb title="图论" url="http://TaoSama.github.io/categories/%E5%9B%BE%E8%AE%BA/"/>
-          
-             
-              <breadCrumb title="网络流" url="http://TaoSama.github.io/categories/%E5%9B%BE%E8%AE%BA/%E7%BD%91%E7%BB%9C%E6%B5%81/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://TaoSama.github.io/2017/05/18/Address-Collecting/</loc>
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>Address Collecting</title>
-        <pubTime>2017-05-18T10:30:10.000Z</pubTime>
+        <title>Notes, Most Useful Shell Command</title>
+        <pubTime>2017-08-25T02:57:10.000Z</pubTime>
         
          
            
@@ -153,7 +17,7 @@
               <breadCrumb title="Doing" url="http://TaoSama.github.io/categories/Doing/"/>
           
              
-              <breadCrumb title="Life" url="http://TaoSama.github.io/categories/Doing/Life/"/>
+              <breadCrumb title="Shell" url="http://TaoSama.github.io/categories/Doing/Shell/"/>
           
         </display>
     </data>
@@ -161,35 +25,12 @@
 
     
   <url>
-    <loc>http://TaoSama.github.io/2016/08/28/AOJ%201313%20Intersection%20of%20Two%20Prisms%EF%BC%88%E6%95%B0%E5%80%BC%E7%A7%AF%E5%88%86%EF%BC%89/</loc>
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    <loc>http://TaoSama.github.io/2017/09/05/effective-cpp-implementations/</loc>
+    <lastmod>2017-09-20T09:36:53.000Z</lastmod>
     <data>
         <display>
-        <title>AOJ 1313 Intersection of Two Prisms（数值积分）</title>
-        <pubTime>2016-08-28T15:53:10.000Z</pubTime>
-        
-        <tag>数值积分</tag>
-         
-         
-           
-             
-              <breadCrumb title="计算几何" url="http://TaoSama.github.io/categories/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/"/>
-          
-             
-              <breadCrumb title="数值积分" url="http://TaoSama.github.io/categories/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/%E6%95%B0%E5%80%BC%E7%A7%AF%E5%88%86/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://TaoSama.github.io/2017/06/11/Accustoming-to-CPP/</loc>
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>Accustoming to CPP, Notes(1), Effective C++</title>
-        <pubTime>2017-06-11T03:20:10.000Z</pubTime>
+        <title>Implementations, Notes(5), Effective C++</title>
+        <pubTime>2017-09-05T10:16:00.000Z</pubTime>
         
          
            
@@ -205,21 +46,20 @@
 
     
   <url>
-    <loc>http://TaoSama.github.io/2016/08/28/AOJ%202308%20White%20Bird%EF%BC%88%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95%E3%80%81%E7%89%A9%E7%90%86%EF%BC%89/</loc>
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    <loc>http://TaoSama.github.io/2017/09/04/effective-cpp-designs-and-declarations/</loc>
+    <lastmod>2017-09-20T09:36:48.000Z</lastmod>
     <data>
         <display>
-        <title>AOJ 2308 White Bird（计算几何、物理）</title>
-        <pubTime>2016-08-28T13:39:10.000Z</pubTime>
+        <title>Designs and Declarations, Notes(4), Effective C++</title>
+        <pubTime>2017-09-04T05:19:00.000Z</pubTime>
         
-        <tag>物理</tag>
-         
-        <tag>极限情况</tag>
-         
          
            
              
-              <breadCrumb title="计算几何" url="http://TaoSama.github.io/categories/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/"/>
+              <breadCrumb title="Doing" url="http://TaoSama.github.io/categories/Doing/"/>
+          
+             
+              <breadCrumb title="CPP" url="http://TaoSama.github.io/categories/Doing/CPP/"/>
           
         </display>
     </data>
@@ -227,25 +67,148 @@
 
     
   <url>
-    <loc>http://TaoSama.github.io/2016/05/09/BNUOJ%2050395%20Vertex%20Cover%EF%BC%88%E6%90%9C%E7%B4%A2%E3%80%81%E6%9C%80%E5%B0%8F%E7%82%B9%E8%A6%86%E7%9B%96%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2017/08/31/effective-cpp-resource-management/</loc>
+    <lastmod>2017-09-20T09:36:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>Resource Management, Notes(3), Effective C++</title>
+        <pubTime>2017-08-31T03:26:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="Doing" url="http://TaoSama.github.io/categories/Doing/"/>
+          
+             
+              <breadCrumb title="CPP" url="http://TaoSama.github.io/categories/Doing/CPP/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://TaoSama.github.io/2017/08/04/effective-go-notes/</loc>
+    <lastmod>2017-09-20T09:35:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>Notes, Effective Go</title>
+        <pubTime>2017-08-04T09:52:10.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="Doing" url="http://TaoSama.github.io/categories/Doing/"/>
+          
+             
+              <breadCrumb title="Go" url="http://TaoSama.github.io/categories/Doing/Go/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://TaoSama.github.io/2017/07/31/shell-script-notes/</loc>
+    <lastmod>2017-09-20T09:33:58.000Z</lastmod>
+    <data>
+        <display>
+        <title>Notes, Shell Script</title>
+        <pubTime>2017-07-31T03:20:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="Doing" url="http://TaoSama.github.io/categories/Doing/"/>
+          
+             
+              <breadCrumb title="Shell" url="http://TaoSama.github.io/categories/Doing/Shell/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://TaoSama.github.io/2017/08/25/hive-tut-notes/</loc>
+    <lastmod>2017-09-20T09:32:58.000Z</lastmod>
+    <data>
+        <display>
+        <title>Notes, Hive Tutorial</title>
+        <pubTime>2017-08-25T03:07:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="Doing" url="http://TaoSama.github.io/categories/Doing/"/>
+          
+             
+              <breadCrumb title="Hive" url="http://TaoSama.github.io/categories/Doing/Hive/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://TaoSama.github.io/2017/08/07/leetcode-shell-problems-solution/</loc>
+    <lastmod>2017-09-20T09:31:46.000Z</lastmod>
+    <data>
+        <display>
+        <title>Solutions, Leetcode Shell Problems</title>
+        <pubTime>2017-08-07T10:06:10.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="Doing" url="http://TaoSama.github.io/categories/Doing/"/>
+          
+             
+              <breadCrumb title="Shell" url="http://TaoSama.github.io/categories/Doing/Shell/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://TaoSama.github.io/2017/07/01/shell-notes/</loc>
+    <lastmod>2017-09-20T09:28:09.000Z</lastmod>
+    <data>
+        <display>
+        <title>Notes, Shell</title>
+        <pubTime>2017-07-01T02:13:10.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="Doing" url="http://TaoSama.github.io/categories/Doing/"/>
+          
+             
+              <breadCrumb title="Shell" url="http://TaoSama.github.io/categories/Doing/Shell/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://TaoSama.github.io/2016/04/07/HDU%205651%20xiaoxin%20juju%20needs%20help%EF%BC%88%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%EF%BC%89/</loc>
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     <data>
         <display>
-        <title>BNUOJ 50395 Vertex Cover（搜索、最小点覆盖）</title>
-        <pubTime>2016-05-08T17:18:10.000Z</pubTime>
+        <title>HDU 5651 xiaoxin juju needs help（组合数学）</title>
+        <pubTime>2016-04-07T09:12:10.000Z</pubTime>
         
-        <tag>最小点覆盖</tag>
+        <tag>逆元</tag>
          
          
            
              
-              <breadCrumb title="暴力" url="http://TaoSama.github.io/categories/%E6%9A%B4%E5%8A%9B/"/>
+              <breadCrumb title="数学" url="http://TaoSama.github.io/categories/%E6%95%B0%E5%AD%A6/"/>
           
              
-              <breadCrumb title="搜索" url="http://TaoSama.github.io/categories/%E6%9A%B4%E5%8A%9B/%E6%90%9C%E7%B4%A2/"/>
-          
-             
-              <breadCrumb title="dfs/bfs" url="http://TaoSama.github.io/categories/%E6%9A%B4%E5%8A%9B/%E6%90%9C%E7%B4%A2/dfs-bfs/"/>
+              <breadCrumb title="组合数学" url="http://TaoSama.github.io/categories/%E6%95%B0%E5%AD%A6/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
           
         </display>
     </data>
@@ -1091,27 +1054,6 @@
           
              
               <breadCrumb title="Machine Learning" url="http://TaoSama.github.io/categories/Doing/Machine-Learning/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://TaoSama.github.io/2017/06/15/Constructors-Destructors-and-Assignment-Operators/</loc>
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>Constructors, Destrustors and Assignment Operators, Notes(2), Effective C++</title>
-        <pubTime>2017-06-15T13:20:10.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="Doing" url="http://TaoSama.github.io/categories/Doing/"/>
-          
-             
-              <breadCrumb title="CPP" url="http://TaoSama.github.io/categories/Doing/CPP/"/>
           
         </display>
     </data>
@@ -2213,19 +2155,22 @@
 
     
   <url>
-    <loc>http://TaoSama.github.io/2016/06/12/2016%20%E8%AE%A1%E8%92%9C%E4%B9%8B%E9%81%93%20%E7%99%BE%E5%BA%A6%E5%B8%90%E5%8F%B7%E7%9A%84%E9%80%89%E5%8F%96%E6%96%B9%E6%A1%88%20%EF%BC%88%E4%B8%AD%E7%AD%89%EF%BC%89%EF%BC%88kmp%E3%80%81dp%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/05/09/HDU%205375%20Gray%20code%EF%BC%88%E7%BA%BF%E6%80%A7dp%EF%BC%89/</loc>
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     <data>
         <display>
-        <title>2016 计蒜之道 百度帐号的选取方案 （中等）（kmp、dp）</title>
-        <pubTime>2016-06-12T09:42:10.000Z</pubTime>
+        <title>HDU 5375 Gray code（线性dp）</title>
+        <pubTime>2016-05-09T08:42:10.000Z</pubTime>
         
-        <tag>kmp</tag>
+        <tag>dp</tag>
          
          
            
              
               <breadCrumb title="动态规划" url="http://TaoSama.github.io/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+          
+             
+              <breadCrumb title="线性dp" url="http://TaoSama.github.io/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E7%BA%BF%E6%80%A7dp/"/>
           
         </display>
     </data>
@@ -2374,22 +2319,19 @@
 
     
   <url>
-    <loc>http://TaoSama.github.io/2016/04/07/HDU%205651%20xiaoxin%20juju%20needs%20help%EF%BC%88%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/06/12/2016%20%E8%AE%A1%E8%92%9C%E4%B9%8B%E9%81%93%20%E7%99%BE%E5%BA%A6%E5%B8%90%E5%8F%B7%E7%9A%84%E9%80%89%E5%8F%96%E6%96%B9%E6%A1%88%20%EF%BC%88%E4%B8%AD%E7%AD%89%EF%BC%89%EF%BC%88kmp%E3%80%81dp%EF%BC%89/</loc>
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     <data>
         <display>
-        <title>HDU 5651 xiaoxin juju needs help（组合数学）</title>
-        <pubTime>2016-04-07T09:12:10.000Z</pubTime>
+        <title>2016 计蒜之道 百度帐号的选取方案 （中等）（kmp、dp）</title>
+        <pubTime>2016-06-12T09:42:10.000Z</pubTime>
         
-        <tag>逆元</tag>
+        <tag>kmp</tag>
          
          
            
              
-              <breadCrumb title="数学" url="http://TaoSama.github.io/categories/%E6%95%B0%E5%AD%A6/"/>
-          
-             
-              <breadCrumb title="组合数学" url="http://TaoSama.github.io/categories/%E6%95%B0%E5%AD%A6/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
+              <breadCrumb title="动态规划" url="http://TaoSama.github.io/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
           
         </display>
     </data>
@@ -4325,6 +4267,253 @@
            
              
               <breadCrumb title="小结" url="http://TaoSama.github.io/categories/%E5%B0%8F%E7%BB%93/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://TaoSama.github.io/2016/06/12/2016%20%E8%AE%A1%E8%92%9C%E4%B9%8B%E9%81%93%20%20%E5%BE%AE%E8%BD%AF%E7%9A%84%E5%91%98%E5%B7%A5%E7%A6%8F%E5%88%A9%20%EF%BC%88%E7%AE%80%E5%8D%95%E3%80%81%E4%B8%AD%E7%AD%89%EF%BC%89%EF%BC%88dp%EF%BC%89/</loc>
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>2016 计蒜之道  微软的员工福利 （简单、中等）（dp）</title>
+        <pubTime>2016-06-12T10:42:10.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="动态规划" url="http://TaoSama.github.io/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+          
+             
+              <breadCrumb title="树形dp" url="http://TaoSama.github.io/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E6%A0%91%E5%BD%A2dp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://TaoSama.github.io/2016/09/23/51nod%201610%20%E8%B7%AF%E5%BE%84%E8%AE%A1%E6%95%B0%EF%BC%88dp%E3%80%81%E5%AE%B9%E6%96%A5%E5%8E%9F%E7%90%86%EF%BC%89/</loc>
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>51nod 1610 路径计数（dp、容斥）</title>
+        <pubTime>2016-09-22T16:52:10.000Z</pubTime>
+        
+        <tag>容斥</tag>
+         
+         
+           
+             
+              <breadCrumb title="数学" url="http://TaoSama.github.io/categories/%E6%95%B0%E5%AD%A6/"/>
+          
+             
+              <breadCrumb title="容斥" url="http://TaoSama.github.io/categories/%E6%95%B0%E5%AD%A6/%E5%AE%B9%E6%96%A5/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://TaoSama.github.io/2017/06/11/effective-cpp-accustoming-to-cpp/</loc>
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>Accustoming to CPP, Notes(1), Effective C++</title>
+        <pubTime>2017-06-11T03:20:10.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="Doing" url="http://TaoSama.github.io/categories/Doing/"/>
+          
+             
+              <breadCrumb title="CPP" url="http://TaoSama.github.io/categories/Doing/CPP/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://TaoSama.github.io/2016/07/24/51nod%201532%20%E5%B8%A6%E5%8F%AF%E9%80%89%E5%AD%97%E7%AC%A6%E7%9A%84%E5%A4%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%EF%BC%88dp%E3%80%81bitset%E4%BC%98%E5%8C%96%EF%BC%89/</loc>
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>51nod 1532 带可选字符的多字符串匹配（dp、bitset优化）</title>
+        <pubTime>2016-07-24T15:14:10.000Z</pubTime>
+        
+        <tag>bitset</tag>
+         
+         
+           
+             
+              <breadCrumb title="动态规划" url="http://TaoSama.github.io/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+          
+             
+              <breadCrumb title="bitset优化" url="http://TaoSama.github.io/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/bitset%E4%BC%98%E5%8C%96/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://TaoSama.github.io/2016/08/26/AIM%20Tech%20Round%203%20(Div.%201)%20C.%20Centroids%EF%BC%88%E6%A0%91%E5%BD%A2dp%EF%BC%89/</loc>
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>AIM Tech Round 3 (Div. 1) C. Centroids（树形dp）</title>
+        <pubTime>2016-08-26T07:36:10.000Z</pubTime>
+        
+        <tag>树形dp</tag>
+         
+         
+           
+             
+              <breadCrumb title="动态规划" url="http://TaoSama.github.io/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+          
+             
+              <breadCrumb title="树形dp" url="http://TaoSama.github.io/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E6%A0%91%E5%BD%A2dp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://TaoSama.github.io/2016/08/26/AIM%20Tech%20Round%203%20(Div.%201)%20D.%20Incorrect%20Flow%EF%BC%88%E6%9C%89%E6%BA%90%E6%B1%87%E5%8F%AF%E8%A1%8C%E8%B4%B9%E7%94%A8%E6%B5%81%EF%BC%89/</loc>
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>AIM Tech Round 3 (Div. 1) D. Incorrect Flow（有源汇可行费用流）</title>
+        <pubTime>2016-08-26T08:36:10.000Z</pubTime>
+        
+        <tag>可行流</tag>
+         
+         
+           
+             
+              <breadCrumb title="图论" url="http://TaoSama.github.io/categories/%E5%9B%BE%E8%AE%BA/"/>
+          
+             
+              <breadCrumb title="网络流" url="http://TaoSama.github.io/categories/%E5%9B%BE%E8%AE%BA/%E7%BD%91%E7%BB%9C%E6%B5%81/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://TaoSama.github.io/2017/05/18/Address-Collecting/</loc>
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>Address Collecting</title>
+        <pubTime>2017-05-18T10:30:10.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="Doing" url="http://TaoSama.github.io/categories/Doing/"/>
+          
+             
+              <breadCrumb title="Life" url="http://TaoSama.github.io/categories/Doing/Life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://TaoSama.github.io/2017/06/15/effective-cpp-constructors-destructors-and-assignment-operators/</loc>
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>Constructors, Destrustors and Assignment Operators, Notes(2), Effective C++</title>
+        <pubTime>2017-06-15T13:20:10.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="Doing" url="http://TaoSama.github.io/categories/Doing/"/>
+          
+             
+              <breadCrumb title="CPP" url="http://TaoSama.github.io/categories/Doing/CPP/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://TaoSama.github.io/2016/08/28/AOJ%201313%20Intersection%20of%20Two%20Prisms%EF%BC%88%E6%95%B0%E5%80%BC%E7%A7%AF%E5%88%86%EF%BC%89/</loc>
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>AOJ 1313 Intersection of Two Prisms（数值积分）</title>
+        <pubTime>2016-08-28T15:53:10.000Z</pubTime>
+        
+        <tag>数值积分</tag>
+         
+         
+           
+             
+              <breadCrumb title="计算几何" url="http://TaoSama.github.io/categories/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/"/>
+          
+             
+              <breadCrumb title="数值积分" url="http://TaoSama.github.io/categories/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/%E6%95%B0%E5%80%BC%E7%A7%AF%E5%88%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://TaoSama.github.io/2016/08/28/AOJ%202308%20White%20Bird%EF%BC%88%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95%E3%80%81%E7%89%A9%E7%90%86%EF%BC%89/</loc>
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>AOJ 2308 White Bird（计算几何、物理）</title>
+        <pubTime>2016-08-28T13:39:10.000Z</pubTime>
+        
+        <tag>物理</tag>
+         
+        <tag>极限情况</tag>
+         
+         
+           
+             
+              <breadCrumb title="计算几何" url="http://TaoSama.github.io/categories/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://TaoSama.github.io/2016/05/09/BNUOJ%2050395%20Vertex%20Cover%EF%BC%88%E6%90%9C%E7%B4%A2%E3%80%81%E6%9C%80%E5%B0%8F%E7%82%B9%E8%A6%86%E7%9B%96%EF%BC%89/</loc>
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>BNUOJ 50395 Vertex Cover（搜索、最小点覆盖）</title>
+        <pubTime>2016-05-08T17:18:10.000Z</pubTime>
+        
+        <tag>最小点覆盖</tag>
+         
+         
+           
+             
+              <breadCrumb title="暴力" url="http://TaoSama.github.io/categories/%E6%9A%B4%E5%8A%9B/"/>
+          
+             
+              <breadCrumb title="搜索" url="http://TaoSama.github.io/categories/%E6%9A%B4%E5%8A%9B/%E6%90%9C%E7%B4%A2/"/>
+          
+             
+              <breadCrumb title="dfs/bfs" url="http://TaoSama.github.io/categories/%E6%9A%B4%E5%8A%9B/%E6%90%9C%E7%B4%A2/dfs-bfs/"/>
           
         </display>
     </data>

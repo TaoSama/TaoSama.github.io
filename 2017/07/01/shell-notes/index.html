@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Notes, Shell | TaoSama&#39;s Blog - ACMer, C/C++, 算法竞赛</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Last Modified: 2017-07-31 11:18:00 Acknowledge What is shell? The shell is a program that takes keyboard commands and passes them to the operating system to carry out. Almost all Linux distributions s">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Notes, Shell">
+<meta property="og:url" content="http://TaoSama.github.io/2017/07/01/shell-notes/index.html">
+<meta property="og:site_name" content="TaoSama&#39;s Blog">
+<meta property="og:description" content="Last Modified: 2017-07-31 11:18:00 Acknowledge What is shell? The shell is a program that takes keyboard commands and passes them to the operating system to carry out. Almost all Linux distributions s">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://7xru22.com1.z0.glb.clouddn.com/101.png">
+<meta property="og:updated_time" content="2017-09-20T09:28:09.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Notes, Shell">
+<meta name="twitter:description" content="Last Modified: 2017-07-31 11:18:00 Acknowledge What is shell? The shell is a program that takes keyboard commands and passes them to the operating system to carry out. Almost all Linux distributions s">
+<meta name="twitter:image" content="http://7xru22.com1.z0.glb.clouddn.com/101.png">
+<meta name="twitter:creator" content="@lwt1367">
+<link rel="publisher" href="115031676619400074158">
+<meta property="fb:admins" content="lwt1367">
+  
+    <link rel="alternate" href="/atom.xml" title="TaoSama&#39;s Blog" type="application/atom+xml">
+  
+
+  <!-- favicons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/css/images/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/css/images/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/css/images/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/css/images/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/css/images/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/css/images/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/css/images/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/css/images/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/css/images/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/css/images/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/css/images/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/css/images/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/css/images/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/css/images/manifest.json">
+  <link rel="mask-icon" href="/css/images/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/css/images/favicon.ico">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="msapplication-TileImage" content="/css/images/mstile-144x144.png">
+  <meta name="msapplication-config" content="/css/images/browserconfig.xml">
+  <meta name="theme-color" content="#3B74AC">
+  <!-- end of icons -->
+  <link href="http://fonts.lug.ustc.edu.cn/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link href="/css/duoshuo.css" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="/css/style.css">
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">TaoSama&#39;s Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Reborn and Walk Alone</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon" style="margin-left: 13px;"></a>
+        
+          <a class="main-nav-link" href="/">主页</a>
+        
+          <a class="main-nav-link" href="/archives">文章</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      <nav id="sub-nav">
+		<a class="nav-icon" href="http://weibo.com/3863360617" title="微博" target="_blank">&#61834;</a>
+		<!--
+		<a class="nav-icon" href="http://www.renren.com/287137027" title="人人" target="_blank">&#61835;</a>
+		<a class="nav-icon" href="http://user.qzone.qq.com/525969441" title="QQ空间" target="_blank">&#61910;</a>
+		-->
+		<a class="nav-icon" href="https://www.facebook.com/lwt1367" title="Facebook" target="_blank">&#62000;</a>
+		<a class="nav-icon" href="https://twitter.com/lwt1367" title="Twitter" target="_blank">&#61593;</a>
+		<a class="nav-icon" href="http://www.linkedin.com/in/lwt1367" title="LinkedIn" target="_blank">&#61665;</a>
+		<a class="nav-icon" href="https://github.com/TaoSama" title="GitHub" target="_blank">&#61595;</a>
+		<a class="nav-icon" href="https://plus.google.com/115031676619400074158" title="Google+" target="_blank">&#61653;</a>
+        
+          <a id="nav-rss-link" class="nav-icon" style="font-size: 22px; width: 22px; height: 22px; padding: 20px 5px;" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" style="font-size: 19px; width: 19px; height: 19px; padding: 20px 5px;" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://TaoSama.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-shell-notes" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Notes, Shell
+    </h1>
+  
+
+      </header>
+    
+  <div class="article-meta">
+    <a href="/2017/07/01/shell-notes/" class="article-date">
+  <time datetime="2017-07-01T02:13:10.000Z" itemprop="datePublished">2017-7-1 周六  10:13</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Doing/">Doing</a>►<a class="article-category-link" href="/categories/Doing/Shell/">Shell</a>
+  </div>
+
+  </div>
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+      	
+      		<div id="toc" class="toc-article">
+      		<strong class="toc-title">Contents</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Acknowledge"><span class="toc-number">1.</span> <span class="toc-text">Acknowledge</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Navigate-the-file-system"><span class="toc-number"></span> <span class="toc-text">Navigate the file system</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#important-facts-about-filenames"><span class="toc-number">0.1.</span> <span class="toc-text">important facts about filenames</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Manipulate-files-and-directories"><span class="toc-number">1.</span> <span class="toc-text">Manipulate files and directories</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ln-—-Create-links"><span class="toc-number">1.1.</span> <span class="toc-text">ln — Create links</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#create-hard-links"><span class="toc-number">1.1.1.</span> <span class="toc-text">create hard links</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#create-symbolic-links"><span class="toc-number">1.1.2.</span> <span class="toc-text">create symbolic links</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Use-commands"><span class="toc-number">2.</span> <span class="toc-text">Use commands</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#I-O-redirection"><span class="toc-number">3.</span> <span class="toc-text">I/O redirection</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Expansion"><span class="toc-number">4.</span> <span class="toc-text">Expansion</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#to-control-expansion"><span class="toc-number">4.1.</span> <span class="toc-text">to control expansion</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Keyboard-operating-techniques"><span class="toc-number">5.</span> <span class="toc-text">Keyboard operating techniques</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#cursor-movement-shortcuts"><span class="toc-number">5.1.</span> <span class="toc-text">cursor movement shortcuts</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#text-editing-shortcuts"><span class="toc-number">5.2.</span> <span class="toc-text">text editing shortcuts</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#cut-and-paste-shortcuts"><span class="toc-number">5.3.</span> <span class="toc-text">cut and paste shortcuts</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#history-expansion-and-shortcuts"><span class="toc-number">5.4.</span> <span class="toc-text">history expansion and shortcuts</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Permission"><span class="toc-number">6.</span> <span class="toc-text">Permission</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#access-rights-read-write-execution"><span class="toc-number">6.1.</span> <span class="toc-text">access rights, read, write, execution</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#file-types"><span class="toc-number">6.1.1.</span> <span class="toc-text">file types</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#file-mode"><span class="toc-number">6.1.2.</span> <span class="toc-text">file mode</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#chmod"><span class="toc-number">6.2.</span> <span class="toc-text">chmod</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#chmod-Symbolic-Notation"><span class="toc-number">6.2.1.</span> <span class="toc-text">chmod Symbolic Notation</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#chmod-Symbolic-Notation-Examples"><span class="toc-number">6.2.2.</span> <span class="toc-text">chmod Symbolic Notation Examples</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#umask"><span class="toc-number">6.3.</span> <span class="toc-text">umask</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#others"><span class="toc-number">6.4.</span> <span class="toc-text">others</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Process"><span class="toc-number">7.</span> <span class="toc-text">Process</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Process-States"><span class="toc-number">7.1.</span> <span class="toc-text">Process States</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Signals"><span class="toc-number">7.2.</span> <span class="toc-text">Signals</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Shell-environment"><span class="toc-number">8.</span> <span class="toc-text">Shell environment</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-usage-of-vi"><span class="toc-number">9.</span> <span class="toc-text">Basic usage of vi</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Customize-shell-prompt"><span class="toc-number">10.</span> <span class="toc-text">Customize shell prompt</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Package-control"><span class="toc-number">11.</span> <span class="toc-text">Package control</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Storage-devices"><span class="toc-number">12.</span> <span class="toc-text">Storage devices</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Networking"><span class="toc-number">13.</span> <span class="toc-text">Networking</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Find-files"><span class="toc-number">14.</span> <span class="toc-text">Find files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Archive-and-backup"><span class="toc-number">15.</span> <span class="toc-text">Archive and backup</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Regex"><span class="toc-number">16.</span> <span class="toc-text">Regex</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#metacharacters"><span class="toc-number">16.1.</span> <span class="toc-text">metacharacters</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#any-character"><span class="toc-number">16.1.1.</span> <span class="toc-text">any character</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#anchors"><span class="toc-number">16.1.2.</span> <span class="toc-text">anchors</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#bracket-expressions"><span class="toc-number">16.1.3.</span> <span class="toc-text">bracket expressions</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#POSIX-Character-Classes"><span class="toc-number">16.2.</span> <span class="toc-text">POSIX Character Classes</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#basic-regular-expressions-BRE-and-extended-regular-expressions-ERE"><span class="toc-number">16.3.</span> <span class="toc-text">basic regular expressions (BRE) and extended regular expressions (ERE)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#alternation"><span class="toc-number">16.4.</span> <span class="toc-text">alternation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#quantifier"><span class="toc-number">16.5.</span> <span class="toc-text">quantifier</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#find-files"><span class="toc-number">16.6.</span> <span class="toc-text">find files</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#less-and-vim"><span class="toc-number">16.7.</span> <span class="toc-text">less and vim</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Manipulate-text"><span class="toc-number">17.</span> <span class="toc-text">Manipulate text</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#cat"><span class="toc-number">17.1.</span> <span class="toc-text">cat</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sort"><span class="toc-number">17.2.</span> <span class="toc-text">sort</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#unique"><span class="toc-number">17.3.</span> <span class="toc-text">unique</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#cut"><span class="toc-number">17.4.</span> <span class="toc-text">cut</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#paste"><span class="toc-number">17.5.</span> <span class="toc-text">paste</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#join"><span class="toc-number">17.6.</span> <span class="toc-text">join</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#comm-and-diff"><span class="toc-number">17.7.</span> <span class="toc-text">comm and diff</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#patch"><span class="toc-number">17.8.</span> <span class="toc-text">patch</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#tr"><span class="toc-number">17.9.</span> <span class="toc-text">tr</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sed"><span class="toc-number">17.10.</span> <span class="toc-text">sed</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#aspell"><span class="toc-number">17.11.</span> <span class="toc-text">aspell</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Format-text-output"><span class="toc-number">18.</span> <span class="toc-text">Format text output</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Printer"><span class="toc-number">19.</span> <span class="toc-text">Printer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Compile-source-code"><span class="toc-number">20.</span> <span class="toc-text">Compile source code</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Reference"><span class="toc-number">21.</span> <span class="toc-text">Reference</span></a></li></ol>
+		
+      		</div>
+      	
+        <p><del>Last Modified: 2017-07-31 11:18:00</del></p>
+<h3 id="Acknowledge"><a href="#Acknowledge" class="headerlink" title="Acknowledge"></a>Acknowledge</h3><ul>
+<li>What is shell?<ul>
+<li>The shell is a program that takes keyboard commands and passes them to the operating system to carry out.</li>
+<li>Almost all Linux distributions supply a shell program from the GNU Project called <strong>bash</strong>.</li>
+<li><strong>Bash</strong> is an enhanced replacement for <strong>sh</strong>, the original Unix shell program written by Steve Bourne.</li>
+</ul>
+</li>
+<li>What is terminal emulator?<ul>
+<li>We use a terminal emulator to interact with the shell when using a GUI.</li>
+<li>KDE uses <strong>konsole</strong> and GNOME uses <strong>gnome-terminal</strong>, though it’s likely called simply <strong>“terminal”</strong> on our menu.</li>
+</ul>
+</li>
+<li><p>Shell prompt</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[me@linuxbox ~]$</div></pre></td></tr></table></figure>
+</li>
+<li><p>Some Simple Commands</p>
+<ul>
+<li>date - Display the current time and date.</li>
+<li>cal - Display a calendar of the current month.</li>
+<li>df - Display the current amount of free space on your disk drives.</li>
+<li>free - Display the amount of free memory.</li>
+<li>exit - End the terminal session.</li>
+</ul>
+</li>
+</ul>
+<a id="more"></a>
+<h2 id="Navigate-the-file-system"><a href="#Navigate-the-file-system" class="headerlink" title="Navigate the file system"></a>Navigate the file system</h2><ul>
+<li>pwd - Print name of current working directory</li>
+<li>cd - Change directory</li>
+<li>ls - List directory contents</li>
+<li>file – Determine file type</li>
+<li>less – View file contents</li>
+</ul>
+<h4 id="important-facts-about-filenames"><a href="#important-facts-about-filenames" class="headerlink" title="important facts about filenames"></a>important facts about filenames</h4><ul>
+<li>Filenames that <strong>begin with</strong> a <strong>period character(.)</strong> are hidden.<br><code>ls -a</code> can display them, <code>ll -a</code> can display the detailed lists.</li>
+<li><strong>Filenames and commands</strong> in Linux, like Unix, are <strong>case sensitive</strong>. The filenames “File1” and “file1” refer to different files.</li>
+<li>If you want to <strong>represent spaces</strong> between words in a filename, use <strong>underscore characters(_)</strong>. Though Linux supports long filenames which may contain embedded spaces and punctuation characters: period(.), dash(-), underscore(_).</li>
+</ul>
+<h3 id="Manipulate-files-and-directories"><a href="#Manipulate-files-and-directories" class="headerlink" title="Manipulate files and directories"></a>Manipulate files and directories</h3><ul>
+<li>cp – Copy files and directories</li>
+<li>mv – Move/rename files and directories</li>
+<li>mkdir – Create directories</li>
+<li>rm – Remove files and directories</li>
+<li>ln – Create hard and symbolic links</li>
+</ul>
+<p><strong>Here is a useful tip.</strong> Whenever you use wildcards with <code>rm</code> (besides carefully checking your typing!), test the wildcard first with <code>ls</code>.<br>|Wildcard|Meaning|<br>|:——:|:——|<br>|*|    Matches any characters|<br>|?|    Matches any single character|<br>|[characters]|    Matches any character that is a member of the set characters|<br>|[!characters]|    Matches any character that is not a member of the set characters|<br>|[[:class:]]|    Matches any character that is a member of the specified class|</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Character</th>
+<th style="text-align:left">Class Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">[:alnum:]</td>
+<td style="text-align:left">Matches any alphanumeric character</td>
+</tr>
+<tr>
+<td style="text-align:center">[:alpha:]</td>
+<td style="text-align:left">Matches any alphabetic character</td>
+</tr>
+<tr>
+<td style="text-align:center">[:digit:]</td>
+<td style="text-align:left">Matches any numeral</td>
+</tr>
+<tr>
+<td style="text-align:center">[:lower:]</td>
+<td style="text-align:left">Matches any lowercase letter</td>
+</tr>
+<tr>
+<td style="text-align:center">[:upper:]</td>
+<td style="text-align:left">Matches any uppercase letter</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ln-—-Create-links"><a href="#ln-—-Create-links" class="headerlink" title="ln — Create links"></a>ln — Create links</h4><h5 id="create-hard-links"><a href="#create-hard-links" class="headerlink" title="create hard links"></a>create hard links</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ln file link</div></pre></td></tr></table></figure>
+<ul>
+<li>a hard link may not reference a file that is not on the same disk partition as the link itself.</li>
+<li>a hard link may not reference a directory.</li>
+<li>a hard link is <strong>indistinguishable</strong> from the file itself when listed with <code>ls</code>. </li>
+<li>when a hard link is deleted, the link is removed but the contents of the file itself continue to exist (that is, its space is not deallocated) until all links to the file are deleted.</li>
+</ul>
+<h5 id="create-symbolic-links"><a href="#create-symbolic-links" class="headerlink" title="create symbolic links"></a>create symbolic links</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ln -s item link</div></pre></td></tr></table></figure>
+<ul>
+<li>a file pointed to by a symbolic link is <strong>also written</strong>, if you write some something to the symbolic link.</li>
+<li>however when you delete a symbolic link, <strong>only the link is deleted</strong>, not the file itself.</li>
+</ul>
+<h3 id="Use-commands"><a href="#Use-commands" class="headerlink" title="Use commands"></a>Use commands</h3><ul>
+<li>type – Indicate how a command name is interpreted</li>
+<li>which – Display which executable program will be executed</li>
+<li>man – Display a command’s manual page</li>
+<li>apropos – Display a list of appropriate commands</li>
+<li>info – Display a command’s info entry</li>
+<li>whatis – Display a very brief description of a command</li>
+<li>whereis - Display the path of the executable program of a command</li>
+<li>alias – Create an alias for a command</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> append a new line of <span class="built_in">alias</span></span></div><div class="line">echo 'alias foo="cd /usr; ls; cd -"' &gt;&gt; .bashrc</div><div class="line"><span class="meta">#</span><span class="bash"> force bash to re-read the modified .bashrc file</span></div><div class="line">source .bashrc</div></pre></td></tr></table></figure>
+<h3 id="I-O-redirection"><a href="#I-O-redirection" class="headerlink" title="I/O redirection"></a>I/O redirection</h3><ul>
+<li>cat - Concatenate files</li>
+<li>sort - Sort lines of text</li>
+<li>uniq - Report or omit repeated lines</li>
+<li>grep - Print lines matching a pattern</li>
+<li>wc - Print newline, word, and byte counts for each file</li>
+<li>head - Output the first part of a file</li>
+<li>tail - Output the last part of a file</li>
+<li><p>tee - Read from standard input and write to standard output and files</p>
+</li>
+<li><p><code>&lt;</code> operator redirects the standard input, <code>&gt;</code> operator redirects the standard output.<br><code>&gt;&gt;</code> means to append instead of overwriting.<br>file streams as standard <strong>input, output and error</strong>, the shell references them internally as <strong>file descriptors zero, one and two</strong>, respectively</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> redirect to standard error</span></div><div class="line">ls -l /bin/usr 2&gt; ls-error.txt</div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> redirect standard output and error to same file</span></div><div class="line"><span class="meta">#</span><span class="bash"> the redirection of standard error must always occur after</span></div><div class="line"><span class="meta">#</span><span class="bash"> redirecting standard output or it doesn’t work</span></div><div class="line">ls -l /bin/usr &gt; ls-output.txt 2&gt;&amp;1  # old version</div><div class="line">ls -l /bin/usr &amp;&gt; ls-output.txt      # new version</div></pre></td></tr></table></figure>
+</li>
+<li><p>to suppress error messages from a command, a special file called <code>/dev/null</code>, and it is a system device called a <strong>bit bucket</strong> which accepts input and does nothing with it.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ls -l /bin/usr 2&gt; /dev/null</div></pre></td></tr></table></figure>
+</li>
+<li><p>the <strong>pipe</strong> operator <code>|</code> (vertical bar), the standard output of one command can be piped into the standard input of another.<br>usually assisted with filters.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> sort and unique files <span class="keyword">then</span> show</span></div><div class="line">ls /bin /usr/bin | sort | uniq | less</div><div class="line"><span class="meta">#</span><span class="bash"> report the duplicate files with -d</span></div><div class="line">ls /bin /usr/bin | sort | uniq -d | less</div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> add wc to pipelines to count things</span></div><div class="line">ls /bin /usr/bin | sort | uniq | wc -l</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>grep</strong> is a powerful program used to find text patterns within files.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ls /bin /usr/bin | sort | uniq | grep zip</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><code>-i</code> to ignore case, <code>-v</code> to print the lines that do not match the pattern, <code>-n</code> to show the line numbers.</p>
+<ul>
+<li><p><strong>head</strong> prints the <strong>first ten lines</strong> of a file and the <strong>tail</strong> command prints <strong>the last ten lines</strong> by default.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> -n to adjust the number of lines to show</span></div><div class="line">head -n 5 ls-output.txt</div><div class="line"><span class="meta">#</span><span class="bash"> -f to allow tail to view files <span class="keyword">in</span> real-time</span></div><div class="line">tail -f /var/log/messages</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>tee</strong> reads standard input and copies it <strong>to both standard output</strong> (allowing the data to continue down the pipeline) and <strong>to one or more files</strong>.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ls /usr/bin | tee ls.txt | grep zip</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Expansion"><a href="#Expansion" class="headerlink" title="Expansion"></a>Expansion</h3><ul>
+<li><p>pathname expansion</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">echo D*</div><div class="line">Desktop  Documents</div></pre></td></tr></table></figure>
+</li>
+<li><p>arithmetic expansion</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> / is just <span class="built_in">integer</span> division, ** is exponentiation</span></div><div class="line">echo $((2+2-2*2/3%10+2**2))</div><div class="line">7</div></pre></td></tr></table></figure>
+</li>
+<li><p>brace expansion</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">echo Front-&#123;A,B,C&#125;-Back</div><div class="line">Front-A-Back Front-B-Back Front-C-Back</div><div class="line"></div><div class="line">echo Number_&#123;1..5&#125;</div><div class="line">Number_1  Number_2  Number_3  Number_4  Number_5</div><div class="line"></div><div class="line">echo a&#123;A&#123;1,2&#125;,B&#123;3,4&#125;&#125;b</div><div class="line">aA1b aA2b aB3b aB4b</div></pre></td></tr></table></figure>
+</li>
+<li><p>parameter expansion</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">echo $USER</div><div class="line">me</div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> to see a list of available variables</span></div><div class="line">printenv | less</div></pre></td></tr></table></figure>
+</li>
+<li><p>command substitution</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">echo $(ls)</div><div class="line">Desktop Documents ls-output.txt Music Pictures Public Templates</div><div class="line"></div><div class="line">ls -l $(which cp)</div><div class="line">-rwxr-xr-x 1 root root 71516 2007-12-05 08:58 /bin/cp</div><div class="line"></div><div class="line">file $(ls /usr/bin/* | grep zip)</div><div class="line">/usr/bin/bunzip2:     symbolic link to `bzip2'</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> use back-quotes instead of the dollar sign and parentheses</span></div><div class="line"><span class="meta">#</span><span class="bash"> <span class="keyword">in</span> older version of bash</span></div><div class="line">ls -l `which cp`</div><div class="line">-rwxr-xr-x 1 root root 71516 2007-12-05 08:58 /bin/cp</div></pre></td></tr></table></figure>
+<h4 id="to-control-expansion"><a href="#to-control-expansion" class="headerlink" title="to control expansion"></a>to control expansion</h4><ul>
+<li>double quotes<br>If you place text inside double quotes, all the special characters used by the shell lose their special meaning and are treated as ordinary characters.<br>The <strong>exceptions</strong> are <code>$</code>, <code>\ (backslash)</code>, and <code>` (back-quote)</code>.</li>
+<li>single quotes<br>All expansions lose their special meaning.</li>
+<li>escape character<br>You can precede a character with a <code>\ (backslash)</code> to selectively prevent an expansion.<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">echo text ~/*.txt &#123;a,b&#125; $(echo foo) $((2+2)) $USER</div><div class="line">text /home/me/ls-output.txt a b foo 4 me</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">echo "text ~/*.txt &#123;a,b&#125; $(echo foo) $((2+2)) $USER"</div><div class="line">text ~/*.txt   &#123;a,b&#125; foo 4 me</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">echo 'text ~/*.txt &#123;a,b&#125; $(echo foo) $((2+2)) $USER'</div><div class="line">text ~/*.txt  &#123;a,b&#125; $(echo foo) $((2+2)) $USER</div></pre></td></tr></table></figure>
+<h3 id="Keyboard-operating-techniques"><a href="#Keyboard-operating-techniques" class="headerlink" title="Keyboard operating techniques"></a>Keyboard operating techniques</h3><ul>
+<li>clear - Clear the screen</li>
+<li>history - Display the contents of the history list</li>
+</ul>
+<h4 id="cursor-movement-shortcuts"><a href="#cursor-movement-shortcuts" class="headerlink" title="cursor movement shortcuts"></a>cursor movement shortcuts</h4><table>
+<thead>
+<tr>
+<th style="text-align:center">Key</th>
+<th style="text-align:left">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Ctrl-a</td>
+<td style="text-align:left">Move cursor to the beginning of the line.</td>
+</tr>
+<tr>
+<td style="text-align:center">Ctrl-e</td>
+<td style="text-align:left">Move cursor to the end of the line.</td>
+</tr>
+<tr>
+<td style="text-align:center">Ctrl-f</td>
+<td style="text-align:left">Move cursor forward one character; same as the right arrow key.</td>
+</tr>
+<tr>
+<td style="text-align:center">Ctrl-b</td>
+<td style="text-align:left">Move cursor backward one character; same as the left arrow key.</td>
+</tr>
+<tr>
+<td style="text-align:center">Alt-f</td>
+<td style="text-align:left">Move cursor forward one word.</td>
+</tr>
+<tr>
+<td style="text-align:center">Alt-b</td>
+<td style="text-align:left">Move cursor backward one word.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="text-editing-shortcuts"><a href="#text-editing-shortcuts" class="headerlink" title="text editing shortcuts"></a>text editing shortcuts</h4><table>
+<thead>
+<tr>
+<th style="text-align:center">Key</th>
+<th style="text-align:left">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Ctrl-d</td>
+<td style="text-align:left">Delete the character at the cursor location.</td>
+</tr>
+<tr>
+<td style="text-align:center">Ctrl-t</td>
+<td style="text-align:left">Transpose(exchange)the character at the cursor location with the one preceding it.</td>
+</tr>
+<tr>
+<td style="text-align:center">Alt-t</td>
+<td style="text-align:left">Transpose the word at the cursor location with the one preceding it.</td>
+</tr>
+<tr>
+<td style="text-align:center">Alt-l</td>
+<td style="text-align:left">Convert the characters from the cursor location to the end of the word to lowercase.</td>
+</tr>
+<tr>
+<td style="text-align:center">Alt-u</td>
+<td style="text-align:left">Convert the characters from the cursor location to the end of the word to uppercase.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cut-and-paste-shortcuts"><a href="#cut-and-paste-shortcuts" class="headerlink" title="cut and paste shortcuts"></a>cut and paste shortcuts</h4><table>
+<thead>
+<tr>
+<th style="text-align:center">Key</th>
+<th style="text-align:left">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Ctrl-k</td>
+<td style="text-align:left">Kill text from the cursor location to the end of line.</td>
+</tr>
+<tr>
+<td style="text-align:center">Ctrl-u</td>
+<td style="text-align:left">Kill text from the cursor location to the beginning of the line.</td>
+</tr>
+<tr>
+<td style="text-align:center">Alt-d</td>
+<td style="text-align:left">Kill text from the cursor location to the end of the current word.</td>
+</tr>
+<tr>
+<td style="text-align:center">Alt-Backspace</td>
+<td style="text-align:left">Kill text from the cursor location to the beginning of the word. If the cursor is at the beginning of a word, kill the previous word.</td>
+</tr>
+<tr>
+<td style="text-align:center">Ctrl-y</td>
+<td style="text-align:left">Yank text from the kill-ring and insert it at the cursor location.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="history-expansion-and-shortcuts"><a href="#history-expansion-and-shortcuts" class="headerlink" title="history expansion and shortcuts"></a>history expansion and shortcuts</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">history | grep /usr/bin</div><div class="line"><span class="meta">#</span><span class="bash"> 88  ls -l /usr/bin &gt; ls-output.txt</span></div><div class="line"><span class="meta">#</span><span class="bash"> to expand the <span class="built_in">command</span> of <span class="built_in">history</span> of 88th line</span></div><div class="line">!88</div><div class="line"><span class="meta">#</span><span class="bash"> to expand the last <span class="built_in">command</span> of <span class="built_in">history</span></span></div><div class="line">!!</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Key</th>
+<th style="text-align:left">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Ctrl-p</td>
+<td style="text-align:left">Move to the previous history entry. Same action as the up arrow.</td>
+</tr>
+<tr>
+<td style="text-align:center">Ctrl-n</td>
+<td style="text-align:left">Move to the next history entry. Same action as the down arrow.</td>
+</tr>
+<tr>
+<td style="text-align:center">Ctrl-r</td>
+<td style="text-align:left">Reverse incremental search. Searches incrementally from the current command line up the history list.</td>
+</tr>
+<tr>
+<td style="text-align:center">Ctrl-o</td>
+<td style="text-align:left">Execute the current item in the history list and advance to the next one. This is handy if you are trying to re-execute a sequence of commands in the history list.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Permission"><a href="#Permission" class="headerlink" title="Permission"></a>Permission</h3><ul>
+<li>id – Display user identity</li>
+<li>chmod – Change a file’s mode</li>
+<li>umask – Set the default file permissions</li>
+<li>su – Run a shell as another user</li>
+<li>sudo – Execute a command as another user</li>
+<li>chown – Change a file’s owner</li>
+<li>chgrp – Change a file’s group ownership</li>
+<li>passwd – Change a user’s password</li>
+</ul>
+<h4 id="access-rights-read-write-execution"><a href="#access-rights-read-write-execution" class="headerlink" title="access rights, read, write, execution"></a>access rights, read, write, execution</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ls -l foo.txt</div><div class="line">-rw-rw-r-- 1 me   me   0 2008-03-06 14:52 foo.txt</div><div class="line"><span class="meta">#</span><span class="bash"> the first one is file <span class="built_in">type</span>, and the left nine is file mode.</span></div></pre></td></tr></table></figure>
+<h5 id="file-types"><a href="#file-types" class="headerlink" title="file types"></a>file types</h5><table>
+<thead>
+<tr>
+<th style="text-align:center">Attribute</th>
+<th style="text-align:left">File Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">a regular file</td>
+</tr>
+<tr>
+<td style="text-align:center">d</td>
+<td style="text-align:left">A directory</td>
+</tr>
+<tr>
+<td style="text-align:center">l</td>
+<td style="text-align:left">A symbolic link. Notice that with symbolic links, the remainning file attributes are always “rwxrwxrwx” and are dummy values. The real file attributes are those of the file the symbolic link points to.</td>
+</tr>
+<tr>
+<td style="text-align:center">c</td>
+<td style="text-align:left">A character special file. This file type refers to a device that handles data as a stream of bytes, such as a terminal or modem.</td>
+</tr>
+<tr>
+<td style="text-align:center">b</td>
+<td style="text-align:left">A block special file. This file type refers to a device that handles data in blocks, such as a hard drive or CD-ROM drive.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="file-mode"><a href="#file-mode" class="headerlink" title="file mode"></a>file mode</h5><p><img src="http://7xru22.com1.z0.glb.clouddn.com/101.png" alt=""><br>|Attribute|    Files|    Directories|<br>|:-:|:-|<br>|r|    Allows a file to be opened and read.|    Allows a directory’s contents to be listed if the execute attribute is also set.|<br>|w|    Allows a file to be written to or truncated, however this attribute does not allow files to be renamed or deleted. The ability to delete or rename files is determined by directory attributes.|    Allows files within a directory to be created, deleted, and renamed if the execute attribute is also set.|<br>|x|    Allows a file to be treated as a program and executed. Program files written in scripting languages must also be set as readable to be executed.|    Allows a directory to be entered, e.g., cd directory.|</p>
+<h4 id="chmod"><a href="#chmod" class="headerlink" title="chmod"></a>chmod</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">chmod 600 foo.txt</div><div class="line">ls -l foo.txt</div><div class="line">-rw------- 1 me    me    0  2008-03-06 14:52 foo.txt</div></pre></td></tr></table></figure>
+<p>a few common ones: 7 (rwx), 6 (rw-), 5 (r-x), 4 (r–), and 0 (—).</p>
+<h5 id="chmod-Symbolic-Notation"><a href="#chmod-Symbolic-Notation" class="headerlink" title="chmod Symbolic Notation"></a>chmod Symbolic Notation</h5><table>
+<thead>
+<tr>
+<th style="text-align:center">Notation</th>
+<th style="text-align:left">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">u</td>
+<td style="text-align:left">Short for “user”, but means the file or directory owner.</td>
+</tr>
+<tr>
+<td style="text-align:center">g</td>
+<td style="text-align:left">Group owner.</td>
+</tr>
+<tr>
+<td style="text-align:center">o</td>
+<td style="text-align:left">Short for “others”, but means world.</td>
+</tr>
+<tr>
+<td style="text-align:center">a</td>
+<td style="text-align:left">Short for “all”, the combination of “u”, “g”, and “o”.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="chmod-Symbolic-Notation-Examples"><a href="#chmod-Symbolic-Notation-Examples" class="headerlink" title="chmod Symbolic Notation Examples"></a>chmod Symbolic Notation Examples</h5><table>
+<thead>
+<tr>
+<th style="text-align:center">Example</th>
+<th style="text-align:left">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">u+x</td>
+<td style="text-align:left">Add execute permission for the owner.</td>
+</tr>
+<tr>
+<td style="text-align:center">u-x</td>
+<td style="text-align:left">Remove execute permission from the owner.</td>
+</tr>
+<tr>
+<td style="text-align:center">+x</td>
+<td style="text-align:left">Add execute permission for the owner, group, and world. Equivalent to a+x.</td>
+</tr>
+<tr>
+<td style="text-align:center">o-rw</td>
+<td style="text-align:left">Remove the read and write permission from anyone besides the owner and group owner.</td>
+</tr>
+<tr>
+<td style="text-align:center">u+x,go=rw</td>
+<td style="text-align:left">Add execute permission for the owner and set the permissions for the group and others to read and execute. Multiple specifications may be separated by commas.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="umask"><a href="#umask" class="headerlink" title="umask"></a>umask</h4><p>The umask command controls the default permissions given to a file when it is created. It uses octal notation to express a mask of bits <strong>to be removed</strong> from a file’s mode attributes.<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">umask 0022</div></pre></td></tr></table></figure></p>
+<h4 id="others"><a href="#others" class="headerlink" title="others"></a>others</h4><ul>
+<li><p>The <strong>su</strong> command is used to start a shell as another user. </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">su [-[l]] [user]</div></pre></td></tr></table></figure>
+</li>
+<li><p>The <strong>sudo</strong> command is used to execute commands as a different user (usually the superuser) in a very controlled way.</p>
+</li>
+<li><p>The <strong>chown</strong> command is used to change the owner and group owner of a file or directory. Superuser privileges are required to use this command. </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chown [owner][:[group]] file...</div></pre></td></tr></table></figure>
+</li>
+<li><p>In older versions of Unix, the chown command only changed file ownership, not group ownership. For that purpose, a separate command, <strong>chgrp</strong> was used. It works much the same way as chown, except for being more limited.</p>
+</li>
+<li><p>The <strong>passwd</strong> command is used to set passwords for <strong>yourself</strong> (and for other users if you have access to superuser privileges). </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">passwd [user]</div></pre></td></tr></table></figure>
+</li>
+<li><p>more infos, … <code>adduser, useradd, groupadd</code></p>
+</li>
+</ul>
+<h3 id="Process"><a href="#Process" class="headerlink" title="Process"></a>Process</h3><ul>
+<li>ps – Report a snapshot of current processes</li>
+<li>top – Display tasks</li>
+<li>jobs – List active jobs</li>
+<li>bg – Place a job in the background</li>
+<li>fg – Place a job in the foreground</li>
+<li>kill – Send a signal to a process</li>
+<li>killall – Kill processes by name</li>
+<li>shutdown – Shutdown or reboot the system</li>
+</ul>
+<h4 id="Process-States"><a href="#Process-States" class="headerlink" title="Process States"></a>Process States</h4><table>
+<thead>
+<tr>
+<th style="text-align:center">State</th>
+<th style="text-align:left">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">R</td>
+<td style="text-align:left">Running. This means that the process is running or ready to run.</td>
+</tr>
+<tr>
+<td style="text-align:center">S</td>
+<td style="text-align:left">Sleeping. A process is not running; rather, it is waiting for an event, such as a keystroke or network packet.</td>
+</tr>
+<tr>
+<td style="text-align:center">D</td>
+<td style="text-align:left">Uninterruptible Sleep. Process is waiting for I/O such as a disk drive.</td>
+</tr>
+<tr>
+<td style="text-align:center">T</td>
+<td style="text-align:left">Stopped. Process has been instructed to stop. More on this later.</td>
+</tr>
+<tr>
+<td style="text-align:center">Z</td>
+<td style="text-align:left">A defunct or “zombie” process. This is a child process that has terminated, but has not been cleaned up by its parent.</td>
+</tr>
+<tr>
+<td style="text-align:center">&lt;</td>
+<td style="text-align:left">A high priority process. It’s possible to grant more importance to a process, giving it more time on the CPU. This property of a process is called niceness. A process with high priority is said to be less nice because it’s taking more of the CPU’s time, which leaves less for everybody else.</td>
+</tr>
+<tr>
+<td style="text-align:center">N</td>
+<td style="text-align:left">A low priority process. A process with low priority (a “nice” process) will only get processor time after other processes with higher priority have been serviced.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="Signals"><a href="#Signals" class="headerlink" title="Signals"></a>Signals</h4><p>In the case of <strong>Ctrl-c</strong>, a signal called <strong>INT</strong> (Interrupt) is sent; with <strong>Ctrl-z</strong>, a signal called <strong>TSTP</strong> (Terminal Stop.) </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">kill [-Number] PID</div><div class="line">kill [-SIG&lt;Name&gt;] PID</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Number</th>
+<th style="text-align:center">Name</th>
+<th style="text-align:left">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">HUP</td>
+<td style="text-align:left">Hangup.</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">INT</td>
+<td style="text-align:left">Interrupt. Performs the same function as the Ctrl-c key sent from the terminal. It will usually terminate a program.</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td style="text-align:center">KILL</td>
+<td style="text-align:left">Kill.</td>
+</tr>
+<tr>
+<td style="text-align:center">15</td>
+<td style="text-align:center">TERM</td>
+<td style="text-align:left">Terminate. This is the default signal sent by the kill command. If a program is still “alive” enough to receive signals, it will terminate.</td>
+</tr>
+<tr>
+<td style="text-align:center">18</td>
+<td style="text-align:center">CONT</td>
+<td style="text-align:left">Continue. This will restore a process after a STOP signal.</td>
+</tr>
+<tr>
+<td style="text-align:center">19</td>
+<td style="text-align:center">STOP</td>
+<td style="text-align:left">Stop. This signal causes a process to pause without terminating. Like the KILL signal, it is not sent to the target process, and thus it cannot be ignored.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Shell-environment"><a href="#Shell-environment" class="headerlink" title="Shell environment"></a>Shell environment</h3><ul>
+<li>printenv – Print part or all of the environment</li>
+<li>set – Set shell options</li>
+<li>export – Export environment to subsequently executed programs</li>
+<li>alias – Create an alias for a command</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">printenv USER # print environment variable USER</div><div class="line">echo $USER    # a same way as above</div><div class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">export</span> added PATH</span></div><div class="line">PATH=$PATH:$HOME/bin</div><div class="line">export PATH</div></pre></td></tr></table></figure>
+<h3 id="Basic-usage-of-vi"><a href="#Basic-usage-of-vi" class="headerlink" title="Basic usage of vi"></a>Basic usage of vi</h3><p><code>to do</code></p>
+<h3 id="Customize-shell-prompt"><a href="#Customize-shell-prompt" class="headerlink" title="Customize shell prompt"></a>Customize shell prompt</h3><p><code>omitted</code></p>
+<h3 id="Package-control"><a href="#Package-control" class="headerlink" title="Package control"></a>Package control</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">-</th>
+<th style="text-align:center">Debian Style (.deb)</th>
+<th style="text-align:center">Red Hat Style (.rpm)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Distributions (Partial Listing)</td>
+<td style="text-align:center">Debian, Ubuntu, Xandros, Linspire</td>
+<td style="text-align:center">Fedora, CentOS, Red Hat Enterprise Linux, OpenSUSE, Mandriva, PCLinuxOS</td>
+</tr>
+<tr>
+<td style="text-align:center">Low-Level Tools</td>
+<td style="text-align:center">dpkg</td>
+<td style="text-align:center">apt-get, aptitude</td>
+</tr>
+<tr>
+<td style="text-align:center">High-Level Tools</td>
+<td style="text-align:center">rpm</td>
+<td style="text-align:center">yum</td>
+</tr>
+<tr>
+<td style="text-align:center">Package Search Commands</td>
+<td style="text-align:center">apt-get update; apt-cache search search_string</td>
+<td style="text-align:center">yum search search_string</td>
+</tr>
+<tr>
+<td style="text-align:center">Package Installation Commands</td>
+<td style="text-align:center">apt-get update; apt-get install package_name</td>
+<td style="text-align:center">yum install package_name</td>
+</tr>
+<tr>
+<td style="text-align:center">Low-Level Package Installation Commands</td>
+<td style="text-align:center">dpkg –install package_file</td>
+<td style="text-align:center">rpm -i package_file</td>
+</tr>
+<tr>
+<td style="text-align:center">Package Removal Commands</td>
+<td style="text-align:center">apt-get remove package_name</td>
+<td style="text-align:center">yum erase package_name</td>
+</tr>
+<tr>
+<td style="text-align:center">Package Update Commands</td>
+<td style="text-align:center">apt-get update; apt-get upgrade</td>
+<td style="text-align:center">yum update</td>
+</tr>
+<tr>
+<td style="text-align:center">Low-Level Package Upgrade Commands</td>
+<td style="text-align:center">dpkg –install package_file</td>
+<td style="text-align:center">rpm -U package_file</td>
+</tr>
+<tr>
+<td style="text-align:center">Package Listing Commands</td>
+<td style="text-align:center">dpkg –list</td>
+<td style="text-align:center">rpm -qa</td>
+</tr>
+<tr>
+<td style="text-align:center">Package Status Commands</td>
+<td style="text-align:center">dpkg –status package_name</td>
+<td style="text-align:center">rpm -q package_name</td>
+</tr>
+<tr>
+<td style="text-align:center">Package Information Commands</td>
+<td style="text-align:center">apt-cache show package_name</td>
+<td style="text-align:center">yum info package_name</td>
+</tr>
+<tr>
+<td style="text-align:center">Package File Identification Commands</td>
+<td style="text-align:center">dpkg –search file_name</td>
+<td style="text-align:center">rpm -qf file_name</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Storage-devices"><a href="#Storage-devices" class="headerlink" title="Storage devices"></a>Storage devices</h3><ul>
+<li>mount – Mount a file system</li>
+<li>umount – Unmount a file system</li>
+<li>fsck – Check and repair a file system</li>
+<li>fdisk – Partition table manipulator</li>
+<li>mkfs – Create a file system</li>
+<li>fdformat – Format a floppy disk</li>
+<li>dd – Write block oriented data directly to a device</li>
+<li>genisoimage (mkisofs) – Create an ISO 9660 image file</li>
+<li>wodim (cdrecord) – Write data to optical storage media</li>
+<li>md5sum – Calculate an MD5 checksum</li>
+</ul>
+<p><code>omitted</code></p>
+<h3 id="Networking"><a href="#Networking" class="headerlink" title="Networking"></a>Networking</h3><ul>
+<li>ping - Send an ICMP ECHO_REQUEST to network hosts</li>
+<li>traceroute - Print the route packets trace to a network host</li>
+<li>netstat - Print network connections, routing tables, interface statistics, masquerade connections, and multicast memberships</li>
+<li>ftp - Internet file transfer program</li>
+<li>wget - Non-interactive network downloader</li>
+<li>ssh - OpenSSH SSH client (remote login program)</li>
+</ul>
+<h3 id="Find-files"><a href="#Find-files" class="headerlink" title="Find files"></a>Find files</h3><ul>
+<li>locate – Find files by name</li>
+<li>find – Search for files in a directory hierarchy</li>
+</ul>
+<p>We will also look at a command that is often used with file search commands to process the resulting list of files:</p>
+<ul>
+<li>xargs – Build and execute command lines from standard input</li>
+</ul>
+<p>In addition, we will introduce a couple of commands to assist us in or exploration:</p>
+<ul>
+<li>touch – Change file times</li>
+<li>stat – Display file or file system status</li>
+</ul>
+<h3 id="Archive-and-backup"><a href="#Archive-and-backup" class="headerlink" title="Archive and backup"></a>Archive and backup</h3><ul>
+<li>gzip – Compress or expand files</li>
+<li>bzip2 – A block sorting file compressor</li>
+<li>tar – Tape archiving utility</li>
+<li>zip – Package and compress files</li>
+<li>rsync – Remote file and directory synchronization</li>
+</ul>
+<h3 id="Regex"><a href="#Regex" class="headerlink" title="Regex"></a>Regex</h3><p>grep: global regular expression print<br><code>-n</code>: Prefix each matching line with the number of the line within the file. May also be specified –line-number.<br><code>-r</code>: Recursively search subdirectories listed.</p>
+<h4 id="metacharacters"><a href="#metacharacters" class="headerlink" title="metacharacters"></a>metacharacters</h4><p>Regular expression metacharacters consist of the following:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">^ $ . [ ] &#123; &#125; - ? * + ( ) | \</div></pre></td></tr></table></figure></p>
+<h5 id="any-character"><a href="#any-character" class="headerlink" title="any character"></a>any character</h5><p>The dot or period(.) character is used to match any character. </p>
+<h5 id="anchors"><a href="#anchors" class="headerlink" title="anchors"></a>anchors</h5><p>The caret <code>(^)</code> and dollar <code>($)</code> sign characters are treated as anchors. This means that they cause the match to occur only if the regular expression is found <strong>at the beginning of the line</strong> or <strong>at the end of the line</strong>.<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> crossword puzzles</span></div><div class="line">grep -i '^..j.r$' /usr/share/dict/words</div><div class="line">Gujar</div><div class="line">Kajar</div><div class="line">Major</div><div class="line">major</div></pre></td></tr></table></figure></p>
+<h5 id="bracket-expressions"><a href="#bracket-expressions" class="headerlink" title="bracket expressions"></a>bracket expressions</h5><p>Bracket expressions is used to match a single character from a specified set of characters.<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">grep -h '[bg]zip' dirlist*.txt</div><div class="line">bzip2</div><div class="line">bzip2recover</div><div class="line">gzip</div></pre></td></tr></table></figure></p>
+<p>Metacharacters lose their special meaning when placed within brackets. However, <strong>two cases</strong> have different meanings.<br>The first is the caret <code>(^)</code>, which is used to indicate <strong>negation</strong>; the second is the dash <code>(-)</code>, which is used to indicate a <strong>character range</strong>.<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">grep -h '[^bg]zip' dirlist*.txt</div><div class="line">bunzip2</div><div class="line">gunzip</div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> it will match all filenames starting with letters and numbers:</span></div><div class="line">grep -h '^[A-Za-z0-9]' dirlist*.txt</div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> to include a dash, making it the first character <span class="keyword">in</span> the expression</span></div><div class="line"><span class="meta">#</span><span class="bash"> it will match every filename containing a dash, or a upper <span class="keyword">case</span> “A” or an uppercase “Z”.</span></div><div class="line">grep -h '[-AZ]' dirlist*.txt</div></pre></td></tr></table></figure></p>
+<h4 id="POSIX-Character-Classes"><a href="#POSIX-Character-Classes" class="headerlink" title="POSIX Character Classes"></a>POSIX Character Classes</h4><table>
+<thead>
+<tr>
+<th style="text-align:center">Character Class</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">[:alnum:]</td>
+<td style="text-align:left">The alphanumeric characters. In ASCII, equivalent to: [A-Za-z0-9]</td>
+</tr>
+<tr>
+<td style="text-align:center">[:word:]</td>
+<td style="text-align:left">The same as [:alnum:], with the addition of the underscore (_) character.</td>
+</tr>
+<tr>
+<td style="text-align:center">[:alpha:]</td>
+<td style="text-align:left">The alphabetic characters. In ASCII, equivalent to: [A-Za-z]</td>
+</tr>
+<tr>
+<td style="text-align:center">[:digit:]</td>
+<td style="text-align:left">The numerals zero through nine.</td>
+</tr>
+<tr>
+<td style="text-align:center">[:lower:]</td>
+<td style="text-align:left">The lowercase letters.</td>
+</tr>
+<tr>
+<td style="text-align:center">[:space:]</td>
+<td style="text-align:left">The whitespace characters including space, tab, carriage return, newline, vertical tab, and form feed. In ASCII, equivalent to: [ \t\r\n\v\f]</td>
+</tr>
+<tr>
+<td style="text-align:center">[:upper:]</td>
+<td style="text-align:left">The upper case characters.</td>
+</tr>
+<tr>
+<td style="text-align:center">[:xdigit:]</td>
+<td style="text-align:left">Characters used to express hexadecimal numbers. In ASCII, equivalent to: [0-9A-Fa-f]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="basic-regular-expressions-BRE-and-extended-regular-expressions-ERE"><a href="#basic-regular-expressions-BRE-and-extended-regular-expressions-ERE" class="headerlink" title="basic regular expressions (BRE) and extended regular expressions (ERE)"></a>basic regular expressions (BRE) and extended regular expressions (ERE)</h4><p>What’s the difference between BRE and ERE?<br>It’s a matter of metacharacters.<br>With BRE, the following metacharacters are recognized:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">^ $ . [ ] *</div></pre></td></tr></table></figure></p>
+<p>All other characters are considered literals.</p>
+<p>With ERE, the following metacharacters (and their associated functions) are added:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">( ) &#123; &#125; ? + |</div></pre></td></tr></table></figure></p>
+<h4 id="alternation"><a href="#alternation" class="headerlink" title="alternation"></a>alternation</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> it will match the filenames <span class="keyword">in</span> our lists that start with either “bz”, “gz”, or “zip</span></div><div class="line">grep -Eh '^(bz|gz|zip)' dirlist*.txt</div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> it changes to match any filename that begins with “bz” or contains “gz” or contains “zip”</span></div><div class="line">grep -Eh '^bz|gz|zip' dirlist*.txt</div></pre></td></tr></table></figure>
+<h4 id="quantifier"><a href="#quantifier" class="headerlink" title="quantifier"></a>quantifier</h4><p>The question mark <code>(?)</code> means <strong>making the preceding element optional (matching 0 or 1 element)</strong>.<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> to valid <span class="keyword">if</span> it matched either of these two forms:</span></div><div class="line"><span class="meta">#</span><span class="bash"> (nnn) nnn-nnnn</span></div><div class="line"><span class="meta">#</span><span class="bash"> nnn nnn-nnnn</span></div><div class="line"></div><div class="line">echo "(555) 123-4567" | grep -E '^\(?[0-9][0-9][0-9]</div><div class="line">\)? [0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]$'</div><div class="line">(555) 123-4567</div><div class="line"></div><div class="line">echo "555 123-4567" | grep -E '^\(?[0-9][0-9][0-9]\)</div><div class="line">? [0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]$'</div><div class="line">555 123-4567</div></pre></td></tr></table></figure></p>
+<p>The asterisk <code>(*)</code> means <strong>making the preceding element optional (matching 0 or any number of times elements)</strong>.<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> to see <span class="keyword">if</span> a string was a sentence</span></div><div class="line"><span class="meta">#</span><span class="bash"> it starts with an uppercase letter</span></div><div class="line"><span class="meta">#</span><span class="bash"> <span class="keyword">then</span> contains any number of upper and lowercase letters and spaces</span></div><div class="line"><span class="meta">#</span><span class="bash"> and ends with a period. </span></div><div class="line">echo "This works." | grep -E '[[:upper:]][[:upper:][:lower:] ]*\.'</div><div class="line">This works.</div><div class="line"></div><div class="line">echo "this does not" | grep -E '[[:upper:]][[:upper:][:lower:] ]*\.'</div></pre></td></tr></table></figure></p>
+<p>The plus mark <code>(+)</code> means <strong>making the preceding element optional (matching 1 or any number of times elements)</strong>.<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> it will match lines consisting of groups of one or more alphabetic characters separated by single spaces</span></div><div class="line">echo "This that" | grep -E '^([[:alpha:]]+ ?)+$'</div><div class="line">This that</div><div class="line"></div><div class="line">echo "a b c" | grep -E '^([[:alpha:]]+ ?)+$'</div><div class="line">a b c</div></pre></td></tr></table></figure></p>
+<p>The <code>{</code> and <code>}</code> metacharacters are used to <strong>express minimum and maximum numbers of required matches</strong>. They may be specified in four possible ways:<br>|Specifier|    Meaning|<br>|:-:|:-|<br>|{n}|    Match the preceding element if it occurs exactly n times.<br>|{n,m}|    Match the preceding element if it occurs at least n times, but no more than m times.|<br>|{n,}|    Match the preceding element if it occurs n or more times.|<br>|{,m}|    Match the preceding element if it occurs no more than m times.|<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">echo "(555) 123-4567" | grep -E '^\(?[0-9]&#123;3&#125;\)? [0-9]&#123;3&#125;-[0-9]&#123;4&#125;$'</div><div class="line">(555) 123-4567</div></pre></td></tr></table></figure></p>
+<h4 id="find-files"><a href="#find-files" class="headerlink" title="find files"></a>find files</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> it will reveal pathnames that contain embedded spaces and other potentially offensive characters</span></div><div class="line">find . -regex '.*[^-\_./0-9a-zA-Z].*'</div></pre></td></tr></table></figure>
+<h4 id="less-and-vim"><a href="#less-and-vim" class="headerlink" title="less and vim"></a>less and vim</h4><p>They support basic regular expressions.<br>Pressing the <code>/</code> key followed by <strong>a regular expression</strong> will perform a search.</p>
+<h3 id="Manipulate-text"><a href="#Manipulate-text" class="headerlink" title="Manipulate text"></a>Manipulate text</h3><ul>
+<li>cat – Concatenate files and print on the standard output</li>
+<li>sort – Sort lines of text files</li>
+<li>uniq – Report or omit repeated lines</li>
+<li>cut – Remove sections from each line of files</li>
+<li>paste – Merge lines of files</li>
+<li>join – Join lines of two files on a common field</li>
+<li>comm – Compare two sorted files line by line</li>
+<li>diff – Compare files line by line</li>
+<li>patch – Apply a diff file to an original</li>
+<li>tr – Translate or delete characters</li>
+<li>sed – Stream editor for filtering and transforming text</li>
+<li>aspell – Interactive spell checker</li>
+</ul>
+<h4 id="cat"><a href="#cat" class="headerlink" title="cat"></a>cat</h4><p><code>-A</code>: display non- printing characters in the text.<br><code>-n</code>: show line numbers.<br><code>-s</code>: suppress the output of multiple blank lines.</p>
+<h4 id="sort"><a href="#sort" class="headerlink" title="sort"></a>sort</h4><p><code>-n</code>: perform sorting based on the numeric evaluation of a string rather than alphabetical value.<br><code>-r</code>: sort in reverse order. results are in descending rather than ascending order.<br><code>-b</code>: ignore leading blanks.<br><code>-k field1[,field2]</code>: sort based on a key field located from field1 to field2 rather than the entire line.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> by specifying -k 3.7 we instruct sort to </span></div><div class="line"><span class="meta">#</span><span class="bash"> use a sort key that begins at the seventh character within the third field</span></div><div class="line">sort -k 3.7nbr -k 3.1nbr -k 3.4nbr distros.txt</div><div class="line">Fedora         10    11/25/2008</div><div class="line">Ubuntu         8.10  10/30/2008</div><div class="line">SUSE           11.0  06/19/2008</div><div class="line">...</div></pre></td></tr></table></figure>
+<h4 id="unique"><a href="#unique" class="headerlink" title="unique"></a>unique</h4><p><code>-u</code>: remove duplicates from the sorted output.<br><code>-d</code>: only output duplicated lines, rather than unique lines.</p>
+<h4 id="cut"><a href="#cut" class="headerlink" title="cut"></a>cut</h4><p><code>-f filed_list</code>, <code>-c char_list</code>, <code>-d delimiter_char</code><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">cut -f 3 distros.txt</div><div class="line">12/07/2006</div><div class="line">11/25/2008</div><div class="line"></div><div class="line">cut -f 3 distros.txt | cut -c 7-10</div><div class="line">2006</div><div class="line">2008</div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> default delimiter is tab</span></div><div class="line"><span class="meta">#</span><span class="bash"> what <span class="keyword">if</span> we wanted a file fully manipulated with cut by characters, rather than fields</span></div><div class="line">expand distros.txt | cut -c 23-</div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">set</span> delimiter to <span class="string">':'</span></span></div><div class="line">cut -d ':' -f 1 /etc/passwd | head</div></pre></td></tr></table></figure></p>
+<h4 id="paste"><a href="#paste" class="headerlink" title="paste"></a>paste</h4><p>The paste command does the opposite of cut. Rather than extracting a column of text from a file, it adds one or more columns of text to a file.</p>
+<h4 id="join"><a href="#join" class="headerlink" title="join"></a>join</h4><p>A join is an operation usually associated with relational databases where data from multiple tables with a shared key field is combined to form a desired result.</p>
+<h4 id="comm-and-diff"><a href="#comm-and-diff" class="headerlink" title="comm and diff"></a>comm and diff</h4><ul>
+<li>comm<br>The comm program compares two text files and displays the lines that are unique to each one and the lines they have in common.</li>
+<li>diff<br><code>-c</code>: <strong>contex format</strong><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">diff -c file1.txt file2.txt</div><div class="line">*** file1.txt    2008-12-23 06:40:13.000000000 -0500</div><div class="line">--- file2.txt   2008-12-23 06:40:34.000000000 -0500</div><div class="line">***************</div><div class="line">*** 1,4 ****</div><div class="line">- a</div><div class="line">  b</div><div class="line">  c</div><div class="line">  d</div><div class="line">--- 1,4 ----</div><div class="line">  b</div><div class="line">  c</div><div class="line">  d</div><div class="line">  + e</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><code>-u</code>: <strong>unified format</strong><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">diff -u file1.txt file2.txt</div><div class="line">--- file1.txt 2008-12-23 06:40:13.000000000 -0500</div><div class="line">+++ file2.txt 2008-12-23 06:40:34.000000000 -0500</div><div class="line">@@ -1,4 +1,4 @@</div><div class="line">-a</div><div class="line"> b</div><div class="line"> c</div><div class="line"> d</div><div class="line">+e</div></pre></td></tr></table></figure></p>
+<h4 id="patch"><a href="#patch" class="headerlink" title="patch"></a>patch</h4><p>To prepare a diff file for use with patch, the GNU documentation (see Further Reading below) suggests using diff as follows:<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">diff -Naur old_file new_file &gt; diff_file</div></pre></td></tr></table></figure></p>
+<p>Once the diff file has been created, we can apply it to patch the old file into the new file:<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">patch &lt; diff_file</div></pre></td></tr></table></figure></p>
+<h4 id="tr"><a href="#tr" class="headerlink" title="tr"></a>tr</h4><p>The tr program is used to transliterate characters.<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> transliterate characters</span></div><div class="line">echo "lowercase letters" | tr a-z A-Z</div><div class="line">LOWERCASE LETTERS</div><div class="line">echo "lowercase letters" | tr [:lower:] A</div><div class="line">AAAAAAAAA AAAAAAA</div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> delete <span class="string">'\r'</span> <span class="keyword">in</span> dos files</span></div><div class="line">tr -d '\r' &lt; dos_file &gt; unix_file</div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> “squeeze” (delete) repeated instances of a character</span></div><div class="line">echo "aaabbbccc" | tr -s ab</div><div class="line">abccc</div></pre></td></tr></table></figure></p>
+<h4 id="sed"><a href="#sed" class="headerlink" title="sed"></a>sed</h4><p><code>-n</code>: no auto-print;</p>
+<p>sed Address Notation<br>|Address|    Description|<br>|:-:|:-|<br>|n|    A line number where n is a positive integer.|<br>|$|    The last line.|<br>|/regexp/|    Lines matching a POSIX basic regular expression. Note that the regular expression is delimited by slash characters. Optionally, the regular expression may be delimited by an alternate character, by specifying the expression with \cregexpc, where c is the alternate character.|<br>|addr1,addr2|    A range of lines from addr1 to addr2, inclusive. Addresses may be any of the single address forms above.|<br>|first~step|    Match the line represented by the number first, then each subsequent line at step intervals. For example 1~2 refers to each odd numbered line, 5~5 refers to the fifth line and every fifth line thereafter.|<br>|addr1,+n|    Match addr1 and the following n lines.|<br>|addr!|    Match all lines except addr, which may be any of the forms above.|</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">sed -n '1,5p' distros.txt</div><div class="line">SUSE           10.2     12/07/2006</div><div class="line">Fedora         10       11/25/2008</div><div class="line">SUSE           11.0     06/19/2008</div><div class="line">Ubuntu         8.04     04/24/2008</div><div class="line">Fedora         8        11/08/2007</div><div class="line"></div><div class="line">sed -n '/SUSE/p' distros.txt</div><div class="line">SUSE         10.2     12/07/2006</div><div class="line">SUSE         11.0     06/19/2008</div><div class="line"></div><div class="line">sed -n '/SUSE/!p' distros.txt</div><div class="line">Fedora         10       11/25/2008</div><div class="line">Ubuntu         8.04     04/24/2008</div></pre></td></tr></table></figure>
+<p>sed Basic Editing Commands<br>|Command|    Description|<br>|:-:|:-|<br>|=|    Output current line number.|<br>|a|    Append text after the current line.|<br>|d|    Delete the current line.|<br>|i|    Insert text in front of the current line.|<br>|p|    Print the current line. By default, sed prints every line and only edits lines that match a specified address within the file. The default behavior can be overridden by specifying the -n option.|<br>|q|    Exit sed without processing any more lines. If the -n option is not specified, output the current line.|<br>|Q|    Exit sed without processing any more lines.|<br>|s/regexp/replacement/|    Substitute the contents of replacement wherever regexp is found. replacement may include the special character &amp;, which is equivalent to the text matched by regexp. In addition, replacement may include the sequences \1 through \9, which are the contents of the corresponding subexpressions in regexp. For more about this, see the discussion of back references below. After the trailing slash following replacement, an optional flag may be specified to modify the s command’s behavior.|<br>|y/set1/set2|    Perform transliteration by converting characters from set1 to the corresponding characters in set2. Note that unlike tr, sed requires that both sets be of the same length.|</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> <span class="string">'s/([0-9]&#123;2&#125;)/([0-9]&#123;2&#125;)/([0-9]&#123;4&#125;)$/\3-\1-\2/'</span></span></div><div class="line">sed 's/\([0-9]\&#123;2\&#125;\)\/\([0-9]\&#123;2\&#125;\)\/\([0-9]\&#123;4\&#125;\)$/\3-\1-\2/' distros.txt</div><div class="line">SUSE           10.2     2006-12-07</div><div class="line"></div><div class="line">echo "aaabbbccc" | sed 's/b/B/'</div><div class="line">aaaBbbccc</div><div class="line"></div><div class="line">echo "aaabbbccc" | sed 's/b/B/g'</div><div class="line">aaaBBBccc</div></pre></td></tr></table></figure>
+<h4 id="aspell"><a href="#aspell" class="headerlink" title="aspell"></a>aspell</h4><p>an interactive spelling checker.<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">aspell check textfile</div></pre></td></tr></table></figure></p>
+<h3 id="Format-text-output"><a href="#Format-text-output" class="headerlink" title="Format text output"></a>Format text output</h3><p><code>omitted</code></p>
+<h3 id="Printer"><a href="#Printer" class="headerlink" title="Printer"></a>Printer</h3><p><code>ommited</code></p>
+<h3 id="Compile-source-code"><a href="#Compile-source-code" class="headerlink" title="Compile source code"></a>Compile source code</h3><p>Why compile software? There are two reasons:</p>
+<ol>
+<li>Availability. Despite the number of precompiled programs in distribution repositories, some distributions may not include all the desired applications. In this case, the only way to get the desired program is to compile it from source.</li>
+<li>Timeliness. While some distributions specialize in cutting edge versions of programs, many do not. This means that in order to have the very latest version of a program, compiling is necessary.</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">[~]$ mkdir src</div><div class="line">[~]$ cd src</div><div class="line">ftp ftp.gnu.org</div><div class="line">anonymous</div><div class="line"><span class="meta">ftp&gt;</span><span class="bash"> <span class="built_in">cd</span> gnu/diction</span></div><div class="line"><span class="meta">ftp&gt;</span><span class="bash"> ls</span></div><div class="line">150 Here comes the directory listing.</div><div class="line">-rw-r--r-- 1 1003 65534 68940 Aug 28 1998 diction-0.7.tar.gz</div><div class="line">-rw-r--r-- 1 1003 65534 90957 Mar 04 2002 diction-1.02.tar.gz</div><div class="line">-rw-r--r-- 1 1003 65534 141062 Sep 17 2007 diction-1.11.tar.gz</div><div class="line"><span class="meta">ftp&gt;</span><span class="bash"> get diction-1.11.tar.gz</span></div><div class="line">226 File send OK.</div><div class="line"><span class="meta">ftp&gt;</span><span class="bash"> <span class="built_in">bye</span></span></div><div class="line"><span class="meta">[src]$</span><span class="bash"> ls</span></div><div class="line">diction-1.11.tar.gz</div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> unpack</span></div><div class="line"><span class="meta">[src]$</span><span class="bash"> tar -xzf diction-1.11.tar.gz</span></div><div class="line"><span class="meta">[src]$</span><span class="bash"> <span class="built_in">cd</span> diction-1.11</span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> configure, compile and install</span></div><div class="line">[diction-1.11]$ ./configure</div><div class="line">[diction-1.11]$ make</div><div class="line">[diction-1.11]$ make install</div></pre></td></tr></table></figure>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="http://billie66.github.io/TLCL/book/index.html" target="_blank" rel="external">快乐的 Linux 命令行</a></p>
+
+      
+	  
+  <div class="article-statement">
+    <hr> 
+    1. 除非注明，本博文即为原创，转载请注明链接地址 <br>
+    2. 本博文只代表博主当时的观点或结论，请不要恶意攻击 <br>
+    3. 如果本文帮到了您，不妨点一下 <a>下面</a> 的 <a>分享到</a> 按钮，让更多的人看到 <br>
+	<!-- ，或者 <a href='/about/index.html#zan-shang'>小额赞赏</a> 我。-->
+  </div>
+
+
+
+    </div>
+    <footer class="article-footer">
+	  
+	    <div class="bdsharebuttonbox"><a>分享到：</a> <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook">Facebook</a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter">Twitter</a><a href="#" class="bds_more" data-cmd="more">其他平台</a></div>
+      
+      
+        <a href="http://TaoSama.github.io/2017/07/01/shell-notes/#ds-thread" class="ds-thread-count article-comment-link" data-thread-key="2017/07/01/shell-notes/">文章评论</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/07/31/shell-script-notes/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">
+        
+          Notes, Shell Script
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/06/15/effective-cpp-constructors-destructors-and-assignment-operators/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">Constructors, Destrustors and Assignment Operators, Notes(2), Effective C++</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+
+<!-- 多说评论框 start -->
+	<div id="ds-thread" class="ds-thread" data-thread-key="2017/07/01/shell-notes/" data-title="Notes, Shell" data-url="http://TaoSama.github.io/2017/07/01/shell-notes/" data-author-key="233"></div>
+<!-- 多说评论框 end -->
+</section>
+</section>
+        
+          
+<aside id="sidebar">
+
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title">关于我</h3>
+  <ul class="widget about-me">
+    <li><img class="author" title="About me" src="/css/images/avatar.png" /></li>
+    
+    <li><a href="/about/" style="color:orange">老顽童</a></li>
+    
+    <li><a href="http://codeforces.com/profile/TaoSama" style="color:purple">TaoSama</a></li>
+    
+    <li>迷茫的搬砖工 / 永不退役的ACMer</li>
+    
+  </ul>
+</div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">推荐文章</h3>
+    <div class="widget">
+      <ul>
+        
+        
+          
+          <li>
+            <a href="/2016/05/02/%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%B0%8F%E7%BB%93/" target="_blank">1. 常见错误小结</a>
+          </li>
+        
+          
+          <li>
+            <a href="/2016/03/09/Hello%20World%20%E2%80%94%E2%80%94%20%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%8E%86%E7%A8%8B/" target="_blank">2. Hello World —— 博客搭建历程</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">友情链接</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="http://blog.csdn.net/lwt36/" target="_blank">我的CSDN</a>
+          </li>
+        
+          <li>
+            <a href="http://www.zhihu.com/people/ye-zhu-shui-han/" target="_blank">我的知乎</a>
+          </li>
+        
+          <li>
+            <a href="http://notdeep.github.io/" target="_blank">果姐姐</a>
+          </li>
+        
+          <li>
+            <a href="https://cloverii.github.io/" target="_blank">WMW</a>
+          </li>
+        
+          <li>
+            <a href="http://blog.luoxinchen.me/" target="_blank">Mathon</a>
+          </li>
+        
+          <li>
+            <a href="http://www.cnblogs.com/forever97/" target="_blank">forever97</a>
+          </li>
+        
+          <li>
+            <a href="http://liziyang96.com/" target="_blank">liziy</a>
+          </li>
+        
+          <li>
+            <a href="http://blog.csdn.net/viphong" target="_blank">liuyuhong</a>
+          </li>
+        
+          <li>
+            <a href="http://blog.csdn.net/a1s4z5/" target="_blank">QAQ</a>
+          </li>
+        
+          <li>
+            <a href="http://blog.csdn.net/qwb492859377" target="_blank">qwb</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/">Doing</a><span class="category-list-count">21</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Blog/">Blog</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/CPP/">CPP</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Go/">Go</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Hive/">Hive</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Interview/">Interview</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Life/">Life</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Machine-Learning/">Machine Learning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Python/">Python</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Shell/">Shell</a><span class="category-list-count">4</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/">动态规划</a><span class="category-list-count">27</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/bitset优化/">bitset优化</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/数位dp/">数位dp</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/数据结构优化/">数据结构优化</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/斜率优化/">斜率优化</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/最长上升子序列/">最长上升子序列</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/树形dp/">树形dp</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/概率-期望dp/">概率/期望dp</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/状压dp/">状压dp</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/矩阵优化/">矩阵优化</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/线性dp/">线性dp</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/">图论</a><span class="category-list-count">26</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/图论/LCA/">LCA</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/二分图/">二分图</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/拓扑排序/">拓扑排序</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/最大团/">最大团</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/最小生成树/">最小生成树</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/最短路/">最短路</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/生成树计数/">生成树计数</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/网络流/">网络流</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/连通图/">连通图</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/套题/">套题</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/字符串/">字符串</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/字符串/AC自动机/">AC自动机</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/字符串/Manacher-回文树/">Manacher/回文树</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/字符串/SA-SAM/">SA/SAM</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/小结/">小结</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/">思维</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/思维/分治/">分治</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/扫描线/">扫描线</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/数形结合/">数形结合</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/离线思想/">离线思想</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/贪心/">贪心</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/思维/贪心/区间贪心/">区间贪心</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/逆向思维/">逆向思维</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/">技巧</a><span class="category-list-count">17</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/two-pointers/">two pointers</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/xor/">xor</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/反转问题/">反转问题</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/哈希/">哈希</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/折半搜索/">折半搜索</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/">数学</a><span class="category-list-count">26</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/数学/CRT/">CRT</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/FFT-NTT-FWT/">FFT/NTT/FWT</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/博弈/">博弈</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/容斥/">容斥</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/概率-期望/">概率/期望</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/组合数学/">组合数学</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/贡献/">贡献</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/高斯消元/">高斯消元</a><span class="category-list-count">4</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/">数据结构</a><span class="category-list-count">18</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/主席树/">主席树</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/二叉搜索树/">二叉搜索树</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/可持久化Trie/">可持久化Trie</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/并查集/">并查集</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/树上莫队/">树上莫队</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/树状数组/">树状数组</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/线段树/">线段树</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/">暴力</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/大模拟/">大模拟</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/小模拟/">小模拟</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/搜索/">搜索</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/搜索/dfs-bfs/">dfs/bfs</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/搜索/二-三分搜索/">二/三分搜索</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/签到/">签到</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/">计算几何</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/三维几何/">三维几何</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/扫描线/">扫描线</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/数值积分/">数值积分</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/旋转卡壳/">旋转卡壳</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/极角扫描/">极角扫描</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/极角排序/">极角排序</a><span class="category-list-count">1</span></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">2017年 09月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">2017年 08月</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">2017年 07月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">2017年 06月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">2017年 05月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">2017年 04月</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">2017年 03月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">2017年 02月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">2016年 09月</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">2016年 08月</a><span class="archive-list-count">42</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">2016年 07月</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">2016年 06月</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">2016年 05月</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">2016年 04月</a><span class="archive-list-count">41</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">2016年 03月</a><span class="archive-list-count">42</span></li></ul>
+    </div>
+  </div>
+
+
+  
+     
+	 
+	  <div class="widget-wrap">
+		<h3 class="widget-title">最近评论</h3>
+		<div class="widget">
+		  <!-- 多说最新评论 start -->
+		  <div class="ds-recent-comments" data-num-items="5" data-show-avatars="0" data-show-time="1" data-show-title="1" data-show-admin="1" data-excerpt-length="70"></div>
+		  <!-- 多说最新评论 end -->
+		  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+		  <script type="text/javascript">
+			var duoshuoQuery = {short_name:"TaoSama"};
+			(function() {
+			  var ds = document.createElement('script');
+			  ds.type = 'text/javascript';ds.async = true;
+			  ds.src = '/js/ds_embed.js';
+			  <!--
+			  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+			  -->
+			  ds.charset = 'UTF-8';
+			  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+			})();
+		  </script>
+		  <!-- 多说公共JS代码 end -->
+		</div>
+	  </div>
+	
+
+  
+
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <img src="/css/images/umaru.png" style="position:fixed; right:0; bottom:0; width:70px">
+  <div class="outer">
+    <div id="footer-info" style="text-align:center; border:0;">
+	   <div style="font-family: FontAwesome;font-size: 20px;">
+		<a href="http://weibo.com/3863360617" title="微博" target="_blank">&#61834;</a>&nbsp;
+		<!--
+		<a href="http://www.renren.com/287137027" title="人人" target="_blank">&#61835;</a>&nbsp; 
+		<a href="http://user.qzone.qq.com/525969441" title="QQ空间" target="_blank">&#61910;</a>&nbsp;
+		-->
+		<a href="https://www.facebook.com/lwt1367" title="Facebook" target="_blank">&#62000;</a>&nbsp;
+		<a href="https://twitter.com/lwt1367" title="Twitter" target="_blank">&#61593;</a>&nbsp;
+		<a href="http://www.linkedin.com/in/lwt1367" title="LinkedIn" target="_blank">&#61665;</a>&nbsp;
+		<a href="https://github.com/TaoSama" title="GitHub" target="_blank">&#61595;</a>&nbsp;
+		<a href="https://plus.google.com/115031676619400074158" title="Google+" target="_blank">&#61653;</a>
+	   </div>
+	   <div style="font-size: 15px;">
+		<a href="/sitemap.xml">Sitemap</a>&nbsp;
+		<a href="/atom.xml">RSS</a>&nbsp;
+		<a href="mailto:lwt1367@gmail.com" target="_blank">Contact</a>
+		<br>
+		Copyright &copy; 2016-2017 
+	    <a href="/" target="_blank"> TaoSama </a>
+		<br>
+		Powered by <a href="https://hexo.io/zh-cn/docs/index.html" target="_blank">Hexo</a>
+	    &nbsp;|&nbsp;
+	    Theme by <a href="https://github.com/TaoSama/landscape" target="_blank">landscape</a>
+	    &nbsp;|&nbsp;
+	    <span id="busuanzi_container_site_pv">
+		总访问量 <a href="http://service.ibruce.info/" target="_blank"><span id="busuanzi_value_site_pv"></span></a> 次
+	    </span>
+	    <span id="busuanzi_container_site_uv">
+		<a href="http://service.ibruce.info/" target="_blank"><span id="busuanzi_value_site_uv"></span></a> 人
+	    </span>
+	   </div>
+	</div>
+  </div>
+  <!-- 为超链接加上target='_blank'属性 -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('a[href^="http"]').each(function() {
+			$(this).attr('target', '_blank');
+		});
+	});
+  </script>
+  <!-- 不蒜子js -->
+  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">主页</a>
+  
+    <a href="/archives" class="mobile-nav-link">文章</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"TaoSama"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = '/js/ds_embed.js';
+		<!-- ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js'; -->
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+
+<script src="http://lib.sinaapp.com/js/jquery/2.0.3/jquery-2.0.3.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof jQuery == 'undefined') {
+  document.write(unescape("%3Cscript src='/js/jquery-2.0.3.min.js' type='text/javascript'%3E%3C/script%3E"));
+}
+// ]]>
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+<div class="bottom-btn">
+
+	<a class="icon-gotop" href="javascript:void(0)" title="返回顶部"></a>
+	<script src="/js/gotop.js"></script>
+	<!--
+	<script src="/js/gotop.js"></script>
+	-->
+
+</div>
+
+
+<script src="/js/script.js"></script>
+<!-- Baidu Share Start --->
+<script>window._bd_share_config={"common":{"bdWbuid":3863360617,"bdText":"","bdMini":"2","bdMiniList":["douban","kaixin001","tieba","tsohu","sqq","youdao","qingbiji","mail","linkedin","mshare","copy","print"],"bdStyle":"1","bdSize":"24"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<!-- Baidu Share End --->
+
+
+<! -- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+                processEscapes: true
+                    
+}
+  
+        });
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+                  
+}
+    
+        });
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Queue(function() {
+            var all = MathJax.Hub.getAllJax(), i;
+            for(i=0; i < all.length; i += 1) {
+                            all[i].SourceElement().parentNode.className += ' has-jax';
+                                    
+            }
+                
+        });
+</script>
+
+<script type="text/javascript" src="http://cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
