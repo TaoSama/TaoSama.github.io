@@ -5,18 +5,18 @@
   
   <title>HDU 5799 This world need more Zhu（树上莫队） | TaoSama&#39;s Blog - Forward and Never Step Back</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="题意：  $给定一颗N\le 10^5个点的树，点权Ai\le 10^9，Q\le 10^5，询问形如op\ u\ v\ a\ b$$op=1时，u=v，查询子树u中，gcd(\sum{cnt[x]=a} x,\ \sum{cnt[y]=b} y)$$op=2时，查询路径(u,\ v)中，gcd(\sum{cnt[x]=a} x,\ \sum_{cnt[y]=b} y)$">
+  <meta name="description" content="题意：  $给定一颗N\le 10^5个点的树，点权A_i\le 10^9，Q\le 10^5，询问形如op u v a b$$op=1时，u=v，查询子树u中，gcd(\sum_{cnt[x]=a} x, \sum_{cnt[y]=b} y)$$op=2时，查询路径(u, v)中，gcd(\sum_{cnt[x]=a} x, \sum_{cnt[y]=b} y)$">
 <meta name="keywords" content="树上莫队">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HDU 5799 This world need more Zhu（树上莫队）">
 <meta property="og:url" content="http://TaoSama.github.io/2016/08/08/HDU 5799 This world need more Zhu（树上莫队）/index.html">
 <meta property="og:site_name" content="TaoSama&#39;s Blog">
-<meta property="og:description" content="题意：  $给定一颗N\le 10^5个点的树，点权Ai\le 10^9，Q\le 10^5，询问形如op\ u\ v\ a\ b$$op=1时，u=v，查询子树u中，gcd(\sum{cnt[x]=a} x,\ \sum{cnt[y]=b} y)$$op=2时，查询路径(u,\ v)中，gcd(\sum{cnt[x]=a} x,\ \sum_{cnt[y]=b} y)$">
+<meta property="og:description" content="题意：  $给定一颗N\le 10^5个点的树，点权A_i\le 10^9，Q\le 10^5，询问形如op u v a b$$op=1时，u=v，查询子树u中，gcd(\sum_{cnt[x]=a} x, \sum_{cnt[y]=b} y)$$op=2时，查询路径(u, v)中，gcd(\sum_{cnt[x]=a} x, \sum_{cnt[y]=b} y)$">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2017-09-19T14:48:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HDU 5799 This world need more Zhu（树上莫队）">
-<meta name="twitter:description" content="题意：  $给定一颗N\le 10^5个点的树，点权Ai\le 10^9，Q\le 10^5，询问形如op\ u\ v\ a\ b$$op=1时，u=v，查询子树u中，gcd(\sum{cnt[x]=a} x,\ \sum{cnt[y]=b} y)$$op=2时，查询路径(u,\ v)中，gcd(\sum{cnt[x]=a} x,\ \sum_{cnt[y]=b} y)$">
+<meta name="twitter:description" content="题意：  $给定一颗N\le 10^5个点的树，点权A_i\le 10^9，Q\le 10^5，询问形如op u v a b$$op=1时，u=v，查询子树u中，gcd(\sum_{cnt[x]=a} x, \sum_{cnt[y]=b} y)$$op=2时，查询路径(u, v)中，gcd(\sum_{cnt[x]=a} x, \sum_{cnt[y]=b} y)$">
 <meta name="twitter:creator" content="@lwt1367">
 <link rel="publisher" href="115031676619400074158">
 <meta property="fb:admins" content="lwt1367">
@@ -132,7 +132,7 @@
       	
         <p>题意：</p>
 <blockquote>
-<p>$给定一颗N\le 10^5个点的树，点权A<em>i\le 10^9，Q\le 10^5，询问形如op\ u\ v\ a\ b$<br>$op=1时，u=v，查询子树u中，gcd(\sum</em>{cnt[x]=a} x,\ \sum<em>{cnt[y]=b} y)$<br>$op=2时，查询路径(u,\ v)中，gcd(\sum</em>{cnt[x]=a} x,\ \sum_{cnt[y]=b} y)$</p>
+<p>$给定一颗N\le 10^5个点的树，点权A_i\le 10^9，Q\le 10^5，询问形如op u v a b$<br>$op=1时，u=v，查询子树u中，gcd(\sum_{cnt[x]=a} x, \sum_{cnt[y]=b} y)$<br>$op=2时，查询路径(u, v)中，gcd(\sum_{cnt[x]=a} x, \sum_{cnt[y]=b} y)$</p>
 </blockquote>
 <a id="more"></a>
 <p>分析：</p>

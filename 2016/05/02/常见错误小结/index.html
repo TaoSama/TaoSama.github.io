@@ -5,18 +5,18 @@
   
   <title>常见错误小结 | TaoSama&#39;s Blog - Forward and Never Step Back</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="$1. 递归时隐藏的修改了全局变量例如点分治重心$ $\to 每次复制一遍$$2. 测试数据时未将空间开到题目要求, 隐藏的空间倍数关系例如无向图2倍$ $\to RE$$3. 除数是个减法式子$ $整数\to RE\ \ \ 浮点数\to WA\ \ \ \to 特判$$4. 离线并查集的重复操作$ $\to 只有第一次才需要unite$$5. 回溯暴搜的复杂度是阶乘级或者指数级$ $\to">
+  <meta name="description" content="$1. 递归时隐藏的修改了全局变量例如点分治重心$ $\to 每次复制一遍$$2. 测试数据时未将空间开到题目要求, 隐藏的空间倍数关系例如无向图2倍$ $\to RE$$3. 除数是个减法式子$ $整数\to RE   浮点数\to WA   \to 特判$$4. 离线并查集的重复操作$ $\to 只有第一次才需要unite$$5. 回溯暴搜的复杂度是阶乘级或者指数级$ $\to 看到正常数据">
 <meta name="keywords" content="小结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="常见错误小结">
 <meta property="og:url" content="http://TaoSama.github.io/2016/05/02/常见错误小结/index.html">
 <meta property="og:site_name" content="TaoSama&#39;s Blog">
-<meta property="og:description" content="$1. 递归时隐藏的修改了全局变量例如点分治重心$ $\to 每次复制一遍$$2. 测试数据时未将空间开到题目要求, 隐藏的空间倍数关系例如无向图2倍$ $\to RE$$3. 除数是个减法式子$ $整数\to RE\ \ \ 浮点数\to WA\ \ \ \to 特判$$4. 离线并查集的重复操作$ $\to 只有第一次才需要unite$$5. 回溯暴搜的复杂度是阶乘级或者指数级$ $\to">
+<meta property="og:description" content="$1. 递归时隐藏的修改了全局变量例如点分治重心$ $\to 每次复制一遍$$2. 测试数据时未将空间开到题目要求, 隐藏的空间倍数关系例如无向图2倍$ $\to RE$$3. 除数是个减法式子$ $整数\to RE   浮点数\to WA   \to 特判$$4. 离线并查集的重复操作$ $\to 只有第一次才需要unite$$5. 回溯暴搜的复杂度是阶乘级或者指数级$ $\to 看到正常数据">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2017-09-19T14:48:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常见错误小结">
-<meta name="twitter:description" content="$1. 递归时隐藏的修改了全局变量例如点分治重心$ $\to 每次复制一遍$$2. 测试数据时未将空间开到题目要求, 隐藏的空间倍数关系例如无向图2倍$ $\to RE$$3. 除数是个减法式子$ $整数\to RE\ \ \ 浮点数\to WA\ \ \ \to 特判$$4. 离线并查集的重复操作$ $\to 只有第一次才需要unite$$5. 回溯暴搜的复杂度是阶乘级或者指数级$ $\to">
+<meta name="twitter:description" content="$1. 递归时隐藏的修改了全局变量例如点分治重心$ $\to 每次复制一遍$$2. 测试数据时未将空间开到题目要求, 隐藏的空间倍数关系例如无向图2倍$ $\to RE$$3. 除数是个减法式子$ $整数\to RE   浮点数\to WA   \to 特判$$4. 离线并查集的重复操作$ $\to 只有第一次才需要unite$$5. 回溯暴搜的复杂度是阶乘级或者指数级$ $\to 看到正常数据">
 <meta name="twitter:creator" content="@lwt1367">
 <link rel="publisher" href="115031676619400074158">
 <meta property="fb:admins" content="lwt1367">
@@ -131,7 +131,7 @@
         <!-- Table of Contents -->
       	
         <blockquote>
-<p>$1. 递归时隐藏的修改了全局变量例如点分治重心$<font color="red"> $\to 每次复制一遍$</font><br>$2. 测试数据时未将空间开到题目要求, 隐藏的空间倍数关系例如无向图2倍$<font color="red"> $\to RE$</font><br>$3. 除数是个减法式子$<font color="red"> $整数\to RE\ \ \ 浮点数\to WA\ \ \ \to 特判$</font><br>$4. 离线并查集的重复操作$<font color="red"> $\to 只有第一次才需要unite$</font><br>$5. 回溯暴搜的复杂度是阶乘级或者指数级$<font color="red"> $\to 看到正常数据的题再爆搜就可以去死了$</font><br>$6. 乘法取模, a \times b$<font color="red"> $\to a \% MOD \times (b\%MOD)\%MOD $</font><br>$7. two\ pointers的时候，相等时移动指针$<font color="red"> $\to 小心重复数据，死循环死你啊$</font><br>$8. 利用欧拉定理降幂的时候x^n\%\ MOD，特判x\% MOD == 0$<font color="red"> $\to 此时答案是0啊$</font><br><a id="more"></a></p>
+<p>$1. 递归时隐藏的修改了全局变量例如点分治重心$<font color="red"> $\to 每次复制一遍$</font><br>$2. 测试数据时未将空间开到题目要求, 隐藏的空间倍数关系例如无向图2倍$<font color="red"> $\to RE$</font><br>$3. 除数是个减法式子$<font color="red"> $整数\to RE   浮点数\to WA   \to 特判$</font><br>$4. 离线并查集的重复操作$<font color="red"> $\to 只有第一次才需要unite$</font><br>$5. 回溯暴搜的复杂度是阶乘级或者指数级$<font color="red"> $\to 看到正常数据的题再爆搜就可以去死了$</font><br>$6. 乘法取模, a \times b$<font color="red"> $\to a \% MOD \times (b\%MOD)\%MOD $</font><br>$7. two pointers的时候，相等时移动指针$<font color="red"> $\to 小心重复数据，死循环死你啊$</font><br>$8. 利用欧拉定理降幂的时候x^n\% MOD，特判x\% MOD == 0$<font color="red"> $\to 此时答案是0啊$</font><br><a id="more"></a></p>
 </blockquote>
 
       

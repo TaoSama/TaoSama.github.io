@@ -5,18 +5,18 @@
   
   <title>AIM Tech Round 3 (Div. 1) D. Incorrect Flow（有源汇可行费用流） | TaoSama&#39;s Blog - Forward and Never Step Back</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="题意：   $N\le 100，M\le 100的流网络，0\le c_i,\ f_i\le 10^6$$现在这个网络错了，可能c_i&amp;gt;f_i，也可能流量不平衡$$现在要求你修改f_i和c_i使得流网络成为可行流，并且change=\sum |f_i’-f_i|+|c_i’-c_i|最小$$求这个change$">
+  <meta name="description" content="题意：   $N\le 100，M\le 100的流网络，0\le c_i, f_i\le 10^6$$现在这个网络错了，可能c_i&amp;gt;f_i，也可能流量不平衡$$现在要求你修改f_i和c_i使得流网络成为可行流，并且change=\sum |f_i’-f_i|+|c_i’-c_i|最小$$求这个change$">
 <meta name="keywords" content="可行流">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AIM Tech Round 3 (Div. 1) D. Incorrect Flow（有源汇可行费用流）">
 <meta property="og:url" content="http://TaoSama.github.io/2016/08/26/AIM Tech Round 3 (Div. 1) D. Incorrect Flow（有源汇可行费用流）/index.html">
 <meta property="og:site_name" content="TaoSama&#39;s Blog">
-<meta property="og:description" content="题意：   $N\le 100，M\le 100的流网络，0\le c_i,\ f_i\le 10^6$$现在这个网络错了，可能c_i&amp;gt;f_i，也可能流量不平衡$$现在要求你修改f_i和c_i使得流网络成为可行流，并且change=\sum |f_i’-f_i|+|c_i’-c_i|最小$$求这个change$">
+<meta property="og:description" content="题意：   $N\le 100，M\le 100的流网络，0\le c_i, f_i\le 10^6$$现在这个网络错了，可能c_i&amp;gt;f_i，也可能流量不平衡$$现在要求你修改f_i和c_i使得流网络成为可行流，并且change=\sum |f_i’-f_i|+|c_i’-c_i|最小$$求这个change$">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2017-09-19T14:48:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AIM Tech Round 3 (Div. 1) D. Incorrect Flow（有源汇可行费用流）">
-<meta name="twitter:description" content="题意：   $N\le 100，M\le 100的流网络，0\le c_i,\ f_i\le 10^6$$现在这个网络错了，可能c_i&amp;gt;f_i，也可能流量不平衡$$现在要求你修改f_i和c_i使得流网络成为可行流，并且change=\sum |f_i’-f_i|+|c_i’-c_i|最小$$求这个change$">
+<meta name="twitter:description" content="题意：   $N\le 100，M\le 100的流网络，0\le c_i, f_i\le 10^6$$现在这个网络错了，可能c_i&amp;gt;f_i，也可能流量不平衡$$现在要求你修改f_i和c_i使得流网络成为可行流，并且change=\sum |f_i’-f_i|+|c_i’-c_i|最小$$求这个change$">
 <meta name="twitter:creator" content="@lwt1367">
 <link rel="publisher" href="115031676619400074158">
 <meta property="fb:admins" content="lwt1367">
@@ -132,12 +132,12 @@
       	
         <p>题意： </p>
 <blockquote>
-<p>$N\le 100，M\le 100的流网络，0\le c_i,\ f_i\le 10^6$<br>$现在这个网络错了，可能c_i&gt;f_i，也可能流量不平衡$<br>$现在要求你修改f_i和c_i使得流网络成为可行流，并且change=\sum |f_i’-f_i|+|c_i’-c_i|最小$<br>$求这个change$</p>
+<p>$N\le 100，M\le 100的流网络，0\le c_i, f_i\le 10^6$<br>$现在这个网络错了，可能c_i&gt;f_i，也可能流量不平衡$<br>$现在要求你修改f_i和c_i使得流网络成为可行流，并且change=\sum |f_i’-f_i|+|c_i’-c_i|最小$<br>$求这个change$</p>
 </blockquote>
 <a id="more"></a>
 <p>分析：</p>
 <blockquote>
-<p>$对于无源汇的上下界可行流，新建源s，汇t，然后对于u\to v边，下界d，上界c$<br>$变成s\to t,\ 容量d；u\to v，容量c-d；v\to t，容量d$<br>$合并一下边就好了最后，如果有可行流，那么一定满流(下界一定满足)$<br>$对于有源汇的，添加t\to s，容量为INF的边，之后新建超源s’，超汇t’，再做上面的就可以了$<br>$显然添加那条边之后就抵消了原来的源汇的影响(即给他们加上了流量平衡)$</p>
+<p>$对于无源汇的上下界可行流，新建源s，汇t，然后对于u\to v边，下界d，上界c$<br>$变成s\to t, 容量d；u\to v，容量c-d；v\to t，容量d$<br>$合并一下边就好了最后，如果有可行流，那么一定满流(下界一定满足)$<br>$对于有源汇的，添加t\to s，容量为INF的边，之后新建超源s’，超汇t’，再做上面的就可以了$<br>$显然添加那条边之后就抵消了原来的源汇的影响(即给他们加上了流量平衡)$</p>
 </blockquote>
 <hr>
 <blockquote>

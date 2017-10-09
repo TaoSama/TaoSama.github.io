@@ -158,7 +158,7 @@
 </ul>
 <h4 id="Maximum-Weighted-Independent-Set-of-a-tree"><a href="#Maximum-Weighted-Independent-Set-of-a-tree" class="headerlink" title="Maximum Weighted Independent Set of a tree"></a>Maximum Weighted Independent Set of a tree</h4><p>choose some nodes that each pair of them have no edge.<br>try to maximize the total weight of the chosen nodes</p>
 <ul>
-<li>Solution<br>simple tree dp. $f[u][0/1]:=$ the maximum weight of the independent set that the subtree rooted at $u$, and choosing $u$ or not<br>and the transition is simple:<br>choose $u$, all of its sons mustn’t be choosed<br>not choose $u$, choosing or not choosing its sons is OK, choose the maximum one.<br>$ans=\max {f[root][0], f[root][1]}$<br>total time complexity is $O(N)$</li>
+<li>Solution<br>simple tree dp. $f[u][0/1]:=$ the maximum weight of the independent set that the subtree rooted at $u$, and choosing $u$ or not<br>and the transition is simple:<br>choose $u$, all of its sons mustn’t be choosed<br>not choose $u$, choosing or not choosing its sons is OK, choose the maximum one.<br>$ans=\max \{f[root][0], f[root][1]\}$<br>total time complexity is $O(N)$</li>
 </ul>
 <h4 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h4><p>Two interviewers are both very nice and patient. Good Expericence.</p>
 <h4 id="VP-Interview"><a href="#VP-Interview" class="headerlink" title="VP Interview"></a>VP Interview</h4><p>Fvcking stupid that I talked about FP programming…<br>I’m not familiar with that..<br>I think the Japanese interviewer was a little sleepy, so absolutely my interview is a shit.. even he “woke up” when heard FP..<br>And it seemed that the Chinese one is weak.. some easy cpp questions..</p>

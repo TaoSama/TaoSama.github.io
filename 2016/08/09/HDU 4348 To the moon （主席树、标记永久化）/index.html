@@ -5,18 +5,18 @@
   
   <title>HDU 4348 To the moon （主席树、标记永久化） | TaoSama&#39;s Blog - Forward and Never Step Back</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="题意：   $给定N\le 10^5个数，Q\le 10^5询问，初始时间戳Timestamp=0$$C\ l\ r\ v:Timestamp+1，将[l,\ r]区间的数都+v$$Q\ l\ r:查询当前Timestamp的[l,\ r]区间和$$H\ l\ r\ t:查询历史Timestamp=t的[l,\ r]区间和，保证合法$$B\ t:回到历史Timestamp=t的时刻，保证合法，保证">
+  <meta name="description" content="题意：   $给定N\le 10^5个数，Q\le 10^5询问，初始时间戳Timestamp=0$$C l r v:Timestamp+1，将[l, r]区间的数都+v$$Q l r:查询当前Timestamp的[l, r]区间和$$H l r t:查询历史Timestamp=t的[l, r]区间和，保证合法$$B t:回到历史Timestamp=t的时刻，保证合法，保证不会回到将来$">
 <meta name="keywords" content="主席树,标记永久化">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HDU 4348 To the moon （主席树、标记永久化）">
 <meta property="og:url" content="http://TaoSama.github.io/2016/08/09/HDU 4348 To the moon （主席树、标记永久化）/index.html">
 <meta property="og:site_name" content="TaoSama&#39;s Blog">
-<meta property="og:description" content="题意：   $给定N\le 10^5个数，Q\le 10^5询问，初始时间戳Timestamp=0$$C\ l\ r\ v:Timestamp+1，将[l,\ r]区间的数都+v$$Q\ l\ r:查询当前Timestamp的[l,\ r]区间和$$H\ l\ r\ t:查询历史Timestamp=t的[l,\ r]区间和，保证合法$$B\ t:回到历史Timestamp=t的时刻，保证合法，保证">
+<meta property="og:description" content="题意：   $给定N\le 10^5个数，Q\le 10^5询问，初始时间戳Timestamp=0$$C l r v:Timestamp+1，将[l, r]区间的数都+v$$Q l r:查询当前Timestamp的[l, r]区间和$$H l r t:查询历史Timestamp=t的[l, r]区间和，保证合法$$B t:回到历史Timestamp=t的时刻，保证合法，保证不会回到将来$">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2017-09-19T14:48:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HDU 4348 To the moon （主席树、标记永久化）">
-<meta name="twitter:description" content="题意：   $给定N\le 10^5个数，Q\le 10^5询问，初始时间戳Timestamp=0$$C\ l\ r\ v:Timestamp+1，将[l,\ r]区间的数都+v$$Q\ l\ r:查询当前Timestamp的[l,\ r]区间和$$H\ l\ r\ t:查询历史Timestamp=t的[l,\ r]区间和，保证合法$$B\ t:回到历史Timestamp=t的时刻，保证合法，保证">
+<meta name="twitter:description" content="题意：   $给定N\le 10^5个数，Q\le 10^5询问，初始时间戳Timestamp=0$$C l r v:Timestamp+1，将[l, r]区间的数都+v$$Q l r:查询当前Timestamp的[l, r]区间和$$H l r t:查询历史Timestamp=t的[l, r]区间和，保证合法$$B t:回到历史Timestamp=t的时刻，保证合法，保证不会回到将来$">
 <meta name="twitter:creator" content="@lwt1367">
 <link rel="publisher" href="115031676619400074158">
 <meta property="fb:admins" content="lwt1367">
@@ -132,7 +132,7 @@
       	
         <p>题意： </p>
 <blockquote>
-<p>$给定N\le 10^5个数，Q\le 10^5询问，初始时间戳Timestamp=0$<br>$C\ l\ r\ v:Timestamp+1，将[l,\ r]区间的数都+v$<br>$Q\ l\ r:查询当前Timestamp的[l,\ r]区间和$<br>$H\ l\ r\ t:查询历史Timestamp=t的[l,\ r]区间和，保证合法$<br>$B\ t:回到历史Timestamp=t的时刻，保证合法，保证不会回到将来$</p>
+<p>$给定N\le 10^5个数，Q\le 10^5询问，初始时间戳Timestamp=0$<br>$C l r v:Timestamp+1，将[l, r]区间的数都+v$<br>$Q l r:查询当前Timestamp的[l, r]区间和$<br>$H l r t:查询历史Timestamp=t的[l, r]区间和，保证合法$<br>$B t:回到历史Timestamp=t的时刻，保证合法，保证不会回到将来$</p>
 </blockquote>
 <a id="more"></a>
 <p>分析：</p>

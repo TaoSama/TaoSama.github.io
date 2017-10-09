@@ -5,18 +5,18 @@
   
   <title>HDU 4418 Time travel（高斯消元解期望dp） | TaoSama&#39;s Blog - Forward and Never Step Back</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="题意：  $给定N\le 100长度的路，这个路是来回走的$$比如4个点，0, 1, 2, 3, 2, 1, 0, 1, …$$给定每次最大步数M，以及每个步数x\in[1,\ M]行走的概率p_x，保证\sum p_x=1$$给定起点x，终点y，以及方向d，0正着1反着$$求到达终点的期望步数$">
+  <meta name="description" content="题意：  $给定N\le 100长度的路，这个路是来回走的$$比如4个点，0, 1, 2, 3, 2, 1, 0, 1, …$$给定每次最大步数M，以及每个步数x\in[1, M]行走的概率p_x，保证\sum p_x=1$$给定起点x，终点y，以及方向d，0正着1反着$$求到达终点的期望步数$">
 <meta name="keywords" content="期望dp,高斯消元">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HDU 4418 Time travel（高斯消元解期望dp）">
 <meta property="og:url" content="http://TaoSama.github.io/2016/08/06/HDU 4418 Time travel（高斯消元解期望dp）/index.html">
 <meta property="og:site_name" content="TaoSama&#39;s Blog">
-<meta property="og:description" content="题意：  $给定N\le 100长度的路，这个路是来回走的$$比如4个点，0, 1, 2, 3, 2, 1, 0, 1, …$$给定每次最大步数M，以及每个步数x\in[1,\ M]行走的概率p_x，保证\sum p_x=1$$给定起点x，终点y，以及方向d，0正着1反着$$求到达终点的期望步数$">
+<meta property="og:description" content="题意：  $给定N\le 100长度的路，这个路是来回走的$$比如4个点，0, 1, 2, 3, 2, 1, 0, 1, …$$给定每次最大步数M，以及每个步数x\in[1, M]行走的概率p_x，保证\sum p_x=1$$给定起点x，终点y，以及方向d，0正着1反着$$求到达终点的期望步数$">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2017-09-19T14:48:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HDU 4418 Time travel（高斯消元解期望dp）">
-<meta name="twitter:description" content="题意：  $给定N\le 100长度的路，这个路是来回走的$$比如4个点，0, 1, 2, 3, 2, 1, 0, 1, …$$给定每次最大步数M，以及每个步数x\in[1,\ M]行走的概率p_x，保证\sum p_x=1$$给定起点x，终点y，以及方向d，0正着1反着$$求到达终点的期望步数$">
+<meta name="twitter:description" content="题意：  $给定N\le 100长度的路，这个路是来回走的$$比如4个点，0, 1, 2, 3, 2, 1, 0, 1, …$$给定每次最大步数M，以及每个步数x\in[1, M]行走的概率p_x，保证\sum p_x=1$$给定起点x，终点y，以及方向d，0正着1反着$$求到达终点的期望步数$">
 <meta name="twitter:creator" content="@lwt1367">
 <link rel="publisher" href="115031676619400074158">
 <meta property="fb:admins" content="lwt1367">
@@ -132,7 +132,7 @@
       	
         <p>题意：</p>
 <blockquote>
-<p>$给定N\le 100长度的路，这个路是来回走的$<br>$比如4个点，0, 1, 2, 3, 2, 1, 0, 1, …$<br>$给定每次最大步数M，以及每个步数x\in[1,\ M]行走的概率p_x，保证\sum p_x=1$<br>$给定起点x，终点y，以及方向d，0正着1反着$<br>$求到达终点的期望步数$</p>
+<p>$给定N\le 100长度的路，这个路是来回走的$<br>$比如4个点，0, 1, 2, 3, 2, 1, 0, 1, …$<br>$给定每次最大步数M，以及每个步数x\in[1, M]行走的概率p_x，保证\sum p_x=1$<br>$给定起点x，终点y，以及方向d，0正着1反着$<br>$求到达终点的期望步数$</p>
 </blockquote>
 <a id="more"></a>
 <p>分析：</p>

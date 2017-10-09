@@ -5,18 +5,18 @@
   
   <title>HDU 5730 Shell Necklace（dp、cdq分治+FFT） | TaoSama&#39;s Blog - Forward and Never Step Back</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="题意：  $给定N\le 10^5个贝壳的项链，每连续i\le N个贝壳模式的贡献是a_i$$对于某种串项链的方式，假设含有模式b_1,\ b_2,\ \cdots,\ bm，总贡献为\prod{i=1}^m a_{b_i} $$求所有串项链方式的贡献和$">
+  <meta name="description" content="题意：  $给定N\le 10^5个贝壳的项链，每连续i\le N个贝壳模式的贡献是a_i$$对于某种串项链的方式，假设含有模式b_1, b_2, \cdots, b_m，总贡献为\prod_{i=1}^m a_{b_i} $$求所有串项链方式的贡献和$">
 <meta name="keywords" content="FFT,cdq分治">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HDU 5730 Shell Necklace（dp、cdq分治+FFT）">
 <meta property="og:url" content="http://TaoSama.github.io/2016/07/24/HDU 5730 Shell Necklace（dp、cdq分治+FFT）/index.html">
 <meta property="og:site_name" content="TaoSama&#39;s Blog">
-<meta property="og:description" content="题意：  $给定N\le 10^5个贝壳的项链，每连续i\le N个贝壳模式的贡献是a_i$$对于某种串项链的方式，假设含有模式b_1,\ b_2,\ \cdots,\ bm，总贡献为\prod{i=1}^m a_{b_i} $$求所有串项链方式的贡献和$">
+<meta property="og:description" content="题意：  $给定N\le 10^5个贝壳的项链，每连续i\le N个贝壳模式的贡献是a_i$$对于某种串项链的方式，假设含有模式b_1, b_2, \cdots, b_m，总贡献为\prod_{i=1}^m a_{b_i} $$求所有串项链方式的贡献和$">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2017-09-19T14:48:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HDU 5730 Shell Necklace（dp、cdq分治+FFT）">
-<meta name="twitter:description" content="题意：  $给定N\le 10^5个贝壳的项链，每连续i\le N个贝壳模式的贡献是a_i$$对于某种串项链的方式，假设含有模式b_1,\ b_2,\ \cdots,\ bm，总贡献为\prod{i=1}^m a_{b_i} $$求所有串项链方式的贡献和$">
+<meta name="twitter:description" content="题意：  $给定N\le 10^5个贝壳的项链，每连续i\le N个贝壳模式的贡献是a_i$$对于某种串项链的方式，假设含有模式b_1, b_2, \cdots, b_m，总贡献为\prod_{i=1}^m a_{b_i} $$求所有串项链方式的贡献和$">
 <meta name="twitter:creator" content="@lwt1367">
 <link rel="publisher" href="115031676619400074158">
 <meta property="fb:admins" content="lwt1367">
@@ -132,7 +132,7 @@
       	
         <p>题意：</p>
 <blockquote>
-<p>$给定N\le 10^5个贝壳的项链，每连续i\le N个贝壳模式的贡献是a_i$<br>$对于某种串项链的方式，假设含有模式b_1,\ b_2,\ \cdots,\ b<em>m，总贡献为\prod</em>{i=1}^m a_{b_i} $<br>$求所有串项链方式的贡献和$</p>
+<p>$给定N\le 10^5个贝壳的项链，每连续i\le N个贝壳模式的贡献是a_i$<br>$对于某种串项链的方式，假设含有模式b_1, b_2, \cdots, b_m，总贡献为\prod_{i=1}^m a_{b_i} $<br>$求所有串项链方式的贡献和$</p>
 </blockquote>
 <a id="more"></a>
 <p>分析：</p>

@@ -5,18 +5,18 @@
   
   <title>Hihocode 1496 寻找最大值（高维前缀和） | TaoSama&#39;s Blog - Forward and Never Step Back</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="题意：$给定一个长度为N\le 10^5的数列，1\le Ai\le 2^{20}$$求\displaystyle\max{i,\ j,\ i\neq j}{A_i\times A_j\times (A_i\&amp;amp; A_j)}的值$">
+  <meta name="description" content="题意：$给定一个长度为N\le 10^5的数列，1\le A_i\le 2^{20}$$求\displaystyle\max_{i, j, i\neq j}\{A_i\times A_j\times (A_i\&amp;amp; A_j)\}的值$">
 <meta name="keywords" content="高维前缀和">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hihocode 1496 寻找最大值（高维前缀和）">
 <meta property="og:url" content="http://TaoSama.github.io/2017/04/05/Hihocode 1496 寻找最大值（高维前缀和）/index.html">
 <meta property="og:site_name" content="TaoSama&#39;s Blog">
-<meta property="og:description" content="题意：$给定一个长度为N\le 10^5的数列，1\le Ai\le 2^{20}$$求\displaystyle\max{i,\ j,\ i\neq j}{A_i\times A_j\times (A_i\&amp;amp; A_j)}的值$">
+<meta property="og:description" content="题意：$给定一个长度为N\le 10^5的数列，1\le A_i\le 2^{20}$$求\displaystyle\max_{i, j, i\neq j}\{A_i\times A_j\times (A_i\&amp;amp; A_j)\}的值$">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2017-09-19T14:48:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hihocode 1496 寻找最大值（高维前缀和）">
-<meta name="twitter:description" content="题意：$给定一个长度为N\le 10^5的数列，1\le Ai\le 2^{20}$$求\displaystyle\max{i,\ j,\ i\neq j}{A_i\times A_j\times (A_i\&amp;amp; A_j)}的值$">
+<meta name="twitter:description" content="题意：$给定一个长度为N\le 10^5的数列，1\le A_i\le 2^{20}$$求\displaystyle\max_{i, j, i\neq j}\{A_i\times A_j\times (A_i\&amp;amp; A_j)\}的值$">
 <meta name="twitter:creator" content="@lwt1367">
 <link rel="publisher" href="115031676619400074158">
 <meta property="fb:admins" content="lwt1367">
@@ -130,7 +130,7 @@
       
         <!-- Table of Contents -->
       	
-        <p>题意：<br>$给定一个长度为N\le 10^5的数列，1\le A<em>i\le 2^{20}$<br>$求\displaystyle\max</em>{i,\ j,\ i\neq j}{A_i\times A_j\times (A_i\&amp; A_j)}的值$</p>
+        <p>题意：<br>$给定一个长度为N\le 10^5的数列，1\le A_i\le 2^{20}$<br>$求\displaystyle\max_{i, j, i\neq j}\{A_i\times A_j\times (A_i\&amp; A_j)\}的值$</p>
 <a id="more"></a>
 <p>分析：<br>$这个题显然不能枚举A_i和A_j，考虑枚举A_i\&amp; A_j的值$<br>$令z=A_i\&amp;A_j，事实上条件可以不用这么严格$<br>$只要找到z的超集Z’即可，即z\supset Z’$<br>$假如存在Z’中的两个元素z’_1，z’_2分别是最大值和次大值$<br>$满足z’_1\&amp; z’_2=z，那么这个必然是z的答案$<br>$假如z’_1\&amp; z’_2&gt;z，那么令z’_1\&amp; z’_2=y$<br>$那么这个答案必然在y处更新，且答案更大，也就是说不会影响答案$<br>$所以问题就变成了如何求z的超集的最大值和次大值了$</p>
 <p>$这是一个高位前缀和问题，即20维空间，每一维大小是2$<br>$所以把1的答案都加到0上即可，因为1是0的超集$<br>$同理子集问题也可以这么搞，不过是0加到1上，0是1的子集$<br>$具体看代码，注意循环顺序，感受一下前缀和$</p>

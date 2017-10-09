@@ -5,18 +5,18 @@
   
   <title>斜率优化dp小结 | TaoSama&#39;s Blog - Forward and Never Step Back</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Ⅰ. 斜率优化认知 这东西英文名叫$Convex\ Hull\ Trick\ (CHT)$ 主要优化形如$f_i = min{\ f_j + cost(j+1,\ i)\ }的这种dp$ 由于等号右边的式子并不能$O(1)$计算，所以我们需要一些技巧来优化">
+  <meta name="description" content="Ⅰ. 斜率优化认知 这东西英文名叫$Convex Hull Trick (CHT)$ 主要优化形如$f_i = min\{ f_j + cost(j+1, i) \}的这种dp$ 由于等号右边的式子并不能$O(1)$计算，所以我们需要一些技巧来优化">
 <meta name="keywords" content="斜率优化">
 <meta property="og:type" content="article">
 <meta property="og:title" content="斜率优化dp小结">
 <meta property="og:url" content="http://TaoSama.github.io/2016/05/11/斜率优化dp小结/index.html">
 <meta property="og:site_name" content="TaoSama&#39;s Blog">
-<meta property="og:description" content="Ⅰ. 斜率优化认知 这东西英文名叫$Convex\ Hull\ Trick\ (CHT)$ 主要优化形如$f_i = min{\ f_j + cost(j+1,\ i)\ }的这种dp$ 由于等号右边的式子并不能$O(1)$计算，所以我们需要一些技巧来优化">
+<meta property="og:description" content="Ⅰ. 斜率优化认知 这东西英文名叫$Convex Hull Trick (CHT)$ 主要优化形如$f_i = min\{ f_j + cost(j+1, i) \}的这种dp$ 由于等号右边的式子并不能$O(1)$计算，所以我们需要一些技巧来优化">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2017-09-19T14:48:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="斜率优化dp小结">
-<meta name="twitter:description" content="Ⅰ. 斜率优化认知 这东西英文名叫$Convex\ Hull\ Trick\ (CHT)$ 主要优化形如$f_i = min{\ f_j + cost(j+1,\ i)\ }的这种dp$ 由于等号右边的式子并不能$O(1)$计算，所以我们需要一些技巧来优化">
+<meta name="twitter:description" content="Ⅰ. 斜率优化认知 这东西英文名叫$Convex Hull Trick (CHT)$ 主要优化形如$f_i = min\{ f_j + cost(j+1, i) \}的这种dp$ 由于等号右边的式子并不能$O(1)$计算，所以我们需要一些技巧来优化">
 <meta name="twitter:creator" content="@lwt1367">
 <link rel="publisher" href="115031676619400074158">
 <meta property="fb:admins" content="lwt1367">
@@ -138,35 +138,35 @@
       		</div>
       	
         <h2 id="Ⅰ-斜率优化认知"><a href="#Ⅰ-斜率优化认知" class="headerlink" title="Ⅰ. 斜率优化认知"></a>Ⅰ. 斜率优化认知</h2><ul>
-<li>这东西英文名叫$Convex\ Hull\ Trick\ (CHT)$</li>
-<li>主要优化形如$f_i = min{\ f_j + cost(j+1,\ i)\ }的这种dp$</li>
+<li>这东西英文名叫$Convex Hull Trick (CHT)$</li>
+<li>主要优化形如$f_i = min\{ f_j + cost(j+1, i) \}的这种dp$</li>
 <li>由于等号右边的式子并不能$O(1)$计算，所以我们需要一些技巧来优化</li>
 </ul>
 <a id="more"></a>
 <h2 id="Ⅱ-斜率优化"><a href="#Ⅱ-斜率优化" class="headerlink" title="Ⅱ. 斜率优化"></a>Ⅱ. 斜率优化</h2><ul>
 <li>$懒得写引子了，就直接推推推吧$</li>
-<li>$对于当前状态i，有2个决策j和k，不妨假设k &lt; j &lt; i，如果决策j优于k，则有：$<br>$$f_j + cost(j+1,\ i)&lt;f_k + cost(k+1,\ i)$$</li>
+<li>$对于当前状态i，有2个决策j和k，不妨假设k &lt; j &lt; i，如果决策j优于k，则有：$<br>$$f_j + cost(j+1, i)&lt;f_k + cost(k+1, i)$$</li>
 <li>$如果以上这个式子可以化简到：$<br>$$ \frac{Y(j)-Y(k)}{X(j)-X(k)}&lt;F(i) $$</li>
-<li>$记这个式子为slope(k,\ j)=\frac{Y(j)-Y(k)}{X(j)-X(k)}&lt;F(i)，即j优于k$</li>
+<li>$记这个式子为slope(k, j)=\frac{Y(j)-Y(k)}{X(j)-X(k)}&lt;F(i)，即j优于k$</li>
 <li>$便可以使用优化，这个式子很斜率，故称这个优化方法为斜率优化$</li>
 </ul>
 <hr>
 <ul>
 <li>$我们发现以上并没有什么卵用，先说一个结论$</li>
-<li>$结论：如果slope(k,\ j)\ge slope(j,\ i)，k &lt; j &lt; i，那么j决策是不优的可以删除$</li>
+<li>$结论：如果slope(k, j)\ge slope(j, i)，k &lt; j &lt; i，那么j决策是不优的可以删除$</li>
 <li>$证明：$</li>
-<li>$如果slope(j,\ i) &lt; F(i)，那么i优于j，j可以删除$</li>
-<li>$如果slope(j,\ i)\ge F(i)，虽然j优于i，但是slope(k,\ j)\ge F(i)，k比j优，j还是可以删除\ \ \ \blacksquare$</li>
+<li>$如果slope(j, i) &lt; F(i)，那么i优于j，j可以删除$</li>
+<li>$如果slope(j, i)\ge F(i)，虽然j优于i，但是slope(k, j)\ge F(i)，k比j优，j还是可以删除   \blacksquare$</li>
 <li>$然后就可以用这个结论来维护一个单调队列来搞了$</li>
 </ul>
 <hr>
-<h2 id="Ⅲ-题目讲解"><a href="#Ⅲ-题目讲解" class="headerlink" title="Ⅲ. 题目讲解"></a>Ⅲ. 题目讲解</h2><h3 id="HDU-3507-Print-Article"><a href="#HDU-3507-Print-Article" class="headerlink" title="HDU 3507 Print Article"></a>HDU 3507 Print Article</h3><p>分析:<br>$f_i:=打印前i个字符的最小代价$<br>$f_i = min{\ f_j + (sum<em>i - sum</em>{j})^2 + M\ }，sum<em>i=\sum</em>{i=1}^n c_i$<br>$假设k&lt;j&lt;i，假设j优于k，可得：$<br>$$ f_j + (sum<em>i - sum</em>{j})^2 + M &lt; f_k + (sum<em>i - sum</em>{k})^2 + M $$<br>$$ f_j +sum_i^2-2\cdot sum_i \cdot sum_j + sum_j^2 &lt; f_k +sum_i^2-2\cdot sum_i \cdot sum_k + sum_k^2 $$<br>$$ (f_j + sum_j^2)-(f_k+sum_k^2) &lt; 2\cdot sum_i\cdot (sum_j-sum_k) $$<br>$$ \frac{(f_j + sum_j^2)-(f_k+sum_k^2)}{sum_j-sum_k} &lt; sum_i $$<br>$即j优于k的条件是：slope(k,\ j)=\frac{(f_j + sum_j^2)-(f_k+sum_k^2)}{sum_j-sum_k} &lt; sum_i $</p>
+<h2 id="Ⅲ-题目讲解"><a href="#Ⅲ-题目讲解" class="headerlink" title="Ⅲ. 题目讲解"></a>Ⅲ. 题目讲解</h2><h3 id="HDU-3507-Print-Article"><a href="#HDU-3507-Print-Article" class="headerlink" title="HDU 3507 Print Article"></a>HDU 3507 Print Article</h3><p>分析:<br>$f_i:=打印前i个字符的最小代价$<br>$f_i = min\{ f_j + (sum_i - sum_{j})^2 + M \}，sum_i=\sum_{i=1}^n c_i$<br>$假设k&lt;j&lt;i，假设j优于k，可得：$<br>$$ f_j + (sum_i - sum_{j})^2 + M &lt; f_k + (sum_i - sum_{k})^2 + M $$<br>$$ f_j +sum_i^2-2\cdot sum_i \cdot sum_j + sum_j^2 &lt; f_k +sum_i^2-2\cdot sum_i \cdot sum_k + sum_k^2 $$<br>$$ (f_j + sum_j^2)-(f_k+sum_k^2) &lt; 2\cdot sum_i\cdot (sum_j-sum_k) $$<br>$$ \frac{(f_j + sum_j^2)-(f_k+sum_k^2)}{sum_j-sum_k} &lt; sum_i $$<br>$即j优于k的条件是：slope(k, j)=\frac{(f_j + sum_j^2)-(f_k+sum_k^2)}{sum_j-sum_k} &lt; sum_i $</p>
 <ul>
-<li>$维护单调队列，开区间[L,\ R)：$</li>
-<li>$先删除队头不优的元素，即slope(q[L],\ q[L+1])\le sum_i$</li>
+<li>$维护单调队列，开区间[L, R)：$</li>
+<li>$先删除队头不优的元素，即slope(q[L], q[L+1])\le sum_i$</li>
 <li>$此时q[L+1]不差于q[L]，所以q[L]可以删除$</li>
 <li>$用最优的j=q[L]更新f_i$</li>
-<li>$再用f_i去删除队尾的不优元素，即slope(q[R-2],\ q[R-1])\ge slope(q[R-1],\ i)$</li>
+<li>$再用f_i去删除队尾的不优元素，即slope(q[R-2], q[R-1])\ge slope(q[R-1], i)$</li>
 <li>$时间复杂度O(n)$</li>
 </ul>
 <p>参考代码：</p>
