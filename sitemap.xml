@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://TaoSama.github.io/2017/10/09/effective-cpp-templates-and-generic-programming/</loc>
+    
+    <lastmod>2017-10-16T12:05:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2017/09/11/effective-cpp-inheritance-and-object-oriented-design/</loc>
+    
+    <lastmod>2017-10-16T12:01:18.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2017/10/12/effective-cpp-customizing-new-and-delete/</loc>
+    
+    <lastmod>2017-10-16T12:01:02.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/09/10/FWT%E5%B0%8F%E7%BB%93/</loc>
+    
+    <lastmod>2017-10-09T02:31:31.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://TaoSama.github.io/about/index.html</loc>
     
     <lastmod>2017-09-20T10:14:31.000Z</lastmod>
@@ -72,35 +100,7 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/04/07/HDU%205651%20xiaoxin%20juju%20needs%20help%EF%BC%88%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2016/05/09/BNUOJ%2051645%20ACM%20Battle%EF%BC%88%E6%90%9C%E7%B4%A2%E3%80%81%E6%9C%80%E5%B0%8F%E7%82%B9%E8%A6%86%E7%9B%96%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2016/05/09/BNUOJ%2051639%20Simple%20Database%EF%BC%88%E5%A4%A7%E6%A8%A1%E6%8B%9F%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2016/03/23/BZOJ%201878%20HH%E7%9A%84%E9%A1%B9%E9%93%BE%EF%BC%88%E7%A6%BB%E7%BA%BF%E6%80%9D%E6%83%B3%E3%80%81BIT%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2017/04/28/Backthoughts-during-These-Days/</loc>
+    <loc>http://TaoSama.github.io/2016/04/07/HDU%205654%20xiaoxin%20and%20his%20watermelon%20candy%EF%BC%88%E7%A6%BB%E7%BA%BF%E6%80%9D%E6%83%B3%E3%80%81BIT%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -408,7 +408,7 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/09/10/FWT%E5%B0%8F%E7%BB%93/</loc>
+    <loc>http://TaoSama.github.io/2016/06/12/2016%20%E8%AE%A1%E8%92%9C%E4%B9%8B%E9%81%93%20%E7%99%BE%E5%BA%A6%E5%B8%90%E5%8F%B7%E7%9A%84%E9%80%89%E5%8F%96%E6%96%B9%E6%A1%88%20%EF%BC%88%E4%B8%AD%E7%AD%89%EF%BC%89%EF%BC%88kmp%E3%80%81dp%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -709,14 +709,14 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/06/12/2016%20%E8%AE%A1%E8%92%9C%E4%B9%8B%E9%81%93%20%20%E5%BE%AE%E8%BD%AF%E7%9A%84%E5%91%98%E5%B7%A5%E7%A6%8F%E5%88%A9%20%EF%BC%88%E7%AE%80%E5%8D%95%E3%80%81%E4%B8%AD%E7%AD%89%EF%BC%89%EF%BC%88dp%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/04/07/HDU%205651%20xiaoxin%20juju%20needs%20help%EF%BC%88%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/04/07/HDU%205654%20xiaoxin%20and%20his%20watermelon%20candy%EF%BC%88%E7%A6%BB%E7%BA%BF%E6%80%9D%E6%83%B3%E3%80%81BIT%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/06/12/2016%20%E8%AE%A1%E8%92%9C%E4%B9%8B%E9%81%93%20%20%E5%BE%AE%E8%BD%AF%E7%9A%84%E5%91%98%E5%B7%A5%E7%A6%8F%E5%88%A9%20%EF%BC%88%E7%AE%80%E5%8D%95%E3%80%81%E4%B8%AD%E7%AD%89%EF%BC%89%EF%BC%88dp%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -1283,13 +1283,6 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/06/12/2016%20%E8%AE%A1%E8%92%9C%E4%B9%8B%E9%81%93%20%E7%99%BE%E5%BA%A6%E5%B8%90%E5%8F%B7%E7%9A%84%E9%80%89%E5%8F%96%E6%96%B9%E6%A1%88%20%EF%BC%88%E4%B8%AD%E7%AD%89%EF%BC%89%EF%BC%88kmp%E3%80%81dp%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://TaoSama.github.io/2016/08/26/AIM%20Tech%20Round%203%20(Div.%201)%20D.%20Incorrect%20Flow%EF%BC%88%E6%9C%89%E6%BA%90%E6%B1%87%E5%8F%AF%E8%A1%8C%E8%B4%B9%E7%94%A8%E6%B5%81%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
@@ -1332,6 +1325,13 @@
   </url>
   
   <url>
+    <loc>http://TaoSama.github.io/2017/05/18/Address-Collecting/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://TaoSama.github.io/2016/05/02/%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%B0%8F%E7%BB%93/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
@@ -1339,7 +1339,7 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2017/05/18/Address-Collecting/</loc>
+    <loc>http://TaoSama.github.io/2016/05/09/BNUOJ%2051638%20Air%20Hockey%EF%BC%88%E4%B8%89%E5%88%86%E6%90%9C%E7%B4%A2%E3%80%81%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -1388,14 +1388,35 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/05/09/BNUOJ%2051638%20Air%20Hockey%EF%BC%88%E4%B8%89%E5%88%86%E6%90%9C%E7%B4%A2%E3%80%81%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/08/08/BZOJ%201086%20%E7%8E%8B%E5%AE%A4%E8%81%94%E9%82%A6%EF%BC%88%E5%9D%97%E7%8A%B6%E6%A0%91%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/08/08/BZOJ%201086%20%E7%8E%8B%E5%AE%A4%E8%81%94%E9%82%A6%EF%BC%88%E5%9D%97%E7%8A%B6%E6%A0%91%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/05/09/BNUOJ%2051645%20ACM%20Battle%EF%BC%88%E6%90%9C%E7%B4%A2%E3%80%81%E6%9C%80%E5%B0%8F%E7%82%B9%E8%A6%86%E7%9B%96%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/05/09/BNUOJ%2051639%20Simple%20Database%EF%BC%88%E5%A4%A7%E6%A8%A1%E6%8B%9F%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/03/23/BZOJ%201878%20HH%E7%9A%84%E9%A1%B9%E9%93%BE%EF%BC%88%E7%A6%BB%E7%BA%BF%E6%80%9D%E6%83%B3%E3%80%81BIT%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2017/04/28/Backthoughts-during-These-Days/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     

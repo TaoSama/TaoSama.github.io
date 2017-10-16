@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Inheritance and Object-Oriented Design, Notes(6), Effective C++ | TaoSama&#39;s Blog - Forward and Never Step Back</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Inheritance and Object-Oriented Design(I read a Chinese version of the book, any translation problem plz point out.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Inheritance and Object-Oriented Design, Notes(6), Effective C++">
+<meta property="og:url" content="http://TaoSama.github.io/2017/09/11/effective-cpp-inheritance-and-object-oriented-design/index.html">
+<meta property="og:site_name" content="TaoSama&#39;s Blog">
+<meta property="og:description" content="Inheritance and Object-Oriented Design(I read a Chinese version of the book, any translation problem plz point out.">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-10-16T12:01:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Inheritance and Object-Oriented Design, Notes(6), Effective C++">
+<meta name="twitter:description" content="Inheritance and Object-Oriented Design(I read a Chinese version of the book, any translation problem plz point out.">
+<meta name="twitter:creator" content="@lwt1367">
+<link rel="publisher" href="115031676619400074158">
+<meta property="fb:admins" content="lwt1367">
+  
+    <link rel="alternate" href="/atom.xml" title="TaoSama&#39;s Blog" type="application/atom+xml">
+  
+
+  <!-- favicons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/css/images/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/css/images/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/css/images/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/css/images/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/css/images/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/css/images/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/css/images/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/css/images/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/css/images/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/css/images/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/css/images/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/css/images/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/css/images/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/css/images/manifest.json">
+  <link rel="mask-icon" href="/css/images/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/css/images/favicon.ico">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="msapplication-TileImage" content="/css/images/mstile-144x144.png">
+  <meta name="msapplication-config" content="/css/images/browserconfig.xml">
+  <meta name="theme-color" content="#3B74AC">
+  <!-- end of icons -->
+  <link href="http://fonts.lug.ustc.edu.cn/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link href="/css/duoshuo.css" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="/css/style.css">
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">TaoSama&#39;s Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Reborn and Be Together</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon" style="margin-left: 13px;"></a>
+        
+          <a class="main-nav-link" href="/">主页</a>
+        
+          <a class="main-nav-link" href="/archives">文章</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      <nav id="sub-nav">
+		<a class="nav-icon" href="http://weibo.com/3863360617" title="微博" target="_blank">&#61834;</a>
+		<!--
+		<a class="nav-icon" href="http://www.renren.com/287137027" title="人人" target="_blank">&#61835;</a>
+		<a class="nav-icon" href="http://user.qzone.qq.com/525969441" title="QQ空间" target="_blank">&#61910;</a>
+		-->
+		<a class="nav-icon" href="https://www.facebook.com/lwt1367" title="Facebook" target="_blank">&#62000;</a>
+		<a class="nav-icon" href="https://twitter.com/lwt1367" title="Twitter" target="_blank">&#61593;</a>
+		<a class="nav-icon" href="http://www.linkedin.com/in/lwt1367" title="LinkedIn" target="_blank">&#61665;</a>
+		<a class="nav-icon" href="https://github.com/TaoSama" title="GitHub" target="_blank">&#61595;</a>
+		<a class="nav-icon" href="https://plus.google.com/115031676619400074158" title="Google+" target="_blank">&#61653;</a>
+        
+          <a id="nav-rss-link" class="nav-icon" style="font-size: 22px; width: 22px; height: 22px; padding: 20px 5px;" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" style="font-size: 19px; width: 19px; height: 19px; padding: 20px 5px;" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://TaoSama.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-effective-cpp-inheritance-and-object-oriented-design" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Inheritance and Object-Oriented Design, Notes(6), Effective C++
+    </h1>
+  
+
+      </header>
+    
+  <div class="article-meta">
+    <a href="/2017/09/11/effective-cpp-inheritance-and-object-oriented-design/" class="article-date">
+  <time datetime="2017-09-11T09:22:00.000Z" itemprop="datePublished">2017-9-11 周一  17:22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Doing/">Doing</a>►<a class="article-category-link" href="/categories/Doing/CPP/">CPP</a>
+  </div>
+
+  </div>
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+      	
+      		<div id="toc" class="toc-article">
+      		<strong class="toc-title">Contents</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Inheritance-and-Object-Oriented-Design"><span class="toc-number">1.</span> <span class="toc-text">Inheritance and Object-Oriented Design</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Make-sure-public-inheritance-models-“is-a”"><span class="toc-number">1.1.</span> <span class="toc-text">Make sure public inheritance models “is-a”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Avoid-hiding-inherited-names"><span class="toc-number">1.2.</span> <span class="toc-text">Avoid hiding inherited names</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Differentiate-between-inheritance-of-interface-and-inhertiace-of-implementation"><span class="toc-number">1.3.</span> <span class="toc-text">Differentiate between inheritance of interface and inhertiace of implementation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Consider-alternatives-to-virtual-functions"><span class="toc-number">1.4.</span> <span class="toc-text">Consider alternatives to virtual functions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Never-redefine-an-inherited-non-virtual-function"><span class="toc-number">1.5.</span> <span class="toc-text">Never redefine an inherited non-virtual function</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Never-redefine-a-function’s-inherited-default-parameter-value"><span class="toc-number">1.6.</span> <span class="toc-text">Never redefine a function’s inherited default parameter value</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Model-“has-a”-or-“is-implemented-in-terms-of”-through-composition"><span class="toc-number">1.7.</span> <span class="toc-text">Model “has-a” or “is-implemented-in-terms-of” through composition</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Use-private-inheritance-judiciously"><span class="toc-number">1.8.</span> <span class="toc-text">Use private inheritance judiciously</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Use-multiple-inheritance-judiciously"><span class="toc-number">1.9.</span> <span class="toc-text">Use multiple inheritance judiciously</span></a></li></ol></li></ol>
+		
+      		</div>
+      	
+        <h2 id="Inheritance-and-Object-Oriented-Design"><a href="#Inheritance-and-Object-Oriented-Design" class="headerlink" title="Inheritance and Object-Oriented Design"></a>Inheritance and Object-Oriented Design</h2><p>(I read a Chinese version of the book, any translation problem plz point out. </p>
+<a id="more"></a>
+<h3 id="Make-sure-public-inheritance-models-“is-a”"><a href="#Make-sure-public-inheritance-models-“is-a”" class="headerlink" title="Make sure public inheritance models “is-a”"></a>Make sure public inheritance models “is-a”</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Bird</span> &#123;</span></div><div class="line">    <span class="comment">// ...</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">FlyingBird</span>:</span> <span class="keyword">public</span> Bird &#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">fly</span><span class="params">()</span></span>;</div><div class="line">    <span class="comment">// ...</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Penguin</span>:</span> <span class="keyword">public</span> Bird &#123;</div><div class="line">    <span class="comment">// ...</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>public inheritance means everything must be suitable for derived class if it is suitable for base class,<br>because every derived class object is a base class object.</p>
+<p><strong>is a square a rectangle?</strong></p>
+<h3 id="Avoid-hiding-inherited-names"><a href="#Avoid-hiding-inherited-names" class="headerlink" title="Avoid hiding inherited names"></a>Avoid hiding inherited names</h3><p>CPP name-hiding rules:<br>all the functions of base class with the same name as derived class will be hiden,<br>even if the parameter lists is different. it is both suitable for <strong>virtual and non-virtual functions</strong>.</p>
+<p>CPP name-lookup rules:<br>local -&gt; derived -&gt; namespace of derived -&gt; base -&gt; namespace of base -&gt; global</p>
+<p>but if you use public inheritance without inheriting the overloaded functions, it violates the “is-a” relation between base and derived class.</p>
+<ul>
+<li><code>using</code> declaration<br>introduce all the functions of specific name of base class to derived class,<br>it is ok for public inheritance.<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Base</span> &#123;</span></div><div class="line"><span class="keyword">private</span>:</div><div class="line">    <span class="keyword">int</span> x;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">mf1</span><span class="params">()</span> </span>= <span class="number">0</span>;</div><div class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">mf1</span><span class="params">(<span class="keyword">int</span>)</span></span>;</div><div class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">mf2</span><span class="params">()</span></span>;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">mf3</span><span class="params">()</span></span>;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">mf3</span><span class="params">(<span class="keyword">double</span>)</span></span>;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Derived</span>:</span> <span class="keyword">public</span> Base &#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="keyword">using</span> Base::mf1;</div><div class="line">    <span class="keyword">using</span> Base::mf3;</div><div class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">mf1</span><span class="params">()</span></span>;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">mf3</span><span class="params">()</span></span>;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">mf4</span><span class="params">()</span></span>;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>what if for partially inheriting the functions?</p>
+<ul>
+<li>forwarding function<br>use for private inheritance.<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Base</span> &#123;</span></div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">mf1</span><span class="params">()</span> </span>= <span class="number">0</span>;</div><div class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">mf1</span><span class="params">(<span class="keyword">int</span>)</span></span>;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Derived</span>:</span> <span class="keyword">private</span> Base &#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">mf1</span><span class="params">()</span> </span>&#123; <span class="comment">// Forwarding function</span></div><div class="line">        Base::mf1();     <span class="comment">// Implicitly inline</span></div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Differentiate-between-inheritance-of-interface-and-inhertiace-of-implementation"><a href="#Differentiate-between-inheritance-of-interface-and-inhertiace-of-implementation" class="headerlink" title="Differentiate between inheritance of interface and inhertiace of implementation"></a>Differentiate between inheritance of interface and inhertiace of implementation</h3><ul>
+<li>pure virtual functions: only inherit interface.</li>
+<li>impure virtual functions: inherit interface and a default implementation.</li>
+<li>non-virtual functons: inherit interface and a forced implementation. invariant far more than specialization.</li>
+</ul>
+<h3 id="Consider-alternatives-to-virtual-functions"><a href="#Consider-alternatives-to-virtual-functions" class="headerlink" title="Consider alternatives to virtual functions"></a>Consider alternatives to virtual functions</h3><ul>
+<li><p>use <strong>Non-Virtual Interface</strong> to implement <strong>Template Method</strong> pattern.<br><strong>advantages</strong>: do something before and after the operation, like mutex, log entry, validation of constraints.</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">GameCharacter</span> &#123;</span></div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="comment">// This non-virtual function is a wrapper for the virtual function.</span></div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">healthValue</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; </div><div class="line">        <span class="comment">// ...</span></div><div class="line">        <span class="keyword">int</span> retVal = doHealthValue();</div><div class="line">        <span class="comment">// ...</span></div><div class="line">        <span class="keyword">return</span> retVal;</div><div class="line">    &#125;</div><div class="line"><span class="keyword">private</span>:</div><div class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">int</span> <span class="title">doHealthValue</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123;</div><div class="line">        <span class="comment">// ... </span></div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+</li>
+<li><p>use <strong>Function Pointers</strong> to implement <strong>Strategy</strong> pattern.</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">GameCharacter</span>;</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">defaultHealthCalc</span><span class="params">(<span class="keyword">const</span> GameCharacter&amp; gc)</span></span>;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">GameCharacter</span> &#123;</span></div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="function"><span class="keyword">typedef</span> <span class="title">int</span> <span class="params">(*HealthCalcFunc)</span><span class="params">(<span class="keyword">const</span> GameCharacter&amp;)</span></span>;</div><div class="line">    <span class="function"><span class="keyword">explicit</span> <span class="title">GameCharacter</span><span class="params">(HealthCalcFunc hcf = defaultHealthCalc)</span></span></div><div class="line">                            : healthFunc(hcf) &#123;&#125;</div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">healthValue</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> healthFunc(*<span class="keyword">this</span>); &#125;</div><div class="line"><span class="keyword">private</span>:</div><div class="line">    HealthCalcFunc healthFunc;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>advantages</strong>:<br>different entities of same type can have different function pointers.<br>function pointers can be changed in run-time.<br><strong>disadvantages</strong>:<br>once needing to access the non-public members, you have to weaken the encapsulation of class.<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">EvilBadGuy</span>:</span> <span class="keyword">public</span> GameCharacter &#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="function"><span class="keyword">explicit</span> <span class="title">EvilBadGuy</span><span class="params">(HealthCalcFunc hcf = defaultHealthCalc)</span></span></div><div class="line">                            : healthFunc(hcf) &#123;&#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">loseHealthQuickly</span><span class="params">(<span class="keyword">const</span> GameCharacter&amp;)</span></span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">loseHealthSlowly</span><span class="params">(<span class="keyword">const</span> GameCharacter&amp;)</span></span>;</div><div class="line"></div><div class="line"><span class="function">EvilBadGuy <span class="title">ebg1</span><span class="params">(loseHealthQuickly)</span></span>;</div><div class="line"><span class="function">EvilBadGuy <span class="title">ebg2</span><span class="params">(loseHealthSlowly)</span></span>;</div></pre></td></tr></table></figure></p>
+<p>with <code>std::function</code>:<br>call accept all the callable entities <strong>compatible</strong> with target signature (<strong>implicit conversion</strong>).<br>with <code>std::bind</code>:<br>bind a member function with an object.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">GameCharacter</span>;</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">defaultHealthCalc</span><span class="params">(<span class="keyword">const</span> GameCharacter&amp; gc)</span></span>;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">GameCharacter</span> &#123;</span></div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="keyword">typedef</span> <span class="built_in">std</span>::function&lt;<span class="keyword">int</span> (<span class="keyword">const</span> GameCharacter&amp;)&gt; HealthCalcFunc;  </div><div class="line">    <span class="function"><span class="keyword">explicit</span> <span class="title">GameCharacter</span><span class="params">(HealthCalcFunc hcf = defaultHealthCalc)</span></span></div><div class="line">                            : healthFunc(hcf) &#123;&#125;</div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">healthValue</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> healthFunc(*<span class="keyword">this</span>); &#125;</div><div class="line"><span class="keyword">private</span>:</div><div class="line">    HealthCalcFunc healthFunc;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">EvilBadGuy</span>:</span> <span class="keyword">public</span> GameCharacter &#123;</div><div class="line">    <span class="comment">// ...</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">short</span> <span class="title">calcHealth</span><span class="params">(<span class="keyword">const</span> GameCharacter&amp;)</span></span>;</div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">HealthCalculator</span> &#123;</span></div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">operator</span><span class="params">()</span><span class="params">(<span class="keyword">const</span> GameCharacter&amp;）<span class="keyword">const</span> &#123;&#125;</span></span></div><div class="line"><span class="function"><span class="params">&#125;;</span></span></div><div class="line"><span class="function"><span class="params">class GameLevel &#123;</span></span></div><div class="line"><span class="function"><span class="params"><span class="keyword">public</span>:</span></span></div><div class="line"><span class="function"><span class="params">    <span class="keyword">float</span> health(<span class="keyword">const</span> GameCharacter&amp;)</span> <span class="keyword">const</span></span>;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="function">EvilBadGuy <span class="title">ebg1</span><span class="params">(calcHealth)</span></span>; <span class="comment">// Function pointer</span></div><div class="line">EvilBadGuy ebg2(HealthCalculator()); // Functor</div><div class="line"></div><div class="line">GameLevel currentLevel;</div><div class="line">EvilBadGuy ebg3(std::bind(&amp;GameLevel::health, currentLevel, std::placeholders::_1));</div></pre></td></tr></table></figure>
+<ul>
+<li>classical <strong>Strategy</strong> pattern (with virtual functions)<br>make <code>HealthCalcFunc</code> be a seperate hierarchy of inheritance.<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">GameCharacter</span>;</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">HealthCalcFunc</span> &#123;</span></div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">int</span> <span class="title">calc</span><span class="params">(<span class="keyword">const</span> GameCharacter&amp; gc)</span> <span class="keyword">const</span> </span>&#123; &#125;</div><div class="line">&#125; defaultHealthCalc;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">GameCharacter</span> &#123;</span></div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="function"><span class="keyword">explicit</span> <span class="title">GameCharacter</span><span class="params">(HealthCalcFunc* phcf = &amp;defaultHealthCalc)</span></span></div><div class="line">                            : pHealthFunc(phcf) &#123;&#125;</div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">healthValue</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> pHealthFun-&gt;(*<span class="keyword">this</span>); &#125;</div><div class="line"><span class="keyword">private</span>:</div><div class="line">    HealthCalcFunc* pHealthFunc;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Never-redefine-an-inherited-non-virtual-function"><a href="#Never-redefine-an-inherited-non-virtual-function" class="headerlink" title="Never redefine an inherited non-virtual function"></a>Never redefine an inherited non-virtual function</h3><h3 id="Never-redefine-a-function’s-inherited-default-parameter-value"><a href="#Never-redefine-a-function’s-inherited-default-parameter-value" class="headerlink" title="Never redefine a function’s inherited default parameter value"></a>Never redefine a function’s inherited default parameter value</h3><ul>
+<li>virtual functions is dynamically bound, but default parameter values is statically bound.</li>
+<li>static type is the type declared, and dynamic type is the type pointed to currently.</li>
+<li>use <strong>NVI (non-virtual interface)</strong> to substitute it.</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Shape</span> &#123;</span></div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="keyword">enum</span> ShapeColor &#123; Red, Green, Blue &#125;;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">draw</span><span class="params">(ShapeColor color = Red)</span> <span class="keyword">const</span> </span>&#123;</div><div class="line">        doDraw(color); </div><div class="line">    &#125;</div><div class="line"><span class="keyword">private</span>:</div><div class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">doDraw</span><span class="params">(ShapeColor color)</span> <span class="keyword">const</span> </span>= <span class="number">0</span>;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Rectangle</span>:</span> <span class="keyword">public</span> Shape &#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="comment">// ...</span></div><div class="line"><span class="keyword">private</span>:</div><div class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">doDraw</span><span class="params">(ShapeColor color)</span> <span class="keyword">const</span></span>;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h3 id="Model-“has-a”-or-“is-implemented-in-terms-of”-through-composition"><a href="#Model-“has-a”-or-“is-implemented-in-terms-of”-through-composition" class="headerlink" title="Model “has-a” or “is-implemented-in-terms-of” through composition"></a>Model “has-a” or “is-implemented-in-terms-of” through composition</h3><ul>
+<li>composition has many <strong>synonyms</strong>: layering, containment, aggregation, embedding.</li>
+<li>in application domain, composition means “has-a”, but in inplementation domain, it means “is-implemented-in-terms-of”.</li>
+</ul>
+<h3 id="Use-private-inheritance-judiciously"><a href="#Use-private-inheritance-judiciously" class="headerlink" title="Use private inheritance judiciously"></a>Use private inheritance judiciously</h3><ul>
+<li>private inheritance is a technique of implementation.</li>
+<li>private inheritance means only implementation is inherited and interfaces should be omitted.</li>
+<li>private inheritance is ok, when you want to redefine the inherited virtual functions.  </li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Timer</span> &#123;</span></div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="function"><span class="keyword">explicit</span> <span class="title">Timer</span><span class="params">(<span class="keyword">int</span> tickFrequency)</span></span>;</div><div class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">onTick</span><span class="params">()</span> <span class="keyword">const</span></span>;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="comment">// Althrough Widget reuse Timer, it exposes `onTick` to the user</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Widget</span>:</span> <span class="keyword">private</span> Timer &#123;</div><div class="line"><span class="keyword">private</span>:</div><div class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">onTick</span><span class="params">()</span> <span class="keyword">const</span></span>;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="comment">// This one is kind of complicated, but it can prevent from using WidgetTimer</span></div><div class="line"><span class="comment">// in the derived classes of Widget, (something like Java `final`, C# `sealed`)</span></div><div class="line"><span class="comment">// Once changed to WidgetTimer*, it can also lower the compilation dependency</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Widget</span> &#123;</span></div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="class"><span class="keyword">class</span> <span class="title">WidgetTimer</span>:</span> <span class="keyword">public</span> Timer &#123;</div><div class="line">    <span class="keyword">public</span>:</div><div class="line">        <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">onTick</span><span class="params">()</span> <span class="keyword">const</span></span>;</div><div class="line">    &#125;;</div><div class="line">    </div><div class="line">    WidgetTimer timer;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<ul>
+<li>when facing space optimization, private inheritance may be the best choice.<br>empty class: with no non-static variables, no virtual functions and no virtual base classes.<br><strong>EBO (empty class optimization)</strong> will let your base class take no space.</li>
+</ul>
+<h3 id="Use-multiple-inheritance-judiciously"><a href="#Use-multiple-inheritance-judiciously" class="headerlink" title="Use multiple inheritance judiciously"></a>Use multiple inheritance judiciously</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">File</span> &#123;</span> <span class="comment">// ... &#125;;</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">InputFile</span>:</span> <span class="keyword">public</span> File &#123; <span class="comment">// ... &#125;;</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">OutputFile</span>:</span> <span class="keyword">public</span> File &#123; <span class="comment">// ... &#125;;</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">IOFile</span>:</span> <span class="keyword">public</span> InputFile, <span class="keyword">public</span> OutputFile &#123; <span class="comment">// ... &#125;;</span></div></pre></td></tr></table></figure>
+<ul>
+<li>MI will copy the data through each inheritance path (such as <code>File::name</code>).</li>
+<li>once not, make the class with the data to be a virtual base class, and all the classes intermediately inherited <strong>virtual inherit</strong> it.</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">File</span> &#123;</span> <span class="comment">// ... &#125;;</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">InputFile</span>:</span> <span class="keyword">virtual</span> <span class="keyword">public</span> File &#123; <span class="comment">// ... &#125;;</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">OutputFile</span>:</span> <span class="keyword">virtual</span> <span class="keyword">public</span> File &#123; <span class="comment">// ... &#125;;</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">IOFile</span>:</span> <span class="keyword">public</span> InputFile, <span class="keyword">public</span> OutputFile &#123; <span class="comment">// ... &#125;;</span></div></pre></td></tr></table></figure>
+<ul>
+<li><strong>the initialization of virtual base class is granted to the most derived class</strong>.</li>
+<li>virtual inheritance will increase the cost of size, speed, and initialization(assignment).<br>the virtual base classes with no data will be best-pratical situation.</li>
+<li>MI has some usages: one is the combination of “public inheritance inherits some interface class” and “private inheritance inherits some helper class for implementation”.<br><code>class CPerson: public IPerson, private PersonInfo;</code></li>
+</ul>
+
+      
+	  
+  <div class="article-statement">
+    <hr> 
+    1. 除非注明，本博文即为原创，转载请注明链接地址 <br>
+    2. 本博文只代表博主当时的观点或结论，请不要恶意攻击 <br>
+    3. 如果本文帮到了您，不妨点一下 <a>下面</a> 的 <a>分享到</a> 按钮，让更多的人看到 <br>
+	<!-- ，或者 <a href='/about/index.html#zan-shang'>小额赞赏</a> 我。-->
+  </div>
+
+
+
+    </div>
+    <footer class="article-footer">
+	  
+	    <div class="bdsharebuttonbox"><a>分享到：</a> <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook">Facebook</a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter">Twitter</a><a href="#" class="bds_more" data-cmd="more">其他平台</a></div>
+      
+      
+        <a href="http://TaoSama.github.io/2017/09/11/effective-cpp-inheritance-and-object-oriented-design/#ds-thread" class="ds-thread-count article-comment-link" data-thread-key="2017/09/11/effective-cpp-inheritance-and-object-oriented-design/">文章评论</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/10/09/effective-cpp-templates-and-generic-programming/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">
+        
+          Templates and Generic Programming, Notes(7), Effective C++
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/09/05/effective-cpp-implementations/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">Implementations, Notes(5), Effective C++</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+
+<!-- 多说评论框 start -->
+	<div id="ds-thread" class="ds-thread" data-thread-key="2017/09/11/effective-cpp-inheritance-and-object-oriented-design/" data-title="Inheritance and Object-Oriented Design, Notes(6), Effective C++" data-url="http://TaoSama.github.io/2017/09/11/effective-cpp-inheritance-and-object-oriented-design/" data-author-key="233"></div>
+<!-- 多说评论框 end -->
+</section>
+</section>
+        
+          
+<aside id="sidebar">
+
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title">关于我</h3>
+  <ul class="widget about-me">
+    <li><img class="author" title="About me" src="/css/images/avatar.png" /></li>
+    
+    <li><a href="/about/" style="color:orange">老顽童</a></li>
+    
+    <li><a href="http://codeforces.com/profile/TaoSama" style="color:purple">TaoSama</a></li>
+    
+    <li>迷茫的搬砖工 / 永不退役的ACMer</li>
+    
+  </ul>
+</div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">推荐文章</h3>
+    <div class="widget">
+      <ul>
+        
+        
+          
+          <li>
+            <a href="/2016/05/02/%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%B0%8F%E7%BB%93/" target="_blank">1. 常见错误小结</a>
+          </li>
+        
+          
+          <li>
+            <a href="/2016/03/09/Hello%20World%20%E2%80%94%E2%80%94%20%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%8E%86%E7%A8%8B/" target="_blank">2. Hello World —— 博客搭建历程</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">友情链接</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="http://blog.csdn.net/lwt36/" target="_blank">我的CSDN</a>
+          </li>
+        
+          <li>
+            <a href="http://www.zhihu.com/people/ye-zhu-shui-han/" target="_blank">我的知乎</a>
+          </li>
+        
+          <li>
+            <a href="http://notdeep.github.io/" target="_blank">果姐姐</a>
+          </li>
+        
+          <li>
+            <a href="https://cloverii.github.io/" target="_blank">WMW</a>
+          </li>
+        
+          <li>
+            <a href="http://blog.luoxinchen.me/" target="_blank">Mathon</a>
+          </li>
+        
+          <li>
+            <a href="http://www.cnblogs.com/forever97/" target="_blank">forever97</a>
+          </li>
+        
+          <li>
+            <a href="http://liziyang96.com/" target="_blank">liziy</a>
+          </li>
+        
+          <li>
+            <a href="http://blog.csdn.net/viphong" target="_blank">liuyuhong</a>
+          </li>
+        
+          <li>
+            <a href="http://blog.csdn.net/a1s4z5/" target="_blank">QAQ</a>
+          </li>
+        
+          <li>
+            <a href="http://blog.csdn.net/qwb492859377" target="_blank">qwb</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/">Doing</a><span class="category-list-count">24</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Blog/">Blog</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/CPP/">CPP</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Go/">Go</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Hive/">Hive</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Interview/">Interview</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Life/">Life</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Machine-Learning/">Machine Learning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Python/">Python</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Shell/">Shell</a><span class="category-list-count">4</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/">动态规划</a><span class="category-list-count">27</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/bitset优化/">bitset优化</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/数位dp/">数位dp</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/数据结构优化/">数据结构优化</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/斜率优化/">斜率优化</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/最长上升子序列/">最长上升子序列</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/树形dp/">树形dp</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/概率-期望dp/">概率/期望dp</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/状压dp/">状压dp</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/矩阵优化/">矩阵优化</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/线性dp/">线性dp</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/">图论</a><span class="category-list-count">26</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/图论/LCA/">LCA</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/二分图/">二分图</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/拓扑排序/">拓扑排序</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/最大团/">最大团</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/最小生成树/">最小生成树</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/最短路/">最短路</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/生成树计数/">生成树计数</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/网络流/">网络流</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/连通图/">连通图</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/套题/">套题</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/字符串/">字符串</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/字符串/AC自动机/">AC自动机</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/字符串/Manacher-回文树/">Manacher/回文树</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/字符串/SA-SAM/">SA/SAM</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/小结/">小结</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/">思维</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/思维/分治/">分治</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/扫描线/">扫描线</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/数形结合/">数形结合</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/离线思想/">离线思想</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/贪心/">贪心</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/思维/贪心/区间贪心/">区间贪心</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/逆向思维/">逆向思维</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/">技巧</a><span class="category-list-count">17</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/two-pointers/">two pointers</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/xor/">xor</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/反转问题/">反转问题</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/哈希/">哈希</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/折半搜索/">折半搜索</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/">数学</a><span class="category-list-count">26</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/数学/CRT/">CRT</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/FFT-NTT-FWT/">FFT/NTT/FWT</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/博弈/">博弈</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/容斥/">容斥</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/概率-期望/">概率/期望</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/组合数学/">组合数学</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/贡献/">贡献</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/高斯消元/">高斯消元</a><span class="category-list-count">4</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/">数据结构</a><span class="category-list-count">18</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/主席树/">主席树</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/二叉搜索树/">二叉搜索树</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/可持久化Trie/">可持久化Trie</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/并查集/">并查集</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/树上莫队/">树上莫队</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/树状数组/">树状数组</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/线段树/">线段树</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/">暴力</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/大模拟/">大模拟</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/小模拟/">小模拟</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/搜索/">搜索</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/搜索/dfs-bfs/">dfs/bfs</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/搜索/二-三分搜索/">二/三分搜索</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/签到/">签到</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/">计算几何</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/三维几何/">三维几何</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/扫描线/">扫描线</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/数值积分/">数值积分</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/旋转卡壳/">旋转卡壳</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/极角扫描/">极角扫描</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/极角排序/">极角排序</a><span class="category-list-count">1</span></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">2017年 10月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">2017年 09月</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">2017年 08月</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">2017年 07月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">2017年 06月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">2017年 05月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">2017年 04月</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">2017年 03月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">2017年 02月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">2016年 09月</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">2016年 08月</a><span class="archive-list-count">42</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">2016年 07月</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">2016年 06月</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">2016年 05月</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">2016年 04月</a><span class="archive-list-count">41</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">2016年 03月</a><span class="archive-list-count">42</span></li></ul>
+    </div>
+  </div>
+
+
+  
+     
+	 
+	  <div class="widget-wrap">
+		<h3 class="widget-title">最近评论</h3>
+		<div class="widget">
+		  <!-- 多说最新评论 start -->
+		  <div class="ds-recent-comments" data-num-items="5" data-show-avatars="0" data-show-time="1" data-show-title="1" data-show-admin="1" data-excerpt-length="70"></div>
+		  <!-- 多说最新评论 end -->
+		  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+		  <script type="text/javascript">
+			var duoshuoQuery = {short_name:"TaoSama"};
+			(function() {
+			  var ds = document.createElement('script');
+			  ds.type = 'text/javascript';ds.async = true;
+			  ds.src = '/js/ds_embed.js';
+			  <!--
+			  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+			  -->
+			  ds.charset = 'UTF-8';
+			  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+			})();
+		  </script>
+		  <!-- 多说公共JS代码 end -->
+		</div>
+	  </div>
+	
+
+  
+
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <img src="/css/images/umaru.png" style="position:fixed; right:0; bottom:0; width:70px">
+  <div class="outer">
+    <div id="footer-info" style="text-align:center; border:0;">
+	   <div style="font-family: FontAwesome;font-size: 20px;">
+		<a href="http://weibo.com/3863360617" title="微博" target="_blank">&#61834;</a>&nbsp;
+		<!--
+		<a href="http://www.renren.com/287137027" title="人人" target="_blank">&#61835;</a>&nbsp; 
+		<a href="http://user.qzone.qq.com/525969441" title="QQ空间" target="_blank">&#61910;</a>&nbsp;
+		-->
+		<a href="https://www.facebook.com/lwt1367" title="Facebook" target="_blank">&#62000;</a>&nbsp;
+		<a href="https://twitter.com/lwt1367" title="Twitter" target="_blank">&#61593;</a>&nbsp;
+		<a href="http://www.linkedin.com/in/lwt1367" title="LinkedIn" target="_blank">&#61665;</a>&nbsp;
+		<a href="https://github.com/TaoSama" title="GitHub" target="_blank">&#61595;</a>&nbsp;
+		<a href="https://plus.google.com/115031676619400074158" title="Google+" target="_blank">&#61653;</a>
+	   </div>
+	   <div style="font-size: 15px;">
+		<a href="/sitemap.xml">Sitemap</a>&nbsp;
+		<a href="/atom.xml">RSS</a>&nbsp;
+		<a href="mailto:lwt1367@gmail.com" target="_blank">Contact</a>
+		<br>
+		Copyright &copy; 2016-2017 
+	    <a href="/" target="_blank"> TaoSama </a>
+		<br>
+		Powered by <a href="https://hexo.io/zh-cn/docs/index.html" target="_blank">Hexo</a>
+	    &nbsp;|&nbsp;
+	    Theme by <a href="https://github.com/TaoSama/landscape" target="_blank">landscape</a>
+	    &nbsp;|&nbsp;
+	    <span id="busuanzi_container_site_pv">
+		总访问量 <a href="http://service.ibruce.info/" target="_blank"><span id="busuanzi_value_site_pv"></span></a> 次
+	    </span>
+	    <span id="busuanzi_container_site_uv">
+		<a href="http://service.ibruce.info/" target="_blank"><span id="busuanzi_value_site_uv"></span></a> 人
+	    </span>
+	   </div>
+	</div>
+  </div>
+  <!-- 为超链接加上target='_blank'属性 -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('a[href^="http"]').each(function() {
+			$(this).attr('target', '_blank');
+		});
+	});
+  </script>
+  <!-- 不蒜子js -->
+  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">主页</a>
+  
+    <a href="/archives" class="mobile-nav-link">文章</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"TaoSama"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = '/js/ds_embed.js';
+		<!-- ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js'; -->
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+
+<script src="http://lib.sinaapp.com/js/jquery/2.0.3/jquery-2.0.3.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof jQuery == 'undefined') {
+  document.write(unescape("%3Cscript src='/js/jquery-2.0.3.min.js' type='text/javascript'%3E%3C/script%3E"));
+}
+// ]]>
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+<div class="bottom-btn">
+
+	<a class="icon-gotop" href="javascript:void(0)" title="返回顶部"></a>
+	<script src="/js/gotop.js"></script>
+	<!--
+	<script src="/js/gotop.js"></script>
+	-->
+
+</div>
+
+
+<script src="/js/script.js"></script>
+<!-- Baidu Share Start --->
+<script>window._bd_share_config={"common":{"bdWbuid":3863360617,"bdText":"","bdMini":"2","bdMiniList":["douban","kaixin001","tieba","tsohu","sqq","youdao","qingbiji","mail","linkedin","mshare","copy","print"],"bdStyle":"1","bdSize":"24"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<!-- Baidu Share End --->
+
+
+<! -- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+                processEscapes: true
+                    
+}
+  
+        });
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+                  
+}
+    
+        });
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Queue(function() {
+            var all = MathJax.Hub.getAllJax(), i;
+            for(i=0; i < all.length; i += 1) {
+                            all[i].SourceElement().parentNode.className += ' has-jax';
+                                    
+            }
+                
+        });
+</script>
+
+<script type="text/javascript" src="http://cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
