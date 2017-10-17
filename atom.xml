@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://TaoSama.github.io/"/>
-  <updated>2017-10-17T03:27:52.000Z</updated>
+  <updated>2017-10-17T03:32:30.000Z</updated>
   <id>http://TaoSama.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://TaoSama.github.io/2017/10/17/effective-cpp-miscellany-and-summary/"/>
     <id>http://TaoSama.github.io/2017/10/17/effective-cpp-miscellany-and-summary/</id>
     <published>2017-10-17T02:17:00.000Z</published>
-    <updated>2017-10-17T03:27:52.000Z</updated>
+    <updated>2017-10-17T03:32:30.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="Miscellany-and-Summary"><a href="#Miscellany-and-Summary" class="headerlink" title="Miscellany and Summary"></a>Miscellany and Summary</h2><p>(I read a Chinese version of the book, any translation problem plz point out. </p><a id="more"></a><h3 id="Pay-attention-to-compiler-warnings"><a href="#Pay-attention-to-compiler-warnings" class="headerlink" title="Pay attention to compiler warnings"></a>Pay attention to compiler warnings</h3><ul><li>be serious to compiler warnings.</li><li>but shouldn’t over rely on compiler warnings.</li></ul><h3 id="Familiarize-yourself-with-the-standard-library"><a href="#Familiarize-yourself-with-the-standard-library" class="headerlink" title="Familiarize yourself with the standard library"></a>Familiarize yourself with the standard library</h3><h3 id="Familiarize-yourself-with-Boost"><a href="#Familiarize-yourself-with-Boost" class="headerlink" title="Familiarize yourself with Boost"></a>Familiarize yourself with Boost</h3><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>It is about 4 months since I started to read the book.<br>I’m so painful that I can’t put the ways into pratice, although it is quite fascinating.<br>What I’m eager to do is to write the beautiful code.<br>Keep patient, and what learned will settle.</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="Miscellany-and-Summary"><a href="#Miscellany-and-Summary" class="headerlink" title="Miscellany and Summary"></a>Miscellany and Summary</h2><p>(I read a Chinese version of the book, any translation problem plz point out. </p><a id="more"></a><h3 id="Pay-attention-to-compiler-warnings"><a href="#Pay-attention-to-compiler-warnings" class="headerlink" title="Pay attention to compiler warnings"></a>Pay attention to compiler warnings</h3><ul><li>be serious to compiler warnings.</li><li>but shouldn’t over rely on compiler warnings.</li></ul><h3 id="Familiarize-yourself-with-the-standard-library"><a href="#Familiarize-yourself-with-the-standard-library" class="headerlink" title="Familiarize yourself with the standard library"></a>Familiarize yourself with the standard library</h3><h3 id="Familiarize-yourself-with-Boost"><a href="#Familiarize-yourself-with-Boost" class="headerlink" title="Familiarize yourself with Boost"></a>Familiarize yourself with Boost</h3><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>It is about 4 months since I started to read the book.<br>I’m so sorrow that I can’t put the ways into practice, although it is quite fascinating.<br>What I’m eager to do is to write the beautiful code.<br>Keep patient, and what learned will settle.</p>]]></content>
     
     <summary type="html">
     
