@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://TaoSama.github.io/2017/10/17/effective-cpp-miscellany-and-summary/</loc>
+    
+    <lastmod>2017-10-17T03:27:52.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://TaoSama.github.io/2017/10/09/effective-cpp-templates-and-generic-programming/</loc>
     
     <lastmod>2017-10-16T12:05:42.000Z</lastmod>
@@ -100,14 +107,7 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/04/07/HDU%205654%20xiaoxin%20and%20his%20watermelon%20candy%EF%BC%88%E7%A6%BB%E7%BA%BF%E6%80%9D%E6%83%B3%E3%80%81BIT%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2016/03/23/BZOJ%202743%20%E9%87%87%E8%8A%B1%EF%BC%88%E7%A6%BB%E7%BA%BF%E6%80%9D%E6%83%B3%E3%80%81BIT%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/04/07/HDU%205653%20Bomber%20Man%20wants%20to%20bomb%20an%20Array%EF%BC%88dp%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -716,14 +716,14 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/06/12/2016%20%E8%AE%A1%E8%92%9C%E4%B9%8B%E9%81%93%20%20%E5%BE%AE%E8%BD%AF%E7%9A%84%E5%91%98%E5%B7%A5%E7%A6%8F%E5%88%A9%20%EF%BC%88%E7%AE%80%E5%8D%95%E3%80%81%E4%B8%AD%E7%AD%89%EF%BC%89%EF%BC%88dp%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/04/07/HDU%205654%20xiaoxin%20and%20his%20watermelon%20candy%EF%BC%88%E7%A6%BB%E7%BA%BF%E6%80%9D%E6%83%B3%E3%80%81BIT%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/04/07/HDU%205653%20Bomber%20Man%20wants%20to%20bomb%20an%20Array%EF%BC%88dp%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/06/12/2016%20%E8%AE%A1%E8%92%9C%E4%B9%8B%E9%81%93%20%20%E5%BE%AE%E8%BD%AF%E7%9A%84%E5%91%98%E5%B7%A5%E7%A6%8F%E5%88%A9%20%EF%BC%88%E7%AE%80%E5%8D%95%E3%80%81%E4%B8%AD%E7%AD%89%EF%BC%89%EF%BC%88dp%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -1417,6 +1417,13 @@
   
   <url>
     <loc>http://TaoSama.github.io/2017/04/28/Backthoughts-during-These-Days/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/03/23/BZOJ%202743%20%E9%87%87%E8%8A%B1%EF%BC%88%E7%A6%BB%E7%BA%BF%E6%80%9D%E6%83%B3%E3%80%81BIT%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     

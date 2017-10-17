@@ -4,6 +4,27 @@
 
     
   <url>
+    <loc>http://TaoSama.github.io/2017/10/17/effective-cpp-miscellany-and-summary/</loc>
+    <lastmod>2017-10-17T03:27:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>Miscellany and Summary, Notes(9), Effective C++</title>
+        <pubTime>2017-10-17T02:17:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="Doing" url="http://TaoSama.github.io/categories/Doing/"/>
+          
+             
+              <breadCrumb title="CPP" url="http://TaoSama.github.io/categories/Doing/CPP/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://TaoSama.github.io/2017/10/09/effective-cpp-templates-and-generic-programming/</loc>
     <lastmod>2017-10-16T12:05:42.000Z</lastmod>
     <data>
@@ -275,49 +296,19 @@
 
     
   <url>
-    <loc>http://TaoSama.github.io/2016/04/07/HDU%205654%20xiaoxin%20and%20his%20watermelon%20candy%EF%BC%88%E7%A6%BB%E7%BA%BF%E6%80%9D%E6%83%B3%E3%80%81BIT%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/04/07/HDU%205653%20Bomber%20Man%20wants%20to%20bomb%20an%20Array%EF%BC%88dp%EF%BC%89/</loc>
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     <data>
         <display>
-        <title>HDU 5654 xiaoxin and his watermelon candy（离线思想、BIT）</title>
-        <pubTime>2016-04-07T13:12:10.000Z</pubTime>
+        <title>HDU 5653 Bomber Man wants to bomb an Array（dp）</title>
+        <pubTime>2016-04-07T12:12:10.000Z</pubTime>
         
-        <tag>BIT</tag>
-         
-        <tag>离线</tag>
+        <tag>dp</tag>
          
          
            
              
-              <breadCrumb title="思维" url="http://TaoSama.github.io/categories/%E6%80%9D%E7%BB%B4/"/>
-          
-             
-              <breadCrumb title="离线思想" url="http://TaoSama.github.io/categories/%E6%80%9D%E7%BB%B4/%E7%A6%BB%E7%BA%BF%E6%80%9D%E6%83%B3/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://TaoSama.github.io/2016/03/23/BZOJ%202743%20%E9%87%87%E8%8A%B1%EF%BC%88%E7%A6%BB%E7%BA%BF%E6%80%9D%E6%83%B3%E3%80%81BIT%EF%BC%89/</loc>
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>BZOJ 2743 采花（离线思想、BIT）</title>
-        <pubTime>2016-03-22T21:20:10.000Z</pubTime>
-        
-        <tag>BIT</tag>
-         
-        <tag>离线</tag>
-         
-         
-           
-             
-              <breadCrumb title="思维" url="http://TaoSama.github.io/categories/%E6%80%9D%E7%BB%B4/"/>
-          
-             
-              <breadCrumb title="离线思想" url="http://TaoSama.github.io/categories/%E6%80%9D%E7%BB%B4/%E7%A6%BB%E7%BA%BF%E6%80%9D%E6%83%B3/"/>
+              <breadCrumb title="动态规划" url="http://TaoSama.github.io/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
           
         </display>
     </data>
@@ -2307,6 +2298,31 @@
 
     
   <url>
+    <loc>http://TaoSama.github.io/2016/04/07/HDU%205654%20xiaoxin%20and%20his%20watermelon%20candy%EF%BC%88%E7%A6%BB%E7%BA%BF%E6%80%9D%E6%83%B3%E3%80%81BIT%EF%BC%89/</loc>
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>HDU 5654 xiaoxin and his watermelon candy（离线思想、BIT）</title>
+        <pubTime>2016-04-07T13:12:10.000Z</pubTime>
+        
+        <tag>BIT</tag>
+         
+        <tag>离线</tag>
+         
+         
+           
+             
+              <breadCrumb title="思维" url="http://TaoSama.github.io/categories/%E6%80%9D%E7%BB%B4/"/>
+          
+             
+              <breadCrumb title="离线思想" url="http://TaoSama.github.io/categories/%E6%80%9D%E7%BB%B4/%E7%A6%BB%E7%BA%BF%E6%80%9D%E6%83%B3/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://TaoSama.github.io/2016/06/12/2016%20%E8%AE%A1%E8%92%9C%E4%B9%8B%E9%81%93%20%20%E5%BE%AE%E8%BD%AF%E7%9A%84%E5%91%98%E5%B7%A5%E7%A6%8F%E5%88%A9%20%EF%BC%88%E7%AE%80%E5%8D%95%E3%80%81%E4%B8%AD%E7%AD%89%EF%BC%89%EF%BC%88dp%EF%BC%89/</loc>
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     <data>
@@ -2321,26 +2337,6 @@
           
              
               <breadCrumb title="树形dp" url="http://TaoSama.github.io/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E6%A0%91%E5%BD%A2dp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://TaoSama.github.io/2016/04/07/HDU%205653%20Bomber%20Man%20wants%20to%20bomb%20an%20Array%EF%BC%88dp%EF%BC%89/</loc>
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>HDU 5653 Bomber Man wants to bomb an Array（dp）</title>
-        <pubTime>2016-04-07T12:12:10.000Z</pubTime>
-        
-        <tag>dp</tag>
-         
-         
-           
-             
-              <breadCrumb title="动态规划" url="http://TaoSama.github.io/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
           
         </display>
     </data>
@@ -4578,6 +4574,31 @@
           
              
               <breadCrumb title="Life" url="http://TaoSama.github.io/categories/Doing/Life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://TaoSama.github.io/2016/03/23/BZOJ%202743%20%E9%87%87%E8%8A%B1%EF%BC%88%E7%A6%BB%E7%BA%BF%E6%80%9D%E6%83%B3%E3%80%81BIT%EF%BC%89/</loc>
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>BZOJ 2743 采花（离线思想、BIT）</title>
+        <pubTime>2016-03-22T21:20:10.000Z</pubTime>
+        
+        <tag>BIT</tag>
+         
+        <tag>离线</tag>
+         
+         
+           
+             
+              <breadCrumb title="思维" url="http://TaoSama.github.io/categories/%E6%80%9D%E7%BB%B4/"/>
+          
+             
+              <breadCrumb title="离线思想" url="http://TaoSama.github.io/categories/%E6%80%9D%E7%BB%B4/%E7%A6%BB%E7%BA%BF%E6%80%9D%E6%83%B3/"/>
           
         </display>
     </data>
