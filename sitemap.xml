@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://TaoSama.github.io/2017/10/27/large-site-architecture-notes/</loc>
+    
+    <lastmod>2017-10-30T04:45:10.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2017/08/25/hive-tut-notes/</loc>
+    
+    <lastmod>2017-10-30T04:45:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://TaoSama.github.io/2017/10/17/effective-cpp-miscellany-and-summary/</loc>
     
     <lastmod>2017-10-17T03:32:30.000Z</lastmod>
@@ -86,13 +100,6 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2017/08/25/hive-tut-notes/</loc>
-    
-    <lastmod>2017-09-20T09:32:58.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://TaoSama.github.io/2017/08/07/leetcode-shell-problems-solution/</loc>
     
     <lastmod>2017-09-20T09:31:46.000Z</lastmod>
@@ -108,13 +115,6 @@
   
   <url>
     <loc>http://TaoSama.github.io/2016/04/07/HDU%205653%20Bomber%20Man%20wants%20to%20bomb%20an%20Array%EF%BC%88dp%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2016/05/01/BZOJ%204260%20Codechef%20REBXOR%EF%BC%88xor%20trie%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -1424,6 +1424,13 @@
   
   <url>
     <loc>http://TaoSama.github.io/2016/03/23/BZOJ%202743%20%E9%87%87%E8%8A%B1%EF%BC%88%E7%A6%BB%E7%BA%BF%E6%80%9D%E6%83%B3%E3%80%81BIT%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/05/01/BZOJ%204260%20Codechef%20REBXOR%EF%BC%88xor%20trie%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
