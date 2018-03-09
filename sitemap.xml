@@ -2,9 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://TaoSama.github.io/2018/03/09/springboot-guide-notes/</loc>
+    
+    <lastmod>2018-03-09T09:06:24.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/categories/index.html</loc>
+    
+    <lastmod>2018-02-10T11:35:37.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2017/07/31/shell-script-notes/</loc>
+    
+    <lastmod>2018-01-27T11:10:30.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://TaoSama.github.io/2017/10/27/large-site-architecture-notes/</loc>
     
-    <lastmod>2017-10-30T04:45:10.000Z</lastmod>
+    <lastmod>2018-01-27T10:44:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/tags/index.html</loc>
+    
+    <lastmod>2018-01-27T10:34:49.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/about/index.html</loc>
+    
+    <lastmod>2018-01-27T10:34:49.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/project/index.html</loc>
+    
+    <lastmod>2018-01-27T10:34:49.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/11/01/set-up-environment-of-vs2013-with-opencv248/</loc>
+    
+    <lastmod>2017-10-30T04:49:11.000Z</lastmod>
     
   </url>
   
@@ -51,13 +100,6 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/about/index.html</loc>
-    
-    <lastmod>2017-09-20T10:14:31.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://TaoSama.github.io/2017/08/25/most-useful-shell-commands/</loc>
     
     <lastmod>2017-09-20T09:38:12.000Z</lastmod>
@@ -93,13 +135,6 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2017/07/31/shell-script-notes/</loc>
-    
-    <lastmod>2017-09-20T09:33:58.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://TaoSama.github.io/2017/08/07/leetcode-shell-problems-solution/</loc>
     
     <lastmod>2017-09-20T09:31:46.000Z</lastmod>
@@ -114,42 +149,7 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/04/07/HDU%205653%20Bomber%20Man%20wants%20to%20bomb%20an%20Array%EF%BC%88dp%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2017/04/28/Backthoughts-about-the-Failure-of-the-Autumn-and-Spring-Campus-Recruiting-of-Toutiao/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://TaoSama.github.io/2016/03/28/CDOJ%201051%20Eggs%20broken%EF%BC%88%E6%9C%9F%E6%9C%9Bdp%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2017/04/05/BestCoder%20Round%2092/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2017/04/12/BestCoder%20Round%2093/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2016/03/22/CROC%202016%20-%20Elimination%20Round%20E.%20Intellectual%20Inquiry%EF%BC%88%E8%B4%AA%E5%BF%83%E3%80%81dp%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -163,13 +163,6 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/03/22/CROC%202016%20-%20Elimination%20Round%20D.%20Robot%20Rapping%20Results%20Report%EF%BC%88%E4%BA%8C%E5%88%86%E3%80%81%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://TaoSama.github.io/2016/05/09/CQUOJ%2021465%20%E9%83%A8%E8%90%BDMod%EF%BC%88%E5%B9%B6%E6%9F%A5%E9%9B%86%E3%80%81%E5%88%A0%E7%82%B9%20%20%E5%90%AF%E5%8F%91%E5%BC%8F%E5%90%88%E5%B9%B6%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
@@ -177,21 +170,14 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/04/29/CSU%201724%20%E7%9B%B8%E7%AD%89%E8%B7%9D%E7%A6%BB%E7%9A%84%E5%92%8C%EF%BC%88%E7%BA%BF%E6%AE%B5%E6%A0%91%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/03/22/CROC%202016%20-%20Elimination%20Round%20D.%20Robot%20Rapping%20Results%20Report%EF%BC%88%E4%BA%8C%E5%88%86%E3%80%81%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/09/22/CSU%201805%20Three%20Capitals%EF%BC%88BEST%E5%AE%9A%E7%90%86%E3%80%81MatrixTree%E5%AE%9A%E7%90%86%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2016/04/29/CSU%201728%20%E7%BA%BF%E5%BD%A2%E9%80%90%E6%AD%A5%E5%85%B1%E8%81%9A%E5%90%88%E5%8F%8D%E5%BA%94%EF%BC%88%E4%B8%89%E5%88%86%E3%80%81dp%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/03/22/CROC%202016%20-%20Elimination%20Round%20E.%20Intellectual%20Inquiry%EF%BC%88%E8%B4%AA%E5%BF%83%E3%80%81dp%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -205,14 +191,21 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/09/21/Codeforces%20451E.%20Devu%20and%20Flowers%EF%BC%88%E5%AE%B9%E6%96%A5%E5%8E%9F%E7%90%86%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/04/29/CSU%201724%20%E7%9B%B8%E7%AD%89%E8%B7%9D%E7%A6%BB%E7%9A%84%E5%92%8C%EF%BC%88%E7%BA%BF%E6%AE%B5%E6%A0%91%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/09/23/51nod%201610%20%E8%B7%AF%E5%BE%84%E8%AE%A1%E6%95%B0%EF%BC%88dp%E3%80%81%E5%AE%B9%E6%96%A5%E5%8E%9F%E7%90%86%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/04/29/CSU%201728%20%E7%BA%BF%E5%BD%A2%E9%80%90%E6%AD%A5%E5%85%B1%E8%81%9A%E5%90%88%E5%8F%8D%E5%BA%94%EF%BC%88%E4%B8%89%E5%88%86%E3%80%81dp%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/09/22/CSU%201805%20Three%20Capitals%EF%BC%88BEST%E5%AE%9A%E7%90%86%E3%80%81MatrixTree%E5%AE%9A%E7%90%86%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -220,6 +213,13 @@
   
   <url>
     <loc>http://TaoSama.github.io/2016/08/09/CodeForces%20231E%20Cactus%EF%BC%88%E8%BE%B9%E5%8F%8C%E7%BC%A9%E7%82%B9%E3%80%81LCA%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/09/21/Codeforces%20451E.%20Devu%20and%20Flowers%EF%BC%88%E5%AE%B9%E6%96%A5%E5%8E%9F%E7%90%86%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -254,13 +254,6 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/04/30/Codeforces%20Round%20349%20(Div.%202)%20C.%20Reberland%20Linguistics%EF%BC%88dp%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://TaoSama.github.io/2016/04/07/Codeforces%20Round%20346%20(Div.%202)%20E.%20New%20Reform%EF%BC%88%E8%BE%B9%E5%8F%8C%E8%BF%9E%E9%80%9A%E7%BC%A9%E7%82%B9%E3%80%81%E8%BF%9E%E9%80%9A%E5%9D%97%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
@@ -269,6 +262,13 @@
   
   <url>
     <loc>http://TaoSama.github.io/2016/04/07/Codeforces%20Round%20346%20(Div.%202)%20F.%20Polycarp%20and%20Hay%EF%BC%88%E9%80%86%E5%90%91%E6%80%9D%E7%BB%B4%E3%80%81bfs%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/04/30/Codeforces%20Round%20349%20(Div.%202)%20C.%20Reberland%20Linguistics%EF%BC%88dp%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -296,7 +296,7 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/06/20/Codeforces%20Round%20361%20(Div.%202)%20E.%20Mike%20and%20Geometry%20Problem%EF%BC%88%E6%89%AB%E6%8F%8F%E7%BA%BF%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2017/04/12/Codeforces%20Round%20358%20(Div.%202)%20E.%20Alyona%20and%20Triangles/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -310,7 +310,7 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2017/04/12/Codeforces%20Round%20358%20(Div.%202)%20E.%20Alyona%20and%20Triangles/</loc>
+    <loc>http://TaoSama.github.io/2016/06/20/Codeforces%20Round%20361%20(Div.%202)%20E.%20Mike%20and%20Geometry%20Problem%EF%BC%88%E6%89%AB%E6%8F%8F%E7%BA%BF%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -394,28 +394,7 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/05/11/HDU%202829%20Lawrence%EF%BC%88%E6%96%9C%E7%8E%87%E4%BC%98%E5%8C%96dp%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2016/08/06/HDU%203364%20Lanterns%EF%BC%88%E7%BA%BF%E6%80%A7%E5%9F%BA%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2016/06/12/2016%20%E8%AE%A1%E8%92%9C%E4%B9%8B%E9%81%93%20%E7%99%BE%E5%BA%A6%E5%B8%90%E5%8F%B7%E7%9A%84%E9%80%89%E5%8F%96%E6%96%B9%E6%A1%88%20%EF%BC%88%E4%B8%AD%E7%AD%89%EF%BC%89%EF%BC%88kmp%E3%80%81dp%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2016/04/29/HDU%203585%20maximum%20shortest%20distance%EF%BC%88%E4%BA%8C%E5%88%86%E3%80%81%E6%9C%80%E5%A4%A7%E5%9B%A2%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/07/24/51nod%201532%20%E5%B8%A6%E5%8F%AF%E9%80%89%E5%AD%97%E7%AC%A6%E7%9A%84%E5%A4%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%EF%BC%88dp%E3%80%81bitset%E4%BC%98%E5%8C%96%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -429,7 +408,35 @@
   </url>
   
   <url>
+    <loc>http://TaoSama.github.io/2016/05/11/HDU%202829%20Lawrence%EF%BC%88%E6%96%9C%E7%8E%87%E4%BC%98%E5%8C%96dp%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/04/29/HDU%203585%20maximum%20shortest%20distance%EF%BC%88%E4%BA%8C%E5%88%86%E3%80%81%E6%9C%80%E5%A4%A7%E5%9B%A2%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/08/06/HDU%203364%20Lanterns%EF%BC%88%E7%BA%BF%E6%80%A7%E5%9F%BA%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://TaoSama.github.io/2016/08/06/HDU%203949%20XOR%EF%BC%88%E7%BA%BF%E6%80%A7%E5%9F%BA%E3%80%81kth%E5%BC%82%E6%88%96%E5%92%8C%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/05/02/HDU%204122%20Alice's%20mooncake%20shop%EF%BC%88%E8%B4%AA%E5%BF%83%E3%80%81RMQ%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -450,21 +457,7 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/05/02/HDU%204122%20Alice's%20mooncake%20shop%EF%BC%88%E8%B4%AA%E5%BF%83%E3%80%81RMQ%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://TaoSama.github.io/2016/08/06/HDU%204418%20Time%20travel%EF%BC%88%E9%AB%98%E6%96%AF%E6%B6%88%E5%85%83%E8%A7%A3%E6%9C%9F%E6%9C%9Bdp%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2016/03/01/HDU%204606%20Occupy%20Cities%20%EF%BC%88%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95%E3%80%81%E6%9C%80%E7%9F%AD%E8%B7%AF%E3%80%81%E6%9C%80%E5%B0%8F%E8%B7%AF%E5%BE%84%E8%A6%86%E7%9B%96%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -478,7 +471,21 @@
   </url>
   
   <url>
+    <loc>http://TaoSama.github.io/2016/03/01/HDU%204606%20Occupy%20Cities%20%EF%BC%88%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95%E3%80%81%E6%9C%80%E7%9F%AD%E8%B7%AF%E3%80%81%E6%9C%80%E5%B0%8F%E8%B7%AF%E5%BE%84%E8%A6%86%E7%9B%96%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://TaoSama.github.io/2016/03/23/HDU%204630%20No%20Pain%20No%20Game%EF%BC%88%E7%A6%BB%E7%BA%BF%E6%80%9D%E6%83%B3%E3%80%81BIT%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/03/23/HDU%204631%20Sad%20Love%20Story%EF%BC%88%E7%A6%BB%E7%BA%BF%E6%80%9D%E6%83%B3%E3%80%81%E5%88%86%E6%B2%BB%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -492,7 +499,7 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/03/23/HDU%204631%20Sad%20Love%20Story%EF%BC%88%E7%A6%BB%E7%BA%BF%E6%80%9D%E6%83%B3%E3%80%81%E5%88%86%E6%B2%BB%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/03/26/HDU%204638%20Group%EF%BC%88%E7%A6%BB%E7%BA%BF%E6%80%9D%E6%83%B3%E3%80%81BIT%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -513,21 +520,7 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/03/26/HDU%204638%20Group%EF%BC%88%E7%A6%BB%E7%BA%BF%E6%80%9D%E6%83%B3%E3%80%81BIT%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://TaoSama.github.io/2016/04/11/HDU%204647%20Another%20Graph%20Game%EF%BC%88%E8%B4%AA%E5%BF%83%E3%80%81%E8%BE%B9%E6%9D%83%E6%98%A0%E5%B0%84%E5%88%B0%E7%82%B9%E6%9D%83%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2016/03/28/HDU%204650%20Minimum%20Average%20Weight%20Path%EF%BC%88floyd%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -541,14 +534,14 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/03/28/HDU%204651%20Partition%EF%BC%88%E4%BA%94%E8%BE%B9%E5%BD%A2%E6%95%B0%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/03/28/HDU%204650%20Minimum%20Average%20Weight%20Path%EF%BC%88floyd%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/05/01/HDU%204825%20Xor%20Sum%EF%BC%88xor%20trie%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/03/28/HDU%204651%20Partition%EF%BC%88%E4%BA%94%E8%BE%B9%E5%BD%A2%E6%95%B0%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -562,7 +555,7 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/04/12/HDU%205288%20OO%E2%80%99s%20Sequence%EF%BC%88%E8%B4%A1%E7%8C%AE%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/05/01/HDU%204825%20Xor%20Sum%EF%BC%88xor%20trie%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -583,6 +576,20 @@
   </url>
   
   <url>
+    <loc>http://TaoSama.github.io/2016/06/04/HDU%205212%20ZZX%20and%20Permutations%EF%BC%88%E7%BD%AE%E6%8D%A2%E3%80%81%E7%BA%BF%E6%AE%B5%E6%A0%91%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/04/12/HDU%205288%20OO%E2%80%99s%20Sequence%EF%BC%88%E8%B4%A1%E7%8C%AE%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://TaoSama.github.io/2016/04/12/HDU%205289%20Assignment%EF%BC%88two%20pointers%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
@@ -597,42 +604,7 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/06/04/HDU%205212%20ZZX%20and%20Permutations%EF%BC%88%E7%BD%AE%E6%8D%A2%E3%80%81%E7%BA%BF%E6%AE%B5%E6%A0%91%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2016/04/27/HDU%205299%20Circles%20Game%20(%E5%9C%86%E7%9A%84%E6%89%AB%E6%8F%8F%E7%BA%BF%E3%80%81%E6%A0%91%E4%B8%8Asg)/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2016/03/18/HDU%205301%20Buildings%EF%BC%88%E6%80%9D%E7%BB%B4%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2016/03/18/HDU%205305%20Friends%EF%BC%88dfs%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://TaoSama.github.io/2016/04/26/HDU%205296%20Annoying%20problem%EF%BC%88LCA%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2016/03/28/HDU%205318%20The%20Goddess%20Of%20The%20Moon%EF%BC%88dp%E3%80%81%E7%9F%A9%E9%98%B5%E5%BF%AB%E9%80%9F%E5%B9%82%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -646,14 +618,28 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/05/09/HDU%205375%20Gray%20code%EF%BC%88%E7%BA%BF%E6%80%A7dp%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/03/18/HDU%205301%20Buildings%EF%BC%88%E6%80%9D%E7%BB%B4%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/03/28/HDU%205324%20Boring%20Class%EF%BC%88LIS%E3%80%81%E4%BA%8C%E7%BB%B4%E5%88%86%E5%9D%97%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/04/27/HDU%205299%20Circles%20Game%20(%E5%9C%86%E7%9A%84%E6%89%AB%E6%8F%8F%E7%BA%BF%E3%80%81%E6%A0%91%E4%B8%8Asg)/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/03/28/HDU%205318%20The%20Goddess%20Of%20The%20Moon%EF%BC%88dp%E3%80%81%E7%9F%A9%E9%98%B5%E5%BF%AB%E9%80%9F%E5%B9%82%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/03/18/HDU%205305%20Friends%EF%BC%88dfs%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -667,7 +653,42 @@
   </url>
   
   <url>
+    <loc>http://TaoSama.github.io/2016/03/28/HDU%205324%20Boring%20Class%EF%BC%88LIS%E3%80%81%E4%BA%8C%E7%BB%B4%E5%88%86%E5%9D%97%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/05/09/HDU%205375%20Gray%20code%EF%BC%88%E7%BA%BF%E6%80%A7dp%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://TaoSama.github.io/2016/05/09/HDU%205372%20Segment%20Game%EF%BC%88BIT%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/05/01/HDU%205536%20Chip%20Factory%EF%BC%88xor%20trie%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/04/07/HDU%205639%20Deletion%EF%BC%88%E6%9C%80%E5%A4%A7%E6%B5%81%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/04/07/HDU%205638%20Toposort%EF%BC%88%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -688,28 +709,21 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/05/01/HDU%205536%20Chip%20Factory%EF%BC%88xor%20trie%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2016/04/07/HDU%205638%20Toposort%EF%BC%88%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2016/04/07/HDU%205639%20Deletion%EF%BC%88%E6%9C%80%E5%A4%A7%E6%B5%81%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://TaoSama.github.io/2016/04/07/HDU%205651%20xiaoxin%20juju%20needs%20help%EF%BC%88%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/04/07/HDU%205653%20Bomber%20Man%20wants%20to%20bomb%20an%20Array%EF%BC%88dp%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/04/07/HDU%205652%20India%20and%20China%20Origins%EF%BC%88%E5%B9%B6%E6%9F%A5%E9%9B%86%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -723,14 +737,7 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/06/12/2016%20%E8%AE%A1%E8%92%9C%E4%B9%8B%E9%81%93%20%20%E5%BE%AE%E8%BD%AF%E7%9A%84%E5%91%98%E5%B7%A5%E7%A6%8F%E5%88%A9%20%EF%BC%88%E7%AE%80%E5%8D%95%E3%80%81%E4%B8%AD%E7%AD%89%EF%BC%89%EF%BC%88dp%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2016/04/07/HDU%205652%20India%20and%20China%20Origins%EF%BC%88%E5%B9%B6%E6%9F%A5%E9%9B%86%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/06/12/2016%20%E8%AE%A1%E8%92%9C%E4%B9%8B%E9%81%93%20%E7%99%BE%E5%BA%A6%E5%B8%90%E5%8F%B7%E7%9A%84%E9%80%89%E5%8F%96%E6%96%B9%E6%A1%88%20%EF%BC%88%E4%B8%AD%E7%AD%89%EF%BC%89%EF%BC%88kmp%E3%80%81dp%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -758,20 +765,6 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/04/11/HDU%205658%20CA%20Loves%20Palindromic%EF%BC%88Manacher%20%20%E5%9B%9E%E6%96%87%E6%A0%91%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2016/07/24/HDU%205730%20Shell%20Necklace%EF%BC%88dp%E3%80%81cdq%E5%88%86%E6%B2%BB+FFT%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://TaoSama.github.io/2016/07/24/HDU%205726%20GCD%EF%BC%88dp%E3%80%81%E5%80%8D%E5%A2%9E%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
@@ -786,14 +779,14 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/07/24/HDU%205732%20Subway%EF%BC%88%E6%A0%91%E5%93%88%E5%B8%8C%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/07/24/HDU%205730%20Shell%20Necklace%EF%BC%88dp%E3%80%81cdq%E5%88%86%E6%B2%BB+FFT%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/07/25/HDU%205737%20Differencia%EF%BC%88%E5%BD%92%E5%B9%B6%E6%A0%91%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/07/24/HDU%205732%20Subway%EF%BC%88%E6%A0%91%E5%93%88%E5%B8%8C%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -814,7 +807,21 @@
   </url>
   
   <url>
+    <loc>http://TaoSama.github.io/2016/07/25/HDU%205737%20Differencia%EF%BC%88%E5%BD%92%E5%B9%B6%E6%A0%91%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://TaoSama.github.io/2016/07/24/HDU%205738%20Eureka%EF%BC%88%E8%B4%A1%E7%8C%AE%E3%80%81%E6%9E%81%E8%A7%92%E6%8E%92%E5%BA%8F%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/07/24/HDU%205739%20Fantasia%EF%BC%88%E7%82%B9%E5%8F%8C%E8%BF%9E%E9%80%9A%E3%80%81%E6%A0%91%E5%BD%A2dp%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -835,7 +842,7 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/07/24/HDU%205739%20Fantasia%EF%BC%88%E7%82%B9%E5%8F%8C%E8%BF%9E%E9%80%9A%E3%80%81%E6%A0%91%E5%BD%A2dp%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/08/05/HDU%205755%20Gambler%20Bo%EF%BC%88%E9%AB%98%E6%96%AF%E6%B6%88%E5%85%83%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -843,13 +850,6 @@
   
   <url>
     <loc>http://TaoSama.github.io/2016/08/11/HDU%205756%20Boss%20Bo%EF%BC%88%E4%B8%BB%E5%B8%AD%E6%A0%91%E3%80%81%E6%A0%87%E8%AE%B0%E6%B0%B8%E4%B9%85%E5%8C%96%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2016/08/05/HDU%205755%20Gambler%20Bo%EF%BC%88%E9%AB%98%E6%96%AF%E6%B6%88%E5%85%83%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -912,21 +912,7 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/08/13/HDU%205801%20Up%20Sky,Mr.Zhu%EF%BC%88%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96Trie%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://TaoSama.github.io/2016/08/05/HDU%205794%20A%20Simple%20Chess%EF%BC%88dp%E3%80%81%E5%AE%B9%E6%96%A5%E3%80%81Lucas%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2016/08/08/HDU%205803%20Zhu%E2%80%99s%20Math%20Problem%EF%BC%88%E6%95%B0%E4%BD%8Ddp%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -940,7 +926,21 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/08/10/HDU%205820%20Lights%EF%BC%88%E4%B8%BB%E5%B8%AD%E6%A0%91%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/08/13/HDU%205801%20Up%20Sky,Mr.Zhu%EF%BC%88%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96Trie%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/08/08/HDU%205803%20Zhu%E2%80%99s%20Math%20Problem%EF%BC%88%E6%95%B0%E4%BD%8Ddp%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/08/10/HDU%205811%20Colosseo%EF%BC%88%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F%E3%80%81LIS%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -954,7 +954,7 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/08/10/HDU%205811%20Colosseo%EF%BC%88%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F%E3%80%81LIS%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/08/10/HDU%205820%20Lights%EF%BC%88%E4%B8%BB%E5%B8%AD%E6%A0%91%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -975,21 +975,14 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2017/04/05/Hihocode%201492%20Parentheses%20Sequence%EF%BC%88dp%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2016/03/13/Hihocoder%201273%20%E6%B8%85%E7%90%86%E6%B5%B7%E6%8A%A5%EF%BC%88%E5%88%A4%E6%96%AD%E7%9F%A9%E5%BD%A2%E7%9B%B8%E4%BA%A4%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://TaoSama.github.io/2016/03/21/HihoCoder%201279%20Rikka%20with%20Sequence%EF%BC%88%E7%8A%B6%E5%8E%8Bdp%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2017/04/05/Hihocode%201492%20Parentheses%20Sequence%EF%BC%88dp%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -1010,7 +1003,7 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/03/21/IndiaHacks%202016%20D.%20Delivery%20Bears%EF%BC%88%E4%BA%8C%E5%88%86%E3%80%81%E6%9C%80%E5%A4%A7%E6%B5%81%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/03/13/Hihocoder%201273%20%E6%B8%85%E7%90%86%E6%B5%B7%E6%8A%A5%EF%BC%88%E5%88%A4%E6%96%AD%E7%9F%A9%E5%BD%A2%E7%9B%B8%E4%BA%A4%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -1024,14 +1017,14 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/08/29/POJ%201418%20Viva%20Confetti%EF%BC%88%E6%9E%81%E8%A7%92%E6%89%AB%E6%8F%8F%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/03/21/IndiaHacks%202016%20C.%20Bear%20and%20Up-Down%EF%BC%88%E6%9A%B4%E5%8A%9B%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/03/21/IndiaHacks%202016%20C.%20Bear%20and%20Up-Down%EF%BC%88%E6%9A%B4%E5%8A%9B%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/03/21/IndiaHacks%202016%20D.%20Delivery%20Bears%EF%BC%88%E4%BA%8C%E5%88%86%E3%80%81%E6%9C%80%E5%A4%A7%E6%B5%81%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -1045,13 +1038,6 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/08/28/POJ%201981%20Circle%20and%20Points%EF%BC%88%E6%9E%81%E9%99%90%E6%83%85%E5%86%B5%E3%80%81%E6%9E%81%E8%A7%92%E6%89%AB%E6%8F%8F%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://TaoSama.github.io/2016/08/28/POJ%201127%20Jack%20Straws%EF%BC%88%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
@@ -1059,7 +1045,14 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/08/28/POJ%202932%20Coneology%EF%BC%88%E6%89%AB%E6%8F%8F%E7%BA%BF%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/08/29/POJ%201418%20Viva%20Confetti%EF%BC%88%E6%9E%81%E8%A7%92%E6%89%AB%E6%8F%8F%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/08/28/POJ%201981%20Circle%20and%20Points%EF%BC%88%E6%9E%81%E9%99%90%E6%83%85%E5%86%B5%E3%80%81%E6%9E%81%E8%A7%92%E6%89%AB%E6%8F%8F%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -1087,21 +1080,14 @@
   </url>
   
   <url>
+    <loc>http://TaoSama.github.io/2016/08/28/POJ%202932%20Coneology%EF%BC%88%E6%89%AB%E6%8F%8F%E7%BA%BF%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://TaoSama.github.io/2016/08/29/POJ%203168%20Barn%20Expansion%EF%BC%88%E6%89%AB%E6%8F%8F%E7%BA%BF%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2016/08/01/POJ%203977%20Subset%EF%BC%88%E6%8A%98%E5%8D%8A%E6%90%9C%E7%B4%A2%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2016/04/11/SOJ%204478%20Easy%20Problem%20II%EF%BC%88%E6%A0%88%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -1115,14 +1101,14 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/04/11/SOJ%204479%20Easy%20Problem%20III%EF%BC%88%E5%8C%BA%E9%97%B4%E8%B4%AA%E5%BF%83%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/05/01/POJ%203764%20The%20xor-longest%20Path%EF%BC%88xor%20trie%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/05/01/POJ%203764%20The%20xor-longest%20Path%EF%BC%88xor%20trie%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/08/01/POJ%203977%20Subset%EF%BC%88%E6%8A%98%E5%8D%8A%E6%90%9C%E7%B4%A2%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -1136,7 +1122,14 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/04/11/SOJ%204484%20%E9%9D%99%E6%80%81%E8%A7%84%E5%88%92%EF%BC%88dp%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/04/11/SOJ%204478%20Easy%20Problem%20II%EF%BC%88%E6%A0%88%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/04/11/SOJ%204479%20Easy%20Problem%20III%EF%BC%88%E5%8C%BA%E9%97%B4%E8%B4%AA%E5%BF%83%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -1144,6 +1137,27 @@
   
   <url>
     <loc>http://TaoSama.github.io/2016/04/11/SOJ%204481%20%E5%AD%A6%E9%99%A2%E6%9D%AF%E8%BE%A9%E8%AE%BA%E8%B5%9B%EF%BC%88%E6%A6%82%E7%8E%87dp%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/04/11/SOJ%204482%20%E5%BF%BD%E6%82%A0%E5%A4%A7%E7%A5%9E%EF%BC%88MST%E3%80%81%E7%82%B9%E6%9D%83%E6%98%A0%E5%B0%84%E5%88%B0%E8%BE%B9%E6%9D%83%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/04/11/SOJ%204484%20%E9%9D%99%E6%80%81%E8%A7%84%E5%88%92%EF%BC%88dp%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/08/08/SPOJ%20Count%20on%20a%20tree%20II%EF%BC%88%E6%A0%91%E4%B8%8A%E8%8E%AB%E9%98%9F%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -1164,7 +1178,7 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/04/11/SOJ%204482%20%E5%BF%BD%E6%82%A0%E5%A4%A7%E7%A5%9E%EF%BC%88MST%E3%80%81%E7%82%B9%E6%9D%83%E6%98%A0%E5%B0%84%E5%88%B0%E8%BE%B9%E6%9D%83%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/03/28/UVA%2010968%20KuPellaKes%EF%BC%88%E8%B4%AA%E5%BF%83%E3%80%81%E6%9C%80%E7%9F%AD%E8%B7%AF%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -1178,42 +1192,7 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/08/08/SPOJ%20Count%20on%20a%20tree%20II%EF%BC%88%E6%A0%91%E4%B8%8A%E8%8E%AB%E9%98%9F%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2016/03/28/UVA%2010968%20KuPellaKes%EF%BC%88%E8%B4%AA%E5%BF%83%E3%80%81%E6%9C%80%E7%9F%AD%E8%B7%AF%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2017/04/28/WAPS-Interview/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2016/04/10/ZOJ%203930%20Dice%20Notation%EF%BC%88%E6%A8%A1%E6%8B%9F%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://TaoSama.github.io/2016/03/29/VK%20Cup%202016%20-%20Round%201%20D.%20Bear%20and%20Polynomials%EF%BC%88%E5%93%88%E5%B8%8C%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2016/04/10/ZOJ%203933%20Team%20Formation%EF%BC%88KM%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -1227,7 +1206,7 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/04/25/ZOJ%203939%20The%20Lucky%20Week%EF%BC%88%E6%89%93%E8%A1%A8%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2017/04/28/WAPS-Interview/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -1241,7 +1220,7 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/04/25/ZOJ%203944%20People%20Counting%EF%BC%88%E6%9A%B4%E5%8A%9B%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/04/10/ZOJ%203930%20Dice%20Notation%EF%BC%88%E6%A8%A1%E6%8B%9F%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -1255,6 +1234,13 @@
   </url>
   
   <url>
+    <loc>http://TaoSama.github.io/2016/04/10/ZOJ%203933%20Team%20Formation%EF%BC%88KM%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://TaoSama.github.io/2016/04/25/ZOJ%203938%20Defuse%20the%20Bomb%EF%BC%88%E6%A8%A1%E6%8B%9F%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
@@ -1262,7 +1248,14 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2017/06/15/effective-cpp-constructors-destructors-and-assignment-operators/</loc>
+    <loc>http://TaoSama.github.io/2016/04/25/ZOJ%203939%20The%20Lucky%20Week%EF%BC%88%E6%89%93%E8%A1%A8%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/04/25/ZOJ%203944%20People%20Counting%EF%BC%88%E6%9A%B4%E5%8A%9B%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -1276,6 +1269,13 @@
   </url>
   
   <url>
+    <loc>http://TaoSama.github.io/2017/06/15/effective-cpp-constructors-destructors-and-assignment-operators/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://TaoSama.github.io/2017/06/11/effective-cpp-accustoming-to-cpp/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
@@ -1283,14 +1283,14 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/08/26/AIM%20Tech%20Round%203%20(Div.%201)%20D.%20Incorrect%20Flow%EF%BC%88%E6%9C%89%E6%BA%90%E6%B1%87%E5%8F%AF%E8%A1%8C%E8%B4%B9%E7%94%A8%E6%B5%81%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/06/12/2016%20%E8%AE%A1%E8%92%9C%E4%B9%8B%E9%81%93%20%20%E5%BE%AE%E8%BD%AF%E7%9A%84%E5%91%98%E5%B7%A5%E7%A6%8F%E5%88%A9%20%EF%BC%88%E7%AE%80%E5%8D%95%E3%80%81%E4%B8%AD%E7%AD%89%EF%BC%89%EF%BC%88dp%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/07/24/51nod%201532%20%E5%B8%A6%E5%8F%AF%E9%80%89%E5%AD%97%E7%AC%A6%E7%9A%84%E5%A4%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%EF%BC%88dp%E3%80%81bitset%E4%BC%98%E5%8C%96%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2016/09/23/51nod%201610%20%E8%B7%AF%E5%BE%84%E8%AE%A1%E6%95%B0%EF%BC%88dp%E3%80%81%E5%AE%B9%E6%96%A5%E5%8E%9F%E7%90%86%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -1304,21 +1304,14 @@
   </url>
   
   <url>
+    <loc>http://TaoSama.github.io/2016/08/26/AIM%20Tech%20Round%203%20(Div.%201)%20D.%20Incorrect%20Flow%EF%BC%88%E6%9C%89%E6%BA%90%E6%B1%87%E5%8F%AF%E8%A1%8C%E8%B4%B9%E7%94%A8%E6%B5%81%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://TaoSama.github.io/2016/08/28/AOJ%201313%20Intersection%20of%20Two%20Prisms%EF%BC%88%E6%95%B0%E5%80%BC%E7%A7%AF%E5%88%86%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2016/05/09/BNUOJ%2050395%20Vertex%20Cover%EF%BC%88%E6%90%9C%E7%B4%A2%E3%80%81%E6%9C%80%E5%B0%8F%E7%82%B9%E8%A6%86%E7%9B%96%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2016/08/28/AOJ%202308%20White%20Bird%EF%BC%88%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95%E3%80%81%E7%89%A9%E7%90%86%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -1332,7 +1325,14 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/05/02/%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%B0%8F%E7%BB%93/</loc>
+    <loc>http://TaoSama.github.io/2016/08/28/AOJ%202308%20White%20Bird%EF%BC%88%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95%E3%80%81%E7%89%A9%E7%90%86%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/05/09/BNUOJ%2050395%20Vertex%20Cover%EF%BC%88%E6%90%9C%E7%B4%A2%E3%80%81%E6%9C%80%E5%B0%8F%E7%82%B9%E8%A6%86%E7%9B%96%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -1346,7 +1346,35 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/05/11/%E6%96%9C%E7%8E%87%E4%BC%98%E5%8C%96dp%E5%B0%8F%E7%BB%93/</loc>
+    <loc>http://TaoSama.github.io/2016/05/09/BNUOJ%2051639%20Simple%20Database%EF%BC%88%E5%A4%A7%E6%A8%A1%E6%8B%9F%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/05/09/BNUOJ%2051645%20ACM%20Battle%EF%BC%88%E6%90%9C%E7%B4%A2%E3%80%81%E6%9C%80%E5%B0%8F%E7%82%B9%E8%A6%86%E7%9B%96%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/08/08/BZOJ%201086%20%E7%8E%8B%E5%AE%A4%E8%81%94%E9%82%A6%EF%BC%88%E5%9D%97%E7%8A%B6%E6%A0%91%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/03/23/BZOJ%201878%20HH%E7%9A%84%E9%A1%B9%E9%93%BE%EF%BC%88%E7%A6%BB%E7%BA%BF%E6%80%9D%E6%83%B3%E3%80%81BIT%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/03/23/BZOJ%202743%20%E9%87%87%E8%8A%B1%EF%BC%88%E7%A6%BB%E7%BA%BF%E6%80%9D%E6%83%B3%E3%80%81BIT%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -1360,7 +1388,7 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/03/24/%E7%BD%91%E6%98%93%E6%B8%B8%E6%88%8F%E4%B8%80%E9%9D%A2/</loc>
+    <loc>http://TaoSama.github.io/2016/05/02/%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%B0%8F%E7%BB%93/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -1368,6 +1396,27 @@
   
   <url>
     <loc>http://TaoSama.github.io/2016/03/23/%E5%B9%B3%E9%9D%A2%E6%9C%80%E8%BF%91%E7%82%B9%E5%AF%B9%E9%97%AE%E9%A2%98/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/05/01/BZOJ%204260%20Codechef%20REBXOR%EF%BC%88xor%20trie%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/05/11/%E6%96%9C%E7%8E%87%E4%BC%98%E5%8C%96dp%E5%B0%8F%E7%BB%93/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.github.io/2016/03/24/%E7%BD%91%E6%98%93%E6%B8%B8%E6%88%8F%E4%B8%80%E9%9D%A2/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -1388,28 +1437,7 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/08/08/BZOJ%201086%20%E7%8E%8B%E5%AE%A4%E8%81%94%E9%82%A6%EF%BC%88%E5%9D%97%E7%8A%B6%E6%A0%91%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2016/05/09/BNUOJ%2051645%20ACM%20Battle%EF%BC%88%E6%90%9C%E7%B4%A2%E3%80%81%E6%9C%80%E5%B0%8F%E7%82%B9%E8%A6%86%E7%9B%96%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2016/05/09/BNUOJ%2051639%20Simple%20Database%EF%BC%88%E5%A4%A7%E6%A8%A1%E6%8B%9F%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/2016/03/23/BZOJ%201878%20HH%E7%9A%84%E9%A1%B9%E9%93%BE%EF%BC%88%E7%A6%BB%E7%BA%BF%E6%80%9D%E6%83%B3%E3%80%81BIT%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2017/04/28/Backthoughts-about-the-Failure-of-the-Autumn-and-Spring-Campus-Recruiting-of-Toutiao/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
@@ -1423,28 +1451,21 @@
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/03/23/BZOJ%202743%20%E9%87%87%E8%8A%B1%EF%BC%88%E7%A6%BB%E7%BA%BF%E6%80%9D%E6%83%B3%E3%80%81BIT%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2017/04/05/BestCoder%20Round%2092/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/2016/05/01/BZOJ%204260%20Codechef%20REBXOR%EF%BC%88xor%20trie%EF%BC%89/</loc>
+    <loc>http://TaoSama.github.io/2017/04/12/BestCoder%20Round%2093/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://TaoSama.github.io/categories/index.html</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.github.io/tags/index.html</loc>
+    <loc>http://TaoSama.github.io/2016/04/11/HDU%205658%20CA%20Loves%20Palindromic%EF%BC%88Manacher%20%20%E5%9B%9E%E6%96%87%E6%A0%91%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     

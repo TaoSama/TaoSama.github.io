@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://TaoSama.github.io/page/4/index.html">
 <meta property="og:site_name" content="TaoSama&#39;s Blog">
 <meta property="og:description" content="Forward and Never Step Back">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TaoSama&#39;s Blog">
 <meta name="twitter:description" content="Forward and Never Step Back">
@@ -101,6 +101,144 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Roborn-and-Walk-Alone" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/28/Roborn-and-Walk-Alone/">Reborn and Walk Alone</a>
+    </h1>
+  
+
+      </header>
+    
+  <div class="article-meta">
+    <a href="/2017/02/28/Roborn-and-Walk-Alone/" class="article-date">
+  <time datetime="2017-02-28T14:18:10.000Z" itemprop="datePublished">2017-2-28 Tue  22:18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Doing/">Doing</a>►<a class="article-category-link" href="/categories/Doing/Life/">Life</a>
+  </div>
+
+  </div>
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>时光太瘦，指缝太宽，不经意的一瞥，已隔经年<br> <div style="text-align:right">——安意如</div><br>作为一个记忆是有限覆盖式的人（摊手），我大概已经不太记得这个人生$2\sim 3$年往前的事情了，不知是幸运还是悲哀。<br>四年太快，马上就要毕业了，最近又传来噩耗，能不能毕业都不一定了，自作孽真是的。<br>无数次幻想如果没有得到想要的结果就退役了是怎么样的，正儿八经儿从坎普回来发现其实也没啥区别。<br>仿佛我的力气早已经在一年前透支了，突然找不回从前努力的那个自己了，这个样子不行啊，每天浑浑噩噩的。<br>明天就是三月了，即使是在最后一秒回头也是不晚的，毕竟不是生死，真希望自己踽踽独行，踌躇满志。</p>
+        
+          <p class="article-more-link">
+            <a href="/2017/02/28/Roborn-and-Walk-Alone/#main">阅读全文</a>
+          </p>
+        
+      
+	  
+
+
+    </div>
+    <footer class="article-footer">
+	  
+	    <a data-url="http://TaoSama.github.io/2017/02/28/Roborn-and-Walk-Alone/" data-id="cjcxei5md00enshs6wod89497" class="article-share-link">分享到</a>
+	  
+      
+        <a href="http://TaoSama.github.io/2017/02/28/Roborn-and-Walk-Alone/#ds-thread" class="ds-thread-count article-comment-link" data-thread-key="2017/02/28/Roborn-and-Walk-Alone/">文章评论</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-set-up-environment-of-vs2013-with-opencv248" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/01/set-up-environment-of-vs2013-with-opencv248/">VS2013 + opencv2.4.8 环境搭建</a>
+    </h1>
+  
+
+      </header>
+    
+  <div class="article-meta">
+    <a href="/2016/11/01/set-up-environment-of-vs2013-with-opencv248/" class="article-date">
+  <time datetime="2016-11-01T08:13:10.000Z" itemprop="datePublished">2016-11-1 Tue  16:13</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Doing/">Doing</a>►<a class="article-category-link" href="/categories/Doing/Computer-Vision/">Computer Vision</a>
+  </div>
+
+  </div>
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+      	
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>第一天来实习呀，宇哥让我搭建一波环境，来之前搞过一波$win+qt$的，过来发现这边并不是玩$linux$<br>而是$win10+vs$的节奏，然后我就知道要开始开(踩)心(坑)之旅了</p>
+<h3 id="开始搭建环境"><a href="#开始搭建环境" class="headerlink" title="开始搭建环境"></a>开始搭建环境</h3><h4 id="工具下载"><a href="#工具下载" class="headerlink" title="工具下载"></a>工具下载</h4><ul>
+<li>$vs 2013 ultimate$安装，可以去<a href="http://www.itellyou.cn/" target="_blank" rel="external">MSDN, I tell you</a>下载</li>
+<li>$cmake$，直接<a href="http://www.cmake.org/" target="_blank" rel="external">官网</a>下载就好了，最新版本就好</li>
+<li>$opencv 2.4.8$，直接去官网下载源码就好</li>
+</ul>
+<h4 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h4><ul>
+<li>$cmake gui$选择$opencv$源码根目录，再选择一个输出目录<br>编译静态库就不打勾这2个， <code>BUILD_SHARED_LIBS</code>，<code>BUILD_WITH_STATIC_CRT</code><br><code>QT</code> 方案就 <code>WITH_OPENGL</code> 和 <code>WITH_QT</code> 勾一下</li>
+<li>点击$configure$，选择$Visual Studio 12 2013$就好，编译器就默认就行</li>
+<li>$configure$完之后点击$generate$，之后$open project$</li>
+<li>打开$OpenCV$工程之后，分别在$Debug$和$Release$模式下，$CMakeTargets$下$ALL_BUILD$和$INSTALL$先后构建一下</li>
+</ul>
+<h4 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h4><ul>
+<li><p>新建一个控制台工程，选择空项目，新建 <code>main.cpp</code>，找一段官网代码</p>
+  <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/highgui/highgui.hpp&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> cv;</div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	<span class="keyword">if</span> (argc != <span class="number">2</span>)</div><div class="line">	&#123;</div><div class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">" Usage: display_image ImageToLoadAndDisplay"</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	Mat image;</div><div class="line">	image = imread(argv[<span class="number">1</span>], IMREAD_COLOR); <span class="comment">// Read the file</span></div><div class="line"></div><div class="line">	<span class="keyword">if</span> (!image.data) <span class="comment">// Check for invalid input</span></div><div class="line">	&#123;</div><div class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"Could not open or find the image"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	namedWindow(<span class="string">"Display window"</span>, WINDOW_AUTOSIZE); <span class="comment">// Create a window for display.</span></div><div class="line">	imshow(<span class="string">"Display window"</span>, image); <span class="comment">// Show our image inside it.</span></div><div class="line"></div><div class="line">	waitKey(<span class="number">0</span>); <span class="comment">// Wait for a keystroke in the window</span></div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>有了上面这个 打开的工程就可以为所有工程添加依赖了</p>
+</li>
+<li><p>$View\to Property Manager\to 工程名字\to Debug | Win32\to Microsoft.Cpp.Win32.user$<br>上面这个位置找到之后，就可以添加包含目录和库目录了</p>
+<ul>
+<li>$Common Properties\to VC++ Directories$<br><strong>包含目录</strong>，编译后目录下的 <code>...\install\include</code>，<code>...\install\include\opencv</code>，<code>...\install\include\opencv2</code>三个目录添加就好<br><strong>库目录</strong>，静态库，编译后目录下的 <code>...\install\x86\vc12\staticlib</code><br><strong>可执行文件目录</strong>，直接添加到环境变量里去，<code>...\install\x86\vc12\bin</code></li>
+<li><p>$Linker\to Input$<br><strong>库文件依赖</strong>，静态库依赖，库目录里的全部塞进去就行，$Debug$就添加 <code>*d.lib</code>版本的，$Release$添加 <code>*.lib</code>版本的</p>
+   <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">opencv_core248d.lib</div><div class="line">opencv_imgproc248d.lib</div><div class="line">opencv_highgui248d.lib</div><div class="line">opencv_ml248d.lib</div><div class="line">opencv_video248d.lib</div><div class="line">opencv_features2d248d.lib</div><div class="line">opencv_calib3d248d.lib</div><div class="line">opencv_objdetect248d.lib</div><div class="line">opencv_contrib248d.lib</div><div class="line">opencv_legacy248d.lib</div><div class="line">opencv_flann248d.lib</div><div class="line">libpngd.lib</div><div class="line">libtiffd.lib</div><div class="line">zlibd.lib</div><div class="line">IlmImfd.lib</div><div class="line">libjasperd.lib</div><div class="line">libjpegd.lib</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="各种坑点"><a href="#各种坑点" class="headerlink" title="各种坑点"></a>各种坑点</h3><ul>
+<li><p><strong>静态库需要注意</strong>，<code>highgui</code>会需要下面这一堆。。。。库文件依赖里加一下（<strong>大坑</strong>）<br> <a href="http://stackoverflow.com/questions/8098272/opencv-unresolved-external-symbols-other-libraries-needed" target="_blank" rel="external">参考1</a>，<a href="http://blog.csdn.net/u011636160/article/details/51702368" target="_blank" rel="external">参考2</a></p>
+  <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">comctl32.lib</div><div class="line">vfw32.lib</div><div class="line">user32.lib</div><div class="line">gdi32.lib</div><div class="line">winmm.lib</div><div class="line">uuid.lib</div><div class="line">winspool.lib</div><div class="line">wsock32.lib</div><div class="line">rpcrt4.lib</div><div class="line">odbc32.lib</div><div class="line">oleaut32.lib</div><div class="line">advapi32.lib</div><div class="line">comdlg32.lib</div><div class="line">ole32.lib</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>error LNK2038: 检测到“RuntimeLibrary”的不匹配项:  值“MTd_StaticDebug”不匹配值“MDd_DynamicDebug”</code><br><strong>解决方案：</strong><br>$在工程上右键\to 属性\to C/C++\to 代码生成\to 运行库$<br>有四个选项及含义分别如下：<br>多线程调试Dll (/MDd) 对应的是MD_DynamicDebug<br>多线程Dll (/MD) 对应的是MD_DynamicRelease<br>多线程(/MT) 对应的是MD_StaticRelease<br>多线程(/MTd)对应的是MD_StaticDebug<br><strong>根据错误提示修改即可</strong></p>
+</li>
+</ul>
+<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>$windows$有毒，$vs$有毒。。</p>
+
+      
+	  
+
+
+    </div>
+    <footer class="article-footer">
+	  
+	    <a data-url="http://TaoSama.github.io/2016/11/01/set-up-environment-of-vs2013-with-opencv248/" data-id="cjcxei5ol00i7shs6hi8t2c2r" class="article-share-link">分享到</a>
+	  
+      
+        <a href="http://TaoSama.github.io/2016/11/01/set-up-environment-of-vs2013-with-opencv248/#ds-thread" class="ds-thread-count article-comment-link" data-thread-key="2016/11/01/set-up-environment-of-vs2013-with-opencv248/">文章评论</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-51nod 1610 路径计数（dp、容斥原理）" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -117,7 +255,7 @@
     
   <div class="article-meta">
     <a href="/2016/09/23/51nod 1610 路径计数（dp、容斥原理）/" class="article-date">
-  <time datetime="2016-09-22T16:52:10.000Z" itemprop="datePublished">2016-9-23 周五  00:52</time>
+  <time datetime="2016-09-22T16:52:10.000Z" itemprop="datePublished">2016-9-23 Fri  00:52</time>
 </a>
     
   <div class="article-category">
@@ -144,7 +282,7 @@
     </div>
     <footer class="article-footer">
 	  
-	    <a data-url="http://TaoSama.github.io/2016/09/23/51nod 1610 路径计数（dp、容斥原理）/" data-id="cj8jk71w0002b59s62ijq29o4" class="article-share-link">分享到</a>
+	    <a data-url="http://TaoSama.github.io/2016/09/23/51nod 1610 路径计数（dp、容斥原理）/" data-id="cjcxei5ee0009shs6x5egy4z1" class="article-share-link">分享到</a>
 	  
       
         <a href="http://TaoSama.github.io/2016/09/23/51nod 1610 路径计数（dp、容斥原理）/#ds-thread" class="ds-thread-count article-comment-link" data-thread-key="2016/09/23/51nod 1610 路径计数（dp、容斥原理）/">文章评论</a>
@@ -175,7 +313,7 @@
     
   <div class="article-meta">
     <a href="/2016/09/22/CSU 1805 Three Capitals（BEST定理、MatrixTree定理）/" class="article-date">
-  <time datetime="2016-09-22T15:16:10.000Z" itemprop="datePublished">2016-9-22 周四  23:16</time>
+  <time datetime="2016-09-22T15:16:10.000Z" itemprop="datePublished">2016-9-22 Thu  23:16</time>
 </a>
     
   <div class="article-category">
@@ -202,7 +340,7 @@
     </div>
     <footer class="article-footer">
 	  
-	    <a data-url="http://TaoSama.github.io/2016/09/22/CSU 1805 Three Capitals（BEST定理、MatrixTree定理）/" data-id="cj8jk71vt001z59s66rdypyo3" class="article-share-link">分享到</a>
+	    <a data-url="http://TaoSama.github.io/2016/09/22/CSU 1805 Three Capitals（BEST定理、MatrixTree定理）/" data-id="cjcxei5fj0027shs6aumpxb1e" class="article-share-link">分享到</a>
 	  
       
         <a href="http://TaoSama.github.io/2016/09/22/CSU 1805 Three Capitals（BEST定理、MatrixTree定理）/#ds-thread" class="ds-thread-count article-comment-link" data-thread-key="2016/09/22/CSU 1805 Three Capitals（BEST定理、MatrixTree定理）/">文章评论</a>
@@ -233,7 +371,7 @@
     
   <div class="article-meta">
     <a href="/2016/09/22/IFrog 1032 - A-B（容斥原理）/" class="article-date">
-  <time datetime="2016-09-22T12:45:10.000Z" itemprop="datePublished">2016-9-22 周四  20:45</time>
+  <time datetime="2016-09-22T12:45:10.000Z" itemprop="datePublished">2016-9-22 Thu  20:45</time>
 </a>
     
   <div class="article-category">
@@ -260,7 +398,7 @@
     </div>
     <footer class="article-footer">
 	  
-	    <a data-url="http://TaoSama.github.io/2016/09/22/IFrog 1032 - A-B（容斥原理）/" data-id="cj8jk724600d359s6f0l6xw92" class="article-share-link">分享到</a>
+	    <a data-url="http://TaoSama.github.io/2016/09/22/IFrog 1032 - A-B（容斥原理）/" data-id="cjcxei5lm00d6shs6orbonlmd" class="article-share-link">分享到</a>
 	  
       
         <a href="http://TaoSama.github.io/2016/09/22/IFrog 1032 - A-B（容斥原理）/#ds-thread" class="ds-thread-count article-comment-link" data-thread-key="2016/09/22/IFrog 1032 - A-B（容斥原理）/">文章评论</a>
@@ -291,7 +429,7 @@
     
   <div class="article-meta">
     <a href="/2016/09/21/Codeforces 451E. Devu and Flowers（容斥原理）/" class="article-date">
-  <time datetime="2016-09-21T12:09:10.000Z" itemprop="datePublished">2016-9-21 周三  20:09</time>
+  <time datetime="2016-09-21T12:09:10.000Z" itemprop="datePublished">2016-9-21 Wed  20:09</time>
 </a>
     
   <div class="article-category">
@@ -318,7 +456,7 @@
     </div>
     <footer class="article-footer">
 	  
-	    <a data-url="http://TaoSama.github.io/2016/09/21/Codeforces 451E. Devu and Flowers（容斥原理）/" data-id="cj8jk71vz002959s60is7r8uo" class="article-share-link">分享到</a>
+	    <a data-url="http://TaoSama.github.io/2016/09/21/Codeforces 451E. Devu and Flowers（容斥原理）/" data-id="cjcxei5fm002dshs67syp4rei" class="article-share-link">分享到</a>
 	  
       
         <a href="http://TaoSama.github.io/2016/09/21/Codeforces 451E. Devu and Flowers（容斥原理）/#ds-thread" class="ds-thread-count article-comment-link" data-thread-key="2016/09/21/Codeforces 451E. Devu and Flowers（容斥原理）/">文章评论</a>
@@ -349,7 +487,7 @@
     
   <div class="article-meta">
     <a href="/2016/09/21/Codeforces 662C C. Binary Table（FWT）/" class="article-date">
-  <time datetime="2016-09-21T08:22:10.000Z" itemprop="datePublished">2016-9-21 周三  16:22</time>
+  <time datetime="2016-09-21T08:22:10.000Z" itemprop="datePublished">2016-9-21 Wed  16:22</time>
 </a>
     
   <div class="article-category">
@@ -376,7 +514,7 @@
     </div>
     <footer class="article-footer">
 	  
-	    <a data-url="http://TaoSama.github.io/2016/09/21/Codeforces 662C C. Binary Table（FWT）/" data-id="cj8jk71w2002f59s6m3u9iapb" class="article-share-link">分享到</a>
+	    <a data-url="http://TaoSama.github.io/2016/09/21/Codeforces 662C C. Binary Table（FWT）/" data-id="cjcxei5fn002fshs6o8swlzuy" class="article-share-link">分享到</a>
 	  
       
         <a href="http://TaoSama.github.io/2016/09/21/Codeforces 662C C. Binary Table（FWT）/#ds-thread" class="ds-thread-count article-comment-link" data-thread-key="2016/09/21/Codeforces 662C C. Binary Table（FWT）/">文章评论</a>
@@ -407,7 +545,7 @@
     
   <div class="article-meta">
     <a href="/2016/09/10/FWT小结/" class="article-date">
-  <time datetime="2016-09-09T16:18:10.000Z" itemprop="datePublished">2016-9-10 周六  00:18</time>
+  <time datetime="2016-09-09T16:18:10.000Z" itemprop="datePublished">2016-9-10 Sat  00:18</time>
 </a>
     
   <div class="article-category">
@@ -436,7 +574,7 @@
     </div>
     <footer class="article-footer">
 	  
-	    <a data-url="http://TaoSama.github.io/2016/09/10/FWT小结/" data-id="cj8jk71xj004l59s66i58xy1j" class="article-share-link">分享到</a>
+	    <a data-url="http://TaoSama.github.io/2016/09/10/FWT小结/" data-id="cjcxei5gv004eshs6c0qm5ir7" class="article-share-link">分享到</a>
 	  
       
         <a href="http://TaoSama.github.io/2016/09/10/FWT小结/#ds-thread" class="ds-thread-count article-comment-link" data-thread-key="2016/09/10/FWT小结/">文章评论</a>
@@ -465,7 +603,7 @@
     
   <div class="article-meta">
     <a href="/2016/09/08/Educational Codeforces Round 16（在线AC自动机、二进制分组）/" class="article-date">
-  <time datetime="2016-09-07T17:00:10.000Z" itemprop="datePublished">2016-9-8 周四  01:00</time>
+  <time datetime="2016-09-07T17:00:10.000Z" itemprop="datePublished">2016-9-8 Thu  01:00</time>
 </a>
     
   <div class="article-category">
@@ -492,7 +630,7 @@
     </div>
     <footer class="article-footer">
 	  
-	    <a data-url="http://TaoSama.github.io/2016/09/08/Educational Codeforces Round 16（在线AC自动机、二进制分组）/" data-id="cj8jk71xa004459s6vjw7qy7h" class="article-share-link">分享到</a>
+	    <a data-url="http://TaoSama.github.io/2016/09/08/Educational Codeforces Round 16（在线AC自动机、二进制分组）/" data-id="cjcxei5gs0044shs6m5i8xbb4" class="article-share-link">分享到</a>
 	  
       
         <a href="http://TaoSama.github.io/2016/09/08/Educational Codeforces Round 16（在线AC自动机、二进制分组）/#ds-thread" class="ds-thread-count article-comment-link" data-thread-key="2016/09/08/Educational Codeforces Round 16（在线AC自动机、二进制分组）/">文章评论</a>
@@ -523,7 +661,7 @@
     
   <div class="article-meta">
     <a href="/2016/08/29/POJ 2482 Stars in Your Window（扫描线、线段树）/" class="article-date">
-  <time datetime="2016-08-29T11:50:10.000Z" itemprop="datePublished">2016-8-29 周一  19:50</time>
+  <time datetime="2016-08-29T11:50:10.000Z" itemprop="datePublished">2016-8-29 Mon  19:50</time>
 </a>
     
   <div class="article-category">
@@ -550,129 +688,13 @@
     </div>
     <footer class="article-footer">
 	  
-	    <a data-url="http://TaoSama.github.io/2016/08/29/POJ 2482 Stars in Your Window（扫描线、线段树）/" data-id="cj8jk724s00dv59s6ycynxrof" class="article-share-link">分享到</a>
+	    <a data-url="http://TaoSama.github.io/2016/08/29/POJ 2482 Stars in Your Window（扫描线、线段树）/" data-id="cjcxei5m000dyshs6aw1uqelq" class="article-share-link">分享到</a>
 	  
       
         <a href="http://TaoSama.github.io/2016/08/29/POJ 2482 Stars in Your Window（扫描线、线段树）/#ds-thread" class="ds-thread-count article-comment-link" data-thread-key="2016/08/29/POJ 2482 Stars in Your Window（扫描线、线段树）/">文章评论</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/扫描线/">扫描线</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-POJ 3168 Barn Expansion（扫描线）" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/29/POJ 3168 Barn Expansion（扫描线）/">POJ 3168 Barn Expansion（扫描线）</a>
-    </h1>
-  
-
-      </header>
-    
-  <div class="article-meta">
-    <a href="/2016/08/29/POJ 3168 Barn Expansion（扫描线）/" class="article-date">
-  <time datetime="2016-08-29T11:04:10.000Z" itemprop="datePublished">2016-8-29 周一  19:04</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/计算几何/">计算几何</a>►<a class="article-category-link" href="/categories/计算几何/扫描线/">扫描线</a>
-  </div>
-
-  </div>
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>题意： </p>
-<blockquote>
-<p>$给定N\le 2.5\times 10^4个矩形，保证没有重合，且任何边相切或者顶点重合的是不好的$<br>$问最后还有几个好的$</p>
-</blockquote>
-        
-          <p class="article-more-link">
-            <a href="/2016/08/29/POJ 3168 Barn Expansion（扫描线）/#main">阅读全文</a>
-          </p>
-        
-      
-	  
-
-
-    </div>
-    <footer class="article-footer">
-	  
-	    <a data-url="http://TaoSama.github.io/2016/08/29/POJ 3168 Barn Expansion（扫描线）/" data-id="cj8jk724v00e159s60et2a0tq" class="article-share-link">分享到</a>
-	  
-      
-        <a href="http://TaoSama.github.io/2016/08/29/POJ 3168 Barn Expansion（扫描线）/#ds-thread" class="ds-thread-count article-comment-link" data-thread-key="2016/08/29/POJ 3168 Barn Expansion（扫描线）/">文章评论</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/扫描线/">扫描线</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-POJ 1418 Viva Confetti（极角扫描）" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/29/POJ 1418 Viva Confetti（极角扫描）/">POJ 1418 Viva Confetti（极角扫描）</a>
-    </h1>
-  
-
-      </header>
-    
-  <div class="article-meta">
-    <a href="/2016/08/29/POJ 1418 Viva Confetti（极角扫描）/" class="article-date">
-  <time datetime="2016-08-28T16:04:10.000Z" itemprop="datePublished">2016-8-29 周一  00:04</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/计算几何/">计算几何</a>►<a class="article-category-link" href="/categories/计算几何/极角扫描/">极角扫描</a>
-  </div>
-
-  </div>
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>题意： </p>
-<blockquote>
-<p>$给定N\le 100个圆，按输入顺序1个1个放，问最后能看到哪些圆$</p>
-</blockquote>
-        
-          <p class="article-more-link">
-            <a href="/2016/08/29/POJ 1418 Viva Confetti（极角扫描）/#main">阅读全文</a>
-          </p>
-        
-      
-	  
-
-
-    </div>
-    <footer class="article-footer">
-	  
-	    <a data-url="http://TaoSama.github.io/2016/08/29/POJ 1418 Viva Confetti（极角扫描）/" data-id="cj8jk724800d659s6gjlvj0ty" class="article-share-link">分享到</a>
-	  
-      
-        <a href="http://TaoSama.github.io/2016/08/29/POJ 1418 Viva Confetti（极角扫描）/#ds-thread" class="ds-thread-count article-comment-link" data-thread-key="2016/08/29/POJ 1418 Viva Confetti（极角扫描）/">文章评论</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/极角扫描/">极角扫描</a></li></ul>
 
     </footer>
   </div>
@@ -784,7 +806,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/">Doing</a><span class="category-list-count">26</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Blog/">Blog</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/CPP/">CPP</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Distributed/">Distributed</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Go/">Go</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Hive/">Hive</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Interview/">Interview</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Life/">Life</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Machine-Learning/">Machine Learning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Python/">Python</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Shell/">Shell</a><span class="category-list-count">4</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/">动态规划</a><span class="category-list-count">27</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/bitset优化/">bitset优化</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/数位dp/">数位dp</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/数据结构优化/">数据结构优化</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/斜率优化/">斜率优化</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/最长上升子序列/">最长上升子序列</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/树形dp/">树形dp</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/概率-期望dp/">概率/期望dp</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/状压dp/">状压dp</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/矩阵优化/">矩阵优化</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/线性dp/">线性dp</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/">图论</a><span class="category-list-count">26</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/图论/LCA/">LCA</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/二分图/">二分图</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/拓扑排序/">拓扑排序</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/最大团/">最大团</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/最小生成树/">最小生成树</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/最短路/">最短路</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/生成树计数/">生成树计数</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/网络流/">网络流</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/连通图/">连通图</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/套题/">套题</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/字符串/">字符串</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/字符串/AC自动机/">AC自动机</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/字符串/Manacher-回文树/">Manacher/回文树</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/字符串/SA-SAM/">SA/SAM</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/小结/">小结</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/">思维</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/思维/分治/">分治</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/扫描线/">扫描线</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/数形结合/">数形结合</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/离线思想/">离线思想</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/贪心/">贪心</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/思维/贪心/区间贪心/">区间贪心</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/逆向思维/">逆向思维</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/">技巧</a><span class="category-list-count">17</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/two-pointers/">two pointers</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/xor/">xor</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/反转问题/">反转问题</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/哈希/">哈希</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/折半搜索/">折半搜索</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/">数学</a><span class="category-list-count">26</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/数学/CRT/">CRT</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/FFT-NTT-FWT/">FFT/NTT/FWT</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/博弈/">博弈</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/容斥/">容斥</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/概率-期望/">概率/期望</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/组合数学/">组合数学</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/贡献/">贡献</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/高斯消元/">高斯消元</a><span class="category-list-count">4</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/">数据结构</a><span class="category-list-count">18</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/主席树/">主席树</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/二叉搜索树/">二叉搜索树</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/可持久化Trie/">可持久化Trie</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/并查集/">并查集</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/树上莫队/">树上莫队</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/树状数组/">树状数组</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/线段树/">线段树</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/">暴力</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/大模拟/">大模拟</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/小模拟/">小模拟</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/搜索/">搜索</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/搜索/dfs-bfs/">dfs/bfs</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/搜索/二-三分搜索/">二/三分搜索</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/签到/">签到</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/">计算几何</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/三维几何/">三维几何</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/扫描线/">扫描线</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/数值积分/">数值积分</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/旋转卡壳/">旋转卡壳</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/极角扫描/">极角扫描</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/极角排序/">极角排序</a><span class="category-list-count">1</span></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/">Doing</a><span class="category-list-count">28</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Blog/">Blog</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/CPP/">CPP</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Computer-Vision/">Computer Vision</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Distributed/">Distributed</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Go/">Go</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Hive/">Hive</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Interview/">Interview</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Life/">Life</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Machine-Learning/">Machine Learning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Python/">Python</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Shell/">Shell</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Spring/">Spring</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/">动态规划</a><span class="category-list-count">27</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/bitset优化/">bitset优化</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/数位dp/">数位dp</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/数据结构优化/">数据结构优化</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/斜率优化/">斜率优化</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/最长上升子序列/">最长上升子序列</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/树形dp/">树形dp</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/概率-期望dp/">概率/期望dp</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/状压dp/">状压dp</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/矩阵优化/">矩阵优化</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/线性dp/">线性dp</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/">图论</a><span class="category-list-count">26</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/图论/LCA/">LCA</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/二分图/">二分图</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/拓扑排序/">拓扑排序</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/最大团/">最大团</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/最小生成树/">最小生成树</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/最短路/">最短路</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/生成树计数/">生成树计数</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/网络流/">网络流</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/连通图/">连通图</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/套题/">套题</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/字符串/">字符串</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/字符串/AC自动机/">AC自动机</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/字符串/Manacher-回文树/">Manacher/回文树</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/字符串/SA-SAM/">SA/SAM</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/小结/">小结</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/">思维</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/思维/分治/">分治</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/扫描线/">扫描线</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/数形结合/">数形结合</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/离线思想/">离线思想</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/贪心/">贪心</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/思维/贪心/区间贪心/">区间贪心</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/逆向思维/">逆向思维</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/">技巧</a><span class="category-list-count">17</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/two-pointers/">two pointers</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/xor/">xor</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/反转问题/">反转问题</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/哈希/">哈希</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/折半搜索/">折半搜索</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/">数学</a><span class="category-list-count">26</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/数学/CRT/">CRT</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/FFT-NTT-FWT/">FFT/NTT/FWT</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/博弈/">博弈</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/容斥/">容斥</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/概率-期望/">概率/期望</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/组合数学/">组合数学</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/贡献/">贡献</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/高斯消元/">高斯消元</a><span class="category-list-count">4</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/">数据结构</a><span class="category-list-count">18</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/主席树/">主席树</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/二叉搜索树/">二叉搜索树</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/可持久化Trie/">可持久化Trie</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/并查集/">并查集</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/树上莫队/">树上莫队</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/树状数组/">树状数组</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/线段树/">线段树</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/">暴力</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/大模拟/">大模拟</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/小模拟/">小模拟</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/搜索/">搜索</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/搜索/dfs-bfs/">dfs/bfs</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/搜索/二-三分搜索/">二/三分搜索</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/签到/">签到</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/">计算几何</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/三维几何/">三维几何</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/扫描线/">扫描线</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/数值积分/">数值积分</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/旋转卡壳/">旋转卡壳</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/极角扫描/">极角扫描</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/极角排序/">极角排序</a><span class="category-list-count">1</span></li></ul></li></ul>
     </div>
   </div>
 
@@ -794,7 +816,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">2017年 10月</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">2017年 09月</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">2017年 08月</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">2017年 07月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">2017年 06月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">2017年 05月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">2017年 04月</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">2017年 03月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">2017年 02月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">2016年 09月</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">2016年 08月</a><span class="archive-list-count">42</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">2016年 07月</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">2016年 06月</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">2016年 05月</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">2016年 04月</a><span class="archive-list-count">41</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">2016年 03月</a><span class="archive-list-count">42</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">2018年 03月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">2017年 10月</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">2017年 09月</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">2017年 08月</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">2017年 07月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">2017年 06月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">2017年 05月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">2017年 04月</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">2017年 03月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">2017年 02月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">2016年 11月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">2016年 09月</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">2016年 08月</a><span class="archive-list-count">42</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">2016年 07月</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">2016年 06月</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">2016年 05月</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">2016年 04月</a><span class="archive-list-count">41</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">2016年 03月</a><span class="archive-list-count">42</span></li></ul>
     </div>
   </div>
 
@@ -854,7 +876,7 @@
 		<a href="/atom.xml">RSS</a>&nbsp;
 		<a href="mailto:lwt1367@gmail.com" target="_blank">Contact</a>
 		<br>
-		Copyright &copy; 2016-2017 
+		Copyright &copy; 2016-2018 
 	    <a href="/" target="_blank"> TaoSama </a>
 		<br>
 		Powered by <a href="https://hexo.io/zh-cn/docs/index.html" target="_blank">Hexo</a>
@@ -940,41 +962,25 @@ if (typeof jQuery == 'undefined') {
 <!-- Baidu Share End --->
 
 
-<! -- mathjax config similar to math.stackexchange -->
-
 <script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-                processEscapes: true
-                    
-}
-  
-        });
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  });
 </script>
 
 <script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-tex2jax: {
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-                  
-}
-    
-        });
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
 </script>
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Queue(function() {
-            var all = MathJax.Hub.getAllJax(), i;
-            for(i=0; i < all.length; i += 1) {
-                            all[i].SourceElement().parentNode.className += ' has-jax';
-                                    
-            }
-                
-        });
-</script>
-
-<script type="text/javascript" src="http://cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
 
