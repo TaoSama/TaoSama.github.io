@@ -1,135 +1,517 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  <title>HDU 4631 Sad Love Story（离线思想、分治） | TaoSama&#39;s Blog - Forward and Never Step Back</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="题意：  $N\le 5\times 10^5，给定二维平面上N个点，定义距离为欧氏距离的平方$$挨个加入每个点，对于i&amp;gt;1的所有点，求[1,i]的最近点对距离，输出这些距离和$">
-<meta name="keywords" content="分治">
-<meta property="og:type" content="article">
-<meta property="og:title" content="HDU 4631 Sad Love Story（离线思想、分治）">
-<meta property="og:url" content="http://TaoSama.github.io/2016/03/23/HDU 4631 Sad Love Story（离线思想、分治）/index.html">
-<meta property="og:site_name" content="TaoSama&#39;s Blog">
-<meta property="og:description" content="题意：  $N\le 5\times 10^5，给定二维平面上N个点，定义距离为欧氏距离的平方$$挨个加入每个点，对于i&amp;gt;1的所有点，求[1,i]的最近点对距离，输出这些距离和$">
-<meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-09-19T14:48:07.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HDU 4631 Sad Love Story（离线思想、分治）">
-<meta name="twitter:description" content="题意：  $N\le 5\times 10^5，给定二维平面上N个点，定义距离为欧氏距离的平方$$挨个加入每个点，对于i&amp;gt;1的所有点，求[1,i]的最近点对距离，输出这些距离和$">
-<meta name="twitter:creator" content="@lwt1367">
-<link rel="publisher" href="115031676619400074158">
-<meta property="fb:admins" content="lwt1367">
-  
-    <link rel="alternate" href="/atom.xml" title="TaoSama&#39;s Blog" type="application/atom+xml">
-  
+<html style="display: none;" lang="en">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
 
-  <!-- favicons -->
-  <link rel="apple-touch-icon" sizes="57x57" href="/css/images/apple-touch-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/css/images/apple-touch-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/css/images/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/css/images/apple-touch-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/css/images/apple-touch-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/css/images/apple-touch-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/css/images/apple-touch-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/css/images/apple-touch-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/css/images/apple-touch-icon-180x180.png">
-  <link rel="icon" type="image/png" href="/css/images/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="/css/images/android-chrome-192x192.png" sizes="192x192">
-  <link rel="icon" type="image/png" href="/css/images/favicon-96x96.png" sizes="96x96">
-  <link rel="icon" type="image/png" href="/css/images/favicon-16x16.png" sizes="16x16">
-  <link rel="manifest" href="/css/images/manifest.json">
-  <link rel="mask-icon" href="/css/images/safari-pinned-tab.svg" color="#5bbad5">
-  <link rel="shortcut icon" href="/css/images/favicon.ico">
-  <meta name="msapplication-TileColor" content="#2d89ef">
-  <meta name="msapplication-TileImage" content="/css/images/mstile-144x144.png">
-  <meta name="msapplication-config" content="/css/images/browserconfig.xml">
-  <meta name="theme-color" content="#3B74AC">
-  <!-- end of icons -->
-  <link href="http://fonts.lug.ustc.edu.cn/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  <link href="/css/duoshuo.css" rel="stylesheet" type="text/css">
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
 
-  <link rel="stylesheet" href="/css/style.css">
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">TaoSama&#39;s Blog</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">Reborn and Be Together</a>
-        </h2>
-      
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            HDU 4631 Sad Love Story（离线思想、分治） | 
+        
+        TaoSama&#39;s Blog
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="题意：
+
+$N\le 5\times 10^5，给定二维平面上N个点，定义距离为欧氏距离的平方$$挨个加入每个点，对于i&amp;gt;1的所有点，求[1,i]的最近点对距离，输出这些距离和$
+">
+    <meta name="keywords" content="Algorithm, ACMer,分治">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.en.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/github-v2.min.css?AfzKxt++K+/lhZBlSjnxwg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.proxy.ustclug.org/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="TaoSama&#39;s Blog">
+    <meta name="msapplication-starturl" content="http://TaoSama.github.io/2016/03/23/HDU 4631 Sad Love Story（离线思想、分治）/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="TaoSama&#39;s Blog">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+        
+            <link rel=alternate type="application/atom+xml" href="atom.xml">
+        
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://TaoSama.github.io/2016/03/23/HDU 4631 Sad Love Story（离线思想、分治）/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="HDU 4631 Sad Love Story（离线思想、分治） | TaoSama&#39;s Blog">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="题意：
+
+$N\le 5\times 10^5，给定二维平面上N个点，定义距离为欧氏距离的平方$$挨个加入每个点，对于i&amp;gt;1的所有点，求[1,i]的最近点对距离，输出这些距离和$
+">
+    <meta property="og:article:tag" content="分治"> 
+
+    
+        <meta property="article:published_time" content="Wed Mar 23 2016 23:20:10 GMT+0800">
+        <meta property="article:modified_time" content="Tue Sep 19 2017 22:48:07 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://TaoSama.github.io/2016/03/23/HDU 4631 Sad Love Story（离线思想、分治）/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://TaoSama.github.io/2016/03/23/HDU 4631 Sad Love Story（离线思想、分治）/index.html",
+    "headline": "HDU 4631 Sad Love Story（离线思想、分治）",
+    "datePublished": "Wed Mar 23 2016 23:20:10 GMT+0800",
+    "dateModified": "Tue Sep 19 2017 22:48:07 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "TaoSama",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Forward and Never Step Back"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "TaoSama&#39;s Blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",分治Algorithm, ACMer",
+    "description": "题意：
+
+$N\le 5\times 10^5，给定二维平面上N个点，定义距离为欧氏距离的平方$$挨个加入每个点，对于i&amp;gt;1的所有点，求[1,i]的最近点对距离，输出这些距离和$
+",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon" style="margin-left: 13px;"></a>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
         
-          <a class="main-nav-link" href="/">主页</a>
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
         
-          <a class="main-nav-link" href="/archives">文章</a>
-        
-          <a class="main-nav-link" href="/about">关于</a>
-        
-      </nav>
-      <nav id="sub-nav">
-		<a class="nav-icon" href="http://weibo.com/3863360617" title="微博" target="_blank">&#61834;</a>
-		<!--
-		<a class="nav-icon" href="http://www.renren.com/287137027" title="人人" target="_blank">&#61835;</a>
-		<a class="nav-icon" href="http://user.qzone.qq.com/525969441" title="QQ空间" target="_blank">&#61910;</a>
-		-->
-		<a class="nav-icon" href="https://www.facebook.com/lwt1367" title="Facebook" target="_blank">&#62000;</a>
-		<a class="nav-icon" href="https://twitter.com/lwt1367" title="Twitter" target="_blank">&#61593;</a>
-		<a class="nav-icon" href="http://www.linkedin.com/in/lwt1367" title="LinkedIn" target="_blank">&#61665;</a>
-		<a class="nav-icon" href="https://github.com/TaoSama" title="GitHub" target="_blank">&#61595;</a>
-		<a class="nav-icon" href="https://plus.google.com/115031676619400074158" title="Google+" target="_blank">&#61653;</a>
-        
-          <a id="nav-rss-link" class="nav-icon" style="font-size: 22px; width: 22px; height: 22px; padding: 20px 5px;" href="/atom.xml" title="RSS 订阅"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" style="font-size: 19px; width: 19px; height: 19px; padding: 20px 5px;" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://TaoSama.github.io"></form>
-      </div>
+    
+            <p class="article-headline-p">
+                HDU 4631 Sad Love Story（离线思想、分治）
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
     </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-HDU 4631 Sad Love Story（离线思想、分治）" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
+    <!-- Author Name & Date -->
+    <div>
+        <strong>TaoSama</strong>
+        <span>Mar 23, 2016</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
     
+
+    <!-- Tags (bookmark) -->
     
-      <header class="article-header">
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/分治/">分治</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
         
-  
-    <h1 class="article-title" itemprop="name">
-      HDU 4631 Sad Love Story（离线思想、分治）
-    </h1>
-  
-
-      </header>
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;Views
+                    </span>
+                </li>
+            </a>
+        
     
-  <div class="article-meta">
-    <a href="/2016/03/23/HDU 4631 Sad Love Story（离线思想、分治）/" class="article-date">
-  <time datetime="2016-03-23T15:20:10.000Z" itemprop="datePublished">2016-3-23 Wed  23:20</time>
-</a>
+
+    <!-- Share Weibo -->
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/思维/">思维</a>►<a class="article-category-link" href="/categories/思维/分治/">分治</a>
-  </div>
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=HDU 4631 Sad Love Story（离线思想、分治）&url=http://TaoSama.github.io/2016/03/23/HDU 4631 Sad Love Story（离线思想、分治）/index.html&pic=http://TaoSama.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Weibo
+            </li>
+        </a>
+    
 
-  </div>
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=HDU 4631 Sad Love Story（离线思想、分治）&url=http://TaoSama.github.io/2016/03/23/HDU 4631 Sad Love Story（离线思想、分治）/index.html&via=TaoSama" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Twitter
+            </li>
+        </a>
+    
 
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!-- Table of Contents -->
-      	
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://TaoSama.github.io/2016/03/23/HDU 4631 Sad Love Story（离线思想、分治）/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://TaoSama.github.io/2016/03/23/HDU 4631 Sad Love Story（离线思想、分治）/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
         <p>题意：</p>
 <blockquote>
 <p>$N\le 5\times 10^5，给定二维平面上N个点，定义距离为欧氏距离的平方$<br>$挨个加入每个点，对于i&gt;1的所有点，求[1,i]的最近点对距离，输出这些距离和$</p>
@@ -143,340 +525,673 @@
 <blockquote>
 <p>$其实还可以直接暴力，挨个添加点到set，设当前答案为d$<br>$对于每个点，设坐标为(x,y)，暴力查询横坐标在[x-d, x+d]范围的点$<br>$由于随机数据，答案下降的很快，所以跑的飞快$<br>$时间复杂度大概在O(nlogn)$</p>
 </blockquote>
-<p>第一种解法代码：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//</span></div><div class="line"><span class="comment">//  Created by TaoSama on 2016-03-18</span></div><div class="line"><span class="comment">//  Copyright (c) 2016 TaoSama. All rights reserved.</span></div><div class="line"><span class="comment">//</span></div><div class="line"><span class="meta">#<span class="meta-keyword">pragma</span> comment(linker, <span class="meta-string">"/STACK:1024000000,1024000000"</span>)</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cctype&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iomanip&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> pr(x) cout &lt;&lt; #x &lt;&lt; <span class="meta-string">" = "</span> &lt;&lt; x &lt;&lt; <span class="meta-string">"  "</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> prln(x) cout &lt;&lt; #x &lt;&lt; <span class="meta-string">" = "</span> &lt;&lt; x &lt;&lt; endl</span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">5e5</span> + <span class="number">10</span>, INF = <span class="number">0x3f3f3f3f</span>, MOD = <span class="number">1e9</span> + <span class="number">7</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n;</div><div class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; P;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</div><div class="line">P a[N]; <span class="keyword">int</span> id[N];</div><div class="line"></div><div class="line">pair&lt;LL, P&gt; dfs(<span class="keyword">int</span> l, <span class="keyword">int</span> r) &#123;</div><div class="line">    <span class="keyword">if</span>(l == r) <span class="keyword">return</span> &#123;~<span class="number">0u</span>ll &gt;&gt; <span class="number">2</span>, &#123; <span class="number">-1</span>, <span class="number">-1</span>&#125;&#125;;</div><div class="line">    <span class="keyword">int</span> m = l + r &gt;&gt; <span class="number">1</span>;</div><div class="line">    LL x = a[id[m]].first;</div><div class="line"></div><div class="line">    <span class="keyword">auto</span> ret = min(dfs(l, m), dfs(m + <span class="number">1</span>, r));</div><div class="line">    inplace_merge(id + l, id + m + <span class="number">1</span>, id + r + <span class="number">1</span>, [](<span class="keyword">int</span> x, <span class="keyword">int</span> y) &#123;</div><div class="line">        <span class="keyword">return</span> a[x].second &lt; a[y].second;</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = l; i &lt;= r; ++i) &#123;</div><div class="line">        <span class="keyword">int</span> p = id[i];</div><div class="line">        <span class="keyword">if</span>((a[p].first - x) * (a[p].first - x) &gt;= ret.first) <span class="keyword">continue</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; v.size(); ++j) &#123;</div><div class="line">            <span class="keyword">int</span> q = v[v.size() - <span class="number">1</span> - j];</div><div class="line">            LL dy = a[p].second - a[q].second;</div><div class="line">            <span class="keyword">if</span>(dy * dy &gt;= ret.first) <span class="keyword">break</span>;</div><div class="line">            LL dx = a[p].first - a[q].first;</div><div class="line">            LL d = dx * dx + dy * dy;</div><div class="line">            <span class="keyword">if</span>(d &lt; ret.first) ret = &#123;d, &#123;p, q&#125;&#125;;</div><div class="line">        &#125;</div><div class="line">        v.push_back(p);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> ret;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> LOCAL</span></div><div class="line">    freopen(<span class="string">"C:\\Users\\TaoSama\\Desktop\\in.txt"</span>, <span class="string">"r"</span>, <span class="built_in">stdin</span>);</div><div class="line"><span class="comment">//  freopen("C:\\Users\\TaoSama\\Desktop\\out.txt","w",stdout);</span></div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div><div class="line">    ios_base::sync_with_stdio(<span class="number">0</span>);</div><div class="line"></div><div class="line">    <span class="keyword">int</span> t; <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;t);</div><div class="line">    <span class="keyword">while</span>(t--) &#123;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</div><div class="line">        <span class="keyword">int</span> a1, b1, c1, a2, b2, c2;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>, &amp;a1, &amp;b1, &amp;c1);</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>, &amp;a2, &amp;b2, &amp;c2);</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</div><div class="line">            a[i].first = (<span class="number">1L</span>L * a1 * a[i - <span class="number">1</span>].first + b1) % c1;</div><div class="line">            a[i].second = (<span class="number">1L</span>L * a2 * a[i - <span class="number">1</span>].second + b2) % c2;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        LL ans = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> r = n; r &gt; <span class="number">1</span>;) &#123;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= r; ++i) id[i] = i;</div><div class="line">            sort(id + <span class="number">1</span>, id + <span class="number">1</span> + r, [](<span class="keyword">int</span> x, <span class="keyword">int</span> y) &#123;</div><div class="line">                <span class="keyword">return</span> a[x] &lt; a[y];</div><div class="line">            &#125;);</div><div class="line">            <span class="keyword">auto</span> cp = dfs(<span class="number">1</span>, r);</div><div class="line">            <span class="keyword">int</span> nxt = max(cp.second.first, cp.second.second);</div><div class="line"></div><div class="line">            ans += cp.first * (r - nxt + <span class="number">1</span>);</div><div class="line">            r = nxt - <span class="number">1</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%I64d\n"</span>, ans);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>第一种解法代码：</p>
+<pre><code class="cpp">//
+//  Created by TaoSama on 2016-03-18
+//  Copyright (c) 2016 TaoSama. All rights reserved.
+//
+#pragma comment(linker, &quot;/STACK:1024000000,1024000000&quot;)
+#include &lt;algorithm&gt;
+#include &lt;cctype&gt;
+#include &lt;cmath&gt;
+#include &lt;cstdio&gt;
+#include &lt;cstdlib&gt;
+#include &lt;cstring&gt;
+#include &lt;iomanip&gt;
+#include &lt;iostream&gt;
+#include &lt;map&gt;
+#include &lt;queue&gt;
+#include &lt;string&gt;
+#include &lt;set&gt;
+#include &lt;vector&gt;
 
-      
-	  
-  <div class="article-statement">
-    <hr> 
-    1. 除非注明，本博文即为原创，转载请注明链接地址 <br>
-    2. 本博文只代表博主当时的观点或结论，请不要恶意攻击 <br>
-    3. 如果本文帮到了您，不妨点一下 <a>下面</a> 的 <a>分享到</a> 按钮，让更多的人看到 <br>
-	<!-- ，或者 <a href='/about/index.html#zan-shang'>小额赞赏</a> 我。-->
-  </div>
+using namespace std;
+#define pr(x) cout &lt;&lt; #x &lt;&lt; &quot; = &quot; &lt;&lt; x &lt;&lt; &quot;  &quot;
+#define prln(x) cout &lt;&lt; #x &lt;&lt; &quot; = &quot; &lt;&lt; x &lt;&lt; endl
+const int N = 5e5 + 10, INF = 0x3f3f3f3f, MOD = 1e9 + 7;
 
+int n;
+typedef pair&lt;int, int&gt; P;
+typedef long long LL;
+P a[N]; int id[N];
 
+pair&lt;LL, P&gt; dfs(int l, int r) {
+    if(l == r) return {~0ull &gt;&gt; 2, { -1, -1}};
+    int m = l + r &gt;&gt; 1;
+    LL x = a[id[m]].first;
 
-    </div>
-    <footer class="article-footer">
-	  
-	    <div class="bdsharebuttonbox"><a>分享到：</a> <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook">Facebook</a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter">Twitter</a><a href="#" class="bds_more" data-cmd="more">其他平台</a></div>
-      
-      
-        <a href="http://TaoSama.github.io/2016/03/23/HDU 4631 Sad Love Story（离线思想、分治）/#ds-thread" class="ds-thread-count article-comment-link" data-thread-key="2016/03/23/HDU 4631 Sad Love Story（离线思想、分治）/">文章评论</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/分治/">分治</a></li></ul>
+    auto ret = min(dfs(l, m), dfs(m + 1, r));
+    inplace_merge(id + l, id + m + 1, id + r + 1, [](int x, int y) {
+        return a[x].second &lt; a[y].second;
+    });
 
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2016/03/24/网易游戏一面/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">下一篇</strong>
-      <div class="article-nav-title">
+    vector&lt;int&gt; v;
+    for(int i = l; i &lt;= r; ++i) {
+        int p = id[i];
+        if((a[p].first - x) * (a[p].first - x) &gt;= ret.first) continue;
+        for(int j = 0; j &lt; v.size(); ++j) {
+            int q = v[v.size() - 1 - j];
+            LL dy = a[p].second - a[q].second;
+            if(dy * dy &gt;= ret.first) break;
+            LL dx = a[p].first - a[q].first;
+            LL d = dx * dx + dy * dy;
+            if(d &lt; ret.first) ret = {d, {p, q}};
+        }
+        v.push_back(p);
+    }
+    return ret;
+}
+
+int main() {
+#ifdef LOCAL
+    freopen(&quot;C:\\Users\\TaoSama\\Desktop\\in.txt&quot;, &quot;r&quot;, stdin);
+//  freopen(&quot;C:\\Users\\TaoSama\\Desktop\\out.txt&quot;,&quot;w&quot;,stdout);
+#endif
+    ios_base::sync_with_stdio(0);
+
+    int t; scanf(&quot;%d&quot;, &amp;t);
+    while(t--) {
+        scanf(&quot;%d&quot;, &amp;n);
+        int a1, b1, c1, a2, b2, c2;
+        scanf(&quot;%d%d%d&quot;, &amp;a1, &amp;b1, &amp;c1);
+        scanf(&quot;%d%d%d&quot;, &amp;a2, &amp;b2, &amp;c2);
+        for(int i = 1; i &lt;= n; ++i) {
+            a[i].first = (1LL * a1 * a[i - 1].first + b1) % c1;
+            a[i].second = (1LL * a2 * a[i - 1].second + b2) % c2;
+        }
+
+        LL ans = 0;
+        for(int r = n; r &gt; 1;) {
+            for(int i = 1; i &lt;= r; ++i) id[i] = i;
+            sort(id + 1, id + 1 + r, [](int x, int y) {
+                return a[x] &lt; a[y];
+            });
+            auto cp = dfs(1, r);
+            int nxt = max(cp.second.first, cp.second.second);
+
+            ans += cp.first * (r - nxt + 1);
+            r = nxt - 1;
+        }
+        printf(&quot;%I64d\n&quot;, ans);
+    }
+    return 0;
+}
+</code></pre>
+
         
-          网易游戏一面
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2016/03/23/平面最近点对问题/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">上一篇</strong>
-      <div class="article-nav-title">平面最近点对问题</div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-
-<section id="comments">
-
-<!-- 多说评论框 start -->
-	<div id="ds-thread" class="ds-thread" data-thread-key="2016/03/23/HDU 4631 Sad Love Story（离线思想、分治）/" data-title="HDU 4631 Sad Love Story（离线思想、分治）" data-url="http://TaoSama.github.io/2016/03/23/HDU 4631 Sad Love Story（离线思想、分治）/" data-author-key="233"></div>
-<!-- 多说评论框 end -->
-</section>
-</section>
-        
-          
-<aside id="sidebar">
-
-  
-    <div class="widget-wrap">
-  <h3 class="widget-title">关于我</h3>
-  <ul class="widget about-me">
-    <li><img class="author" title="About me" src="/css/images/avatar.png" /></li>
     
-    <li><a href="/about/" style="color:orange">老顽童</a></li>
+
     
-    <li><a href="http://codeforces.com/profile/TaoSama" style="color:purple">TaoSama</a></li>
-    
-    <li>迷茫的搬砖工 / 永不退役的ACMer</li>
-    
-  </ul>
 </div>
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">推荐文章</h3>
-    <div class="widget">
-      <ul>
-        
-        
-          
-          <li>
-            <a href="/2016/05/02/%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%B0%8F%E7%BB%93/" target="_blank">1. 常见错误小结</a>
-          </li>
-        
-          
-          <li>
-            <a href="/2016/03/09/Hello%20World%20%E2%80%94%E2%80%94%20%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%8E%86%E7%A8%8B/" target="_blank">2. Hello World —— 博客搭建历程</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">友情链接</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="http://blog.csdn.net/lwt36/" target="_blank">我的CSDN</a>
-          </li>
-        
-          <li>
-            <a href="http://www.zhihu.com/people/ye-zhu-shui-han/" target="_blank">我的知乎</a>
-          </li>
-        
-          <li>
-            <a href="http://notdeep.github.io/" target="_blank">果姐姐</a>
-          </li>
-        
-          <li>
-            <a href="https://cloverii.github.io/" target="_blank">WMW</a>
-          </li>
-        
-          <li>
-            <a href="http://blog.luoxinchen.me/" target="_blank">Mathon</a>
-          </li>
-        
-          <li>
-            <a href="http://www.cnblogs.com/forever97/" target="_blank">forever97</a>
-          </li>
-        
-          <li>
-            <a href="http://liziyang96.com/" target="_blank">liziy</a>
-          </li>
-        
-          <li>
-            <a href="http://blog.csdn.net/viphong" target="_blank">liuyuhong</a>
-          </li>
-        
-          <li>
-            <a href="http://blog.csdn.net/a1s4z5/" target="_blank">QAQ</a>
-          </li>
-        
-          <li>
-            <a href="http://blog.csdn.net/qwb492859377" target="_blank">qwb</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+                
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">分类</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/">Doing</a><span class="category-list-count">28</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Blog/">Blog</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/CPP/">CPP</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Computer-Vision/">Computer Vision</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Distributed/">Distributed</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Go/">Go</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Hive/">Hive</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Interview/">Interview</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Life/">Life</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Machine-Learning/">Machine Learning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Python/">Python</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Shell/">Shell</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Doing/Spring/">Spring</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/">动态规划</a><span class="category-list-count">27</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/bitset优化/">bitset优化</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/数位dp/">数位dp</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/数据结构优化/">数据结构优化</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/斜率优化/">斜率优化</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/最长上升子序列/">最长上升子序列</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/树形dp/">树形dp</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/概率-期望dp/">概率/期望dp</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/状压dp/">状压dp</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/矩阵优化/">矩阵优化</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动态规划/线性dp/">线性dp</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/">图论</a><span class="category-list-count">26</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/图论/LCA/">LCA</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/二分图/">二分图</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/拓扑排序/">拓扑排序</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/最大团/">最大团</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/最小生成树/">最小生成树</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/最短路/">最短路</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/生成树计数/">生成树计数</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/网络流/">网络流</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/图论/连通图/">连通图</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/套题/">套题</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/字符串/">字符串</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/字符串/AC自动机/">AC自动机</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/字符串/Manacher-回文树/">Manacher/回文树</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/字符串/SA-SAM/">SA/SAM</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/小结/">小结</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/">思维</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/思维/分治/">分治</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/扫描线/">扫描线</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/数形结合/">数形结合</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/离线思想/">离线思想</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/贪心/">贪心</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/思维/贪心/区间贪心/">区间贪心</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/思维/逆向思维/">逆向思维</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/">技巧</a><span class="category-list-count">17</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/two-pointers/">two pointers</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/xor/">xor</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/反转问题/">反转问题</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/哈希/">哈希</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/折半搜索/">折半搜索</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/">数学</a><span class="category-list-count">26</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/数学/CRT/">CRT</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/FFT-NTT-FWT/">FFT/NTT/FWT</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/博弈/">博弈</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/容斥/">容斥</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/概率-期望/">概率/期望</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/组合数学/">组合数学</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/贡献/">贡献</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/高斯消元/">高斯消元</a><span class="category-list-count">4</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/">数据结构</a><span class="category-list-count">18</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/主席树/">主席树</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/二叉搜索树/">二叉搜索树</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/可持久化Trie/">可持久化Trie</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/并查集/">并查集</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/树上莫队/">树上莫队</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/树状数组/">树状数组</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/线段树/">线段树</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/">暴力</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/大模拟/">大模拟</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/小模拟/">小模拟</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/搜索/">搜索</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/搜索/dfs-bfs/">dfs/bfs</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/搜索/二-三分搜索/">二/三分搜索</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/暴力/签到/">签到</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/">计算几何</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/三维几何/">三维几何</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/扫描线/">扫描线</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/数值积分/">数值积分</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/旋转卡壳/">旋转卡壳</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/极角扫描/">极角扫描</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算几何/极角排序/">极角排序</a><span class="category-list-count">1</span></li></ul></li></ul>
-    </div>
-  </div>
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
 
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">2018年 03月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">2017年 10月</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">2017年 09月</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">2017年 08月</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">2017年 07月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">2017年 06月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">2017年 05月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">2017年 04月</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">2017年 03月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">2017年 02月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">2016年 11月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">2016年 09月</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">2016年 08月</a><span class="archive-list-count">42</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">2016年 07月</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">2016年 06月</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">2016年 05月</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">2016年 04月</a><span class="archive-list-count">41</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">2016年 03月</a><span class="archive-list-count">42</span></li></ul>
-    </div>
-  </div>
-
-
-  
-     
-	 
-	  <div class="widget-wrap">
-		<h3 class="widget-title">最近评论</h3>
-		<div class="widget">
-		  <!-- 多说最新评论 start -->
-		  <div class="ds-recent-comments" data-num-items="5" data-show-avatars="0" data-show-time="1" data-show-title="1" data-show-admin="1" data-excerpt-length="70"></div>
-		  <!-- 多说最新评论 end -->
-		  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-		  <script type="text/javascript">
-			var duoshuoQuery = {short_name:"TaoSama"};
-			(function() {
-			  var ds = document.createElement('script');
-			  ds.type = 'text/javascript';ds.async = true;
-			  ds.src = '/js/ds_embed.js';
-			  <!--
-			  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-			  -->
-			  ds.charset = 'UTF-8';
-			  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
-			})();
-		  </script>
-		  <!-- 多说公共JS代码 end -->
-		</div>
-	  </div>
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #757575;
+            text-shadow: 0;
+            display: none
+        }
+</style>
 	
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn">Read Comments (Make sure disq.us, disquscdn.com and disqus.com can load properly)</button>
+</div>
 
-  
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://TaoSama.github.io/2016/03/23/HDU 4631 Sad Love Story（离线思想、分治）/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://TaoSama.github.io/2016/03/23/HDU 4631 Sad Love Story（离线思想、分治）/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/ls-javascript" id="disqus-lazy-load-script">
+    $.ajax({
+        url: 'https://disqus.com/next/config.json',
+        timeout: 4000,
+        type: 'GET',
+        success: (function() {
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//taosamaw.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+            $('.disqus_click_btn').css('display','none');
+        })(),
+        error: function() {
+          $('.disqus_click_btn').css('display','block');
+        }
+    });
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//taosamaw.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.disqus_click_btn').css('display','none');
+    });
+</script>
+  	
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2016/03/24/网易游戏一面/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Newer
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2016/03/23/平面最近点对问题/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="TaoSama's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        lwt1367@qq.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:lwt1367@qq.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                Home
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    Archives
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2018/03/">March 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/10/">October 2017<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/09/">September 2017<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/08/">August 2017<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">July 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/06/">June 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/05/">May 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">April 2017<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">March 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/02/">February 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">November 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">September 2016<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">August 2016<span class="sidebar_archives-count">42</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">July 2016<span class="sidebar_archives-count">12</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">June 2016<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/05/">May 2016<span class="sidebar_archives-count">24</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/04/">April 2016<span class="sidebar_archives-count">41</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/03/">March 2016<span class="sidebar_archives-count">42</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                Categories
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/Doing/">Doing<span class="sidebar_archives-count">28</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Blog/">Blog<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/CPP/">CPP<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Computer-Vision/">Computer Vision<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Distributed/">Distributed<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Go/">Go<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Hive/">Hive<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Interview/">Interview<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Life/">Life<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Machine-Learning/">Machine Learning<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Python/">Python<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Shell/">Shell<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Spring/">Spring<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/">动态规划<span class="sidebar_archives-count">27</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/bitset优化/">bitset优化<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/数位dp/">数位dp<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/数据结构优化/">数据结构优化<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/斜率优化/">斜率优化<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/最长上升子序列/">最长上升子序列<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/树形dp/">树形dp<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/概率-期望dp/">概率/期望dp<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/状压dp/">状压dp<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/矩阵优化/">矩阵优化<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/线性dp/">线性dp<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/">图论<span class="sidebar_archives-count">26</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/LCA/">LCA<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/二分图/">二分图<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/拓扑排序/">拓扑排序<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/最大团/">最大团<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/最小生成树/">最小生成树<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/最短路/">最短路<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/生成树计数/">生成树计数<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/网络流/">网络流<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/连通图/">连通图<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/套题/">套题<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/字符串/">字符串<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/字符串/AC自动机/">AC自动机<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/字符串/Manacher-回文树/">Manacher/回文树<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/字符串/SA-SAM/">SA/SAM<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/小结/">小结<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/思维/">思维<span class="sidebar_archives-count">19</span></a></li><li><a class="sidebar_archives-link" href="/categories/思维/分治/">分治<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/思维/扫描线/">扫描线<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/思维/数形结合/">数形结合<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/思维/离线思想/">离线思想<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/思维/贪心/">贪心<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/思维/贪心/区间贪心/">区间贪心<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/思维/逆向思维/">逆向思维<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/技巧/">技巧<span class="sidebar_archives-count">17</span></a></li><li><a class="sidebar_archives-link" href="/categories/技巧/two-pointers/">two pointers<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/技巧/xor/">xor<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/技巧/反转问题/">反转问题<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/技巧/哈希/">哈希<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/技巧/折半搜索/">折半搜索<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/">数学<span class="sidebar_archives-count">26</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/CRT/">CRT<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/FFT-NTT-FWT/">FFT/NTT/FWT<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/博弈/">博弈<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/容斥/">容斥<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/概率-期望/">概率/期望<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/组合数学/">组合数学<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/贡献/">贡献<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/高斯消元/">高斯消元<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/数据结构/">数据结构<span class="sidebar_archives-count">18</span></a></li><li><a class="sidebar_archives-link" href="/categories/数据结构/主席树/">主席树<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/数据结构/二叉搜索树/">二叉搜索树<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/数据结构/可持久化Trie/">可持久化Trie<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/数据结构/并查集/">并查集<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/数据结构/树上莫队/">树上莫队<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/数据结构/树状数组/">树状数组<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/数据结构/线段树/">线段树<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/暴力/">暴力<span class="sidebar_archives-count">15</span></a></li><li><a class="sidebar_archives-link" href="/categories/暴力/大模拟/">大模拟<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/暴力/小模拟/">小模拟<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/暴力/搜索/">搜索<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/暴力/搜索/dfs-bfs/">dfs/bfs<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/暴力/搜索/二-三分搜索/">二/三分搜索<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/暴力/签到/">签到<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算几何/">计算几何<span class="sidebar_archives-count">15</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算几何/三维几何/">三维几何<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算几何/扫描线/">扫描线<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算几何/数值积分/">数值积分<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算几何/旋转卡壳/">旋转卡壳<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算几何/极角扫描/">极角扫描<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算几何/极角排序/">极角排序<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="About">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                About
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                Number of articles
+                <span class="sidebar-badge">206</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+    <a href="mailto:hiviosey@gmail.com" class="sidebar-footer-text-a">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+        sidebar.help
+        <span class="mdl-button__ripple-container">
+          <span class="mdl-ripple"></span>
+        </span>
+      </div>
+    </a>
+
+-->
+
+<!-- Feedback -->
+<!--
+
+    <a href="https://github.com/viosey/hexo-theme-material/issues" target="_blank" class="sidebar-footer-text-a">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+        sidebar.feedback
+        <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+    </a>
+
+-->
+
+<!-- About Theme -->
+<!--
+
+    <a href="https://blog.viosey.com/index.php/Material.html" target="_blank" class="sidebar-footer-text-a">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+             sidebar.about_theme
+            <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+    </a>
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
 
 </aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <img src="/css/images/umaru.png" style="position:fixed; right:0; bottom:0; width:70px">
-  <div class="outer">
-    <div id="footer-info" style="text-align:center; border:0;">
-	   <div style="font-family: FontAwesome;font-size: 20px;">
-		<a href="http://weibo.com/3863360617" title="微博" target="_blank">&#61834;</a>&nbsp;
-		<!--
-		<a href="http://www.renren.com/287137027" title="人人" target="_blank">&#61835;</a>&nbsp; 
-		<a href="http://user.qzone.qq.com/525969441" title="QQ空间" target="_blank">&#61910;</a>&nbsp;
-		-->
-		<a href="https://www.facebook.com/lwt1367" title="Facebook" target="_blank">&#62000;</a>&nbsp;
-		<a href="https://twitter.com/lwt1367" title="Twitter" target="_blank">&#61593;</a>&nbsp;
-		<a href="http://www.linkedin.com/in/lwt1367" title="LinkedIn" target="_blank">&#61665;</a>&nbsp;
-		<a href="https://github.com/TaoSama" title="GitHub" target="_blank">&#61595;</a>&nbsp;
-		<a href="https://plus.google.com/115031676619400074158" title="Google+" target="_blank">&#61653;</a>
-	   </div>
-	   <div style="font-size: 15px;">
-		<a href="/sitemap.xml">Sitemap</a>&nbsp;
-		<a href="/atom.xml">RSS</a>&nbsp;
-		<a href="mailto:lwt1367@gmail.com" target="_blank">Contact</a>
-		<br>
-		Copyright &copy; 2016-2018 
-	    <a href="/" target="_blank"> TaoSama </a>
-		<br>
-		Powered by <a href="https://hexo.io/zh-cn/docs/index.html" target="_blank">Hexo</a>
-	    &nbsp;|&nbsp;
-	    Theme by <a href="https://github.com/TaoSama/landscape" target="_blank">landscape</a>
-	    &nbsp;|&nbsp;
-	    <span id="busuanzi_container_site_pv">
-		总访问量 <a href="http://service.ibruce.info/" target="_blank"><span id="busuanzi_value_site_pv"></span></a> 次
-	    </span>
-	    <span id="busuanzi_container_site_uv">
-		<a href="http://service.ibruce.info/" target="_blank"><span id="busuanzi_value_site_uv"></span></a> 人
-	    </span>
-	   </div>
-	</div>
-  </div>
-  <!-- 为超链接加上target='_blank'属性 -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('a[href^="http"]').each(function() {
-			$(this).attr('target', '_blank');
-		});
-	});
-  </script>
-  <!-- 不蒜子js -->
-  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">主页</a>
-  
-    <a href="/archives" class="mobile-nav-link">文章</a>
-  
-    <a href="/about" class="mobile-nav-link">关于</a>
-  
-</nav>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
     
 
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"TaoSama"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = '/js/ds_embed.js';
-		<!-- ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js'; -->
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-<!-- 多说公共JS代码 end -->
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/lwt1367" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
 
+    <!-- Google + -->
+    
 
-<script src="http://lib.sinaapp.com/js/jquery/2.0.3/jquery-2.0.3.min.js"></script>
-<script type="text/javascript">
-//<![CDATA[
-if (typeof jQuery == 'undefined') {
-  document.write(unescape("%3Cscript src='/js/jquery-2.0.3.min.js' type='text/javascript'%3E%3C/script%3E"));
-}
-// ]]>
-</script>
+    <!-- Weibo -->
+    
+        <a href="https://weibo.com/u/3863360617" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-weibo">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
+    
 
+    <!-- Instagram -->
+    
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <!-- Tumblr -->
+    
 
-<div class="bottom-btn">
+    <!-- Github -->
+    
+        <a href="https://github.com/TaoSama" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
 
-	<a class="icon-gotop" href="javascript:void(0)" title="返回顶部"></a>
-	<script src="/js/gotop.js"></script>
-	<!--
-	<script src="/js/gotop.js"></script>
-	-->
+    <!-- LinkedIn -->
+    
 
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
 </div>
 
 
-<script src="/js/script.js"></script>
-<!-- Baidu Share Start --->
-<script>window._bd_share_config={"common":{"bdWbuid":3863360617,"bdText":"","bdMini":"2","bdMiniList":["douban","kaixin001","tieba","tsohu","sqq","youdao","qingbiji","mail","linkedin","mshare","copy","print"],"bdStyle":"1","bdSize":"24"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-<!-- Baidu Share End --->
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;2016&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>TaoSama's Blog
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
 
 
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    });
+</script>
 <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-      processEscapes: true,
-      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    }
-  });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
 </script>
 
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for (i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+    <script src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 
-  </div>
-</body>
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
 </html>
