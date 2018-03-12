@@ -1,0 +1,2424 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="en">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            Notes, Effective Go | 
+        
+        TaoSama&#39;s Blog
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="Last Modified: 2017-08-23 11:46:10
+Hard to say, I finished Go, for about 20 days (except busy for 1 week and training for 1 week).
+Such a long time, 1 week to learn a new language, having known a little about concurrency.
+Not so bad.
+AcknowledgeGo is a new language. Although it borrows ideas from existing languages, it has unusual properties that make effective Go programs different in character from programs written in its relatives.The notes below was written from the view of a CPP programmer.
+
+and a hello world
+
+package main
+
+import &amp;quot;fmt&amp;quot;
+
+func main() {
+    fmt.Println(&amp;quot;Hello, World&amp;quot;)
+}
+">
+    <meta name="keywords" content="Algorithm, ACMer">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.en.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/github-v2.min.css?AfzKxt++K+/lhZBlSjnxwg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <style>
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 300;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: regular;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.svg#Roboto) format('svg')
+        }
+    </style>
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="TaoSama&#39;s Blog">
+    <meta name="msapplication-starturl" content="http://TaoSama.com/2017-08-04/effective-go-notes/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="TaoSama&#39;s Blog">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+        
+            <link rel=alternate type="application/atom+xml" href="atom.xml">
+        
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://TaoSama.com/2017-08-04/effective-go-notes/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Notes, Effective Go | TaoSama&#39;s Blog">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="Last Modified: 2017-08-23 11:46:10
+Hard to say, I finished Go, for about 20 days (except busy for 1 week and training for 1 week).
+Such a long time, 1 week to learn a new language, having known a little about concurrency.
+Not so bad.
+AcknowledgeGo is a new language. Although it borrows ideas from existing languages, it has unusual properties that make effective Go programs different in character from programs written in its relatives.The notes below was written from the view of a CPP programmer.
+
+and a hello world
+
+package main
+
+import &amp;quot;fmt&amp;quot;
+
+func main() {
+    fmt.Println(&amp;quot;Hello, World&amp;quot;)
+}
+">
+    
+
+    
+        <meta property="article:published_time" content="Fri Aug 04 2017 17:52:10 GMT+0800">
+        <meta property="article:modified_time" content="Sun Mar 11 2018 20:24:43 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://TaoSama.com/2017-08-04/effective-go-notes/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://TaoSama.com/2017-08-04/effective-go-notes/index.html",
+    "headline": "Notes, Effective Go",
+    "datePublished": "Fri Aug 04 2017 17:52:10 GMT+0800",
+    "dateModified": "Sun Mar 11 2018 20:24:43 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "TaoSama",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Forward and Never Step Back"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "TaoSama&#39;s Blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": "Algorithm, ACMer",
+    "description": "Last Modified: 2017-08-23 11:46:10
+Hard to say, I finished Go, for about 20 days (except busy for 1 week and training for 1 week).
+Such a long time, 1 week to learn a new language, having known a little about concurrency.
+Not so bad.
+AcknowledgeGo is a new language. Although it borrows ideas from existing languages, it has unusual properties that make effective Go programs different in character from programs written in its relatives.The notes below was written from the view of a CPP programmer.
+
+and a hello world
+
+package main
+
+import &amp;quot;fmt&amp;quot;
+
+func main() {
+    fmt.Println(&amp;quot;Hello, World&amp;quot;)
+}
+",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Acknowledge"><span class="post-toc-number">1.</span> <span class="post-toc-text">Acknowledge</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Syntax"><span class="post-toc-number">2.</span> <span class="post-toc-text">Syntax</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Basics"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Basics</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Flow-control"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">Flow control</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#More-types"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">More types</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Methods-and-interfaces"><span class="post-toc-number">3.</span> <span class="post-toc-text">Methods and interfaces</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#methods"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">methods</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#interfaces"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">interfaces</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Concurrency"><span class="post-toc-number">4.</span> <span class="post-toc-text">Concurrency</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#goroutines"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">goroutines</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#channels"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">channels</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#buffered-Channels"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">buffered Channels</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#range-and-close"><span class="post-toc-number">4.4.</span> <span class="post-toc-text">range and close</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#select"><span class="post-toc-number">4.5.</span> <span class="post-toc-text">select</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#sync-Mutex"><span class="post-toc-number">4.6.</span> <span class="post-toc-text">sync.Mutex</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Language-specification"><span class="post-toc-number">5.</span> <span class="post-toc-text">Language specification</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Formatting"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">Formatting</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Commentary"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">Commentary</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Names"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">Names</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Semicolons"><span class="post-toc-number">5.4.</span> <span class="post-toc-text">Semicolons</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Redeclaration-and-reassignment"><span class="post-toc-number">5.5.</span> <span class="post-toc-text">Redeclaration and reassignment</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Data"><span class="post-toc-number">5.6.</span> <span class="post-toc-text">Data</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Arrays"><span class="post-toc-number">5.7.</span> <span class="post-toc-text">Arrays</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#The-blank-identifier"><span class="post-toc-number">5.8.</span> <span class="post-toc-text">The blank identifier</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Concurrency-1"><span class="post-toc-number">5.9.</span> <span class="post-toc-text">Concurrency</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Errors"><span class="post-toc-number">5.10.</span> <span class="post-toc-text">Errors</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#A-web-server"><span class="post-toc-number">5.11.</span> <span class="post-toc-text">A web server</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Reference"><span class="post-toc-number">6.</span> <span class="post-toc-text">Reference</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                Notes, Effective Go
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>TaoSama</strong>
+        <span>Aug 04, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;Views
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Notes, Effective Go&url=http://TaoSama.com/2017-08-04/effective-go-notes/index.html&pic=http://TaoSama.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Weibo
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Notes, Effective Go&url=http://TaoSama.com/2017-08-04/effective-go-notes/index.html&via=TaoSama" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://TaoSama.com/2017-08-04/effective-go-notes/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://TaoSama.com/2017-08-04/effective-go-notes/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p><del>Last Modified: 2017-08-23 11:46:10</del></p>
+<p><del>Hard to say, I finished Go, for about 20 days (except busy for 1 week and training for 1 week).</del></p>
+<p><del>Such a long time, 1 week to learn a new language, having known a little about concurrency.</del></p>
+<p><del>Not so bad.</del></p>
+<h3 id="Acknowledge"><a href="#Acknowledge" class="headerlink" title="Acknowledge"></a>Acknowledge</h3><p>Go is a new language. Although it borrows ideas from existing languages, it has unusual properties that make effective Go programs different in character from programs written in its relatives.<br>The notes below was written from the view of <strong>a CPP programmer</strong>.</p>
+<ul>
+<li>and a hello world</li>
+</ul>
+<pre><code class="go">package main
+
+import &quot;fmt&quot;
+
+func main() {
+    fmt.Println(&quot;Hello, World&quot;)
+}
+</code></pre>
+<a id="more"></a>
+<h3 id="Syntax"><a href="#Syntax" class="headerlink" title="Syntax"></a>Syntax</h3><h4 id="Basics"><a href="#Basics" class="headerlink" title="Basics"></a>Basics</h4><ul>
+<li>function</li>
+</ul>
+<pre><code class="go">func swap(x, y string) (string, string) {
+    return y, x
+}
+func split(sum int) (x, y int) {
+    x = sum * 4 / 9
+    y = sum - x
+    return
+}
+</code></pre>
+<ul>
+<li>variable</li>
+</ul>
+<pre><code class="go">var c, python, java bool
+var i, j int = 1, 2
+var c, python, java = true, false, &quot;no!&quot;
+
+k := 3 // only can be used inside function
+</code></pre>
+<ul>
+<li>basic types</li>
+</ul>
+<pre><code class="go">bool
+
+string
+
+int  int8  int16  int32  int64
+uint uint8 uint16 uint32 uint64 uintptr
+
+byte // alias for uint8
+
+rune // alias for int32
+     // represents a Unicode code point
+
+float32 float64
+
+complex64 complex128
+
+// The int, uint, and uintptr types are usually 32 bits wide on 32-bit systems and 64 bits wide on 64-bit systems.
+</code></pre>
+<ul>
+<li>var blocks</li>
+</ul>
+<pre><code class="go">var (
+    ToBe   bool       = false
+    MaxInt uint64     = 1&lt;&lt;64 - 1
+    z      complex128 = cmplx.Sqrt(-5 + 12i)
+)
+</code></pre>
+<ul>
+<li><p>zero values<br>Variables declared without an explicit initial value are given their zero value.<br><code>0</code> for <code>numeric</code> types,<br><code>false</code> for the <code>boolean</code> type, and<br><code>&quot;&quot;</code> (the empty string) for <code>strings</code>.</p>
+</li>
+<li><p>type conversions</p>
+</li>
+</ul>
+<pre><code class="go">var i int = 42
+var f float64 = float64(i)
+var u uint = uint(f)
+// more simply
+i := 42
+f := float64(i)
+u := uint(f)
+</code></pre>
+<ul>
+<li>type inference</li>
+</ul>
+<pre><code class="go">var i int
+j := i // j is an int
+3
+i := 42           // int
+f := 3.142        // float64
+g := 0.867 + 0.5i // complex128
+</code></pre>
+<ul>
+<li>constants</li>
+</ul>
+<pre><code class="go">const Pi = 2.14
+const Truth bool = true
+
+// numeric constants are high-precision values.
+const (
+    Big = 1 &lt;&lt; 100
+    Small = Big &gt;&gt; 99
+)
+</code></pre>
+<h4 id="Flow-control"><a href="#Flow-control" class="headerlink" title="Flow control"></a>Flow control</h4><ul>
+<li>for </li>
+</ul>
+<pre><code class="go">for i := 0; i &lt; 10; i++ {
+    // do something
+}
+for ; i &lt; 10; {
+    // do something
+}
+
+// C&#39;s `while` is spelled `for` in Go
+i := 0
+for i &lt; 10 {
+    // do something
+}
+
+// loop forever
+for {
+    // do something
+}
+</code></pre>
+<ul>
+<li>if</li>
+</ul>
+<pre><code class="go">if i &lt; 10 {
+    // do something
+} else {
+    // do something
+}
+
+if i &lt; 10 {
+    // do something
+} else if i &lt; 100 {
+    // do something
+}
+
+// if with a short statement
+// variables declared by the statement are only in scope until the end of the if.
+if v := 1; v &lt; 10 {
+    // do something
+}
+</code></pre>
+<ul>
+<li>exercise-loops-and-functions.go</li>
+</ul>
+<pre><code class="go">package main
+
+import (
+    &quot;fmt&quot;
+    &quot;math&quot;
+)
+
+func Sqrt(x float64) float64 {
+    var cur float64 = x
+    for nxt := 0.0; math.Abs(nxt - cur) &gt; 1e-8;  {
+        t := cur - (cur * cur - x) / (2 * cur)
+        nxt = cur
+        cur = t
+    }
+    return cur
+}
+
+func main() {
+    fmt.Println(Sqrt(2))
+}
+</code></pre>
+<ul>
+<li>switch</li>
+</ul>
+<pre><code class="go">// a case body breaks automatically, unless it ends with a &#39;fallthrough&#39; statement.
+fmt.Print(&quot;Go runs on &quot;)
+switch os := runtime.GOOS; os {
+case &quot;darwin&quot;:
+    fmt.Println(&quot;OS X.&quot;)
+case &quot;linux&quot;:
+    fmt.Println(&quot;Linux.&quot;)
+default:
+    // freebsd, openbsd,
+    // plan9, windows...
+    fmt.Printf(&quot;%s.&quot;, os)
+}
+
+// switch with no condition
+t := time.Now()
+switch {
+case t.Hour() &lt; 12:
+    fmt.Println(&quot;Good morning!&quot;)
+case t.Hour() &lt; 17:
+    fmt.Println(&quot;Good afternoon.&quot;)
+case t.Hour() &lt; 24:
+    fmt.Println(&quot;One more&quot;)
+    fallthrough
+default:
+    fmt.Println(&quot;Good evening.&quot;)
+}
+</code></pre>
+<ul>
+<li>defer</li>
+</ul>
+<pre><code class="go">// deferred function calls are pushed onto a stack. 
+// when a function returns, its deferred calls are executed in last-in-first-out order.
+func main() {
+    fmt.Println(&quot;counting&quot;)
+
+    for i := 0; i &lt; 3; i++ {
+        defer fmt.Println(i)
+    }
+
+    fmt.Println(&quot;done&quot;)
+}
+/*
+counting
+done
+2
+1
+0
+*/
+</code></pre>
+<h4 id="More-types"><a href="#More-types" class="headerlink" title="More types"></a>More types</h4><ul>
+<li>pointers</li>
+</ul>
+<pre><code class="go">// the type *T is a pointer to a T value.
+// its zero value is nil.
+var p *int
+
+i := 42
+p = &amp;i
+
+fmt.Println(*p) // read i through the pointer p
+*p = 21         // set i through the pointer p
+</code></pre>
+<ul>
+<li>struct</li>
+</ul>
+<pre><code class="cpp">type Vertex struct {
+    X int
+    Y int
+}
+
+var v Vertex = Vertex{2, 3}  // v := VertexP{2, 3}
+p := &amp;v  // pointer to structs
+v.x = 1e9
+p.X = 1e9 // implicit conversion ???
+
+// struct literals
+var (
+    v1 = Vertex{1, 2}  // has type Vertex
+    v2 = Vertex{X: 1}  // Y:0 is implicit
+    v3 = Vertex{}      // X:0 and Y:0
+    p  = &amp;Vertex{1, 2} // has type *Vertex
+)
+</code></pre>
+<ul>
+<li>array</li>
+</ul>
+<pre><code class="go">var prime [6]int = [6]int{2, 3, 5, 7, 11, 13}
+</code></pre>
+<ul>
+<li>slices</li>
+</ul>
+<pre><code class="go">// slices are like references to arrays
+var s []int = primes[1:4]
+
+// array literal
+[3]bool{true, true, false}
+// slice literal
+[]bool{true, true, false}
+
+// slice defaults
+// the default is zero for the low bound and the length of the slice for the high bound.
+// these slice expressions are equivalent:
+a[0:10]
+a[:10]
+a[0:]
+a[:]
+
+// nil slices
+// A nil slice has a length and capacity of 0 and has no underlying array.
+var s []int
+fmt.Println(s, len(s), cap(s))
+if s == nil {
+    fmt.Println(&quot;nil!&quot;)
+}
+/*
+[] 0 0
+nil!
+*/
+</code></pre>
+<ul>
+<li>slice length and capacity</li>
+</ul>
+<pre><code class="go">package main
+
+import &quot;fmt&quot;
+
+func main() {
+    s := []int{2, 3, 5, 7, 11, 13}
+    printSlice(s)
+
+    // Slice the slice to give it zero length.
+    s = s[:0]
+    printSlice(s)
+
+    // Extend its length.
+    s = s[:4]
+    printSlice(s)
+
+
+    // Drop its first two values.
+    s = s[2:]
+    printSlice(s)
+}
+
+func printSlice(s []int) {
+    fmt.Printf(&quot;len=%d cap=%d %v\n&quot;, len(s), cap(s), s)
+}
+/*
+len=6 cap=6 [2 3 5 7 11 13]
+len=0 cap=6 []
+len=4 cap=6 [2 3 5 7]
+len=2 cap=4 [5 7]
+*/
+</code></pre>
+<ul>
+<li>creating a slice with make<br>slices can be created with the built-in make function;<br>this is how you create dynamically-sized arrays.</li>
+</ul>
+<pre><code class="go">b := make([]int, 0, 5) // len(b)=0, cap(b)=5
+</code></pre>
+<ul>
+<li>slices of slices</li>
+</ul>
+<pre><code class="go">board := [][]string{
+    []string{&quot;_&quot;, &quot;_&quot;, &quot;_&quot;},
+    []string{&quot;_&quot;, &quot;_&quot;, &quot;_&quot;},
+    []string{&quot;_&quot;, &quot;_&quot;, &quot;_&quot;},
+}
+for i := 0; i &lt; len(board); i++ {
+    fmt.Printf(&quot;%s\n&quot;, strings.Join(board[i], &quot; &quot;))
+}
+</code></pre>
+<ul>
+<li>apending to a slice</li>
+</ul>
+<pre><code class="go">// func append(s []T, vs ...T) []T
+var s []int
+s = append(s, 1)
+s = append(s, 2, 3, 4)
+
+// append slice
+x := []int{1,2,3}
+y := []int{4,5,6}
+x = append(x, y...)
+</code></pre>
+<ul>
+<li>range</li>
+</ul>
+<pre><code class="go">var pow = []int{1, 2, 4, 8, 16, 32, 64, 128}
+for i, v := range pow {
+    fmt.Printf(&quot;2**%d = %d\n&quot;, i, v)
+}
+
+// skip the index or value
+pow := make([]int, 10)
+for i := range pow {
+    pow[i] = 1 &lt;&lt; uint(i) // == 2**i
+}
+for _, value := range pow {
+    fmt.Printf(&quot;%d\n&quot;, value)
+}
+</code></pre>
+<ul>
+<li>exercise-slices.go</li>
+</ul>
+<pre><code class="go">package main
+
+import &quot;golang.org/x/tour/pic&quot;
+
+func Pic(dx, dy int) [][]uint8 {
+    var pic [][]uint8 = make([][]uint8, dy)
+    for i := 0; i &lt; dy; i++ {
+        pic[i] = make([]uint8, dx)
+        for j := 0; j &lt; dx; j++ {
+            pic[i][j] = uint8(i ^ j);    
+        }
+    }
+    return pic
+}
+
+func main() {
+    pic.Show(Pic)
+}
+</code></pre>
+<ul>
+<li>maps<br>The zero value of a map is nil. A nil map has no keys, nor can keys be added.</li>
+</ul>
+<pre><code class="go">type Vertex struct {
+    Lat, Long float64
+}
+
+var m map[string]Vertex
+m = make(map[string]Vertex)
+m[&quot;Bell Labs&quot;] = Vertex{
+    40.68433, -74.39967,
+}
+fmt.Println(m[&quot;Bell Labs&quot;])
+
+// map literals
+var m = map[string]Vertex{
+    &quot;Bell Labs&quot;: Vertex{
+        40.68433, -74.39967,
+    },
+    &quot;Google&quot;: Vertex{
+        37.42202, -122.08408,
+    },
+}
+
+// If the top-level type is just a type name, you can omit it from the elements of the literal.
+var m = map[string]Vertex{
+    &quot;Bell Labs&quot;: {40.68433, -74.39967},
+    &quot;Google&quot;:    {37.42202, -122.08408},
+}
+
+// mutating maps
+// insert or update an element in map m:
+m[key] = elem
+// retrieve an element:
+elem = m[key]
+// delete an element:
+delete(m, key)
+// test that a key is present with a two-value assignment:
+elem, ok = m[key]
+</code></pre>
+<ul>
+<li>exercise-maps.go</li>
+</ul>
+<pre><code class="go">package main
+
+import (
+    &quot;golang.org/x/tour/wc&quot;;
+    &quot;strings&quot;
+)
+
+func WordCount(s string) map[string]int {
+    word := strings.Split(s, &quot; &quot;)
+    var mp map[string]int = make(map[string]int)
+    for i := 0; i &lt; len(word); i++ {
+        mp[word[i]] += 1
+    }
+    return mp
+}
+
+func main() {
+    wc.Test(WordCount)
+}
+</code></pre>
+<ul>
+<li>funtion values</li>
+</ul>
+<pre><code class="go">func compute(fn func(float64, float64) float64) float64 {
+    return fn(3, 4)
+}
+
+func main() {
+    hypot := func(x, y float64) float64 {
+        return math.Sqrt(x*x + y*y)
+    }
+    fmt.Println(hypot(5, 12))
+
+    fmt.Println(compute(hypot))
+    fmt.Println(compute(math.Pow))
+}
+</code></pre>
+<ul>
+<li><p>closure</p>
+<p>a closure is a function value that references variables from outside its body.<br>the function may access and assign to the referenced variables; in this sense the function is “bound” to the variables.</p>
+</li>
+</ul>
+<pre><code class="go">// each closure is bound to its own sum variable.
+func adder() func(int) int {
+    sum := 0
+    return func(x int) int {
+        sum += x
+        return sum
+    }
+}
+
+func main() {
+    pos, neg := adder(), adder()
+    for i := 0; i &lt; 3; i++ {
+        fmt.Println(
+            pos(i),
+            neg(-2*i),
+        )
+    }
+}
+/*
+0 0
+1 -2
+3 -6
+*/
+</code></pre>
+<ul>
+<li>function-closures.go</li>
+</ul>
+<pre><code class="go">package main
+
+import &quot;fmt&quot;
+
+// fibonacci is a function that returns
+// a function that returns an int.
+func fibonacci() func() int {
+    var f0, f1 int = 0, 1
+    return func() int {
+        ret := f0
+        f0, f1 = f1, f0 + f1
+        return ret
+    }
+}
+
+func main() {
+    f := fibonacci()
+    for i := 0; i &lt; 10; i++ {
+        fmt.Println(f())
+    }
+}
+</code></pre>
+<h3 id="Methods-and-interfaces"><a href="#Methods-and-interfaces" class="headerlink" title="Methods and interfaces"></a>Methods and interfaces</h3><h4 id="methods"><a href="#methods" class="headerlink" title="methods"></a>methods</h4><ul>
+<li><strong>go does not have classes</strong>. However, you can define methods on types.</li>
+<li>a method is a <strong>function</strong> with a <strong>special receiver argument</strong>.</li>
+<li>the receiver appears in its own argument list <strong>between the func keyword and the method name</strong></li>
+</ul>
+<pre><code class="go">type Vertex struct {
+    X, Y float64
+}
+
+func (v Vertex) Abs() float64 {
+    return math.Sqrt(v.X*v.X + v.Y*v.Y)
+}
+</code></pre>
+<ul>
+<li>declare a method on non-struct types</li>
+</ul>
+<pre><code class="go">type Vertex struct {
+    X, Y float64
+}
+
+func (v Vertex) Abs() float64 {
+    return math.Sqrt(v.X*v.X + v.Y*v.Y)
+}
+
+func (v *Vertex) Scale(f float64) {
+    v.X = v.X * f
+    v.Y = v.Y * f
+}
+
+func main() {
+    v := Vertex{3, 4}
+    v.Scale(10)
+    fmt.Println(v.Abs())
+}
+</code></pre>
+<ul>
+<li>In general, all methods on a given type should have either value or pointer receivers, but not a mixture of both.</li>
+</ul>
+<h4 id="interfaces"><a href="#interfaces" class="headerlink" title="interfaces"></a>interfaces</h4><p>an interface type is defined as a set of method signatures.<br>a value of interface type can hold any value that implements those methods.</p>
+<ul>
+<li><p>interfaces are implemented implicitly<br>implicit interfaces <strong>decouple</strong> the definition of an interface from its implementation, which could then appear in any package without prearrangement.</p>
+</li>
+<li><p>interface values<br>an interface value holds a value of a specific underlying concrete type.<br>it can be thought of as a tuple of a value and a concrete type: <code>(value, type)</code></p>
+</li>
+<li><p>interface values can be with nil underlying values.</p>
+</li>
+</ul>
+<pre><code class="go">type I interface {
+    M()
+}
+
+type T struct {
+    S string
+}
+
+// This method means type T implements the interface I,
+// but we don&#39;t need to explicitly declare that it does so.
+func (t T) M() {
+    if t == nil {  
+        fmt.Println(&quot;&lt;nil&gt;&quot;)
+        return
+    }
+    fmt.Println(t.S)
+}
+
+func describe(i I) {
+    fmt.Printf(&quot;(%v, %T)\n&quot;, i, i)
+}
+
+func main() {
+    var i I
+    describe(i)   // nil interface value -&gt; run-time error
+
+    var t *T
+    i = t
+    describe(i)  // nil receiver -&gt; OK
+    i.M()
+
+    i = &amp;T{&quot;hello&quot;}
+    describe(i)
+    i.M()
+}
+</code></pre>
+<ul>
+<li><p>empty interface<br>an empty interface may hold values of any type. (every type implements at least zero methods.)<br>empty interfaces are used by code that handles values of unknown type.</p>
+<pre><code class="go">var i interface{}
+i = 42
+i = &quot;hello&quot;
+</code></pre>
+</li>
+<li><p>type assertions</p>
+</li>
+</ul>
+<pre><code class="go">// if i does not hold a type T, the statement will trigger a panic.
+t := i.(T)
+
+// if i does not hold a type T, ok will be false 
+// and t will be the zero value of type T, and no panic occurs.
+t, ok := i.(T)
+</code></pre>
+<ul>
+<li>type switches</li>
+</ul>
+<pre><code class="go">package main
+
+import &quot;fmt&quot;
+
+func do(i interface{}) {
+    switch v := i.(type) {
+    case int:
+        fmt.Printf(&quot;Twice %v is %v\n&quot;, v, v*2)
+    case string:
+        fmt.Printf(&quot;%q is %v bytes long\n&quot;, v, len(v))
+    default:
+        fmt.Printf(&quot;I don&#39;t know about type %T!\n&quot;, v)
+    }
+}
+
+func main() {
+    do(21)
+    do(&quot;hello&quot;)
+    do(true)
+}
+</code></pre>
+<ul>
+<li>Stringers and error</li>
+</ul>
+<pre><code class="go">// a Stringer is a type that can describe itself as a string.
+type Stringer interface {
+    String() string
+}
+
+// the error type is a built-in interface similar to fmt.Stringer
+type error interface {
+    Error() string
+}
+
+// for example, fmt.Println will call the two interfaces
+</code></pre>
+<ul>
+<li>exercise-stringer.go</li>
+</ul>
+<pre><code class="go">package main
+
+import &quot;fmt&quot;
+
+type IPAddr [4]byte
+
+// TODO: Add a &quot;String() string&quot; method to IPAddr.
+
+func (t *IPAddr) String() string {
+    return fmt.Sprintf(&quot;%v.%v.%v.%v&quot;, t[0], t[1], t[2], t[3])    
+}
+
+func main() {
+    hosts := map[string]IPAddr{
+        &quot;loopback&quot;:  {127, 0, 0, 1},
+        &quot;googleDNS&quot;: {8, 8, 8, 8},
+    }
+    for name, ip := range hosts {
+        fmt.Println(ip.String())
+        fmt.Printf(&quot;%v: %v\n&quot;, name, ip)
+    }
+}
+</code></pre>
+<ul>
+<li>exercise-errors.go</li>
+</ul>
+<pre><code class="go">package main
+
+import (
+    &quot;fmt&quot;
+)
+
+type ErrNegativeSqrt float64
+
+func (e ErrNegativeSqrt) Error() string {
+    return fmt.Sprintf(&quot;cannot Sqrt negative number: %v&quot;, float64(e))    
+}
+
+func Sqrt(x float64) (float64, error) {
+    if x &lt; 0 {
+        return 0, ErrNegativeSqrt(x)    
+    }
+    z := 1.0
+    for i := 0; i &lt; 10; i++ {
+        z = z - (z * z - x) / (2 * z), y
+    }
+    return z, nil
+}
+
+func main() {
+    fmt.Println(Sqrt(2))
+    fmt.Println(Sqrt(-2))
+}
+</code></pre>
+<ul>
+<li>readers<br>interface <code>io.Reader::Read</code><pre><code class="go">func (T) Read(b []byte) (n int, err error)
+</code></pre>
+</li>
+<li>exercise-reader.go</li>
+</ul>
+<pre><code class="go">package main
+
+import &quot;golang.org/x/tour/reader&quot;
+
+type MyReader struct{}
+
+// TODO: Add a Read([]byte) (int, error) method to MyReader.
+func (t MyReader) Read(b []byte) (int, error) {
+    for i := 0; i &lt; len(b); i++ {
+        b[i] = &#39;A&#39;    
+    }
+    return len(b), nil
+}
+
+func main() {
+    reader.Validate(MyReader{})
+}
+</code></pre>
+<ul>
+<li>exercise-rot-reader.go</li>
+</ul>
+<pre><code class="go">package main
+
+import (
+    &quot;io&quot;
+    &quot;os&quot;
+    &quot;strings&quot;
+)
+
+type rot13Reader struct {
+    r io.Reader
+}
+
+func (r rot13Reader) Read(b []byte) (n int, err error) {
+    insideR := r.r
+    if n, err = insideR.Read(b); err != nil {
+        return    
+    }
+    for i := 0; i &lt; n; i++ {
+        if b[i] &gt;= &#39;a&#39; &amp;&amp; b[i] &lt;= &#39;z&#39; {
+            b[i] = (b[i] - &#39;a&#39; + 13) % 26 + &#39;a&#39;    
+        } else if b[i] &gt;= &#39;A&#39; &amp;&amp; b[i] &lt;= &#39;Z&#39; {
+            b[i] = (b[i] - &#39;A&#39; + 13) % 26 + &#39;A&#39;    
+        }
+    }
+    return
+}
+
+func main() {
+    s := strings.NewReader(&quot;Lbh penpxrq gur pbqr!&quot;)
+    r := rot13Reader{s}
+    io.Copy(os.Stdout, &amp;r)
+}
+</code></pre>
+<ul>
+<li>exercise-images.go</li>
+</ul>
+<pre><code class="go">package main
+
+import (
+    &quot;golang.org/x/tour/pic&quot;
+    &quot;image&quot;
+    &quot;image/color&quot;
+)
+
+/*
+type Image interface {
+    ColorModel() color.Model
+    Bounds() Rectangle
+    At(x, y int) color.Color
+}
+*/
+
+type Image struct{
+    Width, Height int
+}
+
+func (img Image) ColorModel() color.Model {
+    return color.RGBAModel    
+}
+
+func (img Image) Bounds() image.Rectangle {
+    return image.Rect(0, 0, img.Width, img.Height)
+}
+
+func (img Image) At(x, y int) color.Color {
+    return color.RGBA{uint8(x * y), uint8((x + y) / 2), 100, 255}    
+}
+
+func main() {
+    m := Image{100, 100}
+    pic.ShowImage(m)
+}
+</code></pre>
+<h3 id="Concurrency"><a href="#Concurrency" class="headerlink" title="Concurrency"></a>Concurrency</h3><h4 id="goroutines"><a href="#goroutines" class="headerlink" title="goroutines"></a>goroutines</h4><p>A goroutine is a lightweight thread managed by the Go runtime.<br><code>go f(x, y, z)</code> starts a new goroutine running <code>f(x, y, z)</code>.<br>The <strong>evaluation</strong> of <code>f, x, y, and z</code> happens in the <strong>current goroutine</strong> and the <strong>execution</strong> of <code>f</code> happens in the <strong>new goroutine</strong>.<br>Goroutines run in the <strong>same address space</strong>, so access to shared memory must be synchronized. </p>
+<h4 id="channels"><a href="#channels" class="headerlink" title="channels"></a>channels</h4><p>Channels are a typed conduit(pipe) through which you can send and receive values with the channel operator, <code>&lt;-</code>.<br>By default, <strong>sends and receives block until the other side is ready</strong>. This allows goroutines to <strong>synchronize without explicit locks or condition variables</strong>.</p>
+<pre><code class="go">// (The data flows in the direction of the arrow.)
+// Like maps and slices, channels must be created before use:
+ch := make(chan int)
+ch &lt;- v    // Send v to channel ch.
+v := &lt;-ch  // Receive from ch, and
+           // assign value to v.
+</code></pre>
+<h4 id="buffered-Channels"><a href="#buffered-Channels" class="headerlink" title="buffered Channels"></a>buffered Channels</h4><p>Channels can be buffered. Provide the buffer length as the second argument to make to initialize a buffered channel:<br><code>ch := make(chan int, 100)</code><br><strong>Sends</strong> to a buffered channel <strong>block</strong> only when the buffer is <strong>full</strong>. <strong>Receives</strong> <strong>block</strong> when the buffer is <strong>empty</strong>.</p>
+<h4 id="range-and-close"><a href="#range-and-close" class="headerlink" title="range and close"></a>range and close</h4><p><code>v, ok := &lt;-ch</code><br>ok is false if there are no more values to receive and the channel is closed.<br>The loop <code>for i := range c</code> <strong>receives values</strong> from the channel repeatedly <strong>until</strong> it is <strong>closed</strong>.</p>
+<p><strong>Note</strong>: Only the sender should close a channel, never the receiver. Sending on a closed channel will cause a panic.</p>
+<p><strong>Another note</strong>: Channels aren’t like files; you don’t usually need to close them.<br><strong>Closing</strong> is only necessary when the receiver must be told there are <strong>no more values coming</strong>, such as to <strong>terminate</strong> a <code>range</code> <strong>loop</strong>.</p>
+<pre><code class="go">func fibonacci(n int, c chan int) {
+    x, y := 0, 1
+    for i := 0; i &lt; n; i++ {
+        c &lt;- x
+        x, y = y, x+y
+    }
+    close(c)
+}
+
+func main() {
+    c := make(chan int, 10)
+    go fibonacci(cap(c), c)
+    for i := range c {
+        fmt.Println(i)
+    }
+}
+</code></pre>
+<h4 id="select"><a href="#select" class="headerlink" title="select"></a>select</h4><p>The <code>select</code> statement lets a goroutine wait on multiple communication operations.<br>A <code>select</code> blocks until one of its cases can run, then it executes that case.<br><strong>It chooses one at random if multiple are ready</strong>.</p>
+<p>Use a <code>default</code> case to try a send or receive without blocking:</p>
+<pre><code class="go">func fibonacci(c, quit chan int) {
+    x, y := 0, 1
+    for {
+        select {
+        case c &lt;- x:
+            x, y = y, x+y
+        case &lt;-quit:
+            fmt.Println(&quot;quit&quot;)
+            return
+        }
+        default:
+            // receiving from c would block
+    }
+}
+
+func main() {
+    c := make(chan int)
+    quit := make(chan int)
+    go func() {
+        for i := 0; i &lt; 10; i++ {
+            fmt.Println(&lt;-c)
+        }
+        quit &lt;- 0
+    }()
+    fibonacci(c, quit)
+}
+</code></pre>
+<h4 id="sync-Mutex"><a href="#sync-Mutex" class="headerlink" title="sync.Mutex"></a>sync.Mutex</h4><p>We’ve seen how <strong>channels</strong> are great for <strong>communication among goroutines</strong>.<br>But what if we don’t need communication? What if we just want to make sure only one goroutine can access a variable at a time to avoid conflicts?<br>This concept is called <strong>mutual exclusion</strong>, and the conventional name for the data structure that provides it is <strong>mutex</strong>.<br>Go’s standard library provides mutual exclusion with <code>sync.Mutex</code> and its two methods:<br><code>Lock, Unlock</code></p>
+<pre><code class="go">type SafeCounter struct {
+    v   map[string]int
+    mux sync.Mutex
+}
+
+// Inc increments the counter for the given key.
+func (c *SafeCounter) Inc(key string) {
+    c.mux.Lock()
+    // Lock so only one goroutine at a time can access the map c.v.
+    c.v[key]++
+    c.mux.Unlock()
+}
+
+// Value returns the current value of the counter for the given key.
+func (c *SafeCounter) Value(key string) int {
+    c.mux.Lock()
+    // Lock so only one goroutine at a time can access the map c.v.
+    defer c.mux.Unlock()
+    return c.v[key]
+}
+</code></pre>
+<ul>
+<li>exercise-equivalent-binary-trees.go</li>
+</ul>
+<pre><code class="go">package main
+
+import (
+    &quot;golang.org/x/tour/tree&quot;
+
+    &quot;fmt&quot;
+)
+
+// Walk walks the tree t sending all values
+// from the tree to the channel ch.
+func Walk(t *tree.Tree, ch chan int) {
+    defer close(ch)
+    var walker func(t *tree.Tree)
+    walker = func(t *tree.Tree) {
+        if t == nil {
+            return
+        }
+        walker(t.Left)
+        ch &lt;- t.Value
+        walker(t.Right)
+
+    }
+    walker(t)
+}
+
+// Same determines whether the trees
+// t1 and t2 contain the same values.
+func Same(t1, t2 *tree.Tree) bool {
+    ch1 := make(chan int)
+    ch2 := make(chan int)
+    go Walk(t1, ch1)
+    go Walk(t2, ch2)
+
+    for x1 := range ch1 {
+        x2, ok2 := &lt;-ch2
+        if !ok2 || x1 != x2 {
+            return false
+        }
+    }
+    return true
+}
+
+func main() {
+    fmt.Println(Same(tree.New(1), tree.New(1)))
+    fmt.Println(Same(tree.New(1), tree.New(2)))
+}
+</code></pre>
+<ul>
+<li>exercise-web-crawler.go</li>
+</ul>
+<pre><code class="go">package main
+
+import (
+    &quot;fmt&quot;
+    &quot;sync&quot;
+)
+
+type Fetcher interface {
+    // Fetch returns the body of URL and
+    // a slice of URLs found on that page.
+    Fetch(url string) (body string, urls []string, err error)
+}
+
+type Cache struct {
+    visited map[string]bool    
+    mtx sync.Mutex
+}
+
+type Response struct {
+    url string
+    body string    
+}
+
+// Crawl uses fetcher to recursively crawl
+// pages starting with url, to a maximum of depth.
+func Crawl(url string, depth int, fetcher Fetcher, result chan Response, cache Cache) {
+    // TODO: Fetch URLs in parallel.
+    // TODO: Don&#39;t fetch the same URL twice.
+    // This implementation doesn&#39;t do either:
+    defer close(result)
+    if depth &lt;= 0 {
+        return
+    }
+
+    cache.mtx.Lock()
+    if cache.visited[url] {
+        cache.mtx.Unlock()
+        return
+    }
+    cache.visited[url] = true
+    cache.mtx.Unlock()
+
+    body, urls, err := fetcher.Fetch(url)
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+
+    result &lt;- Response{url, body}
+    // fmt.Printf(&quot;found: %s %q\n&quot;, url, body)
+
+    for _, u := range urls {
+        tempResult := make(chan Response)
+        go Crawl(u, depth-1, fetcher, tempResult, cache)
+        for re := range tempResult {
+            result &lt;- re
+        }
+    }
+    return
+}
+
+func main() {
+    result := make(chan Response)
+    go Crawl(&quot;http://golang.org/&quot;, 4, fetcher, result, Cache{visited:make(map[string]bool)})
+
+    for re := range result {
+        fmt.Printf(&quot;found: %s %q\n&quot;, re.url, re.body)
+    }
+}
+
+// fakeFetcher is Fetcher that returns canned results.
+type fakeFetcher map[string]*fakeResult
+
+type fakeResult struct {
+    body string
+    urls []string
+}
+
+func (f fakeFetcher) Fetch(url string) (string, []string, error) {
+    if res, ok := f[url]; ok {
+        return res.body, res.urls, nil
+    }
+    return &quot;&quot;, nil, fmt.Errorf(&quot;not found: %s&quot;, url)
+}
+
+// fetcher is a populated fakeFetcher.
+var fetcher = fakeFetcher{
+    &quot;http://golang.org/&quot;: &amp;fakeResult{
+        &quot;The Go Programming Language&quot;,
+        []string{
+            &quot;http://golang.org/pkg/&quot;,
+            &quot;http://golang.org/cmd/&quot;,
+        },
+    },
+    &quot;http://golang.org/pkg/&quot;: &amp;fakeResult{
+        &quot;Packages&quot;,
+        []string{
+            &quot;http://golang.org/&quot;,
+            &quot;http://golang.org/cmd/&quot;,
+            &quot;http://golang.org/pkg/fmt/&quot;,
+            &quot;http://golang.org/pkg/os/&quot;,
+        },
+    },
+    &quot;http://golang.org/pkg/fmt/&quot;: &amp;fakeResult{
+        &quot;Package fmt&quot;,
+        []string{
+            &quot;http://golang.org/&quot;,
+            &quot;http://golang.org/pkg/&quot;,
+        },
+    },
+    &quot;http://golang.org/pkg/os/&quot;: &amp;fakeResult{
+        &quot;Package os&quot;,
+        []string{
+            &quot;http://golang.org/&quot;,
+            &quot;http://golang.org/pkg/&quot;,
+        },
+    },
+}
+</code></pre>
+<h3 id="Language-specification"><a href="#Language-specification" class="headerlink" title="Language specification"></a>Language specification</h3><h4 id="Formatting"><a href="#Formatting" class="headerlink" title="Formatting"></a>Formatting</h4><ul>
+<li>gofmt ?</li>
+<li>Indentation<br>We use tabs for indentation and gofmt emits them by default. Use spaces only if you must.</li>
+<li>Line length<br>Go has no line length limit. Don’t worry about overflowing a punched card. If a line feels too long, wrap it and indent with an extra tab.</li>
+<li>Parentheses<br>Go needs fewer parentheses than C and Java: control structures (if, for, switch) do not have parentheses in their syntax. Also, the operator precedence hierarchy is shorter and clearer, so <code>x&lt;&lt;8 + y&lt;&lt;16</code> means what the spacing implies, unlike in the other languages.</li>
+</ul>
+<h4 id="Commentary"><a href="#Commentary" class="headerlink" title="Commentary"></a>Commentary</h4><ul>
+<li>Go provides C-style <code>/* */</code> block comments and C++-style <code>//</code> line comments. </li>
+<li>Line comments are the norm; </li>
+<li><p>Block comments appear mostly as package comments, but are useful within an expression or to disable large swaths of code.</p>
+</li>
+<li><p><strong>Every exported (capitalized) name in a program should have a doc comment</strong>.</p>
+</li>
+<li>Doc comments work best as complete sentences, which allow a wide variety of automated presentations. </li>
+<li>The first sentence should be a <strong>one-sentence summary</strong> that <strong>starts with the name being declared</strong>.</li>
+</ul>
+<h4 id="Names"><a href="#Names" class="headerlink" title="Names"></a>Names</h4><ul>
+<li>Package names<br>By convention, packages are given lower case, single-word names; there should be no need for underscores or mixedCaps. For example, the package in <code>src/encoding/base64</code> is imported as <code>&quot;encoding/base64&quot;</code> but has name base64, not <code>encoding_base64</code> and not <code>encodingBase64</code>.</li>
+<li>Clear and Concise Name<br>ring.New<br>once.Do</li>
+<li>Getters and Setters<br>If you have a field called owner (lower case, unexported), the getter method should be called Owner (upper case, exported), not GetOwner.<pre><code class="go">owner := obj.Owner()
+if owner != user {
+  obj.SetOwner(user)
+}
+</code></pre>
+</li>
+<li>Interface names<br>By convention, one-method interfaces are named by the method name plus an -er suffix or similar modification to construct an agent noun: Reader, Writer, Formatter, CloseNotifier etc.</li>
+<li>MixedCaps<br>Finally, the convention in Go is to use MixedCaps or mixedCaps rather than underscores to write multiword names.</li>
+</ul>
+<h4 id="Semicolons"><a href="#Semicolons" class="headerlink" title="Semicolons"></a>Semicolons</h4><ul>
+<li>Like C, Go’s formal grammar uses semicolons to terminate statements, but unlike in C, those semicolons do not appear in the source.</li>
+<li>If the last token before a newline is an identifier, the lexer always inserts a semicolon after the token. This could be summarized as, “if the newline comes after a token that could end a statement, insert a semicolon”.</li>
+</ul>
+<pre><code class="go">// identifiers
+break continue fallthrough return ++ -- ) }
+</code></pre>
+<ul>
+<li>One consequence of the semicolon insertion rules is that you <strong>cannot</strong> put the <strong>opening brace</strong> of a control structure (if, for, switch, or select) <strong>on the next line</strong>.<br>If you do, a semicolon will be inserted before the brace, which could cause unwanted effects.</li>
+</ul>
+<pre><code class="go">// right
+if i &lt; f() {
+    g()
+}
+
+// wrong
+if i &lt; f() 
+{
+    g()
+}
+</code></pre>
+<h4 id="Redeclaration-and-reassignment"><a href="#Redeclaration-and-reassignment" class="headerlink" title="Redeclaration and reassignment"></a>Redeclaration and reassignment</h4><p>In a <code>:=</code> declaration a variable <code>v</code> may appear even if it has already been declared, provided:</p>
+<ul>
+<li>this declaration is in the same scope as the existing declaration of v (if v is already declared in an outer scope, the declaration will create a new variable),</li>
+<li>the corresponding value in the initialization is assignable to v, and</li>
+<li>there is at least one other variable in the declaration that is being declared a new.</li>
+</ul>
+<pre><code class="go">f, err := os.Open(name)
+d, err := f.Stat()
+</code></pre>
+<h4 id="Data"><a href="#Data" class="headerlink" title="Data"></a>Data</h4><ul>
+<li>Allocation with new<br><code>new(T)</code> returns a pointer to a newly allocated zero value of type <code>T</code>.</li>
+<li>Allocation with make<br><code>make(T, args)</code> serves a purpose different from <code>new(T)</code>.<br>It creates slices, maps, and channels only, and it returns an <strong>initialized (not zeroed)</strong> value of type <code>T</code> (not <code>*T</code>).<br>The reason for the distinction is that these three types represent, under the covers, references to data structures that must be initialized before use.</li>
+</ul>
+<h4 id="Arrays"><a href="#Arrays" class="headerlink" title="Arrays"></a>Arrays</h4><p>There are major differences between the ways arrays work in Go and C. In Go,</p>
+<ul>
+<li>Arrays are values. Assigning one array to another copies all the elements.</li>
+<li>In particular, if you pass an array to a function, it will receive a copy of the array, not a pointer to it.</li>
+<li>The size of an array is part of its type. The types <code>[10]int</code> and <code>[20]int</code> are distinct.</li>
+</ul>
+<p>The value property can be useful but also expensive;<br>If you want C-like behavior and efficiency, you can <strong>pass a pointer to the array</strong>.<br><strong>But even this style isn’t idiomatic Go. Use slices instead.</strong></p>
+<h4 id="The-blank-identifier"><a href="#The-blank-identifier" class="headerlink" title="The blank identifier"></a>The blank identifier</h4><p>The blank identifier can be assigned or declared with any value of any type, with the value discarded harmlessly.</p>
+<ul>
+<li>Unused imports and variables</li>
+</ul>
+<pre><code class="go">import (
+    &quot;fmt&quot;
+    &quot;io&quot;
+    &quot;log&quot;
+    &quot;os&quot;
+)
+
+var _ = fmt.Printf // For debugging; delete when done. 
+var _ io.Reader    // For debugging; delete when done. 
+
+func main() {
+    fd, err := os.Open(&quot;test.go&quot;)
+    if err != nil {
+        log.Fatal(err)
+    }
+    // TODO: use fd.
+    _ = fd
+}
+</code></pre>
+<ul>
+<li><p>Import for side effect<br><code>import _ &quot;net/http/pprof&quot;</code><br>This form of import makes clear that the package is being imported for its side effects, because there is no other possible use of the package: in this file, it doesn’t have a name. (If it did, and we didn’t use that name, the compiler would reject the program.)</p>
+</li>
+<li><p>Interface checks<br>If it’s necessary only to ask whether a type implements an interface, without actually using the interface itself, perhaps as part of an error check, use the blank identifier to ignore the type-asserted value:</p>
+<pre><code class="go">if _, ok := val.(json.Marshaler); ok {
+  fmt.Printf(&quot;value %v of type %T implements json.Marshaler\n&quot;, val, val)
+}
+</code></pre>
+</li>
+</ul>
+<p>One place this situation arises is when it is necessary to guarantee within the package implementing the type that it actually satisfies the interface.<br>If a type—for example, <code>json.RawMessage</code> needs a custom JSON representation, it should implement json.Marshaler, but there are no static conversions that would cause the compiler to verify this automatically.<br>If the type inadvertently fails to satisfy the interface, the JSON encoder will still work, but will not use the custom implementation.<br>To guarantee that the implementation is correct, a global declaration using the blank identifier can be used in the package:</p>
+<pre><code class="go">var _ json.Marshaler = (*RawMessage)(nil)
+</code></pre>
+<h4 id="Concurrency-1"><a href="#Concurrency-1" class="headerlink" title="Concurrency"></a>Concurrency</h4><p>concurrency: structuring a program as independently executing components.<br>parallelism: executing calculations in parallel for efficiency on multiple CPUs. </p>
+<ul>
+<li><p>Channels of channels<br>// TODO</p>
+</li>
+<li><p>Parallelization<br>Either run your job with environment variable <code>GOMAXPROCS</code> set to the number of cores to use or import the <code>runtime</code> package and call <code>runtime.GOMAXPROCS(NCPU)</code>.<br>A helpful value might be <code>runtime.NumCPU()</code>, which reports the number of logical CPUs on the local machine.</p>
+</li>
+<li><p>A leaky buffer<br>// TODO</p>
+</li>
+</ul>
+<h4 id="Errors"><a href="#Errors" class="headerlink" title="Errors"></a>Errors</h4><ul>
+<li>Panic<br>Panic that in effect creates a run-time error that will stop the program.<br>It’s always better to let things continue to run rather than taking down the whole program. One possible counterexample is during initialization: if the library truly cannot set itself up, it might be reasonable to panic, so to speak.</li>
+</ul>
+<pre><code class="go">var user = os.Getenv(&quot;USER&quot;)
+
+func init() {
+    if user == &quot;&quot; {
+        panic(&quot;no value for $USER&quot;)
+    }
+}
+</code></pre>
+<ul>
+<li>Recover<br>When panic is called, including implicitly for run-time errors such as indexing a slice out of bounds or failing a type assertion, it immediately stops execution of the current function and begins unwinding the stack of the goroutine, running any deferred functions along the way.<br>If that unwinding reaches the top of the goroutine’s stack, the program dies. However, it is possible to use the built-in function <strong>recover to regain control of the goroutine and resume normal execution</strong>.<br>One application of recover is to shut down a failing goroutine inside a server without killing the other executing goroutines.</li>
+</ul>
+<pre><code class="go">func server(workChan &lt;-chan *Work) {
+    for work := range workChan {
+        go safelyDo(work)
+    }
+}
+
+func safelyDo(work *Work) {
+    defer func() {
+        if err := recover(); err != nil {
+            log.Println(&quot;work failed:&quot;, err)
+        }
+    }()
+    do(work)
+}
+</code></pre>
+<p>// TODO: the rest of contents…</p>
+<h4 id="A-web-server"><a href="#A-web-server" class="headerlink" title="A web server"></a>A web server</h4><p>Let’s finish with a complete Go program, a web server.<br>This one is actually a kind of web re-server. Google provides a service at <a href="http://chart.apis.google.com" target="_blank" rel="external">http://chart.apis.google.com</a> that does automatic formatting of data into charts and graphs.<br>It’s hard to use interactively, though, because you need to put the data into the URL as a query.<br>The program here provides a nicer interface to one form of data: given a short piece of text, it calls on the chart server to produce a QR code, a matrix of boxes that encode the text. That image can be grabbed with your cell phone’s camera and interpreted as, for instance, a URL, saving you typing the URL into the phone’s tiny keyboard.<br>Here’s the complete program. </p>
+<pre><code class="go">package main
+
+import (
+    &quot;flag&quot;
+    &quot;html/template&quot;
+    &quot;log&quot;
+    &quot;net/http&quot;
+)
+
+var addr = flag.String(&quot;addr&quot;, &quot;:1718&quot;, &quot;http service address&quot;) // Q=17, R=18
+
+var templ = template.Must(template.New(&quot;qr&quot;).Parse(templateStr))
+
+func main() {
+    flag.Parse()
+    http.Handle(&quot;/&quot;, http.HandlerFunc(QR))
+    err := http.ListenAndServe(*addr, nil)
+    if err != nil {
+        log.Fatal(&quot;ListenAndServe:&quot;, err)
+    }
+}
+
+func QR(w http.ResponseWriter, req *http.Request) {
+    templ.Execute(w, req.FormValue(&quot;s&quot;))
+}
+
+const templateStr = `
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;QR Link Generator&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+{{if .}}
+&lt;img src=&quot;http://chart.apis.google.com/chart?chs=300x300&amp;cht=qr&amp;choe=UTF-8&amp;chl={{.}}&quot; /&gt;
+&lt;br&gt;
+{{.}}
+&lt;br&gt;
+&lt;br&gt;
+{{end}}
+&lt;form action=&quot;/&quot; name=f method=&quot;GET&quot;&gt;&lt;input maxLength=1024 size=70
+name=s value=&quot;&quot; title=&quot;Text to QR Encode&quot;&gt;&lt;input type=submit
+value=&quot;Show QR&quot; name=qr&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+`
+</code></pre>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://golang.org/" target="_blank" rel="external">Go Official Site</a><br><a href="https://tour.golang.org/" target="_blank" rel="external">A Tour of Go</a><br><a href="https://www.gitbook.com/book/bingohuang/effective-go-zh-en/details" target="_blank" rel="external">Effective Go</a><br><a href="https://golang.org/ref/spec" target="_blank" rel="external">The Go Programming Language Specification</a></p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #757575;
+            text-shadow: 0;
+            display: none
+        }
+</style>
+	
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn">Read Comments (Make sure disq.us, disquscdn.com and disqus.com can load properly)</button>
+</div>
+
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://TaoSama.com/2017-08-04/effective-go-notes/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://TaoSama.com/2017-08-04/effective-go-notes/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/ls-javascript" id="disqus-lazy-load-script">
+    $.ajax({
+        url: 'https://disqus.com/next/config.json',
+        timeout: 4000,
+        type: 'GET',
+        success: (function() {
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//taosama.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+            $('.disqus_click_btn').css('display','none');
+        })(),
+        error: function() {
+          $('.disqus_click_btn').css('display','block');
+        }
+    });
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//taosama.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.disqus_click_btn').css('display','none');
+    });
+</script>
+  	
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2017-08-07/leetcode-shell-problems-solution/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Newer
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017-07-31/shell-script-notes/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="TaoSama's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        lwt1367@qq.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:lwt1367@qq.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                Home
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    Archives
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2018/03/">March 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/10/">October 2017<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/09/">September 2017<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/08/">August 2017<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">July 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/06/">June 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/05/">May 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">April 2017<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">March 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/02/">February 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">November 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">September 2016<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">August 2016<span class="sidebar_archives-count">42</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">July 2016<span class="sidebar_archives-count">12</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">June 2016<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/05/">May 2016<span class="sidebar_archives-count">24</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/04/">April 2016<span class="sidebar_archives-count">41</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/03/">March 2016<span class="sidebar_archives-count">42</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                Categories
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/Doing/">Doing<span class="sidebar_archives-count">28</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Blog/">Blog<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/CPP/">CPP<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Computer-Vision/">Computer Vision<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Distributed/">Distributed<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Go/">Go<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Hive/">Hive<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Interview/">Interview<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Life/">Life<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Machine-Learning/">Machine Learning<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Python/">Python<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Shell/">Shell<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Spring/">Spring<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/">动态规划<span class="sidebar_archives-count">27</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/bitset优化/">bitset优化<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/数位dp/">数位dp<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/数据结构优化/">数据结构优化<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/斜率优化/">斜率优化<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/最长上升子序列/">最长上升子序列<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/树形dp/">树形dp<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/概率-期望dp/">概率/期望dp<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/状压dp/">状压dp<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/矩阵优化/">矩阵优化<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/线性dp/">线性dp<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/">图论<span class="sidebar_archives-count">26</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/LCA/">LCA<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/二分图/">二分图<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/拓扑排序/">拓扑排序<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/最大团/">最大团<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/最小生成树/">最小生成树<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/最短路/">最短路<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/生成树计数/">生成树计数<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/网络流/">网络流<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/连通图/">连通图<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/套题/">套题<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/字符串/">字符串<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/字符串/AC自动机/">AC自动机<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/字符串/Manacher-回文树/">Manacher/回文树<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/字符串/SA-SAM/">SA/SAM<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/小结/">小结<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/思维/">思维<span class="sidebar_archives-count">19</span></a></li><li><a class="sidebar_archives-link" href="/categories/思维/分治/">分治<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/思维/扫描线/">扫描线<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/思维/数形结合/">数形结合<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/思维/离线思想/">离线思想<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/思维/贪心/">贪心<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/思维/贪心/区间贪心/">区间贪心<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/思维/逆向思维/">逆向思维<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/技巧/">技巧<span class="sidebar_archives-count">17</span></a></li><li><a class="sidebar_archives-link" href="/categories/技巧/two-pointers/">two pointers<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/技巧/xor/">xor<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/技巧/反转问题/">反转问题<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/技巧/哈希/">哈希<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/技巧/折半搜索/">折半搜索<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/">数学<span class="sidebar_archives-count">26</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/CRT/">CRT<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/FFT-NTT-FWT/">FFT/NTT/FWT<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/博弈/">博弈<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/容斥/">容斥<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/概率-期望/">概率/期望<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/组合数学/">组合数学<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/贡献/">贡献<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/高斯消元/">高斯消元<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/数据结构/">数据结构<span class="sidebar_archives-count">18</span></a></li><li><a class="sidebar_archives-link" href="/categories/数据结构/主席树/">主席树<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/数据结构/二叉搜索树/">二叉搜索树<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/数据结构/可持久化Trie/">可持久化Trie<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/数据结构/并查集/">并查集<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/数据结构/树上莫队/">树上莫队<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/数据结构/树状数组/">树状数组<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/数据结构/线段树/">线段树<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/暴力/">暴力<span class="sidebar_archives-count">15</span></a></li><li><a class="sidebar_archives-link" href="/categories/暴力/大模拟/">大模拟<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/暴力/小模拟/">小模拟<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/暴力/搜索/">搜索<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/暴力/搜索/dfs-bfs/">dfs/bfs<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/暴力/搜索/二-三分搜索/">二/三分搜索<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/暴力/签到/">签到<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算几何/">计算几何<span class="sidebar_archives-count">15</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算几何/三维几何/">三维几何<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算几何/扫描线/">扫描线<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算几何/数值积分/">数值积分<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算几何/旋转卡壳/">旋转卡壳<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算几何/极角扫描/">极角扫描<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算几何/极角排序/">极角排序<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="About">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                About
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                Number of articles
+                <span class="sidebar-badge">206</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+    <a href="mailto:hiviosey@gmail.com" class="sidebar-footer-text-a">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+        sidebar.help
+        <span class="mdl-button__ripple-container">
+          <span class="mdl-ripple"></span>
+        </span>
+      </div>
+    </a>
+
+-->
+
+<!-- Feedback -->
+<!--
+
+    <a href="https://github.com/viosey/hexo-theme-material/issues" target="_blank" class="sidebar-footer-text-a">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+        sidebar.feedback
+        <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+    </a>
+
+-->
+
+<!-- About Theme -->
+<!--
+
+    <a href="https://blog.viosey.com/index.php/Material.html" target="_blank" class="sidebar-footer-text-a">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+             sidebar.about_theme
+            <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+    </a>
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/lwt1367" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+        <a href="https://weibo.com/u/3863360617" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-weibo">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/TaoSama" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;2016&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>TaoSama's Blog
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+    <script src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

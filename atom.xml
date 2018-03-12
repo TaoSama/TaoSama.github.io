@@ -5,9 +5,9 @@
   <subtitle>Reborn and Be Together</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://TaoSama.github.io/"/>
+  <link href="http://TaoSama.com/"/>
   <updated>2018-03-09T09:06:24.000Z</updated>
-  <id>http://TaoSama.github.io/</id>
+  <id>http://TaoSama.com/</id>
   
   <author>
     <name>TaoSama</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Notes, SpringBoot Guide</title>
-    <link href="http://TaoSama.github.io/2018/03/09/springboot-guide-notes/"/>
-    <id>http://TaoSama.github.io/2018/03/09/springboot-guide-notes/</id>
+    <link href="http://TaoSama.com/2018-03-09/springboot-guide-notes/"/>
+    <id>http://TaoSama.com/2018-03-09/springboot-guide-notes/</id>
     <published>2018-03-09T09:01:00.000Z</published>
     <updated>2018-03-09T09:06:24.000Z</updated>
     
@@ -33,17 +33,17 @@
     
     </summary>
     
-      <category term="Doing" scheme="http://TaoSama.github.io/categories/Doing/"/>
+      <category term="Doing" scheme="http://TaoSama.com/categories/Doing/"/>
     
-      <category term="Spring" scheme="http://TaoSama.github.io/categories/Doing/Spring/"/>
+      <category term="Spring" scheme="http://TaoSama.com/categories/Doing/Spring/"/>
     
     
   </entry>
   
   <entry>
     <title>Notes, 大型网站技术架构</title>
-    <link href="http://TaoSama.github.io/2017/10/27/large-site-architecture-notes/"/>
-    <id>http://TaoSama.github.io/2017/10/27/large-site-architecture-notes/</id>
+    <link href="http://TaoSama.com/2017-10-27/large-site-architecture-notes/"/>
+    <id>http://TaoSama.com/2017-10-27/large-site-architecture-notes/</id>
     <published>2017-10-27T03:52:10.000Z</published>
     <updated>2018-01-27T10:44:15.000Z</updated>
     
@@ -63,17 +63,17 @@
     
     </summary>
     
-      <category term="Doing" scheme="http://TaoSama.github.io/categories/Doing/"/>
+      <category term="Doing" scheme="http://TaoSama.com/categories/Doing/"/>
     
-      <category term="Distributed" scheme="http://TaoSama.github.io/categories/Doing/Distributed/"/>
+      <category term="Distributed" scheme="http://TaoSama.com/categories/Doing/Distributed/"/>
     
     
   </entry>
   
   <entry>
     <title>Miscellany and Summary, Notes(9), Effective C++</title>
-    <link href="http://TaoSama.github.io/2017/10/17/effective-cpp-miscellany-and-summary/"/>
-    <id>http://TaoSama.github.io/2017/10/17/effective-cpp-miscellany-and-summary/</id>
+    <link href="http://TaoSama.com/2017-10-17/effective-cpp-miscellany-and-summary/"/>
+    <id>http://TaoSama.com/2017-10-17/effective-cpp-miscellany-and-summary/</id>
     <published>2017-10-17T02:17:00.000Z</published>
     <updated>2017-10-17T03:32:30.000Z</updated>
     
@@ -85,17 +85,17 @@
     
     </summary>
     
-      <category term="Doing" scheme="http://TaoSama.github.io/categories/Doing/"/>
+      <category term="Doing" scheme="http://TaoSama.com/categories/Doing/"/>
     
-      <category term="CPP" scheme="http://TaoSama.github.io/categories/Doing/CPP/"/>
+      <category term="CPP" scheme="http://TaoSama.com/categories/Doing/CPP/"/>
     
     
   </entry>
   
   <entry>
     <title>Customizing new and delete, Notes(8), Effective C++</title>
-    <link href="http://TaoSama.github.io/2017/10/12/effective-cpp-customizing-new-and-delete/"/>
-    <id>http://TaoSama.github.io/2017/10/12/effective-cpp-customizing-new-and-delete/</id>
+    <link href="http://TaoSama.com/2017-10-12/effective-cpp-customizing-new-and-delete/"/>
+    <id>http://TaoSama.com/2017-10-12/effective-cpp-customizing-new-and-delete/</id>
     <published>2017-10-12T12:47:00.000Z</published>
     <updated>2017-10-16T12:01:02.000Z</updated>
     
@@ -107,17 +107,17 @@
     
     </summary>
     
-      <category term="Doing" scheme="http://TaoSama.github.io/categories/Doing/"/>
+      <category term="Doing" scheme="http://TaoSama.com/categories/Doing/"/>
     
-      <category term="CPP" scheme="http://TaoSama.github.io/categories/Doing/CPP/"/>
+      <category term="CPP" scheme="http://TaoSama.com/categories/Doing/CPP/"/>
     
     
   </entry>
   
   <entry>
     <title>Templates and Generic Programming, Notes(7), Effective C++</title>
-    <link href="http://TaoSama.github.io/2017/10/09/effective-cpp-templates-and-generic-programming/"/>
-    <id>http://TaoSama.github.io/2017/10/09/effective-cpp-templates-and-generic-programming/</id>
+    <link href="http://TaoSama.com/2017-10-09/effective-cpp-templates-and-generic-programming/"/>
+    <id>http://TaoSama.com/2017-10-09/effective-cpp-templates-and-generic-programming/</id>
     <published>2017-10-09T07:10:00.000Z</published>
     <updated>2017-10-16T12:05:42.000Z</updated>
     
@@ -129,17 +129,17 @@
     
     </summary>
     
-      <category term="Doing" scheme="http://TaoSama.github.io/categories/Doing/"/>
+      <category term="Doing" scheme="http://TaoSama.com/categories/Doing/"/>
     
-      <category term="CPP" scheme="http://TaoSama.github.io/categories/Doing/CPP/"/>
+      <category term="CPP" scheme="http://TaoSama.com/categories/Doing/CPP/"/>
     
     
   </entry>
   
   <entry>
     <title>Inheritance and Object-Oriented Design, Notes(6), Effective C++</title>
-    <link href="http://TaoSama.github.io/2017/09/11/effective-cpp-inheritance-and-object-oriented-design/"/>
-    <id>http://TaoSama.github.io/2017/09/11/effective-cpp-inheritance-and-object-oriented-design/</id>
+    <link href="http://TaoSama.com/2017-09-11/effective-cpp-inheritance-and-object-oriented-design/"/>
+    <id>http://TaoSama.com/2017-09-11/effective-cpp-inheritance-and-object-oriented-design/</id>
     <published>2017-09-11T09:22:00.000Z</published>
     <updated>2017-10-16T12:01:18.000Z</updated>
     
@@ -151,17 +151,17 @@
     
     </summary>
     
-      <category term="Doing" scheme="http://TaoSama.github.io/categories/Doing/"/>
+      <category term="Doing" scheme="http://TaoSama.com/categories/Doing/"/>
     
-      <category term="CPP" scheme="http://TaoSama.github.io/categories/Doing/CPP/"/>
+      <category term="CPP" scheme="http://TaoSama.com/categories/Doing/CPP/"/>
     
     
   </entry>
   
   <entry>
     <title>Implementations, Notes(5), Effective C++</title>
-    <link href="http://TaoSama.github.io/2017/09/05/effective-cpp-implementations/"/>
-    <id>http://TaoSama.github.io/2017/09/05/effective-cpp-implementations/</id>
+    <link href="http://TaoSama.com/2017-09-05/effective-cpp-implementations/"/>
+    <id>http://TaoSama.com/2017-09-05/effective-cpp-implementations/</id>
     <published>2017-09-05T10:16:00.000Z</published>
     <updated>2017-09-20T09:36:53.000Z</updated>
     
@@ -173,21 +173,21 @@
     
     </summary>
     
-      <category term="Doing" scheme="http://TaoSama.github.io/categories/Doing/"/>
+      <category term="Doing" scheme="http://TaoSama.com/categories/Doing/"/>
     
-      <category term="CPP" scheme="http://TaoSama.github.io/categories/Doing/CPP/"/>
+      <category term="CPP" scheme="http://TaoSama.com/categories/Doing/CPP/"/>
     
     
   </entry>
   
   <entry>
     <title>Designs and Declarations, Notes(4), Effective C++</title>
-    <link href="http://TaoSama.github.io/2017/09/04/effective-cpp-designs-and-declarations/"/>
-    <id>http://TaoSama.github.io/2017/09/04/effective-cpp-designs-and-declarations/</id>
+    <link href="http://TaoSama.com/2017-09-04/effective-cpp-designs-and-declarations/"/>
+    <id>http://TaoSama.com/2017-09-04/effective-cpp-designs-and-declarations/</id>
     <published>2017-09-04T05:19:00.000Z</published>
-    <updated>2017-09-20T09:36:48.000Z</updated>
+    <updated>2018-03-12T01:47:46.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="Designs-and-Declarations"><a href="#Designs-and-Declarations" class="headerlink" title="Designs and Declarations"></a>Designs and Declarations</h2><p>(I read a Chinese version of the book, any translation problem plz point out. </p><a id="more"></a><h3 id="Make-interfaces-easy-to-use-correctly-and-hard-to-use-incorrectly"><a href="#Make-interfaces-easy-to-use-correctly-and-hard-to-use-incorrectly" class="headerlink" title="Make interfaces easy to use correctly and hard to use incorrectly"></a>Make interfaces easy to use correctly and hard to use incorrectly</h3><ul><li>introduce a new type.<br><code>Data d(Month(9), Day(4), Year(2017));</code></li><li>restrict some invalid operations on types.<br>add <code>const</code> is a useful way.<br>```cpp<br>if(a * b = c) // …</li></ul><p>// It will avoid the problem above.<br>const Type operator*(const Type&amp; a, const Type&amp; b);</p><pre><code>* predefine all the valid values, if we want type safety.```cppclass Month {public:    static Month Jan() { return Month(1); }    static Month Feb() { return Month(2); }    // ...    static Month Dec() { return Month(12); }    // ...private:    explicit Month(int m);    // ...};</code></pre><ul><li>make interfaces be compatible with built-in types, aka. providing the interfaces of consistent behaviors.</li><li>force users to use smart pointers. e.g., factory function returns a smart pointer.<br><code>std::shared_ptr&lt;Investment&gt; createInvestment();</code></li></ul><h3 id="Treat-class-design-as-type-design"><a href="#Treat-class-design-as-type-design" class="headerlink" title="Treat class design as type design"></a>Treat class design as type design</h3><p>Questions to think:</p><ul><li>create and destroy</li><li>initialize and assign</li><li>pass by value -&gt; copy constructor</li><li>valid values -&gt; invariants(约束) </li><li>inheritance</li><li>conversion</li><li>functions and operators</li><li>access specifiers</li><li>undeclared interface ???</li><li>generalization -&gt; templates</li><li>really need a new type? maybe some non-member functions or templates achieve the goal.</li></ul><h3 id="Prefer-pass-by-reference-to-const-to-pass-by-value"><a href="#Prefer-pass-by-reference-to-const-to-pass-by-value" class="headerlink" title="Prefer pass-by-reference-to-const to pass-by-value"></a>Prefer pass-by-reference-to-const to pass-by-value</h3><ul><li>avoid any construction and destructions, more efficient.</li><li>avoid the slicing problem brought by derived class upcast to base class.</li><li>pass-by-value is proper for built-in types, e.g., STL iterators and functors.</li></ul><h3 id="Don’t-try-to-return-a-reference-when-you-must-return-an-object"><a href="#Don’t-try-to-return-a-reference-when-you-must-return-an-object" class="headerlink" title="Don’t try to return a reference when you must return an object"></a>Don’t try to return a reference when you must return an object</h3><p>try the one that behave correctly, and throw the responsibility to the compilers.</p><h3 id="Prefer-non-member-non-friend-functions-to-member-functions"><a href="#Prefer-non-member-non-friend-functions-to-member-functions" class="headerlink" title="Prefer non-member, non-friend functions to member functions"></a>Prefer non-member, non-friend functions to member functions</h3><p>a natural way, let tool function be a non-member function and put inside the same namespace where the classes it operates is.<br>then, for future expansion of more tool functions, sperate them in new headers but in the same namespaces.<br><strong>increase encapsulation, packaging flexibility, and function expansibility.</strong></p><pre><code class="cpp">// webbrowser.h// Main functionalities of webbrowser.namespace WebBrowserStuff {    class WebBrowser {    public:        // ...        void clearCache();        void clearHistory();        void removeCookies();        // ...    };    void clearBrowser(WebBrowser&amp; wb) {        wb.clearCache();        wb.clearHistory();        wb.removeCookies();    }}// webbrowser_bookmarks.hnamespace WebBrowserStuff {    // Some tool functions related to bookmarks.     // ...}// webbrowser_cookies.hnamespace WebBrowserStuff {    // Some tool functions related to cookies.    // ...}</code></pre><h3 id="Declare-non-member-functions-when-type-conversions-should-apply-to-all-parameters"><a href="#Declare-non-member-functions-when-type-conversions-should-apply-to-all-parameters" class="headerlink" title="Declare non-member functions when type conversions should apply to all parameters"></a>Declare non-member functions when type conversions should apply to all parameters</h3><ul><li>The parameter can be a participant of implicit type conversion, only when the parameter is in parameter list.</li><li>friend should be avoided when it can be.<br><strong>Observation</strong>: non-member functions is the opposite of member ones, not the friend functions.</li></ul><h3 id="Consider-support-for-a-non-throwing-swap"><a href="#Consider-support-for-a-non-throwing-swap" class="headerlink" title="Consider support for a non-throwing swap"></a>Consider support for a non-throwing swap</h3><p>for pointer to implementation (pimpl), more efficient way is to do:</p><ul><li>provide a public member <code>swap</code> function, this function should never throw, because it is the insurance for exception safety.<br>moreover, the default swap is used for built-in types and the built-in types never throws, we should keep consistent.</li><li>provide a non-member <code>swap</code> which calls the member <code>swap</code> in the namespace where your class or template is. </li><li>provide a <code>std::swap</code> total template specilization, if you’re trying to design a class not a class template.<pre><code class="cpp">class Widget {public:  void swap(Widget&amp; other) {      using std::swap;      swap(pImpl, other.pImpl);  }};namespace std {  template&lt;&gt;                                // Total template specilization  void swap&lt;Widget&gt;(Widget&amp; a, Widget&amp; b) {       a.swap(b);   }}</code></pre></li><li>we are not allowed to change anything in namespace <code>std</code>, but we can create specialization.<br>it is a UB, if you insist on doing so.</li><li><p>CPP points out, we can only paritially specialized class templates, function templates is not allowed. so provide non-member <code>swap</code> for function templates.</p><pre><code class="cpp">namespace WidgetStuff {  template&lt;typename T&gt;  class Widget { ... };  template&lt;typename T&gt;                    // Non-member function  void swap(Widget&lt;T&gt;&amp; a, Widget&lt;T&gt;&amp; b) {      a.swap(b);   }}</code></pre></li><li>when calling <code>swap</code>, please ensure a <code>using std::swap</code>, then call <code>swap</code> directly without any namespace specifier.<br>let the compiler to find a proper one.<br><strong>CPP name lookup rules (argument-dependent lookup or Koenig lookup rule):</strong><br>try to find a specific <code>swap</code> of <code>T</code> in global scope or the namespace where <code>T</code> is, then the generic one (<code>std::swap</code>).<pre><code class="cpp">template&lt;typename T&gt;void doSomething(T&amp; obj1, T&amp; obj2) {  using std::swap;  // ...  swap(obj1, obj2);  // ...}</code></pre></li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="Designs-and-Declarations"><a href="#Designs-and-Declarations" class="headerlink" title="Designs and Declarations"></a>Designs and Declarations</h2><p>(I read a Chinese version of the book, any translation problem plz point out. </p><a id="more"></a><h3 id="Make-interfaces-easy-to-use-correctly-and-hard-to-use-incorrectly"><a href="#Make-interfaces-easy-to-use-correctly-and-hard-to-use-incorrectly" class="headerlink" title="Make interfaces easy to use correctly and hard to use incorrectly"></a>Make interfaces easy to use correctly and hard to use incorrectly</h3><ul><li>introduce a new type.<br><code>Data d(Month(9), Day(4), Year(2017));</code></li><li>restrict some invalid operations on types.<br>add <code>const</code> is a useful way. </li></ul><pre><code class="cpp">if(a * b = c) // ...// It will avoid the problem above.const Type operator*(const Type&amp; a, const Type&amp; b);</code></pre><ul><li>predefine all the valid values, if we want type safety.<pre><code class="cpp">class Month {public:  static Month Jan() { return Month(1); }  static Month Feb() { return Month(2); }  // ...  static Month Dec() { return Month(12); }  // ...private:  explicit Month(int m);  // ...};</code></pre></li><li>make interfaces be compatible with built-in types, aka. providing the interfaces of consistent behaviors.</li><li>force users to use smart pointers. e.g., factory function returns a smart pointer.<br><code>std::shared_ptr&lt;Investment&gt; createInvestment();</code></li></ul><h3 id="Treat-class-design-as-type-design"><a href="#Treat-class-design-as-type-design" class="headerlink" title="Treat class design as type design"></a>Treat class design as type design</h3><p>Questions to think:</p><ul><li>create and destroy</li><li>initialize and assign</li><li>pass by value -&gt; copy constructor</li><li>valid values -&gt; invariants(约束) </li><li>inheritance</li><li>conversion</li><li>functions and operators</li><li>access specifiers</li><li>undeclared interface ???</li><li>generalization -&gt; templates</li><li>really need a new type? maybe some non-member functions or templates achieve the goal.</li></ul><h3 id="Prefer-pass-by-reference-to-const-to-pass-by-value"><a href="#Prefer-pass-by-reference-to-const-to-pass-by-value" class="headerlink" title="Prefer pass-by-reference-to-const to pass-by-value"></a>Prefer pass-by-reference-to-const to pass-by-value</h3><ul><li>avoid any construction and destructions, more efficient.</li><li>avoid the slicing problem brought by derived class upcast to base class.</li><li>pass-by-value is proper for built-in types, e.g., STL iterators and functors.</li></ul><h3 id="Don’t-try-to-return-a-reference-when-you-must-return-an-object"><a href="#Don’t-try-to-return-a-reference-when-you-must-return-an-object" class="headerlink" title="Don’t try to return a reference when you must return an object"></a>Don’t try to return a reference when you must return an object</h3><p>try the one that behave correctly, and throw the responsibility to the compilers.</p><h3 id="Prefer-non-member-non-friend-functions-to-member-functions"><a href="#Prefer-non-member-non-friend-functions-to-member-functions" class="headerlink" title="Prefer non-member, non-friend functions to member functions"></a>Prefer non-member, non-friend functions to member functions</h3><p>a natural way, let tool function be a non-member function and put inside the same namespace where the classes it operates is.<br>then, for future expansion of more tool functions, sperate them in new headers but in the same namespaces.<br><strong>increase encapsulation, packaging flexibility, and function expansibility.</strong></p><pre><code class="cpp">// webbrowser.h// Main functionalities of webbrowser.namespace WebBrowserStuff {    class WebBrowser {    public:        // ...        void clearCache();        void clearHistory();        void removeCookies();        // ...    };    void clearBrowser(WebBrowser&amp; wb) {        wb.clearCache();        wb.clearHistory();        wb.removeCookies();    }}// webbrowser_bookmarks.hnamespace WebBrowserStuff {    // Some tool functions related to bookmarks.     // ...}// webbrowser_cookies.hnamespace WebBrowserStuff {    // Some tool functions related to cookies.    // ...}</code></pre><h3 id="Declare-non-member-functions-when-type-conversions-should-apply-to-all-parameters"><a href="#Declare-non-member-functions-when-type-conversions-should-apply-to-all-parameters" class="headerlink" title="Declare non-member functions when type conversions should apply to all parameters"></a>Declare non-member functions when type conversions should apply to all parameters</h3><ul><li>The parameter can be a participant of implicit type conversion, only when the parameter is in parameter list.</li><li>friend should be avoided when it can be.<br><strong>Observation</strong>: non-member functions is the opposite of member ones, not the friend functions.</li></ul><h3 id="Consider-support-for-a-non-throwing-swap"><a href="#Consider-support-for-a-non-throwing-swap" class="headerlink" title="Consider support for a non-throwing swap"></a>Consider support for a non-throwing swap</h3><p>for pointer to implementation (pimpl), more efficient way is to do:</p><ul><li>provide a public member <code>swap</code> function, this function should never throw, because it is the insurance for exception safety.<br>moreover, the default swap is used for built-in types and the built-in types never throws, we should keep consistent.</li><li>provide a non-member <code>swap</code> which calls the member <code>swap</code> in the namespace where your class or template is. </li><li>provide a <code>std::swap</code> total template specilization, if you’re trying to design a class not a class template.<pre><code class="cpp">class Widget {public:  void swap(Widget&amp; other) {      using std::swap;      swap(pImpl, other.pImpl);  }};namespace std {  template&lt;&gt;                                // Total template specilization  void swap&lt;Widget&gt;(Widget&amp; a, Widget&amp; b) {       a.swap(b);   }}</code></pre></li><li>we are not allowed to change anything in namespace <code>std</code>, but we can create specialization.<br>it is a UB, if you insist on doing so.</li><li><p>CPP points out, we can only paritially specialized class templates, function templates is not allowed. so provide non-member <code>swap</code> for function templates.</p><pre><code class="cpp">namespace WidgetStuff {  template&lt;typename T&gt;  class Widget { ... };  template&lt;typename T&gt;                    // Non-member function  void swap(Widget&lt;T&gt;&amp; a, Widget&lt;T&gt;&amp; b) {      a.swap(b);   }}</code></pre></li><li>when calling <code>swap</code>, please ensure a <code>using std::swap</code>, then call <code>swap</code> directly without any namespace specifier.<br>let the compiler to find a proper one.<br><strong>CPP name lookup rules (argument-dependent lookup or Koenig lookup rule):</strong><br>try to find a specific <code>swap</code> of <code>T</code> in global scope or the namespace where <code>T</code> is, then the generic one (<code>std::swap</code>).<pre><code class="cpp">template&lt;typename T&gt;void doSomething(T&amp; obj1, T&amp; obj2) {  using std::swap;  // ...  swap(obj1, obj2);  // ...}</code></pre></li></ul>]]></content>
     
     <summary type="html">
     
@@ -195,17 +195,17 @@
     
     </summary>
     
-      <category term="Doing" scheme="http://TaoSama.github.io/categories/Doing/"/>
+      <category term="Doing" scheme="http://TaoSama.com/categories/Doing/"/>
     
-      <category term="CPP" scheme="http://TaoSama.github.io/categories/Doing/CPP/"/>
+      <category term="CPP" scheme="http://TaoSama.com/categories/Doing/CPP/"/>
     
     
   </entry>
   
   <entry>
     <title>Resource Management, Notes(3), Effective C++</title>
-    <link href="http://TaoSama.github.io/2017/08/31/effective-cpp-resource-management/"/>
-    <id>http://TaoSama.github.io/2017/08/31/effective-cpp-resource-management/</id>
+    <link href="http://TaoSama.com/2017-08-31/effective-cpp-resource-management/"/>
+    <id>http://TaoSama.com/2017-08-31/effective-cpp-resource-management/</id>
     <published>2017-08-31T03:26:00.000Z</published>
     <updated>2017-09-20T09:36:26.000Z</updated>
     
@@ -217,17 +217,17 @@
     
     </summary>
     
-      <category term="Doing" scheme="http://TaoSama.github.io/categories/Doing/"/>
+      <category term="Doing" scheme="http://TaoSama.com/categories/Doing/"/>
     
-      <category term="CPP" scheme="http://TaoSama.github.io/categories/Doing/CPP/"/>
+      <category term="CPP" scheme="http://TaoSama.com/categories/Doing/CPP/"/>
     
     
   </entry>
   
   <entry>
     <title>Notes, Hive Tutorial</title>
-    <link href="http://TaoSama.github.io/2017/08/25/hive-tut-notes/"/>
-    <id>http://TaoSama.github.io/2017/08/25/hive-tut-notes/</id>
+    <link href="http://TaoSama.com/2017-08-25/hive-tut-notes/"/>
+    <id>http://TaoSama.com/2017-08-25/hive-tut-notes/</id>
     <published>2017-08-25T03:07:00.000Z</published>
     <updated>2017-10-30T04:45:01.000Z</updated>
     
@@ -245,17 +245,17 @@
     
     </summary>
     
-      <category term="Doing" scheme="http://TaoSama.github.io/categories/Doing/"/>
+      <category term="Doing" scheme="http://TaoSama.com/categories/Doing/"/>
     
-      <category term="Hive" scheme="http://TaoSama.github.io/categories/Doing/Hive/"/>
+      <category term="Hive" scheme="http://TaoSama.com/categories/Doing/Hive/"/>
     
     
   </entry>
   
   <entry>
     <title>Notes, Most Useful Shell Command</title>
-    <link href="http://TaoSama.github.io/2017/08/25/most-useful-shell-commands/"/>
-    <id>http://TaoSama.github.io/2017/08/25/most-useful-shell-commands/</id>
+    <link href="http://TaoSama.com/2017-08-25/most-useful-shell-commands/"/>
+    <id>http://TaoSama.com/2017-08-25/most-useful-shell-commands/</id>
     <published>2017-08-25T02:57:10.000Z</published>
     <updated>2017-09-20T09:38:12.000Z</updated>
     
@@ -275,17 +275,17 @@
     
     </summary>
     
-      <category term="Doing" scheme="http://TaoSama.github.io/categories/Doing/"/>
+      <category term="Doing" scheme="http://TaoSama.com/categories/Doing/"/>
     
-      <category term="Shell" scheme="http://TaoSama.github.io/categories/Doing/Shell/"/>
+      <category term="Shell" scheme="http://TaoSama.com/categories/Doing/Shell/"/>
     
     
   </entry>
   
   <entry>
     <title>Solutions, Leetcode Shell Problems</title>
-    <link href="http://TaoSama.github.io/2017/08/07/leetcode-shell-problems-solution/"/>
-    <id>http://TaoSama.github.io/2017/08/07/leetcode-shell-problems-solution/</id>
+    <link href="http://TaoSama.com/2017-08-07/leetcode-shell-problems-solution/"/>
+    <id>http://TaoSama.com/2017-08-07/leetcode-shell-problems-solution/</id>
     <published>2017-08-07T10:06:10.000Z</published>
     <updated>2017-09-20T09:31:46.000Z</updated>
     
@@ -303,17 +303,17 @@
     
     </summary>
     
-      <category term="Doing" scheme="http://TaoSama.github.io/categories/Doing/"/>
+      <category term="Doing" scheme="http://TaoSama.com/categories/Doing/"/>
     
-      <category term="Shell" scheme="http://TaoSama.github.io/categories/Doing/Shell/"/>
+      <category term="Shell" scheme="http://TaoSama.com/categories/Doing/Shell/"/>
     
     
   </entry>
   
   <entry>
     <title>Notes, Effective Go</title>
-    <link href="http://TaoSama.github.io/2017/08/04/effective-go-notes/"/>
-    <id>http://TaoSama.github.io/2017/08/04/effective-go-notes/</id>
+    <link href="http://TaoSama.com/2017-08-04/effective-go-notes/"/>
+    <id>http://TaoSama.com/2017-08-04/effective-go-notes/</id>
     <published>2017-08-04T09:52:10.000Z</published>
     <updated>2018-03-11T12:24:43.000Z</updated>
     
@@ -340,17 +340,17 @@ func main() {
     
     </summary>
     
-      <category term="Doing" scheme="http://TaoSama.github.io/categories/Doing/"/>
+      <category term="Doing" scheme="http://TaoSama.com/categories/Doing/"/>
     
-      <category term="Go" scheme="http://TaoSama.github.io/categories/Doing/Go/"/>
+      <category term="Go" scheme="http://TaoSama.com/categories/Doing/Go/"/>
     
     
   </entry>
   
   <entry>
     <title>Notes, Shell Script</title>
-    <link href="http://TaoSama.github.io/2017/07/31/shell-script-notes/"/>
-    <id>http://TaoSama.github.io/2017/07/31/shell-script-notes/</id>
+    <link href="http://TaoSama.com/2017-07-31/shell-script-notes/"/>
+    <id>http://TaoSama.com/2017-07-31/shell-script-notes/</id>
     <published>2017-07-31T03:20:00.000Z</published>
     <updated>2018-01-27T11:10:30.000Z</updated>
     
@@ -366,17 +366,17 @@ func main() {
     
     </summary>
     
-      <category term="Doing" scheme="http://TaoSama.github.io/categories/Doing/"/>
+      <category term="Doing" scheme="http://TaoSama.com/categories/Doing/"/>
     
-      <category term="Shell" scheme="http://TaoSama.github.io/categories/Doing/Shell/"/>
+      <category term="Shell" scheme="http://TaoSama.com/categories/Doing/Shell/"/>
     
     
   </entry>
   
   <entry>
     <title>Notes, Shell</title>
-    <link href="http://TaoSama.github.io/2017/07/01/shell-notes/"/>
-    <id>http://TaoSama.github.io/2017/07/01/shell-notes/</id>
+    <link href="http://TaoSama.com/2017-07-01/shell-notes/"/>
+    <id>http://TaoSama.com/2017-07-01/shell-notes/</id>
     <published>2017-07-01T02:13:10.000Z</published>
     <updated>2017-09-20T09:28:09.000Z</updated>
     
@@ -412,17 +412,17 @@ func main() {
     
     </summary>
     
-      <category term="Doing" scheme="http://TaoSama.github.io/categories/Doing/"/>
+      <category term="Doing" scheme="http://TaoSama.com/categories/Doing/"/>
     
-      <category term="Shell" scheme="http://TaoSama.github.io/categories/Doing/Shell/"/>
+      <category term="Shell" scheme="http://TaoSama.com/categories/Doing/Shell/"/>
     
     
   </entry>
   
   <entry>
     <title>Constructors, Destrustors and Assignment Operators, Notes(2), Effective C++</title>
-    <link href="http://TaoSama.github.io/2017/06/15/effective-cpp-constructors-destructors-and-assignment-operators/"/>
-    <id>http://TaoSama.github.io/2017/06/15/effective-cpp-constructors-destructors-and-assignment-operators/</id>
+    <link href="http://TaoSama.com/2017-06-15/effective-cpp-constructors-destructors-and-assignment-operators/"/>
+    <id>http://TaoSama.com/2017-06-15/effective-cpp-constructors-destructors-and-assignment-operators/</id>
     <published>2017-06-15T13:20:10.000Z</published>
     <updated>2017-09-19T14:48:07.000Z</updated>
     
@@ -434,17 +434,17 @@ func main() {
     
     </summary>
     
-      <category term="Doing" scheme="http://TaoSama.github.io/categories/Doing/"/>
+      <category term="Doing" scheme="http://TaoSama.com/categories/Doing/"/>
     
-      <category term="CPP" scheme="http://TaoSama.github.io/categories/Doing/CPP/"/>
+      <category term="CPP" scheme="http://TaoSama.com/categories/Doing/CPP/"/>
     
     
   </entry>
   
   <entry>
     <title>Accustoming to CPP, Notes(1), Effective C++</title>
-    <link href="http://TaoSama.github.io/2017/06/11/effective-cpp-accustoming-to-cpp/"/>
-    <id>http://TaoSama.github.io/2017/06/11/effective-cpp-accustoming-to-cpp/</id>
+    <link href="http://TaoSama.com/2017-06-11/effective-cpp-accustoming-to-cpp/"/>
+    <id>http://TaoSama.com/2017-06-11/effective-cpp-accustoming-to-cpp/</id>
     <published>2017-06-11T03:20:10.000Z</published>
     <updated>2017-09-19T14:48:07.000Z</updated>
     
@@ -456,17 +456,17 @@ func main() {
     
     </summary>
     
-      <category term="Doing" scheme="http://TaoSama.github.io/categories/Doing/"/>
+      <category term="Doing" scheme="http://TaoSama.com/categories/Doing/"/>
     
-      <category term="CPP" scheme="http://TaoSama.github.io/categories/Doing/CPP/"/>
+      <category term="CPP" scheme="http://TaoSama.com/categories/Doing/CPP/"/>
     
     
   </entry>
   
   <entry>
     <title>Address Collecting</title>
-    <link href="http://TaoSama.github.io/2017/05/18/Address-Collecting/"/>
-    <id>http://TaoSama.github.io/2017/05/18/Address-Collecting/</id>
+    <link href="http://TaoSama.com/2017-05-18/Address-Collecting/"/>
+    <id>http://TaoSama.com/2017-05-18/Address-Collecting/</id>
     <published>2017-05-18T10:30:10.000Z</published>
     <updated>2017-09-19T14:48:07.000Z</updated>
     
@@ -478,17 +478,17 @@ func main() {
     
     </summary>
     
-      <category term="Doing" scheme="http://TaoSama.github.io/categories/Doing/"/>
+      <category term="Doing" scheme="http://TaoSama.com/categories/Doing/"/>
     
-      <category term="Life" scheme="http://TaoSama.github.io/categories/Doing/Life/"/>
+      <category term="Life" scheme="http://TaoSama.com/categories/Doing/Life/"/>
     
     
   </entry>
   
   <entry>
     <title>Backthoughts during These Days</title>
-    <link href="http://TaoSama.github.io/2017/04/28/Backthoughts-during-These-Days/"/>
-    <id>http://TaoSama.github.io/2017/04/28/Backthoughts-during-These-Days/</id>
+    <link href="http://TaoSama.com/2017-04-28/Backthoughts-during-These-Days/"/>
+    <id>http://TaoSama.com/2017-04-28/Backthoughts-during-These-Days/</id>
     <published>2017-04-28T09:30:10.000Z</published>
     <updated>2017-09-19T14:48:07.000Z</updated>
     
@@ -500,17 +500,17 @@ func main() {
     
     </summary>
     
-      <category term="Doing" scheme="http://TaoSama.github.io/categories/Doing/"/>
+      <category term="Doing" scheme="http://TaoSama.com/categories/Doing/"/>
     
-      <category term="Life" scheme="http://TaoSama.github.io/categories/Doing/Life/"/>
+      <category term="Life" scheme="http://TaoSama.com/categories/Doing/Life/"/>
     
     
   </entry>
   
   <entry>
     <title>头条秋招春招失败的思考</title>
-    <link href="http://TaoSama.github.io/2017/04/28/Backthoughts-about-the-Failure-of-the-Autumn-and-Spring-Campus-Recruiting-of-Toutiao/"/>
-    <id>http://TaoSama.github.io/2017/04/28/Backthoughts-about-the-Failure-of-the-Autumn-and-Spring-Campus-Recruiting-of-Toutiao/</id>
+    <link href="http://TaoSama.com/2017-04-28/Backthoughts-about-the-Failure-of-the-Autumn-and-Spring-Campus-Recruiting-of-Toutiao/"/>
+    <id>http://TaoSama.com/2017-04-28/Backthoughts-about-the-Failure-of-the-Autumn-and-Spring-Campus-Recruiting-of-Toutiao/</id>
     <published>2017-04-28T09:20:10.000Z</published>
     <updated>2017-09-19T14:48:07.000Z</updated>
     
@@ -522,9 +522,9 @@ func main() {
     
     </summary>
     
-      <category term="Doing" scheme="http://TaoSama.github.io/categories/Doing/"/>
+      <category term="Doing" scheme="http://TaoSama.com/categories/Doing/"/>
     
-      <category term="Interview" scheme="http://TaoSama.github.io/categories/Doing/Interview/"/>
+      <category term="Interview" scheme="http://TaoSama.com/categories/Doing/Interview/"/>
     
     
   </entry>

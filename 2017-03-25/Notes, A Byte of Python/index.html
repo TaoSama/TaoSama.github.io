@@ -1,0 +1,1650 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="en">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            Notes, A Byte of Python | 
+        
+        TaoSama&#39;s Blog
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="
+总结一下$python$的语法对于一个$cpp programmer$来说如何快速上手
+工具查阅。。
+">
+    <meta name="keywords" content="Algorithm, ACMer">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.en.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/github-v2.min.css?AfzKxt++K+/lhZBlSjnxwg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <style>
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 300;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: regular;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.svg#Roboto) format('svg')
+        }
+    </style>
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="TaoSama&#39;s Blog">
+    <meta name="msapplication-starturl" content="http://TaoSama.com/2017-03-25/Notes, A Byte of Python/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="TaoSama&#39;s Blog">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+        
+            <link rel=alternate type="application/atom+xml" href="atom.xml">
+        
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://TaoSama.com/2017-03-25/Notes, A Byte of Python/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Notes, A Byte of Python | TaoSama&#39;s Blog">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="
+总结一下$python$的语法对于一个$cpp programmer$来说如何快速上手
+工具查阅。。
+">
+    
+
+    
+        <meta property="article:published_time" content="Sat Mar 25 2017 03:04:10 GMT+0800">
+        <meta property="article:modified_time" content="Tue Sep 19 2017 22:48:07 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://TaoSama.com/2017-03-25/Notes, A Byte of Python/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://TaoSama.com/2017-03-25/Notes, A Byte of Python/index.html",
+    "headline": "Notes, A Byte of Python",
+    "datePublished": "Sat Mar 25 2017 03:04:10 GMT+0800",
+    "dateModified": "Tue Sep 19 2017 22:48:07 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "TaoSama",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Forward and Never Step Back"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "TaoSama&#39;s Blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": "Algorithm, ACMer",
+    "description": "
+总结一下$python$的语法对于一个$cpp programmer$来说如何快速上手
+工具查阅。。
+",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#基本类型"><span class="post-toc-number">1.</span> <span class="post-toc-text">基本类型</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#数"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#字符串-str"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">字符串(str)</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#变量"><span class="post-toc-number">2.</span> <span class="post-toc-text">变量</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#运算符"><span class="post-toc-number">3.</span> <span class="post-toc-text">运算符</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#控制语句-不要忘记"><span class="post-toc-number">4.</span> <span class="post-toc-text">控制语句 (不要忘记:)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#函数-不要忘记"><span class="post-toc-number">5.</span> <span class="post-toc-text">函数 (不要忘记:)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#模块"><span class="post-toc-number">6.</span> <span class="post-toc-text">模块</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数据结构"><span class="post-toc-number">7.</span> <span class="post-toc-text">数据结构</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#列表"><span class="post-toc-number">7.1.</span> <span class="post-toc-text">列表</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#元组"><span class="post-toc-number">7.2.</span> <span class="post-toc-text">元组</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#字典"><span class="post-toc-number">7.3.</span> <span class="post-toc-text">字典</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#序列"><span class="post-toc-number">7.4.</span> <span class="post-toc-text">序列</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#引用"><span class="post-toc-number">7.5.</span> <span class="post-toc-text">引用</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#类"><span class="post-toc-number">8.</span> <span class="post-toc-text">类</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#类的声明"><span class="post-toc-number">8.1.</span> <span class="post-toc-text">类的声明</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#类的继承"><span class="post-toc-number">8.2.</span> <span class="post-toc-text">类的继承</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#I-O"><span class="post-toc-number">9.</span> <span class="post-toc-text">I/O</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#文件"><span class="post-toc-number">9.1.</span> <span class="post-toc-text">文件</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#储存器"><span class="post-toc-number">9.2.</span> <span class="post-toc-text">储存器</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#异常"><span class="post-toc-number">10.</span> <span class="post-toc-text">异常</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Python标准库"><span class="post-toc-number">11.</span> <span class="post-toc-text">Python标准库</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#sys模块"><span class="post-toc-number">11.1.</span> <span class="post-toc-text">sys模块</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#os模块"><span class="post-toc-number">11.2.</span> <span class="post-toc-text">os模块</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#更多关于Python"><span class="post-toc-number">12.</span> <span class="post-toc-text">更多关于Python</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#列表综合（List-Comprehension）"><span class="post-toc-number">12.1.</span> <span class="post-toc-text">列表综合（List Comprehension）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#在函数中接收元组和列表"><span class="post-toc-number">12.2.</span> <span class="post-toc-text">在函数中接收元组和列表</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#lambda-expression"><span class="post-toc-number">12.3.</span> <span class="post-toc-text">lambda expression</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#exec、eval、assert、repr"><span class="post-toc-number">12.4.</span> <span class="post-toc-text">exec、eval、assert、repr</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                Notes, A Byte of Python
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>TaoSama</strong>
+        <span>Mar 25, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;Views
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Notes, A Byte of Python&url=http://TaoSama.com/2017-03-25/Notes, A Byte of Python/index.html&pic=http://TaoSama.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Weibo
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Notes, A Byte of Python&url=http://TaoSama.com/2017-03-25/Notes, A Byte of Python/index.html&via=TaoSama" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://TaoSama.com/2017-03-25/Notes, A Byte of Python/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://TaoSama.com/2017-03-25/Notes, A Byte of Python/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <ul>
+<li>总结一下$python$的语法对于一个$cpp programmer$来说如何快速上手</li>
+<li>工具查阅。。</li>
+</ul>
+<a id="more"></a>
+<h3 id="基本类型"><a href="#基本类型" class="headerlink" title="基本类型"></a>基本类型</h3><h4 id="数"><a href="#数" class="headerlink" title="数"></a>数</h4><ul>
+<li>整数(int) <code>type(1)</code></li>
+<li>长整数(long) <code>type(1L)</code></li>
+<li>浮点数(float) <code>type(1.0)</code> <strong>python不区分单双精度浮点数</strong></li>
+<li>复数(complex) <code>type(2.3+5j)</code></li>
+</ul>
+<h4 id="字符串-str"><a href="#字符串-str" class="headerlink" title="字符串(str)"></a>字符串(str)</h4><ul>
+<li><p><strong>‘和”意思相同</strong> <code>&#39;hello&#39; &quot;hello&quot;</code><br><code>&#39;&#39;&#39;或者&quot;&quot;&quot;</code>多行引号 <strong>里面随便用’和” 会自动转义</strong> </p>
+</li>
+<li><p>自然字符串<br>r或者R前缀 不会转义 <code>r&quot;new line\n&quot;</code></p>
+</li>
+<li><p>Unicode字符串<br>u或者U前缀 <code>u&quot;This is a unicode string&quot;</code></p>
+</li>
+<li><p>Tips:<br><strong>字符串是不可变的</strong><br><strong>正则表示式 一定要用自然字符串</strong><br><strong>行连接: (下面两个等价)</strong> </p>
+<pre><code class="python">print\
+i
+print i
+</code></pre>
+</li>
+</ul>
+<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><ul>
+<li>命名规则<br>类似于C/C++或者Java</li>
+</ul>
+<h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><ul>
+<li><code>+ - * / % &lt;&lt; &gt;&gt; &amp; | ^ ~ &lt; &gt; &lt;= &gt;= == !=</code> 不变</li>
+<li><code>x**y</code> ==&gt; $x^y$</li>
+<li>//取整除 <code>5//2.1=2.0</code></li>
+<li><p>逻辑运算符 <code>not and or</code></p>
+</li>
+<li><p>运算符优先级</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">运算符</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">lambda</td>
+<td style="text-align:center">lambda表达式</td>
+</tr>
+<tr>
+<td style="text-align:center">or</td>
+<td style="text-align:center">布尔“或”</td>
+</tr>
+<tr>
+<td style="text-align:center">and</td>
+<td style="text-align:center">布尔“与”</td>
+</tr>
+<tr>
+<td style="text-align:center">not</td>
+<td style="text-align:center">x 布尔“非”</td>
+</tr>
+<tr>
+<td style="text-align:center">in，not in</td>
+<td style="text-align:center">成员测试</td>
+</tr>
+<tr>
+<td style="text-align:center">is，is not</td>
+<td style="text-align:center">同一性测试</td>
+</tr>
+<tr>
+<td style="text-align:center">&lt;，&lt;=，&gt;，>=，!=，==</td>
+<td style="text-align:center">比较</td>
+</tr>
+<tr>
+<td style="text-align:center">&#124;</td>
+<td style="text-align:center">按位或</td>
+</tr>
+<tr>
+<td style="text-align:center">^</td>
+<td style="text-align:center">按位异或</td>
+</tr>
+<tr>
+<td style="text-align:center">&amp;</td>
+<td style="text-align:center">按位与</td>
+</tr>
+<tr>
+<td style="text-align:center">&lt;&lt;，&gt;&gt;</td>
+<td style="text-align:center">移位</td>
+</tr>
+<tr>
+<td style="text-align:center">+，-</td>
+<td style="text-align:center">加法与减法</td>
+</tr>
+<tr>
+<td style="text-align:center">*，/，%</td>
+<td style="text-align:center">乘法、除法与取余</td>
+</tr>
+<tr>
+<td style="text-align:center">+x，-x</td>
+<td style="text-align:center">正负号</td>
+</tr>
+<tr>
+<td style="text-align:center">~x</td>
+<td style="text-align:center">按位翻转</td>
+</tr>
+<tr>
+<td style="text-align:center">**</td>
+<td style="text-align:center">指数</td>
+</tr>
+<tr>
+<td style="text-align:center">x.attribute</td>
+<td style="text-align:center">属性参考</td>
+</tr>
+<tr>
+<td style="text-align:center">x[index]</td>
+<td style="text-align:center">下标</td>
+</tr>
+<tr>
+<td style="text-align:center">x[index:index]</td>
+<td style="text-align:center">寻址段</td>
+</tr>
+<tr>
+<td style="text-align:center">f(arguments…)</td>
+<td style="text-align:center">函数调用</td>
+</tr>
+<tr>
+<td style="text-align:center">(experession,…)</td>
+<td style="text-align:center">绑定或元组显示</td>
+</tr>
+<tr>
+<td style="text-align:center">[expression,…]</td>
+<td style="text-align:center">列表显示</td>
+</tr>
+<tr>
+<td style="text-align:center">{key:datum,…}</td>
+<td style="text-align:center">字典显示</td>
+</tr>
+<tr>
+<td style="text-align:center">`expression,…`</td>
+<td style="text-align:center">字符串转换</td>
+</tr>
+</tbody>
+</table>
+<h3 id="控制语句-不要忘记"><a href="#控制语句-不要忘记" class="headerlink" title="控制语句 (不要忘记:)"></a>控制语句 (不要忘记:)</h3><p><strong>else部分是可选的。如果包含else，它总是在循环结束后执行一次，除非遇到break</strong></p>
+<ul>
+<li><p>if和while</p>
+<pre><code class="python"># !/usr/bin/python
+number = 23
+running = True
+while running:
+  guess=int(raw_input(&quot;Enter an integer:&quot;))
+  if guess == number:
+      print(&quot;Congratulation, you guessd it.&quot;)
+      running = False
+  elif guess &lt; number:
+      print(&quot;No, it is a little higher&quot;)
+  else:
+      print(&quot;No, it is a little lower&quot;)
+else:
+  print(&quot;The while loop is over.&quot;)
+print(&quot;Done&quot;)
+</code></pre>
+</li>
+<li><p>for, break和continue</p>
+<pre><code class="python">for x in range(1, 10):
+  if x == 2:
+      continue
+  if x == 4:
+      break
+</code></pre>
+</li>
+</ul>
+<h3 id="函数-不要忘记"><a href="#函数-不要忘记" class="headerlink" title="函数 (不要忘记:)"></a>函数 (不要忘记:)</h3><ul>
+<li><p>实参传递方式类似Java, 值类型值传递，对象类型引用传递</p>
+<pre><code class="python">def maximum(x, y):
+  if x &gt; y:
+      return x
+  else:
+      return y
+</code></pre>
+</li>
+<li><p>默认参数</p>
+<pre><code class="python">def printWord(word, times = 1):
+  print(word * times)
+</code></pre>
+</li>
+<li><p>关键参数</p>
+<pre><code class="python">def func(a, b = 5, c = 10):
+  print(&#39;a is %d, b is %d, c is %d&#39; % (a, b, c))
+#####################################################
+func(3, 7)
+func(25, c = 24)
+func(c = 50, a = 100)
+</code></pre>
+</li>
+<li><p>DocStrings<br>文档字符串的惯例是一个多行字符串，它的首行以大写字母开始，句号结尾。第二行是空行，从第三行开始是详细的描述。</p>
+<pre><code class="python">def printMax(x, y):
+  &#39;&#39;&#39;Prints the maximum of two numbers.
+
+  The two values must be integers.&#39;&#39;&#39;
+
+  if x &gt; y:
+      print x, &#39;is maximum&#39;
+  else:
+      print y, &#39;is maximum&#39;
+##########################################
+printMax(3, 5)
+print printMax.__doc__
+</code></pre>
+</li>
+</ul>
+<h3 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h3><p><strong>每个.py程序都是1个模块(可以类似cpp类一样用.来访问模块内的成员)</strong></p>
+<ul>
+<li><p>from..import语句</p>
+<pre><code class="python">import sys
+print &#39;The command line arguments are:&#39;
+  for i in sys.argv:
+      print i
+print &#39;\n\nThe PYTHONPATH is&#39;, sys.path, &#39;\n&#39;
+</code></pre>
+<p>如果你想要直接输入<code>argv</code>变量到你的程序中（避免在每次使用它时打sys.），那么你可以使用<code>from sys import argv</code>语句。<br>如果你想要输入所有sys模块使用的名字，那么你可以使用<code>from sys import *</code>语句。这对于所有模块都适用。<br>一般说来，应该避免使用<code>from..import</code>而使用<code>import</code>语句，因为这样可以使你的程序更加易读，也可以避免名称的冲突。</p>
+</li>
+<li><p>使用模块的<code>__name__</code></p>
+<pre><code class="python">if __name__ == &#39;__main__&#39;:
+  print &#39;This program is being run by itself&#39;
+else:
+  print &#39;I am being imported from another module&#39;
+</code></pre>
+</li>
+<li><p>dir()函数<br>可以使用内建的dir函数来列出模块定义的标识符。标识符有函数、类和变量。<br>当你为dir()提供一个模块名的时候，它返回模块定义的名称列表。<br>如果不提供参数，它返回当前模块中定义的名称列表。</p>
+<pre><code class="python">&gt;&gt;&gt; import sys
+&gt;&gt;&gt; dir() # get list of attributes for current module
+[&#39;__builtins__&#39;, &#39;__doc__&#39;, &#39;__name__&#39;, &#39;sys&#39;]
+&gt;&gt;&gt; a = 5 # create a new variable &#39;a&#39;
+&gt;&gt;&gt; dir()
+[&#39;__builtins__&#39;, &#39;__doc__&#39;, &#39;__name__&#39;, &#39;a&#39;, &#39;sys&#39;]
+&gt;&gt;&gt; del a # delete/remove a name
+&gt;&gt;&gt; dir()
+[&#39;__builtins__&#39;, &#39;__doc__&#39;, &#39;__name__&#39;, &#39;sys&#39;]
+</code></pre>
+</li>
+</ul>
+<h3 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h3><h4 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h4><pre><code class="python">list = [1, 2, 3]
+list.append(4)
+list.pop(0) # del list[0]
+list.sort()
+print(list)
+</code></pre>
+<h4 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h4><pre><code class="python">empty = ()
+single = (1, )
+zoo = (&quot;wolf&quot;, &quot;elephant&quot;, &quot;penguin&quot;)
+print &quot;number of animals in the zoo is&quot;, len(zoo) # 3
+new_zoo = (&quot;monkey&quot;, &quot;dolphin&quot;, zoo)
+print &quot;number of animals in the new zoo is&quot;, len(new_zoo) # 3
+</code></pre>
+<p>元组最通常的用法是用在打印语句</p>
+<pre><code class="python">age = 22
+name = &#39;Swaroop&#39;
+print &#39;%s is %d years old&#39; % (name, age)
+print &#39;Why is %s playing with that python?&#39; % name
+</code></pre>
+<h4 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h4><p>只能使用不可变的对象（比如字符串）来作为字典的键，但是你可以把不可变或可变的对象作为字典的值。<br>基本说来就是，你应该只使用简单的对象作为键。</p>
+<pre><code class="python">ab = { &#39;Swaroop&#39; : &#39;swaroopch@byteofpython.info&#39;,
+       &#39;Larry&#39; : &#39;larry@wall.org&#39;,
+       &#39;Matsumoto&#39; : &#39;matz@ruby-lang.org&#39;,
+       &#39;Spammer&#39; : &#39;spammer@hotmail.com&#39;
+}
+print &quot;Swaroop&#39;s address is %s&quot; % ab[&#39;Swaroop&#39;]
+</code></pre>
+<h4 id="序列"><a href="#序列" class="headerlink" title="序列"></a>序列</h4><p>列表、元组和字符串都是序列，序列的两个主要特点是索引操作符和切片操作符。<br>索引操作符让我们可以从序列中抓取一个特定项目。切片操作符让我们能够获取序列的一个切片，即一部分序列</p>
+<pre><code class="python">shoplist = [&#39;apple&#39;, &#39;mango&#39;, &#39;carrot&#39;, &#39;banana&#39;]
+# Indexing or &#39;Subscription&#39; operation
+print &#39;Item 0 is&#39;, shoplist[0]
+print &#39;Item -1 is&#39;, shoplist[-1]
+# Slicing on a list
+print &#39;Item 1 to 3 is&#39;, shoplist[1:3]
+print &#39;Item 2 to end is&#39;, shoplist[2:]
+print &#39;Item 1 to -1 is&#39;, shoplist[1:-1]
+print &#39;Item start to end is&#39;, shoplist[:]
+# Slicing on a string
+name = &#39;swaroop&#39;
+print &#39;characters 1 to 3 is&#39;, name[1:3]
+print &#39;characters 2 to end is&#39;, name[2:]
+print &#39;characters 1 to -1 is&#39;, name[1:-1]
+print &#39;characters start to end is&#39;, name[:]
+#################################################
+Item 0 is apple
+Item -1 is banana
+Item 1 to 3 is [&#39;mango&#39;, &#39;carrot&#39;]
+Item 2 to end is [&#39;carrot&#39;, &#39;banana&#39;]
+Item 1 to -1 is [&#39;mango&#39;, &#39;carrot&#39;]
+Item start to end is [&#39;apple&#39;, &#39;mango&#39;, &#39;carrot&#39;, &#39;banana&#39;]
+characters 1 to 3 is wa
+characters 2 to end is aroop
+characters 1 to -1 is waroo
+characters start to end is swaroop
+</code></pre>
+<h4 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h4><p>当你创建一个对象并给它赋一个变量的时候，这个变量仅仅引用那个对象，而不是表示这个对象本身！<br>也就是说，变量名指向你计算机中存储那个对象的内存。这被称作名称到对象的绑定。<br><strong>必须使用切片操作符来取得拷贝</strong></p>
+<h3 id="类"><a href="#类" class="headerlink" title="类"></a>类</h3><h4 id="类的声明"><a href="#类的声明" class="headerlink" title="类的声明"></a>类的声明</h4><p>基本跟cpp差不多，类中定义的变量，类似于cpp中的类的静态成员变量(比如下中的population)<br>如果你使用的数据成员名称以双下划线前缀比如__privatevar，Python的名称管理体系会有效地把它作为私有变量。<br>一个惯例，如果某个变量只想在类或对象中使用，就应该以单下划线前缀。<br>其他的名称都将作为公共的，可以被其他类/对象使用。<br>记住这只是一个惯例，并不是Python所要求的（与双下划线前缀不同）。</p>
+<pre><code class="python">class Person:
+    &#39;&#39;&#39;Represents a person.&#39;&#39;&#39;
+    population = 0
+    def __init__(self, name):
+        &#39;&#39;&#39;Initializes the person&#39;s data.&#39;&#39;&#39;
+        self.name = name
+        print &#39;(Initializing %s)&#39; % self.name
+        # When this person is created, he/she
+        # adds to the population
+        Person.population += 1
+    def __del__(self):
+        &#39;&#39;&#39;I am dying.&#39;&#39;&#39;
+        print &#39;%s says bye.&#39; % self.name
+        Person.population -= 1
+        if Person.population == 0:
+            print &#39;I am the last one.&#39;
+        else:
+            print &#39;There are still %d people left.&#39; % Person.population
+    def sayHi(self):
+        &#39;&#39;&#39;Greeting by the person.
+        Really, that&#39;s all it does.&#39;&#39;&#39;
+        print &#39;Hi, my name is %s.&#39; % self.name
+    def howMany(self):
+        &#39;&#39;&#39;Prints the current population.&#39;&#39;&#39;
+        if Person.population == 1:
+            print &#39;I am the only person here.&#39;
+        else:
+            print &#39;We have %d persons here.&#39; % Person.population
+
+###########################################
+swaroop = Person(&#39;Swaroop&#39;)
+swaroop.sayHi()
+swaroop.howMany()
+kalam = Person(&#39;Abdul Kalam&#39;)
+kalam.sayHi()
+kalam.howMany()
+swaroop.sayHi()
+swaroop.howMany()
+###########################################
+(Initializing Swaroop)
+Hi, my name is Swaroop.
+I am the only person here.
+(Initializing Abdul Kalam)
+Hi, my name is Abdul Kalam.
+We have 2 persons here.
+Hi, my name is Swaroop.
+We have 2 persons here.
+Abdul Kalam says bye.
+There are still 1 people left.
+Swaroop says bye.
+I am the last one.
+</code></pre>
+<h4 id="类的继承"><a href="#类的继承" class="headerlink" title="类的继承"></a>类的继承</h4><p><strong>Python不会自动调用基本类的constructor，你得亲自专门调用它</strong></p>
+<pre><code class="python">class SchoolMember:
+    &#39;&#39;&#39;Represents any school member.&#39;&#39;&#39;
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        print &#39;(Initialized SchoolMember: %s)&#39; % self.name
+    def tell(self):
+        &#39;&#39;&#39;Tell my details.&#39;&#39;&#39;
+        print &#39;Name:&quot;%s&quot; Age:&quot;%s&quot;&#39; % (self.name, self.age),
+class Teacher(SchoolMember):
+    &#39;&#39;&#39;Represents a teacher.&#39;&#39;&#39;
+    def __init__(self, name, age, salary):
+        SchoolMember.__init__(self, name, age)
+        self.salary = salary
+        print &#39;(Initialized Teacher: %s)&#39; % self.name
+    def tell(self):
+        SchoolMember.tell(self)
+        print &#39;Salary: &quot;%d&quot;&#39; % self.salary
+class Student(SchoolMember):
+    &#39;&#39;&#39;Represents a student.&#39;&#39;&#39;
+    def __init__(self, name, age, marks):
+        SchoolMember.__init__(self, name, age)
+        self.marks = marks
+        print &#39;(Initialized Student: %s)&#39; % self.name
+    def tell(self):
+        SchoolMember.tell(self)
+        print &#39;Marks: &quot;%d&quot;&#39; % self.marks
+
+##############################################################
+t = Teacher(&#39;Mrs. Shrividya&#39;, 40, 30000)
+s = Student(&#39;Swaroop&#39;, 22, 75)
+print # prints a blank line
+members = [t, s]
+for member in members:
+member.tell() # works for both Teachers and Students
+##############################################################
+(Initialized SchoolMember: Mrs. Shrividya)
+(Initialized Teacher: Mrs. Shrividya)
+(Initialized SchoolMember: Swaroop)
+(Initialized Student: Swaroop)
+Name:&quot;Mrs. Shrividya&quot; Age:&quot;40&quot; Salary: &quot;30000&quot;
+Name:&quot;Swaroop&quot; Age:&quot;22&quot; Marks: &quot;75&quot;
+</code></pre>
+<h3 id="I-O"><a href="#I-O" class="headerlink" title="I/O"></a>I/O</h3><h4 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h4><pre><code class="python">poem = &#39;&#39;&#39;\
+Programming is fun
+When the work is done
+if you wanna make your work also fun:
+use Python!
+&#39;&#39;&#39;
+f = file(&#39;poem.txt&#39;, &#39;w&#39;) # open for &#39;w&#39;riting
+f.write(poem) # write text to file
+f.close() # close the file
+f = file(&#39;poem.txt&#39;) # if no mode is specified, &#39;r&#39;ead mode is assumed by default
+while True:
+    line = f.readline()
+    if len(line) == 0: # Zero length indicates EOF
+        break
+    print line, # Notice comma to avoid automatic newline added by Python
+f.close() # close the file
+</code></pre>
+<h4 id="储存器"><a href="#储存器" class="headerlink" title="储存器"></a>储存器</h4><p>Python提供一个标准的模块，称为pickle。<br>使用它你可以在一个文件中储存何Python对象，之后你又可以把它完整无缺地取出来。这被称为 持久地 储存对象。<br>还有另一个模块称为cPickle，它的功能和pickle模块完全相同，只不过它是C语言编写的，因此要快得多（比pickle快1000倍）</p>
+<pre><code class="python">import cPickle as p
+#import pickle as p
+shoplistfile = &#39;shoplist.data&#39;
+# the name of the file where we will store the object
+shoplist = [&#39;apple&#39;, &#39;mango&#39;, &#39;carrot&#39;]
+# Write to the file
+f = file(shoplistfile, &#39;w&#39;)
+p.dump(shoplist, f) # dump the object to a file
+f.close()
+del shoplist # remove the shoplist
+# Read back from the storage
+f = file(shoplistfile)
+storedlist = p.load(f)
+print storedlist
+</code></pre>
+<h3 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h3><p><strong>else可以和try…except连用，不能只与try…finally连用</strong></p>
+<pre><code class="python">#!/usr/bin/python
+# Filename: raising.py
+class ShortInputException(Exception):
+    &#39;&#39;&#39;A user-defined exception class.&#39;&#39;&#39;
+    def __init__(self, length, atleast):
+    Exception.__init__(self)
+    self.length = length
+    self.atleast = atleast
+try:
+    s = raw_input(&#39;Enter something --&gt; &#39;)
+    if len(s) &lt; 3:
+        raise ShortInputException(len(s), 3)
+    # Other work can continue as usual here
+except EOFError:
+    print &#39;\nWhy did you do an EOF on me?&#39;
+except ShortInputException, x:
+    print &#39;ShortInputException: The input was of length %d, \
+was expecting at least %d&#39; % (x.length, x.atleast)
+else:
+    print &#39;No exception was raised.&#39;
+</code></pre>
+<h3 id="Python标准库"><a href="#Python标准库" class="headerlink" title="Python标准库"></a>Python标准库</h3><h4 id="sys模块"><a href="#sys模块" class="headerlink" title="sys模块"></a>sys模块</h4><ul>
+<li><code>sys.argv</code>列表中总是至少有一个项目。<code>sys.argv[0]</code>（由于Python从0开始计数）就是当前运行的程序名称。其他的命令行参数在这个项目之后。</li>
+<li><code>sys.version</code>字符串给你提供安装的Python的版本信息</li>
+<li><code>sys.stdin、sys.stdout和sys.stderr</code>分别对应程序的标准输入、标准输出和标准错误流。</li>
+</ul>
+<h4 id="os模块"><a href="#os模块" class="headerlink" title="os模块"></a>os模块</h4><ul>
+<li><code>os.name</code>字符串指示你正在使用的平台。比如对于Windows，它是’nt’，而对于Linux/Unix<br>用户，它是’posix’。</li>
+<li><code>os.getcwd()</code>函数得到当前工作目录，即当前Python脚本工作的目录路径。</li>
+<li><code>os.getenv()和os.putenv()</code>函数分别用来读取和设置环境变量。</li>
+<li><code>os.listdir()</code>返回指定目录下的所有文件和目录名。</li>
+<li><code>os.remove()</code>函数用来删除一个文件。</li>
+<li><code>os.system()</code>函数用来运行shell命令。</li>
+<li><code>os.linesep</code>字符串给出当前平台使用的行终止符。例如，Windows使用’\r\n’，Linux使<br>用’\n’而Mac使用’\r’。</li>
+<li><code>os.path.split()</code>函数返回一个路径的目录名和文件名。<pre><code class="python">&gt;&gt;&gt; os.path.split(&#39;/home/swaroop/byte/code/poem.txt&#39;)
+(&#39;/home/swaroop/byte/code&#39;, &#39;poem.txt&#39;)
+</code></pre>
+</li>
+<li><code>os.path.isfile()和os.path.isdir()</code>函数分别检验给出的路径是一个文件还是目录</li>
+<li><code>os.path.exists()</code>函数用来检验给出的路径是否真地存在</li>
+</ul>
+<h3 id="更多关于Python"><a href="#更多关于Python" class="headerlink" title="更多关于Python"></a>更多关于Python</h3><h4 id="列表综合（List-Comprehension）"><a href="#列表综合（List-Comprehension）" class="headerlink" title="列表综合（List Comprehension）"></a>列表综合（List Comprehension）</h4><pre><code class="python">#!/usr/bin/python
+listone = [2, 3, 4]
+listtwo = [2*i for i in listone if i &gt; 2]
+print listtwo
+</code></pre>
+<h4 id="在函数中接收元组和列表"><a href="#在函数中接收元组和列表" class="headerlink" title="在函数中接收元组和列表"></a>在函数中接收元组和列表</h4><p>在args变量前有<code>*</code>前缀，多余的函数参数都会作为一个元组存储在args中<br>如果使用的是<code>**</code>前缀，多余的参数则会被认为是一个字典的键/值对</p>
+<pre><code class="python">&gt;&gt;&gt; def powersum(power, *args):
+... &#39;&#39;&#39;Return the sum of each argument raised to specified power.&#39;&#39;&#39;
+... total = 0
+... for i in args:
+... total += pow(i, power)
+... return total
+...
+&gt;&gt;&gt; powersum(2, 3, 4)
+25
+</code></pre>
+<pre><code class="python">&gt;&gt;&gt; dict = {}
+&gt;&gt;&gt; print dict
+{}
+&gt;&gt;&gt; def addKVs(**args):
+...     for key in args.keys():
+...             dict[key] = args[key]
+...
+&gt;&gt;&gt; addKVs(a=1,b=2)
+&gt;&gt;&gt; print dict
+{&#39;a&#39;: 1, &#39;b&#39;: 2}
+</code></pre>
+<h4 id="lambda-expression"><a href="#lambda-expression" class="headerlink" title="lambda expression"></a>lambda expression</h4><p>语法：<code>lambda [arg1[,arg2,arg3....argN]]:expression</code><br>注意：<br>只能使用表达式，即便是print语句也不能用在lambda形式中<br><code>for..in..if</code>能做的，最好不要选择lambda</p>
+<pre><code class="python">fuck = lambda : &#39;hello world&#39;
+print fuck()
+addition = lambda a, b : a + b
+print addition(1, 2)
+###########################
+hello world
+3
+</code></pre>
+<h4 id="exec、eval、assert、repr"><a href="#exec、eval、assert、repr" class="headerlink" title="exec、eval、assert、repr"></a>exec、eval、assert、repr</h4><ul>
+<li><code>exec</code>语句用来执行储存在字符串或文件中的Python语句<pre><code class="python">&gt;&gt;&gt; exec &#39;print &quot;Hello World&quot;&#39;
+Hello World
+</code></pre>
+</li>
+<li><code>eval</code>语句用来计算存储在字符串中的有效Python表达式<pre><code class="python">&gt;&gt;&gt; eval(&#39;2*3&#39;)
+6
+</code></pre>
+</li>
+<li><code>assert</code>语句用来声明某个条件是真的<pre><code class="python">&gt;&gt;&gt; mylist = [&#39;item&#39;]
+&gt;&gt;&gt; assert len(mylist) &gt;= 1
+&gt;&gt;&gt; mylist.pop()
+&#39;item&#39;
+&gt;&gt;&gt; assert len(mylist) &gt;= 1
+Traceback (most recent call last):
+File &quot;&lt;stdin&gt;&quot;, line 1, in ?
+AssertionError
+</code></pre>
+</li>
+<li><code>repr</code>函数和<code>反引号</code>（也称转换符）用来获取对象的可打印表示形式<br>注意，在大多数时候有<code>eval(repr(object)) == object</code><br>可通过定义类的<code>__repr__</code>方法来控制对象被<code>repr</code>函数调用时返回的内容</li>
+</ul>
+<pre><code class="python">&gt;&gt;&gt; i = []
+&gt;&gt;&gt; i.append(&#39;item&#39;)
+&gt;&gt;&gt; `i`
+&quot;[&#39;item&#39;]&quot;
+&gt;&gt;&gt; repr(i)
+&quot;[&#39;item&#39;]&quot;
+</code></pre>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #757575;
+            text-shadow: 0;
+            display: none
+        }
+</style>
+	
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn">Read Comments (Make sure disq.us, disquscdn.com and disqus.com can load properly)</button>
+</div>
+
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://TaoSama.com/2017-03-25/Notes, A Byte of Python/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://TaoSama.com/2017-03-25/Notes, A Byte of Python/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/ls-javascript" id="disqus-lazy-load-script">
+    $.ajax({
+        url: 'https://disqus.com/next/config.json',
+        timeout: 4000,
+        type: 'GET',
+        success: (function() {
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//taosama.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+            $('.disqus_click_btn').css('display','none');
+        })(),
+        error: function() {
+          $('.disqus_click_btn').css('display','block');
+        }
+    });
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//taosama.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.disqus_click_btn').css('display','none');
+    });
+</script>
+  	
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2017-04-05/BestCoder Round 92/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Newer
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017-03-07/Coursera Machine Learning/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="TaoSama's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        lwt1367@qq.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:lwt1367@qq.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                Home
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    Archives
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2018/03/">March 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/10/">October 2017<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/09/">September 2017<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/08/">August 2017<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">July 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/06/">June 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/05/">May 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">April 2017<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">March 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/02/">February 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">November 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">September 2016<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">August 2016<span class="sidebar_archives-count">42</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">July 2016<span class="sidebar_archives-count">12</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">June 2016<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/05/">May 2016<span class="sidebar_archives-count">24</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/04/">April 2016<span class="sidebar_archives-count">41</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/03/">March 2016<span class="sidebar_archives-count">42</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                Categories
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/Doing/">Doing<span class="sidebar_archives-count">28</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Blog/">Blog<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/CPP/">CPP<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Computer-Vision/">Computer Vision<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Distributed/">Distributed<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Go/">Go<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Hive/">Hive<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Interview/">Interview<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Life/">Life<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Machine-Learning/">Machine Learning<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Python/">Python<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Shell/">Shell<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Spring/">Spring<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/">动态规划<span class="sidebar_archives-count">27</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/bitset优化/">bitset优化<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/数位dp/">数位dp<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/数据结构优化/">数据结构优化<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/斜率优化/">斜率优化<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/最长上升子序列/">最长上升子序列<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/树形dp/">树形dp<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/概率-期望dp/">概率/期望dp<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/状压dp/">状压dp<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/矩阵优化/">矩阵优化<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/线性dp/">线性dp<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/">图论<span class="sidebar_archives-count">26</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/LCA/">LCA<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/二分图/">二分图<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/拓扑排序/">拓扑排序<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/最大团/">最大团<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/最小生成树/">最小生成树<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/最短路/">最短路<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/生成树计数/">生成树计数<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/网络流/">网络流<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/连通图/">连通图<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/套题/">套题<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/字符串/">字符串<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/字符串/AC自动机/">AC自动机<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/字符串/Manacher-回文树/">Manacher/回文树<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/字符串/SA-SAM/">SA/SAM<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/小结/">小结<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/思维/">思维<span class="sidebar_archives-count">19</span></a></li><li><a class="sidebar_archives-link" href="/categories/思维/分治/">分治<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/思维/扫描线/">扫描线<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/思维/数形结合/">数形结合<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/思维/离线思想/">离线思想<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/思维/贪心/">贪心<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/思维/贪心/区间贪心/">区间贪心<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/思维/逆向思维/">逆向思维<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/技巧/">技巧<span class="sidebar_archives-count">17</span></a></li><li><a class="sidebar_archives-link" href="/categories/技巧/two-pointers/">two pointers<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/技巧/xor/">xor<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/技巧/反转问题/">反转问题<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/技巧/哈希/">哈希<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/技巧/折半搜索/">折半搜索<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/">数学<span class="sidebar_archives-count">26</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/CRT/">CRT<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/FFT-NTT-FWT/">FFT/NTT/FWT<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/博弈/">博弈<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/容斥/">容斥<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/概率-期望/">概率/期望<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/组合数学/">组合数学<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/贡献/">贡献<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/高斯消元/">高斯消元<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/数据结构/">数据结构<span class="sidebar_archives-count">18</span></a></li><li><a class="sidebar_archives-link" href="/categories/数据结构/主席树/">主席树<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/数据结构/二叉搜索树/">二叉搜索树<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/数据结构/可持久化Trie/">可持久化Trie<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/数据结构/并查集/">并查集<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/数据结构/树上莫队/">树上莫队<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/数据结构/树状数组/">树状数组<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/数据结构/线段树/">线段树<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/暴力/">暴力<span class="sidebar_archives-count">15</span></a></li><li><a class="sidebar_archives-link" href="/categories/暴力/大模拟/">大模拟<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/暴力/小模拟/">小模拟<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/暴力/搜索/">搜索<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/暴力/搜索/dfs-bfs/">dfs/bfs<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/暴力/搜索/二-三分搜索/">二/三分搜索<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/暴力/签到/">签到<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算几何/">计算几何<span class="sidebar_archives-count">15</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算几何/三维几何/">三维几何<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算几何/扫描线/">扫描线<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算几何/数值积分/">数值积分<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算几何/旋转卡壳/">旋转卡壳<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算几何/极角扫描/">极角扫描<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算几何/极角排序/">极角排序<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="About">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                About
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                Number of articles
+                <span class="sidebar-badge">206</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+    <a href="mailto:hiviosey@gmail.com" class="sidebar-footer-text-a">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+        sidebar.help
+        <span class="mdl-button__ripple-container">
+          <span class="mdl-ripple"></span>
+        </span>
+      </div>
+    </a>
+
+-->
+
+<!-- Feedback -->
+<!--
+
+    <a href="https://github.com/viosey/hexo-theme-material/issues" target="_blank" class="sidebar-footer-text-a">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+        sidebar.feedback
+        <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+    </a>
+
+-->
+
+<!-- About Theme -->
+<!--
+
+    <a href="https://blog.viosey.com/index.php/Material.html" target="_blank" class="sidebar-footer-text-a">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+             sidebar.about_theme
+            <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+    </a>
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/lwt1367" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+        <a href="https://weibo.com/u/3863360617" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-weibo">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/TaoSama" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;2016&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>TaoSama's Blog
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+    <script src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
