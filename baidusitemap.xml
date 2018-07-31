@@ -4,6 +4,27 @@
 
     
   <url>
+    <loc>http://TaoSama.com/2018-08-01/spark-sql-and-dataframes-notes/</loc>
+    <lastmod>2018-07-31T16:46:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>Notes, Spark SQL and DataFrames</title>
+        <pubTime>2018-07-31T16:44:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="Doing" url="http://TaoSama.com/categories/Doing/"/>
+          
+             
+              <breadCrumb title="Spark" url="http://TaoSama.com/categories/Doing/Spark/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://TaoSama.com/2017-04-28/Backthoughts-about-the-Failure-of-the-Autumn-and-Spring-Campus-Recruiting-of-Toutiao/</loc>
     <lastmod>2018-03-22T03:46:16.000Z</lastmod>
     <data>
@@ -376,26 +397,6 @@
           
              
               <breadCrumb title="Shell" url="http://TaoSama.com/categories/Doing/Shell/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://TaoSama.com/2016-05-09/CQUOJ%2021463%20Angela%20Sequence%EF%BC%88dp%EF%BC%89/</loc>
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>CQUOJ 21463 Angela Sequence（dp）</title>
-        <pubTime>2016-05-08T17:55:10.000Z</pubTime>
-        
-        <tag>dp</tag>
-         
-         
-           
-             
-              <breadCrumb title="动态规划" url="http://TaoSama.com/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
           
         </display>
     </data>
@@ -4640,6 +4641,26 @@
           
              
               <breadCrumb title="概率/期望dp" url="http://TaoSama.com/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E6%A6%82%E7%8E%87-%E6%9C%9F%E6%9C%9Bdp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://TaoSama.com/2016-05-09/CQUOJ%2021463%20Angela%20Sequence%EF%BC%88dp%EF%BC%89/</loc>
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>CQUOJ 21463 Angela Sequence（dp）</title>
+        <pubTime>2016-05-08T17:55:10.000Z</pubTime>
+        
+        <tag>dp</tag>
+         
+         
+           
+             
+              <breadCrumb title="动态规划" url="http://TaoSama.com/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
           
         </display>
     </data>

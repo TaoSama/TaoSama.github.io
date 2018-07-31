@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://TaoSama.com/2018-08-01/spark-sql-and-dataframes-notes/</loc>
+    
+    <lastmod>2018-07-31T16:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://TaoSama.com/2017-04-28/Backthoughts-about-the-Failure-of-the-Autumn-and-Spring-Campus-Recruiting-of-Toutiao/</loc>
     
     <lastmod>2018-03-22T03:46:16.000Z</lastmod>
@@ -152,13 +159,6 @@
     <loc>http://TaoSama.com/2017-07-01/shell-notes/</loc>
     
     <lastmod>2017-09-20T09:28:09.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://TaoSama.com/2016-05-09/CQUOJ%2021463%20Angela%20Sequence%EF%BC%88dp%EF%BC%89/</loc>
-    
-    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
   </url>
   
@@ -1459,6 +1459,13 @@
   
   <url>
     <loc>http://TaoSama.com/2016-03-28/CDOJ%201051%20Eggs%20broken%EF%BC%88%E6%9C%9F%E6%9C%9Bdp%EF%BC%89/</loc>
+    
+    <lastmod>2017-09-19T14:48:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://TaoSama.com/2016-05-09/CQUOJ%2021463%20Angela%20Sequence%EF%BC%88dp%EF%BC%89/</loc>
     
     <lastmod>2017-09-19T14:48:07.000Z</lastmod>
     
