@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <%
+  var title = page.title;
+
+  if (is_archive()){
+    title = 'Archives';
+
+    if (is_month()){
+      title += ': ' + page.year + '/' + page.month;
+    } else if (is_year()){
+      title += ': ' + page.year;
+    }
+  } else if (is_category()){
+    title = 'Category: ' + page.category;
+  } else if (is_tag()){
+    title = 'Tag: ' + page.tag;
+  }
+  %>
+  <title><% if (title){ %><%= title %> | <% } %><%= config.title %> - <%= config.description %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
+  <% if (theme.rss){ %>
+    <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
+  <% } %>
+
+  <!-- favicons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/css/images/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/css/images/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/css/images/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/css/images/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/css/images/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/css/images/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/css/images/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/css/images/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/css/images/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/css/images/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/css/images/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/css/images/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/css/images/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/css/images/manifest.json">
+  <link rel="mask-icon" href="/css/images/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/css/images/favicon.ico">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="msapplication-TileImage" content="/css/images/mstile-144x144.png">
+  <meta name="msapplication-config" content="/css/images/browserconfig.xml">
+  <meta name="theme-color" content="#3B74AC">
+  <!-- end of icons -->
+  <link href="http://fonts.lug.ustc.edu.cn/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link href="/css/duoshuo.css" rel="stylesheet" type="text/css">
+
+  <%- css('css/style') %>

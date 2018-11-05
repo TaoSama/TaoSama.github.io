@@ -1,0 +1,30 @@
+<footer id="footer">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"> </script>
+  <% if (theme.sidebar === 'bottom'){ %>
+    <%- partial('_partial/sidebar') %>
+  <% } %>
+  <div class="outer">
+    <div id="footer-info" class="inner" align = "center">
+      Copyright &copy; <%= date(new Date(), 'YYYY') %> 
+	  <a href="/" target="_blank"> <%= config.author || config.title %> </a> <br>
+      Powered by <a href="https://hexo.io/zh-cn/docs/index.html" target="_blank">Hexo</a>
+	  &nbsp;|&nbsp;
+      Theme by <a href="https://github.com/TaoSama/landscape-plus" target="_blank">landscape-plus</a>
+	  &nbsp;|&nbsp;
+	  <span id="busuanzi_container_site_pv">
+        总访问量 <a href="http://service.ibruce.info/" target="_blank"><span id="busuanzi_value_site_pv"></span></a> 次
+      </span>
+      <span id="busuanzi_container_site_uv">
+        <a href="http://service.ibruce.info/" target="_blank"><span id="busuanzi_value_site_uv"></span></a> 人
+      </span>  
+    </div>
+  </div>
+    <!-- 为超链接加上target='_blank'属性 -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('a[href^="http"]').each(function() {
+			$(this).attr('target', '_blank');
+		});
+	});
+	</script>
+</footer>

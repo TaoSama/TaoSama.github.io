@@ -1,0 +1,52 @@
+<footer id="footer">
+  <% if (theme.sidebar === 'bottom'){ %>
+    <%- partial('_partial/sidebar') %>
+  <% } %>
+  <img src="/css/images/umaru.png" style="position:fixed; right:0; bottom:0; width:70px">
+  <div class="outer">
+    <div id="footer-info" style="text-align:center; border:0;">
+	   <div style="font-family: FontAwesome;font-size: 20px;">
+		<a href="http://weibo.com/3863360617" title="微博" target="_blank">&#61834;</a>&nbsp;
+		<!--
+		<a href="http://www.renren.com/287137027" title="人人" target="_blank">&#61835;</a>&nbsp; 
+		<a href="http://user.qzone.qq.com/525969441" title="QQ空间" target="_blank">&#61910;</a>&nbsp;
+		-->
+		<a href="https://www.facebook.com/lwt1367" title="Facebook" target="_blank">&#62000;</a>&nbsp;
+		<a href="https://twitter.com/lwt1367" title="Twitter" target="_blank">&#61593;</a>&nbsp;
+		<a href="http://www.linkedin.com/in/lwt1367" title="LinkedIn" target="_blank">&#61665;</a>&nbsp;
+		<a href="https://github.com/TaoSama" title="GitHub" target="_blank">&#61595;</a>&nbsp;
+		<a href="https://plus.google.com/115031676619400074158" title="Google+" target="_blank">&#61653;</a>
+	   </div>
+	   <div style="font-size: 15px;">
+		<a href="/sitemap.xml">Sitemap</a>&nbsp;
+		<a href="/atom.xml">RSS</a>&nbsp;
+		<a href="mailto:lwt1367@gmail.com" target="_blank">Contact</a>
+		<br>
+		Copyright &copy; 2016-<%= date(new Date(), 'YYYY') %> 
+	    <a href="/" target="_blank"> <%= config.author || config.title %> </a>
+		<br>
+		Powered by <a href="https://hexo.io/zh-cn/docs/index.html" target="_blank">Hexo</a>
+	    &nbsp;|&nbsp;
+	    Theme by <a href="https://github.com/TaoSama/landscape" target="_blank">landscape</a>
+	    &nbsp;|&nbsp;
+	    <span id="busuanzi_container_site_pv">
+		总访问量 <a href="http://service.ibruce.info/" target="_blank"><span id="busuanzi_value_site_pv"></span></a> 次
+	    </span>
+	    <span id="busuanzi_container_site_uv">
+		<a href="http://service.ibruce.info/" target="_blank"><span id="busuanzi_value_site_uv"></span></a> 人
+	    </span>
+	   </div>
+	</div>
+  </div>
+  <!-- 为超链接加上target='_blank'属性 -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('a[href^="http"]').each(function() {
+			$(this).attr('target', '_blank');
+		});
+	});
+  </script>
+  <!-- 不蒜子js -->
+  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+</footer>
