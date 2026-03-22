@@ -23,6 +23,8 @@
 
 
 
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+
 
 
 
@@ -52,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no">
     <meta name="description" itemprop="description" content="Forward and Never Step Back">
-    <meta name="keywords" content="null">
+    <meta name="keywords" content="Algorithm, ACMer">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -78,6 +80,8 @@
         <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
         <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
+        
+            
         
 
     
@@ -226,6 +230,10 @@
 
     <!-- RSS -->
     
+        
+            <link rel="alternate" type="application/atom+xml" href="/atom.xml">
+        
+    
 
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://blog.taoai.site/">
@@ -316,7 +324,7 @@
         <p class="index-top-block-slogan"><a href="#">
         
             
-                Hi, nice to meet you
+                Reborn and Be Together
             
         
         </a></p>
@@ -339,23 +347,22 @@
 
     <!-- Search -->
     
-    <!-- Google -->
+
+
+
+
+    <!-- Local -->
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable" method="post" action="">
         <label id="search-label" class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent mdl-shadow--4dp" for="search">
             <i class="material-icons mdl-color-text--white" role="presentation">search</i>
         </label>
 
-        <form autocomplete="off" id="search-form" method="get" action="//google.com/search" accept-charset="UTF-8" class="mdl-textfield__expandable-holder" target="_blank">
-            <input class="mdl-textfield__input search-input" type="search" name="q" id="search" placeholder="">
+        <form autocomplete="off" id="search-form" class="mdl-textfield__expandable-holder">
+            <input type="text" id="search" class="form-control mdl-textfield__input search-input" name="q" results="0" placeholder=""/>
             <label id="search-form-label" class="mdl-textfield__label" for="search"></label>
-
-            <input type="hidden" name="sitesearch" value="https://blog.taoai.site">
         </form>
     </div>
-
-
-
-
+    <div id="local-search-result"></div>
 
 
 
@@ -381,6 +388,18 @@
         </button>
         <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-pages-button">
             
+                <a class="index_share-link" href="/about" title="About">
+                    <li class="mdl-menu__item mdl-js-ripple-effect">
+                        About
+                    </li>
+                </a>
+            
+                <a class="index_share-link" href="/tags" title="Tags">
+                    <li class="mdl-menu__item mdl-js-ripple-effect">
+                        Tags
+                    </li>
+                </a>
+            
         </ul>
 
         <!-- Menu -->
@@ -390,7 +409,22 @@
         </button>
         <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="menubtn">
             
+                <!-- All Site UV -->
+                <a class="index_share-link" href="#">
+                    <li class="mdl-menu__item mdl-js-ripple-effect">
+                        <span id="busuanzi_container_site_uv">
+                            <span id="busuanzi_value_site_uv"></span>&nbsp;Views
+                        </span>
+                    </li>
+                </a>
+            
 
+            
+                <a class="index_share-link" href="/atom.xml">
+                    <li class="mdl-menu__item mdl-js-ripple-effect">
+                        Article RSS
+                    </li>
+                </a>
             
 
             
@@ -1120,7 +1154,7 @@ progessive development
 
     <!-- Sidebar Email -->
     <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
-        youremail@email.com
+        null
         <b class="caret"></b>
     </a>
 </div>
@@ -1177,8 +1211,43 @@ progessive development
 
     <!-- Categories  -->
     
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                Categories
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/Doing/">Doing<span class="sidebar_archives-count">29</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Blog/">Blog<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/CPP/">CPP<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Computer-Vision/">Computer Vision<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Distributed/">Distributed<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Go/">Go<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Hive/">Hive<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Interview/">Interview<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Life/">Life<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Machine-Learning/">Machine Learning<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Python/">Python<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Shell/">Shell<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Spark/">Spark<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Doing/Spring/">Spring<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/">动态规划<span class="sidebar_archives-count">27</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/bitset优化/">bitset优化<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/数位dp/">数位dp<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/数据结构优化/">数据结构优化<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/斜率优化/">斜率优化<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/最长上升子序列/">最长上升子序列<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/树形dp/">树形dp<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/概率-期望dp/">概率/期望dp<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/状压dp/">状压dp<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/矩阵优化/">矩阵优化<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/动态规划/线性dp/">线性dp<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/">图论<span class="sidebar_archives-count">26</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/LCA/">LCA<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/二分图/">二分图<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/拓扑排序/">拓扑排序<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/最大团/">最大团<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/最小生成树/">最小生成树<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/最短路/">最短路<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/生成树计数/">生成树计数<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/网络流/">网络流<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/图论/连通图/">连通图<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/套题/">套题<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/字符串/">字符串<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/字符串/AC自动机/">AC自动机<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/字符串/Manacher-回文树/">Manacher/回文树<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/字符串/SA-SAM/">SA/SAM<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/小结/">小结<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/思维/">思维<span class="sidebar_archives-count">19</span></a></li><li><a class="sidebar_archives-link" href="/categories/思维/分治/">分治<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/思维/扫描线/">扫描线<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/思维/数形结合/">数形结合<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/思维/离线思想/">离线思想<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/思维/贪心/">贪心<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/思维/贪心/区间贪心/">区间贪心<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/思维/逆向思维/">逆向思维<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/技巧/">技巧<span class="sidebar_archives-count">17</span></a></li><li><a class="sidebar_archives-link" href="/categories/技巧/two-pointers/">two pointers<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/技巧/xor/">xor<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/技巧/反转问题/">反转问题<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/技巧/哈希/">哈希<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/技巧/折半搜索/">折半搜索<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/">数学<span class="sidebar_archives-count">26</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/CRT/">CRT<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/FFT-NTT-FWT/">FFT/NTT/FWT<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/博弈/">博弈<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/容斥/">容斥<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/概率-期望/">概率/期望<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/组合数学/">组合数学<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/贡献/">贡献<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/高斯消元/">高斯消元<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/数据结构/">数据结构<span class="sidebar_archives-count">18</span></a></li><li><a class="sidebar_archives-link" href="/categories/数据结构/主席树/">主席树<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/数据结构/二叉搜索树/">二叉搜索树<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/数据结构/可持久化Trie/">可持久化Trie<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/数据结构/并查集/">并查集<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/数据结构/树上莫队/">树上莫队<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/数据结构/树状数组/">树状数组<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/数据结构/线段树/">线段树<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/暴力/">暴力<span class="sidebar_archives-count">15</span></a></li><li><a class="sidebar_archives-link" href="/categories/暴力/大模拟/">大模拟<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/暴力/小模拟/">小模拟<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/暴力/搜索/">搜索<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/暴力/搜索/dfs-bfs/">dfs/bfs<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/暴力/搜索/二-三分搜索/">二/三分搜索<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/暴力/签到/">签到<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算几何/">计算几何<span class="sidebar_archives-count">15</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算几何/三维几何/">三维几何<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算几何/扫描线/">扫描线<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算几何/数值积分/">数值积分<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算几何/旋转卡壳/">旋转卡壳<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算几何/极角扫描/">极角扫描<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算几何/极角排序/">极角排序<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
 
     <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="About">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                About
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/tags" title="Tags">
+                
+                    <i class="material-icons sidebar-material-icons">loyalty</i>
+                
+                Tags
+            </a>
+        </li>
+        
     
 
     <!-- Article Number  -->
@@ -1253,29 +1322,11 @@ It will not impact the appearance and can give developers a lot of support :)
         <div class="mdl-mini-footer--left-section sns-list">
     <!-- Twitter -->
     
-        <a href="https://twitter.com/twitter" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
-                <span class="visuallyhidden">Twitter</span>
-            </button><!--
-     --></a>
-    
 
     <!-- Facebook -->
     
-        <a href="https://www.facebook.com/facebook" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
-                <span class="visuallyhidden">Facebook</span>
-            </button><!--
-     --></a>
-    
 
     <!-- Google + -->
-    
-        <a href="https://www.google.com/" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
-                <span class="visuallyhidden">Google Plus</span>
-            </button><!--
-     --></a>
     
 
     <!-- Weibo -->
@@ -1288,6 +1339,12 @@ It will not impact the appearance and can give developers a lot of support :)
     
 
     <!-- Github -->
+    
+        <a href="https://github.com/TaoSama" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
     
 
     <!-- LinkedIn -->
@@ -1373,6 +1430,9 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
 
 
 
@@ -1382,6 +1442,25 @@ It will not impact the appearance and can give developers a lot of support :)
     
 
     <!-- Local Search-->
+    
+        <script type="text/ls-javascript" id="search-local-js-script">
+    var searchFunc=function(c,a,b){$.ajax({url:c,dataType:"xml",success:function(e){var d=$("entry",e).map(function(){return{title:$("title",this).text(),content:$("content",this).text(),url:$("url",this).text()}}).get();var g=document.getElementById(a);var f=document.getElementById(b);g.addEventListener("input",function(){var i='<ul class="search-result-list">';var h=this.value.trim().toLowerCase().split(/[\s\-]+/);f.innerHTML="";if(this.value.trim().length<=0){return}d.forEach(function(o){var n=true;var s=[];var t=o.title.trim().toLowerCase();var m=o.content.trim().replace(/<[^>]+>/g,"").toLowerCase();var j=o.url;var u=-1;var q=-1;var p=-1;if(t!==""&&m!==""){h.forEach(function(w,x){u=t.indexOf(w);q=m.indexOf(w);if(u<0&&q<0){n=false}else{if(q<0){q=0}if(x===0){p=q}}})}if(n){i+='<li><a href="'+j+'" class="search-result-title" target="_blank">'+t;var r=o.content.trim().replace(/<[^>]+>/g,"");if(p>=0){var k=p-6;var l=p+6;if(k<0){k=0}if(k===0){l=10}if(l>r.length){l=r.length}var v=r.substr(k,l);h.forEach(function(w){var x=new RegExp(w,"gi");v=v.replace(x,'<em class="search-keyword">'+w+"</em>")});i+='<p class="search-result">'+v+"...</p></a>"}}});f.innerHTML=i})}})};
+</script>
+
+
+        <script type="text/ls-javascript" id="search-input-script">
+            var inputArea = document.querySelector('#search');
+            var getSearchFile = function() {
+                var path = 'search.xml';
+                searchFunc(path, 'search', 'local-search-result');
+            }
+
+            if(inputArea) {
+                inputArea.onfocus = function() {
+                    getSearchFile();
+                }
+            }
+        </script>
     
 
 
@@ -1396,6 +1475,8 @@ It will not impact the appearance and can give developers a lot of support :)
 
 <!-- Import prettify js  -->
 
+    
+
 
 
 <!-- Window Load -->
@@ -1406,6 +1487,8 @@ It will not impact the appearance and can give developers a lot of support :)
         $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
     });
 
+    
+        
     
     
 </script>
