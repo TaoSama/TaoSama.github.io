@@ -12,7 +12,7 @@ timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://TaoSama.com
+url: https://blog.taoai.site
 root: /
 permalink: :year-:month-:day/:title/
 permalink_defaults:
@@ -90,8 +90,4 @@ sitemap:
   path: sitemap.xml
   
 # Deployment
-## Docs: https://hexo.io/docs/deployment.html
-deploy:
-  type: git
-  repo: git@github.com:TaoSama/TaoSama.github.io.git
-  branch: master
+## Deployed via GitHub Actions to gh-pages branch
