@@ -4,4 +4,8 @@ db.json
 *.log
 node_modules/
 public/
-.deploy*/
+.deploy*/themes/bubuzou
+themes/even
+themes/material
+themes/minos
+themes/vexo

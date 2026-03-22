@@ -14,8 +14,13 @@ jobs:
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
+
+      - name: Checkout material theme
+        uses: actions/checkout@v4
         with:
-          submodules: true
+          repository: viosey/hexo-theme-material
+          ref: 6fd8fe99d5ad69ac41b82e1bed947e2ddeca58c3
+          path: themes/material
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
