@@ -23,8 +23,6 @@
 
 
 
-    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
-
 
 
 
@@ -254,7 +252,7 @@ $给定二维平面上N个点，定义距离为欧氏距离$$对于N个点组成
 
     
         <meta property="article:published_time" content="Wed Mar 23 2016 20:20:10 GMT+0800">
-        <meta property="article:modified_time" content="Sun Mar 22 2026 12:14:40 GMT+0000">
+        <meta property="article:modified_time" content="Sun Mar 22 2026 12:40:10 GMT+0000">
     
 
     <!-- The Twitter Card protocol -->
@@ -277,7 +275,7 @@ $给定二维平面上N个点，定义距离为欧氏距离$$对于N个点组成
     "mainEntityOfPage": "https://blog.taoai.site/2016-03-23/平面最近点对问题/index.html",
     "headline": "平面最近点对问题",
     "datePublished": "Wed Mar 23 2016 20:20:10 GMT+0800",
-    "dateModified": "Sun Mar 22 2026 12:14:40 GMT+0000",
+    "dateModified": "Sun Mar 22 2026 12:40:10 GMT+0000",
     "author": {
         "@type": "Person",
         "name": "TaoSama",
@@ -285,7 +283,7 @@ $给定二维平面上N个点，定义距离为欧氏距离$$对于N个点组成
             "@type": "ImageObject",
             "url": "/img/avatar.png"
         },
-        "description": "Reborn and Be Together"
+        "description": "Forward and Never Step Back"
     },
     "publisher": {
         "@type": "Organization",
@@ -452,17 +450,6 @@ $给定二维平面上N个点，定义距离为欧氏距离$$对于N个点组成
     
 
     
-        
-            <!-- Busuanzi Views -->
-            <a class="post_share-link" href="#">
-                <li class="mdl-menu__item">
-                    <span id="busuanzi_container_page_pv">
-                        <span id="busuanzi_value_page_pv"></span>&nbsp;Views
-                    </span>
-                </li>
-            </a>
-        
-    
 
     <!-- Share Weibo -->
     
@@ -531,15 +518,15 @@ $给定二维平面上N个点，定义距离为欧氏距离$$对于N个点组成
 <ul>
 <li><p>划分<br>如果将所有的点按照二维偏序（即横坐标$x$为第一关键字，纵坐标$y$为第二关键字）排序<br>那么通过中间的那个点就可以将所有点划分成均等的<code>2</code>部分了<br>这样我们以$O(nlogn)-O(1)$的时间复杂度做到了这一点</p>
 </li>
-<li><p>递归处理子问题<br><img src="http://7xru22.com1.z0.glb.clouddn.com/16-3-23/81385096.jpg" alt><br>假设均等的<code>2</code>部分的子问题的答案分别是$d_1,d_2$，显然当前答案就是$d=min(d_1,d_2)$<br>$(1)$类型的答案为$d$，但是我们发现$(2)$类型的答案很有可能$\le d$<br>即中间那个点，在它两边的点形成的点对很有可能也会是答案<br>也就说<code>1</code>个子问题对另<code>1</code>个子问题产生了影响，接下来思考如何计算这一部分的答案</p>
+<li><p>递归处理子问题<br><img src="/images/16-3-23_81385096.jpg" alt><br>假设均等的<code>2</code>部分的子问题的答案分别是$d_1,d_2$，显然当前答案就是$d=min(d_1,d_2)$<br>$(1)$类型的答案为$d$，但是我们发现$(2)$类型的答案很有可能$\le d$<br>即中间那个点，在它两边的点形成的点对很有可能也会是答案<br>也就说<code>1</code>个子问题对另<code>1</code>个子问题产生了影响，接下来思考如何计算这一部分的答案</p>
 </li>
-<li><p>子问题间的影响<br><img src="http://7xru22.com1.z0.glb.clouddn.com/16-3-23/34666651.jpg" alt></p>
+<li><p>子问题间的影响<br><img src="/images/16-3-23_34666651.jpg" alt></p>
 <ul>
 <li><p>可能产生影响的点<br>对于中间点<code>p</code>来说，显然左右横坐标距离<code>d</code>以内的才是要考虑的点<br>即若<code>p</code>点坐标为$(x,y)$，那么要考虑的点的横坐标$x-d&lt;x’&lt;x+d$，其它的点显然不能产生影响<br>找到了这些可能产生影响的点后，点最坏有$n$个，如果一一枚举还是$O(n^2)$<br>难道就逃脱不了$n^2$的命运了么？</p>
 </li>
 <li><p>能对一个点贡献答案的点<br>对于其中一个点$p_1$，能产生答案的点只考虑$y$比它大的那部分（这样一对点不会重复枚举）<br>即若$p_1$点坐标为$(x,y)$，那么要考虑的点的横坐标$x-d&lt;x’&lt;x+d$，纵坐标$y \le y’ \le y +d$<br>也就是说对$p_1$贡献答案的点应该就是如图那样的矩形部分</p>
 </li>
-<li><p>矩形内至多有6个点<br>我说矩形里至多有<code>6</code>个点你信不信！我们来证明一下：<br><img src="http://7xru22.com1.z0.glb.clouddn.com/16-3-23/72387356.jpg" alt>、<br>将矩形$R$的长为$2d$的边三等分，宽为$d$的边二等分<br>这样我们得到了<code>6</code>个$\frac{2d}{3}\times \frac{d}{2}$的小矩形<br>假设位于中轴线两侧的<code>4</code>个小矩形中有多于<code>2</code>个点，<br>设$u，v$是位于同一小矩形中的两个点，则<br>$d(u,v)=\sqrt{(x_u - x_v) ^ 2 + (y_u-y_v) ^ 2 }\le \sqrt{(d / 2) ^ 2 + (2d / 3) ^ 2} = \sqrt{25 / 36 * d ^ 2}=\frac{5d}{6} &lt; d$<br>因为递归已经算出两边子问题解为最优为$d$了，这显然是矛盾的，所以每个小矩形最多只能有<code>1</code>个点<br>但是跨越中轴线的<code>2</code>个小矩形中可能会有多于<code>2</code>个点，但我们发现它们只能在中轴线上<br>不然就与其他<code>4</code>个小矩形中的点构成了小于$d$的点对了，但是由于合法性最坏的点对如下图：<br><img src="http://7xru22.com1.z0.glb.clouddn.com/16-3-23/19551345.jpg" alt><br>这样最多就只有<code>6</code>个点了，重合点是非法的，因为会被分到<code>2</code>边，然后违法了$d$是最优解的条件<br>$\blacksquare$</p>
+<li><p>矩形内至多有6个点<br>我说矩形里至多有<code>6</code>个点你信不信！我们来证明一下：<br><img src="/images/16-3-23_72387356.jpg" alt>、<br>将矩形$R$的长为$2d$的边三等分，宽为$d$的边二等分<br>这样我们得到了<code>6</code>个$\frac{2d}{3}\times \frac{d}{2}$的小矩形<br>假设位于中轴线两侧的<code>4</code>个小矩形中有多于<code>2</code>个点，<br>设$u，v$是位于同一小矩形中的两个点，则<br>$d(u,v)=\sqrt{(x_u - x_v) ^ 2 + (y_u-y_v) ^ 2 }\le \sqrt{(d / 2) ^ 2 + (2d / 3) ^ 2} = \sqrt{25 / 36 * d ^ 2}=\frac{5d}{6} &lt; d$<br>因为递归已经算出两边子问题解为最优为$d$了，这显然是矛盾的，所以每个小矩形最多只能有<code>1</code>个点<br>但是跨越中轴线的<code>2</code>个小矩形中可能会有多于<code>2</code>个点，但我们发现它们只能在中轴线上<br>不然就与其他<code>4</code>个小矩形中的点构成了小于$d$的点对了，但是由于合法性最坏的点对如下图：<br><img src="/images/16-3-23_19551345.jpg" alt><br>这样最多就只有<code>6</code>个点了，重合点是非法的，因为会被分到<code>2</code>边，然后违法了$d$是最优解的条件<br>$\blacksquare$</p>
 </li>
 <li><p>时间复杂度分析<br>有一个对$y$坐标排序，我们可以通过归并来实现，这样就还是$O(n)$<br>总时间复杂度：$T(n)=2T(n/2)+O(6n)\Rightarrow O(nlogn)$</p>
 </li>
@@ -697,7 +684,7 @@ int main() {
 
     <!-- Sidebar Email -->
     <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
-        null
+        lwt1367@qq.com
         <b class="caret"></b>
     </a>
 </div>
@@ -710,7 +697,7 @@ int main() {
         <ul id="settings-dropdown" class="dropdown-menu">
             
                 <li>
-                    <a href="#" target="_blank" title="Email Me">
+                    <a href="mailto:lwt1367@qq.com" target="_blank" title="Email Me">
                         
                             <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
                         
@@ -868,11 +855,23 @@ It will not impact the appearance and can give developers a lot of support :)
 
     <!-- Facebook -->
     
+        <a href="https://www.facebook.com/lwt1367" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
 
     <!-- Google + -->
     
 
     <!-- Weibo -->
+    
+        <a href="https://weibo.com/u/3863360617" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-weibo">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
     
 
     <!-- Instagram -->
@@ -972,9 +971,6 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
-
-    <!-- Busuanzi -->
-    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 

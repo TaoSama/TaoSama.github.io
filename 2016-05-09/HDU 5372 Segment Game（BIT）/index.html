@@ -23,8 +23,6 @@
 
 
 
-    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
-
 
 
 
@@ -254,7 +252,7 @@ $N\le 2\times 10^5次操作$$0\ l:如果是第i次添加操作，那么加入一
 
     
         <meta property="article:published_time" content="Mon May 09 2016 16:24:10 GMT+0800">
-        <meta property="article:modified_time" content="Sun Mar 22 2026 12:14:40 GMT+0000">
+        <meta property="article:modified_time" content="Sun Mar 22 2026 12:40:10 GMT+0000">
     
 
     <!-- The Twitter Card protocol -->
@@ -277,7 +275,7 @@ $N\le 2\times 10^5次操作$$0\ l:如果是第i次添加操作，那么加入一
     "mainEntityOfPage": "https://blog.taoai.site/2016-05-09/HDU 5372 Segment Game（BIT）/index.html",
     "headline": "HDU 5372 Segment Game（BIT）",
     "datePublished": "Mon May 09 2016 16:24:10 GMT+0800",
-    "dateModified": "Sun Mar 22 2026 12:14:40 GMT+0000",
+    "dateModified": "Sun Mar 22 2026 12:40:10 GMT+0000",
     "author": {
         "@type": "Person",
         "name": "TaoSama",
@@ -285,7 +283,7 @@ $N\le 2\times 10^5次操作$$0\ l:如果是第i次添加操作，那么加入一
             "@type": "ImageObject",
             "url": "/img/avatar.png"
         },
-        "description": "Reborn and Be Together"
+        "description": "Forward and Never Step Back"
     },
     "publisher": {
         "@type": "Organization",
@@ -443,17 +441,6 @@ $N\le 2\times 10^5次操作$$0\ l:如果是第i次添加操作，那么加入一
     
 
     
-        
-            <!-- Busuanzi Views -->
-            <a class="post_share-link" href="#">
-                <li class="mdl-menu__item">
-                    <span id="busuanzi_container_page_pv">
-                        <span id="busuanzi_value_page_pv"></span>&nbsp;Views
-                    </span>
-                </li>
-            </a>
-        
-    
 
     <!-- Share Weibo -->
     
@@ -515,7 +502,7 @@ $N\le 2\times 10^5次操作$$0\ l:如果是第i次添加操作，那么加入一
 </blockquote>
 <p>分析：</p>
 <blockquote>
-<p>$破题卡nlog^2n的cdq分治做法。。$<br>$然后赛上就卡死了，事实上每次添加的线段长度都更长这个条件很苛刻的$<br><img src="http://7xru22.com1.z0.glb.clouddn.com/16-5-9/81258324.jpg" alt><br>$画个图发现就五种情况，那么答案就显然易见了$<br>$并且发现①②可以合并成左端点在A外的情况$<br>$③④可以合并成右端点在B外的情况$<br>$ans(⑤) = 总线段数-这两种情况的和$<br>$2个BIT分别维护下左右端点的数量即可$<br>$我自己脑补了题意。。特么的题意是删除第i次添加操作的，，这个添加二字$<br>$好吧，时间复杂度O(nlogn)$</p>
+<p>$破题卡nlog^2n的cdq分治做法。。$<br>$然后赛上就卡死了，事实上每次添加的线段长度都更长这个条件很苛刻的$<br><img src="/images/16-5-9_81258324.jpg" alt><br>$画个图发现就五种情况，那么答案就显然易见了$<br>$并且发现①②可以合并成左端点在A外的情况$<br>$③④可以合并成右端点在B外的情况$<br>$ans(⑤) = 总线段数-这两种情况的和$<br>$2个BIT分别维护下左右端点的数量即可$<br>$我自己脑补了题意。。特么的题意是删除第i次添加操作的，，这个添加二字$<br>$好吧，时间复杂度O(nlogn)$</p>
 </blockquote>
 <p>代码：</p>
 <pre><code class="cpp">//
@@ -699,7 +686,7 @@ int main() {
 
     <!-- Sidebar Email -->
     <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
-        null
+        lwt1367@qq.com
         <b class="caret"></b>
     </a>
 </div>
@@ -712,7 +699,7 @@ int main() {
         <ul id="settings-dropdown" class="dropdown-menu">
             
                 <li>
-                    <a href="#" target="_blank" title="Email Me">
+                    <a href="mailto:lwt1367@qq.com" target="_blank" title="Email Me">
                         
                             <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
                         
@@ -870,11 +857,23 @@ It will not impact the appearance and can give developers a lot of support :)
 
     <!-- Facebook -->
     
+        <a href="https://www.facebook.com/lwt1367" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
 
     <!-- Google + -->
     
 
     <!-- Weibo -->
+    
+        <a href="https://weibo.com/u/3863360617" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-weibo">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
     
 
     <!-- Instagram -->
@@ -974,9 +973,6 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
-
-    <!-- Busuanzi -->
-    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 

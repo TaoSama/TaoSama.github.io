@@ -23,8 +23,6 @@
 
 
 
-    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
-
 
 
 
@@ -250,7 +248,7 @@
 
     
         <meta property="article:published_time" content="Wed Apr 12 2017 02:34:10 GMT+0800">
-        <meta property="article:modified_time" content="Sun Mar 22 2026 12:14:40 GMT+0000">
+        <meta property="article:modified_time" content="Sun Mar 22 2026 12:40:10 GMT+0000">
     
 
     <!-- The Twitter Card protocol -->
@@ -273,7 +271,7 @@
     "mainEntityOfPage": "https://blog.taoai.site/2017-04-11/Codeforces Round 358 (Div. 2) E. Alyona and Triangles/index.html",
     "headline": "Codeforces Round 358 (Div. 2) E. Alyona and Triangles",
     "datePublished": "Wed Apr 12 2017 02:34:10 GMT+0800",
-    "dateModified": "Sun Mar 22 2026 12:14:40 GMT+0000",
+    "dateModified": "Sun Mar 22 2026 12:40:10 GMT+0000",
     "author": {
         "@type": "Person",
         "name": "TaoSama",
@@ -281,7 +279,7 @@
             "@type": "ImageObject",
             "url": "/img/avatar.png"
         },
-        "description": "Reborn and Be Together"
+        "description": "Forward and Never Step Back"
     },
     "publisher": {
         "@type": "Organization",
@@ -404,17 +402,6 @@
     
 
     
-        
-            <!-- Busuanzi Views -->
-            <a class="post_share-link" href="#">
-                <li class="mdl-menu__item">
-                    <span id="busuanzi_container_page_pv">
-                        <span id="busuanzi_value_page_pv"></span>&nbsp;Views
-                    </span>
-                </li>
-            </a>
-        
-    
 
     <!-- Share Weibo -->
     
@@ -472,7 +459,7 @@
     
         <p>题意：<br>$N\le 5000个点，保证任意形成的三角形的面积\le S\le 10^{18}$<br>$现在构成出一个三角形面积不超过4S，使得包含这个N个点$</p>
 <a id="more"></a>
-<p>分析：<br>$求个凸包，然后n^2枚举2个点，two\ pointers旋转卡壳搞出第三个点$<br>$求出最大三角形，之后把每条边作为对角线搞出大三角形就好了$<br>$即原来三角形的每个点是新三角形每条边的中点$<br>$证明方式就反证一下，如果有点在大三角形外$<br>$那么他作为新的三角形的顶点，拥有更大的高，面积更大，矛盾$<br>$所以原来的构造方法正确$<br>$时间复杂度O(n^2)$<br><img src="http://7xru22.com1.z0.glb.clouddn.com/17-4-12/82888166-file_1491935866495_b4d6.png" alt></p>
+<p>分析：<br>$求个凸包，然后n^2枚举2个点，two\ pointers旋转卡壳搞出第三个点$<br>$求出最大三角形，之后把每条边作为对角线搞出大三角形就好了$<br>$即原来三角形的每个点是新三角形每条边的中点$<br>$证明方式就反证一下，如果有点在大三角形外$<br>$那么他作为新的三角形的顶点，拥有更大的高，面积更大，矛盾$<br>$所以原来的构造方法正确$<br>$时间复杂度O(n^2)$<br><img src="/images/17-4-12_82888166-file_1491935866495_b4d6.png" alt></p>
 <p>题外话：<br>$我觉得点积叉积还是写函数比较好，不重载运算符比较好$<br>$避免更多的括号，省得出事，而且好看，算是更新了一下板子$</p>
 <p>代码：</p>
 <pre><code class="cpp">//
@@ -663,7 +650,7 @@ int main() {
 
     <!-- Sidebar Email -->
     <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
-        null
+        lwt1367@qq.com
         <b class="caret"></b>
     </a>
 </div>
@@ -676,7 +663,7 @@ int main() {
         <ul id="settings-dropdown" class="dropdown-menu">
             
                 <li>
-                    <a href="#" target="_blank" title="Email Me">
+                    <a href="mailto:lwt1367@qq.com" target="_blank" title="Email Me">
                         
                             <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
                         
@@ -834,11 +821,23 @@ It will not impact the appearance and can give developers a lot of support :)
 
     <!-- Facebook -->
     
+        <a href="https://www.facebook.com/lwt1367" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
 
     <!-- Google + -->
     
 
     <!-- Weibo -->
+    
+        <a href="https://weibo.com/u/3863360617" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-weibo">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
     
 
     <!-- Instagram -->
@@ -938,9 +937,6 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
-
-    <!-- Busuanzi -->
-    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 

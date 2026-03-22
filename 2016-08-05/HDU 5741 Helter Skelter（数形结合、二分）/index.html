@@ -23,8 +23,6 @@
 
 
 
-    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
-
 
 
 
@@ -256,7 +254,7 @@ $给定一个压缩过的0开头的01交替字符串，比如00110表示为{ 2,\
 
     
         <meta property="article:published_time" content="Fri Aug 05 2016 18:56:10 GMT+0800">
-        <meta property="article:modified_time" content="Sun Mar 22 2026 12:14:40 GMT+0000">
+        <meta property="article:modified_time" content="Sun Mar 22 2026 12:40:10 GMT+0000">
     
 
     <!-- The Twitter Card protocol -->
@@ -279,7 +277,7 @@ $给定一个压缩过的0开头的01交替字符串，比如00110表示为{ 2,\
     "mainEntityOfPage": "https://blog.taoai.site/2016-08-05/HDU 5741 Helter Skelter（数形结合、二分）/index.html",
     "headline": "HDU 5741 Helter Skelter（数形结合、二分）",
     "datePublished": "Fri Aug 05 2016 18:56:10 GMT+0800",
-    "dateModified": "Sun Mar 22 2026 12:14:40 GMT+0000",
+    "dateModified": "Sun Mar 22 2026 12:40:10 GMT+0000",
     "author": {
         "@type": "Person",
         "name": "TaoSama",
@@ -287,7 +285,7 @@ $给定一个压缩过的0开头的01交替字符串，比如00110表示为{ 2,\
             "@type": "ImageObject",
             "url": "/img/avatar.png"
         },
-        "description": "Reborn and Be Together"
+        "description": "Forward and Never Step Back"
     },
     "publisher": {
         "@type": "Organization",
@@ -446,17 +444,6 @@ $给定一个压缩过的0开头的01交替字符串，比如00110表示为{ 2,\
     
 
     
-        
-            <!-- Busuanzi Views -->
-            <a class="post_share-link" href="#">
-                <li class="mdl-menu__item">
-                    <span id="busuanzi_container_page_pv">
-                        <span id="busuanzi_value_page_pv"></span>&nbsp;Views
-                    </span>
-                </li>
-            </a>
-        
-    
 
     <!-- Share Weibo -->
     
@@ -519,7 +506,7 @@ $给定一个压缩过的0开头的01交替字符串，比如00110表示为{ 2,\
 <a id="more"></a>
 <p>分析：</p>
 <blockquote>
-<p>$我们把所有的a和b\ n^2枚举一下，如果把这些(a,\ b)表示在二维平面上$<br>$手玩一下可以发现[0\ldots 0]这种子串表示出来的(a,\ b)必然在图形的下部$<br>$也可以发现[1\ldots 1]这种子串表示出来的(a,\ b)必然在图形的下部$<br>$还可以发现图形是连通且封闭的，现在窝萌可以把这个图形抠出来一个凸包$<br>$假设这些下部点是红点，上部点是绿点，其它点是蓝点$<br>$画出一个图，然后根据性质抠一下就好了$<br>$红点在竖线的底端，绿点在竖线的顶端$<br><img src="http://7xru22.com1.z0.glb.clouddn.com/16-8-5/91108107.jpg" alt><br>$之后对于每个询问，只要二分一下a，得到b的下界和上界，即可知道是否合法$<br>$时间复杂度O(n^2+qlogn^2)$</p>
+<p>$我们把所有的a和b\ n^2枚举一下，如果把这些(a,\ b)表示在二维平面上$<br>$手玩一下可以发现[0\ldots 0]这种子串表示出来的(a,\ b)必然在图形的下部$<br>$也可以发现[1\ldots 1]这种子串表示出来的(a,\ b)必然在图形的下部$<br>$还可以发现图形是连通且封闭的，现在窝萌可以把这个图形抠出来一个凸包$<br>$假设这些下部点是红点，上部点是绿点，其它点是蓝点$<br>$画出一个图，然后根据性质抠一下就好了$<br>$红点在竖线的底端，绿点在竖线的顶端$<br><img src="/images/16-8-5_91108107.jpg" alt><br>$之后对于每个询问，只要二分一下a，得到b的下界和上界，即可知道是否合法$<br>$时间复杂度O(n^2+qlogn^2)$</p>
 </blockquote>
 <p>代码:</p>
 <pre><code class="cpp">//
@@ -737,7 +724,7 @@ up:
 
     <!-- Sidebar Email -->
     <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
-        null
+        lwt1367@qq.com
         <b class="caret"></b>
     </a>
 </div>
@@ -750,7 +737,7 @@ up:
         <ul id="settings-dropdown" class="dropdown-menu">
             
                 <li>
-                    <a href="#" target="_blank" title="Email Me">
+                    <a href="mailto:lwt1367@qq.com" target="_blank" title="Email Me">
                         
                             <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
                         
@@ -908,11 +895,23 @@ It will not impact the appearance and can give developers a lot of support :)
 
     <!-- Facebook -->
     
+        <a href="https://www.facebook.com/lwt1367" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
 
     <!-- Google + -->
     
 
     <!-- Weibo -->
+    
+        <a href="https://weibo.com/u/3863360617" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-weibo">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
     
 
     <!-- Instagram -->
@@ -1012,9 +1011,6 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
-
-    <!-- Busuanzi -->
-    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
