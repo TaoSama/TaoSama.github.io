@@ -1,0 +1,240 @@
+# ---------------------------------------------------------------
+# Site Information Settings
+# ---------------------------------------------------------------
+
+# Head info
+head:
+    favicon: "/img/favicon.png"
+    high_res_favicon: "/img/favicon.png"
+    apple_touch_icon: "/img/favicon.png"
+    keywords: Algorithm, ACMer
+    site_verification:
+        google:
+        baidu:
+    structured_data: true
+
+# Jump Links Settings
+url:
+    rss: /atom.xml
+    daily_pic: "#"
+    logo: "#"
+
+
+# ---------------------------------------------------------------
+# Style Settings
+# ---------------------------------------------------------------
+
+# Schemes
+scheme: Paradox
+
+# UI & UX: slogan, color, effect
+uiux:
+    slogan: "Reborn and Be Together"
+    theme_color: "#0097A7"
+    theme_sub_color: "#00838F"
+    hyperlink_color: "#00838F"
+    button_color: "#757575"
+    android_chrome_color: "#0097A7"
+    nprogress_color: "#29d"
+    nprogress_buffer: "800"
+
+# JS Effect Switches
+js_effect:
+    fade: true
+    smoothscroll: false
+
+# Reading experience
+reading:
+    entry_excerpt: 80
+
+# Thumbnail Settings
+thumbnail:
+    purecolor:
+    random_amount: 19
+
+# Background Settings
+background:
+    purecolor: "#F5F5F5"
+    bing:
+        enable: false
+        parameter:
+
+# Images Settings
+img:
+    logo: "/img/logo.png"
+    avatar: "/img/avatar.png"
+    daily_pic: "/img/daily_pic.png"
+    sidebar_header: "/img/sidebar_header.png"
+    random_thumbnail: "/img/random/material-"
+    footer_image:
+
+# Custom Fonts
+fonts:
+    family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif
+    use: google
+    custom_font_host:
+
+# Card Elevation Level
+card_elevation: 2
+
+# Copyright
+copyright_since:
+
+# Footer Text
+footer_text:
+
+# Qrcode
+qrcode:
+    enable: false
+    use: plugin
+
+# Code highlight - Prettify enabled with github-v2 theme
+prettify:
+    enable: true
+    theme: "github-v2"
+
+hanabi:
+    enable: false
+    line_number: true
+    includeDefaultColors: true
+    customColors:
+
+# Post License
+license:
+
+# ---------------------------------------------------------------
+# Menu Settings
+# ---------------------------------------------------------------
+
+# TOC Button
+toc:
+    linenumber: true
+
+# SNS Menu
+sns:
+    email:
+    facebook:
+    twitter:
+    googleplus:
+    weibo:
+    instagram:
+    tumblr:
+    github: "https://github.com/TaoSama"
+    linkedin:
+    zhihu:
+    bilibili:
+    telegram:
+    v2ex:
+
+# SNS Share Switch
+sns_share:
+    twitter: true
+    facebook: true
+    googleplus: true
+    weibo: true
+    linkedin: false
+    qq: false
+    telegram: false
+
+# Sidebar Customize
+sidebar:
+    dropdown:
+        Email Me:
+            link: "#"
+            icon: email
+    homepage:
+        use: true
+        icon: home
+        divider: false
+    archives:
+        use: true
+        icon: inbox
+        divider: false
+    categories:
+        use: true
+        icon: chrome_reader_mode
+        divider: false
+    pages:
+        About:
+            link: "/about"
+            icon: person
+            divider: false
+        Tags:
+            link: "/tags"
+            icon: loyalty
+            divider: false
+    article_num:
+        use: false
+        divider: false
+    footer:
+        divider: true
+        theme: true
+        support: false
+        feedback: false
+        material: false
+
+
+# ---------------------------------------------------------------
+# Integrated Services
+# ---------------------------------------------------------------
+
+# Comment Systems
+comment:
+    use:
+    shortname:
+    changyan_appid:
+    changyan_conf:
+    changyan_thread_key_type: path
+    livere_data_uid:
+    gitment_repo:
+    gitment_owner:
+    gitment_client_id:
+    gitment_client_secret:
+    valine_leancloud_appId:
+    valine_leancloud_appKey:
+    valine_notify: false
+    valine_verify: false
+    valine_pageSize: 10
+    valine_avatar: identicon
+    valine_lang: zh-cn
+    valine_placeholder: Just go go
+    valine_guest_info: nick,mail,link
+    gitalk_repo:
+    gitalk_owner:
+    gitalk_client_id:
+    gitalk_client_secret:
+
+# Search Systems
+search:
+    use: local
+    swiftype_key:
+
+# Analytics Systems
+analytics:
+    google_site_id:
+    baidu_site_id:
+    cnzz_site_id:
+
+# Leancloud Views
+leancloud:
+    enable: false
+    app_id:
+    app_key:
+    av_core_mini: "https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"
+
+# Busuanzi Views
+busuanzi:
+    enable: true
+    all_site_uv: true
+    post_pv: true
+    busuanzi_pure_mini_js: "https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"
+
+# Files Vendors
+vendors:
+    materialcdn:
+    jquery:
+    nprogress:
+    fontawesome:
+    mathjax: "https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    prettify:
+    material_icons:

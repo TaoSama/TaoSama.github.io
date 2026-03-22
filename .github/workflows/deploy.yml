@@ -22,8 +22,8 @@ jobs:
           ref: 6fd8fe99d5ad69ac41b82e1bed947e2ddeca58c3
           path: themes/material
 
-      - name: Setup material theme config
-        run: cp themes/material/_config.template.yml themes/material/_config.yml
+      - name: Restore theme config
+        run: cp _theme_config.yml themes/material/_config.yml
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
