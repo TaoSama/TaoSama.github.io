@@ -20,7 +20,7 @@ toc:
 >$混合积判断四面体存在，delta = A\ det\ B\ dot\ C$
 $delta不为0四面体就存在，然后内切球半径R=\frac{V}{\sum S_{面}}$
 $然后内心坐标：$
-![](/images/16-7-24_95457175.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/16-7-24_95457175.jpg)
 
 
 代码:

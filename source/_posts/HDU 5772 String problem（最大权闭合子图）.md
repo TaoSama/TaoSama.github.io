@@ -24,7 +24,7 @@ $答案是\sum 正权-最小割$
 
 ---
 >本题，官方题解写的很清楚了
-![](/images/16-8-5_48099702.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/16-8-5_48099702.jpg)
 
 代码:
 ```cpp

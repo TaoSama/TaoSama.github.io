@@ -28,7 +28,7 @@ $优化二：$
 $我们展开这个dp转移方程：$
 $f[x_2][y_2]=min\{\ f[x_1][y_1]+abs(x_1-x_2)+abs(y_1-y_2)\ \}$
 $发现对于曼哈顿距离其实有4种情况，根据x和y的大小关系，方便起见画个图：$
-![](/images/16-6-3_79239680.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/16-6-3_79239680.jpg)
 $A点为我们当前要更新的点，B0\sim B3为代表根据x和y大小划分的4个区域$
 $我们可以得到新的转移方程：$
 $UL - f[x_2][y_2] = min \{\ f[x_1][y_1] - x_1 - y_1 + x_2 + y_2\ \},\ B0区域$

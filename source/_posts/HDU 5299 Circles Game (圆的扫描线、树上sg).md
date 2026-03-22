@@ -25,7 +25,7 @@ $问题转化为树上的SG博弈，时间复杂度O(nlogn)$
 (以下转载自[http://csgrandeur.com/hdu3511-prison-break-guan-yu-yuan-de-sao-miao-xian/](http://csgrandeur.com/hdu3511-prison-break-guan-yu-yuan-de-sao-miao-xian/)
 
 >$建图需要用到圆的扫描线，具体看下图：$
-![](/images/16-4-27_68350085.jpg) ![](/images/16-4-27_49884970.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/16-4-27_68350085.jpg) ![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/16-4-27_49884970.jpg)
 $首先和传统扫描线的方法一样先把每个圆左右侧x坐标排个序作为事件，然后开始扫描$
 $圆就麻烦在没有像矩形那样可以离散化的规则上下界，便无法用预处理好的离散编号来构建线段树$
 >$但是我们可以注意到对于扫描线扫描的过程中从上到下穿过各个圆的顺序是不会变的$

@@ -24,7 +24,7 @@ $然后如何找呢，详细看这个博客吧，讲得很清楚：$[传送门](
 $根据dfs序来确定选择的链，如果集合中的dfs序比当前点u都大或者小，就取dfs最大点和最小点$
 $反之，就选大于它的dfs序的第一个点和小于它的最大的那个点$
 $点到链的最短距离：$
-![](/images/16-4-27_7110843.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/16-4-27_7110843.jpg)
 
 代码：
 ```cpp

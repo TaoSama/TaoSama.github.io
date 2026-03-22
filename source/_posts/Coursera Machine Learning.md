@@ -36,7 +36,7 @@ toc: false
 
 * 看到这个绿图还是很欣慰啊，就跟你大半夜日题看到$AC$一样的，勉强入门了？？
 
-![](/images/17-3-12_37459681-file_1489260426139_8708.png)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-3-12_37459681-file_1489260426139_8708.png)
 
 ### 后记
 * 加油加油，我发现我还是爱学习的？ 爱数学？(雾

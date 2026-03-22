@@ -19,7 +19,7 @@ toc:
 分析：
 >$凸包，然后旋转卡壳辣$
 $类似two\ pointers的做法，一图流$
-![](/images/16-8-28_14749437.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/16-8-28_14749437.jpg)
 
 ```cpp
 //

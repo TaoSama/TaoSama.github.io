@@ -30,19 +30,19 @@ toc: true
 
 ##### Development Progress
 * begin
-![](/images/17-10-27_47885692.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-27_47885692.jpg)
 * separate application and data service
 * use cache
 * use application cluster
 * separate read and write of database
 * use reverse proxy and CDN
-![](/images/17-10-29_44949985.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_44949985.jpg)
 * use distributed file system and distributed database
 * use NoSQL and search engine
-![](/images/17-10-29_8148745.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_8148745.jpg)
 * separate bussiness
 * use distributed services
-![](/images/17-10-29_62668186.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_62668186.jpg)
 
 
 ##### Values
@@ -122,7 +122,7 @@ cluster the independent deployed server, i.e., many servers deployed the same ap
 * risk control
 
 ##### Architecture Model of Weibo
-![](/images/17-10-29_87294532.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_87294532.jpg)
 
 
 #### Keys of Large Site Architecture
@@ -132,7 +132,7 @@ cluster the independent deployed server, i.e., many servers deployed the same ap
 * throughput
 * system performance monitor (top)
 
-![](/images/17-10-29_24638084.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_24638084.jpg)
 
 ##### Availability 
 
@@ -160,7 +160,7 @@ easy to add and remove servers in cluster
 ##### Different Views of Website Performance
 
 * user
-  ![](/images/17-10-29_62774698.jpg)
+  ![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_62774698.jpg)
 
 * developer
   the performance of application itself and relevant subsystem.
@@ -172,7 +172,7 @@ easy to add and remove servers in cluster
 ##### Metrics of Performance
 
 * response time
-  ![](/images/17-10-29_34403316.jpg)
+  ![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_34403316.jpg)
 
 * number of concurrency
   number of total users >> number of online users >> number of concurrent users
@@ -183,7 +183,7 @@ easy to add and remove servers in cluster
 * system performance monitor (top)
   system load, number of objects and threads, memory and CPU used, disk and netword I/O
   top: there floating number, recent 1min, 10mins, 15mins average running processes
-  ![](/images/17-10-29_42727590.jpg)
+  ![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_42727590.jpg)
 
 
 ##### Ways of Profiling
@@ -193,12 +193,12 @@ easy to add and remove servers in cluster
 * stress testing
 * stability testing
 
-![](/images/17-10-29_43135395.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_43135395.jpg)
 
-![](/images/17-10-29_85052370.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_85052370.jpg)
 
 * performance report
-![](/images/17-10-29_25395924.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_25395924.jpg)
 
 ##### Strategy of Performance Optimization
 
@@ -215,17 +215,17 @@ easy to add and remove servers in cluster
   * reduce the transferring of Cookie
   
 * CDN (Content Distribute Network)
-  ![](/images/17-10-29_71736041.jpg)
+  ![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_71736041.jpg)
 
 * reverse proxy
-  ![](/images/17-10-29_43823166.jpg)
+  ![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_43823166.jpg)
 
 ##### Application Server Performance Optimization
 
 **distributed cache**
 
 * cache principle (80%-20% law)
-  ![](/images/17-10-29_43534320.jpg)
+  ![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_43534320.jpg)
 
 * use cache properly
   * infrequently modified (read:write ≥ 2:1)
@@ -241,11 +241,11 @@ easy to add and remove servers in cluster
 **architecture of distributed cache**
 
 JBoss Cache: update synchronously (enterprise use)
-![](/images/17-10-29_55001392.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_55001392.jpg)
 
 
 Memcached: no communication between servers
-![](/images/17-10-29_4636924.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_4636924.jpg)
 
 * communication protocol: TCP, UDP, HTTP
   communication serializating protocol: text(XML, JSON), binary(Google Protobuffer)
@@ -258,12 +258,12 @@ Memcached: no communication between servers
   * chunk-based allocation
     find a minimal chunk that can save the data
   * LRU
-  ![](/images/17-10-29_21995999.jpg)
+  ![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_21995999.jpg)
 
 
 **asynchronizaton**
 use message queue to reduce the peek
-![](/images/17-10-29_94302977.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_94302977.jpg)
 
 **cluster**
 
@@ -279,20 +279,20 @@ use message queue to reduce the peek
   hashtable: originlal-`MD5`->info figureprint-`HASH`->hashcode
 * garbage collection
   object created in Eden-`Young GC`->From-`Young GC`->To-`Young GC`->From-...`threshold times Young GC`->Old->`Full GC`
-  ![](/images/17-10-29_70621950.jpg)
+  ![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_70621950.jpg)
 
 **storage performance optimization**
 
 * mechanical hard disk vs. solid state hard drive
 * B+ tree vs. LSM tree
   N-branch search tree: at most 3 level, (maybe 5 disk IOs to update, 3 to get the index, 1 to read, 1 to write)
-  ![](/images/17-10-29_64739055.jpg)
+  ![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_64739055.jpg)
   N-level mergeable search tree: write operations do in memory, and create a new record in the $C_0$ tree
-  ![](/images/17-10-29_65052291.jpg)
+  ![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_65052291.jpg)
 
 * RAID vs. HDFS
-  ![](/images/17-10-29_86796256.jpg)
-  ![](/images/17-10-29_41423906.jpg)
+  ![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_86796256.jpg)
+  ![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_41423906.jpg)
 
 
 #### High-availability Architecture
@@ -300,7 +300,7 @@ use message queue to reduce the peek
 ##### Layered Architecture
 application layer <- service layer <- data layer
 more complicated:
-![](/images/17-10-29_25459489.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_25459489.jpg)
 
 ##### High-availability Application
 
@@ -311,7 +311,7 @@ more complicated:
   * session binding
   * use cookie to record session
   * session server
-  ![](/images/17-10-29_80821252.jpg)
+  ![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_80821252.jpg)
   
 ##### High-availability Service
 
@@ -329,7 +329,7 @@ more complicated:
 * consistency
 * availablity
 * partition tolerance
-![](/images/17-10-29_10107207.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_10107207.jpg)
 
 **consistency**
 
@@ -349,7 +349,7 @@ more complicated:
 ##### Failure Transferring
 
 * failure confirmation
-  ![](/images/17-10-29_56937621.jpg)
+  ![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_56937621.jpg)
 * access transferring
 * data recovering
 
@@ -357,7 +357,7 @@ more complicated:
 
 **automatic releasing**
 (gray releasing)
-![](/images/17-10-29_67465635.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_67465635.jpg)
 
 **automatic testing**
 
@@ -387,7 +387,7 @@ more complicated:
 ##### Physical Separation
 
 （clustering)
-![](/images/17-10-29_61171750.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_61171750.jpg)
 
 ##### Load Balancing
 
@@ -395,10 +395,10 @@ more complicated:
 * DNS (domain name resolution)
 * reverse proxy
 * IP
-  ![](/images/17-10-29_91517327.jpg)
+  ![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_91517327.jpg)
 * data link layer
   LVS (Linux Virtual Server)
-  ![](/images/17-10-29_85037154.jpg)
+  ![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_85037154.jpg)
   
 **load balancing algorithms**
 
@@ -411,25 +411,25 @@ more complicated:
 ##### Distributed Cache
 
 **memchached access model**
-![](/images/17-10-29_40831863.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_40831863.jpg)
 
 consistent hashing
-![](/images/17-10-29_34276778.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_34276778.jpg)
 
 to solve the influence of cache load => `virtual nodes` (a server to 150 nodes)
-![](/images/17-10-29_28184219.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_28184219.jpg)
 
 ##### Distributed Database
 
-![](/images/17-10-29_59890444.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_59890444.jpg)
 
 **spread tables into different database servers**
 **put table into slices, then spread into different database servers**
 
 database products of data slices: Amoeba, Cobar 
 
-![](/images/17-10-29_80126287.jpg)
-![](/images/17-10-29_18332945.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_80126287.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_18332945.jpg)
 
 **NoSQL**
 
@@ -442,21 +442,21 @@ database products of data slices: Amoeba, Cobar
 
 **Apache HBase**
 
-![](/images/17-10-29_98641792.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_98641792.jpg)
 
-![](/images/17-10-29_23962985.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_23962985.jpg)
 
 #### High-extensibility Architecture
 
 * event driven architecture
-  ![](/images/17-10-29_9652231.jpg)
+  ![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_9652231.jpg)
 * distributed message queue
   Apache ActiveMQ
-  ![](/images/17-10-29_81090792.jpg)
+  ![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_81090792.jpg)
 * distributed services
 
 * web service and enterprise distributed service
-  ![](/images/17-10-29_51015171.jpg)
+  ![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_51015171.jpg)
 
 * distributed service framework
   large site need simple and efficient distributed service 
@@ -464,14 +464,14 @@ database products of data slices: Amoeba, Cobar
   it is said that Facebook manages its distributed service based on
   `Thrift` (an opensource remote service call framework)
   `Alibaba-Dubbo`
-   ![](/images/17-10-29_67509941.jpg)
+   ![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_67509941.jpg)
 
 * extensible data structure
   NoSQL `ColumnFamily` (first in Google Bigtable)
-  ![](/images/17-10-29_13082779.jpg)
+  ![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_13082779.jpg)
 
 * open platform to build website ecosystem
-  ![](/images/17-10-29_78200842.jpg)
+  ![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_78200842.jpg)
 
 
 #### Security Architecture
@@ -481,10 +481,10 @@ database products of data slices: Amoeba, Cobar
 **XSS(Cross Site Script) attack**
 
 * reflective type
-  ![](/images/17-10-29_41046481.jpg)
+  ![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_41046481.jpg)
 
 * persistent type
-  ![](/images/17-10-29_42341545.jpg)
+  ![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_42341545.jpg)
 
 * solution: filter, HttpOnly
 
@@ -492,12 +492,12 @@ database products of data slices: Amoeba, Cobar
 SQL injection, OS injection
 
 SQL injection: open source(table name is public), error echoed, blind injection
-![](/images/17-10-29_12246870.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_12246870.jpg)
 
 solution: filter, parameter binding
 
 **CSRF(Cross Site Request Forgety) attack**
-![](/images/17-10-29_93927561.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-29_93927561.jpg)
 
 solution: form token, verification code, referer check
 
@@ -510,7 +510,7 @@ solution: form token, verification code, referer check
 
 **web application firewall**
 ModSecurity
-![](/images/17-10-30_97390520.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-30_97390520.jpg)
 
 ** website security scanning**
 
@@ -519,46 +519,46 @@ ModSecurity
 * one-way hashing encryption
   MD5, SHA
   Rainbow Table to try to decrypt MD5
-  ![](/images/17-10-30_70087109.jpg)
+  ![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-30_70087109.jpg)
 
 * symmetric encryption
   DES, RC
-  ![](/images/17-10-30_72859252.jpg)
+  ![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-30_72859252.jpg)
 
 * asymmetric encryption
   RSA
   information security transmission, digital signature
-  ![](/images/17-10-30_51192903.jpg)
+  ![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-30_51192903.jpg)
 
 * key security management
-  ![](/images/17-10-30_44940270.jpg)
+  ![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-30_44940270.jpg)
 
 ##### Infomation filtering and Anti-spam
 
 * text matching
   double array trie, multi-level hashtable (simpler)
-  ![](/images/17-10-30_84675517.jpg)
+  ![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-30_84675517.jpg)
 
 * classification algorithm
   Native Bayes, TAN, Association Rule Clustering System (ARCS)
-  ![](/images/17-10-30_24237709.jpg)
+  ![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-30_24237709.jpg)
 
 * blacklist
   hashtable, bloomfilter
-  ![](/images/17-10-30_32301588.jpg)
+  ![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-30_32301588.jpg)
 
 ##### Risk Control
 
 * rule engine
-  ![](/images/17-10-30_25087873.jpg)
+  ![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-30_25087873.jpg)
 * statistics model
-  ![](/images/17-10-30_76287040.jpg)
+  ![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-30_76287040.jpg)
 
 ### Cases
 
 #### Taobao
 At first, Ma Yun bought a `C2C` website, then `LAMP`:
-![](/images/17-10-30_37599252.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-30_37599252.jpg)
 
 MVC: decouple view and bussiness logic
 ORM (Object-relational mapping): decouple objects and relational database
@@ -566,21 +566,21 @@ ORM (Object-relational mapping): decouple objects and relational database
 Taobao didn't use the hot `Struts` and `Hibernate`, 
 but choose to develop its own MVC frameword `Webx`, and to use `IBatis` for ORM.
 Taobao also used `Weblogic` for application server, `Oracle` for database. They are commercial softwares. 
-![](/images/17-10-30_959871.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-30_959871.jpg)
 
 Then, to use `Spring` instead of `EJB`, free `JBoss` instead of `Weblogic`
 
 At last, abandon `Oracle`, `IBM`, `EMC`, and back to open source `MySQL` and `NoSQL`
-![](/images/17-10-30_56259159.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-30_56259159.jpg)
 
 
 #### Wikipedia
 **based on** `LAMP`
-![](/images/17-10-30_95474191.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-30_95474191.jpg)
 
 **Wikipedia's web front**
 the key architecture of  is `Squid` cluster:
-![](/images/17-10-30_95191711.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-30_95191711.jpg)
 
 **Wikipedia's backend**
 
@@ -594,15 +594,15 @@ the key architecture of  is `Squid` cluster:
   the close the write service, i.e., close the edition of users.
 
 #### Doris (enormous distributed KV storage)
-![](/images/17-10-30_90549351.jpg)
-![](/images/17-10-30_91551116.jpg)
-![](/images/17-10-30_33182040.jpg)
-![](/images/17-10-30_47667517.jpg)
-![](/images/17-10-30_2416629.jpg)
-![](/images/17-10-30_96568966.jpg)
-![](/images/17-10-30_15742744.jpg)
-![](/images/17-10-30_91008989.jpg)
-![](/images/17-10-30_14212433.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-30_90549351.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-30_91551116.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-30_33182040.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-30_47667517.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-30_2416629.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-30_96568966.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-30_15742744.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-30_91008989.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-30_14212433.jpg)
 
 #### Seckilling System
 
@@ -621,9 +621,9 @@ the key architecture of  is `Squid` cluster:
 * dynamically generate random URL for placing order
 
 ##### architecture
-![](/images/17-10-30_33308473.jpg)
-![](/images/17-10-30_54626461.jpg)
-![](/images/17-10-30_87372762.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-30_33308473.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-30_54626461.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-30_87372762.jpg)
 
 #### Failure Analysis
 
@@ -658,7 +658,7 @@ forget to uncomment some codes.
 forget to check whether the object is `null`.
 
 ### Postscript
-![](/images/17-10-30_1691765.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-10-30_1691765.jpg)
 
 
 

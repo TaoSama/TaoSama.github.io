@@ -18,7 +18,7 @@ $问最少需要删几次才能把所有边都删掉$
 <!-- more -->
 
 分析：
->![](/images/16-4-7_42023196.jpg)
+>![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/16-4-7_42023196.jpg)
 $这想法真是炫酷，虽然我做过混合图欧拉回路那个题，早都忘了$
 $第二种解法也是炫酷$
 

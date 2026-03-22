@@ -19,7 +19,7 @@ $问删去i点后的图G_i的权值$
 
 <!-- more -->
 分析：
->![](/images/16-7-24_80434423.jpg)
+>![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/16-7-24_80434423.jpg)
 $时间复杂度O(n+m)$
 
 

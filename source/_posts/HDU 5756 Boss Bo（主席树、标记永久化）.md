@@ -24,7 +24,7 @@ $op=3:最大距离$
 分析：
 >$定义换句话说，如果一个点是坏点，那么子树都是坏点$
 $剩下的就是官方题解的做法了$
-![](/images/16-8-13_60225630.jpg)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/16-8-13_60225630.jpg)
 
 ```cpp
 //

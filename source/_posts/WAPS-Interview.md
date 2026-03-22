@@ -35,7 +35,7 @@ Just simply go pre-order traversal and check whether each node has two sons...
 Careful about some corner cases..
 
 * Code
-![](/images/17-4-28_55313160-file_1493372200147_2948.png)
+![](https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/17-4-28_55313160-file_1493372200147_2948.png)
 
 ### Onsite Interview
 4 easy problems... I gotta have a solution only with a glance.
