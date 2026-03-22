@@ -22,8 +22,14 @@ jobs:
           ref: 6fd8fe99d5ad69ac41b82e1bed947e2ddeca58c3
           path: themes/material
 
-      - name: Restore theme config
-        run: cp _theme_config.yml themes/material/_config.yml
+      - name: Restore theme config and custom assets
+        run: |
+          cp _theme_config.yml themes/material/_config.yml
+          cp -r source/img/* themes/material/source/img/
+          # Fix busuanzi span IDs for new CDN (3.x)
+          sed -i 's/busuanzi_value_site_uv/busuanzi_site_uv/g' themes/material/layout/_partial/blog_info.ejs
+          sed -i 's/busuanzi_value_page_pv/busuanzi_page_pv/g' themes/material/layout/_partial/post-info-share.ejs
+          sed -i 's|busuanzi.ibruce.info|cdn.busuanzi.cc|g' themes/material/layout/_widget/dnsprefetch.ejs
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
