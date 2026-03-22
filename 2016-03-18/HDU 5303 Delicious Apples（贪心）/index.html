@@ -23,6 +23,8 @@
 
 
 
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+
 
 
 
@@ -254,7 +256,7 @@ $给定L\le 10^9的环形路，家在0号点，N\le 10^5颗苹果树，每棵有
 
     
         <meta property="article:published_time" content="Fri Mar 18 2016 18:45:10 GMT+0800">
-        <meta property="article:modified_time" content="Sun Mar 22 2026 12:40:10 GMT+0000">
+        <meta property="article:modified_time" content="Sun Mar 22 2026 12:56:58 GMT+0000">
     
 
     <!-- The Twitter Card protocol -->
@@ -277,7 +279,7 @@ $给定L\le 10^9的环形路，家在0号点，N\le 10^5颗苹果树，每棵有
     "mainEntityOfPage": "https://blog.taoai.site/2016-03-18/HDU 5303 Delicious Apples（贪心）/index.html",
     "headline": "HDU 5303 Delicious Apples（贪心）",
     "datePublished": "Fri Mar 18 2016 18:45:10 GMT+0800",
-    "dateModified": "Sun Mar 22 2026 12:40:10 GMT+0000",
+    "dateModified": "Sun Mar 22 2026 12:56:58 GMT+0000",
     "author": {
         "@type": "Person",
         "name": "TaoSama",
@@ -444,6 +446,17 @@ $给定L\le 10^9的环形路，家在0号点，N\le 10^5颗苹果树，每棵有
     
 
     
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;Views
+                    </span>
+                </li>
+            </a>
+        
+    
 
     <!-- Share Weibo -->
     
@@ -506,7 +519,7 @@ $给定L\le 10^9的环形路，家在0号点，N\le 10^5颗苹果树，每棵有
 <a id="more"></a>
 <p>分析：</p>
 <blockquote>
-<p>$首先可以发现，肯定是先把近的苹果先拿走，如果拿了远的再拿近的再拿远的路程会交叉，就不优了$<br>$其次再考虑会不会可能走一圈，发现是可以的，见下图：$<br><img src="/images/16-3-18_25212458.jpg" alt><br>$设起点到a的距离为l_1，到b的距离为l_2，且l_1,\ l_2 &gt; {L\over 4}, A_a+A_b\le k$<br>$那么走一圈的路程是L，直接从最近的拿是2(l_1+l_2) &gt; L，此时显然走一圈更优$<br>$更可以得出l_1,l_2\le {L\over 4}直接拿比较好$<br>$问题来了，可不可能走多圈呢，还是上面的图，看2圈的情况：$<br>$不过设A_a = x &lt; k,\ A_b = k + y,\ 且A_a+A_b \le 2k$<br>$显然如果两边都是k的话，就不能绕圈了，所以可能走2圈一定是这样的$<br>$直接拿的话是2(l_1+2l_2)&gt;{3L\over 2}，走2圈是2L，走1圈+先拿k是L+2l_2$<br>$显然走2圈最差，其次L+2l_2 - (2(l_1+2l_2))=L - (2(l_1+l_2)) &lt; 0，走1圈+先拿k最优$<br>$显然更多圈的情况其实都可以规约到2圈的情况$<br>$由于苹果个数10^5，把苹果分开看，l[i]:=左边拿i个苹果的代价,r[i]同理$<br>$所以问题解决了，只要枚举最后一次2边拿的让它走1圈就好了$<br>$时间复杂度因为有排序所以是O(nlogn)$</p>
+<p>$首先可以发现，肯定是先把近的苹果先拿走，如果拿了远的再拿近的再拿远的路程会交叉，就不优了$<br>$其次再考虑会不会可能走一圈，发现是可以的，见下图：$<br><img src="https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/16-3-18_25212458.jpg" alt><br>$设起点到a的距离为l_1，到b的距离为l_2，且l_1,\ l_2 &gt; {L\over 4}, A_a+A_b\le k$<br>$那么走一圈的路程是L，直接从最近的拿是2(l_1+l_2) &gt; L，此时显然走一圈更优$<br>$更可以得出l_1,l_2\le {L\over 4}直接拿比较好$<br>$问题来了，可不可能走多圈呢，还是上面的图，看2圈的情况：$<br>$不过设A_a = x &lt; k,\ A_b = k + y,\ 且A_a+A_b \le 2k$<br>$显然如果两边都是k的话，就不能绕圈了，所以可能走2圈一定是这样的$<br>$直接拿的话是2(l_1+2l_2)&gt;{3L\over 2}，走2圈是2L，走1圈+先拿k是L+2l_2$<br>$显然走2圈最差，其次L+2l_2 - (2(l_1+2l_2))=L - (2(l_1+l_2)) &lt; 0，走1圈+先拿k最优$<br>$显然更多圈的情况其实都可以规约到2圈的情况$<br>$由于苹果个数10^5，把苹果分开看，l[i]:=左边拿i个苹果的代价,r[i]同理$<br>$所以问题解决了，只要枚举最后一次2边拿的让它走1圈就好了$<br>$时间复杂度因为有排序所以是O(nlogn)$</p>
 </blockquote>
 <p>代码：</p>
 <pre><code class="cpp">//
@@ -936,6 +949,9 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
+
+    <!-- Busuanzi -->
+    <script src="https://cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js"></script>
 
 
 

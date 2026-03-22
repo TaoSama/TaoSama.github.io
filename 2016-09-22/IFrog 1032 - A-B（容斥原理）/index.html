@@ -23,6 +23,8 @@
 
 
 
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+
 
 
 
@@ -254,7 +256,7 @@ $n\le 500个球，需要把他们放到m\le 500个盒子里，盒子不同，可
 
     
         <meta property="article:published_time" content="Thu Sep 22 2016 20:45:10 GMT+0800">
-        <meta property="article:modified_time" content="Sun Mar 22 2026 12:40:10 GMT+0000">
+        <meta property="article:modified_time" content="Sun Mar 22 2026 12:56:58 GMT+0000">
     
 
     <!-- The Twitter Card protocol -->
@@ -277,7 +279,7 @@ $n\le 500个球，需要把他们放到m\le 500个盒子里，盒子不同，可
     "mainEntityOfPage": "https://blog.taoai.site/2016-09-22/IFrog 1032 - A-B（容斥原理）/index.html",
     "headline": "IFrog 1032 - A-B（容斥）",
     "datePublished": "Thu Sep 22 2016 20:45:10 GMT+0800",
-    "dateModified": "Sun Mar 22 2026 12:40:10 GMT+0000",
+    "dateModified": "Sun Mar 22 2026 12:56:58 GMT+0000",
     "author": {
         "@type": "Person",
         "name": "TaoSama",
@@ -444,6 +446,17 @@ $n\le 500个球，需要把他们放到m\le 500个盒子里，盒子不同，可
     
 
     
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;Views
+                    </span>
+                </li>
+            </a>
+        
+    
 
     <!-- Share Weibo -->
     
@@ -506,7 +519,7 @@ $n\le 500个球，需要把他们放到m\le 500个盒子里，盒子不同，可
 <a id="more"></a>
 <p>分析：</p>
 <blockquote>
-<p>$容斥原理套路题，枚举最多球的个数x，令事件A_i:=i号盒子\ge x的解的方法数$<br>$显然E_x=$<img src="/images/16-9-21_99036938.jpg" alt><br>$所以容斥一波就好了，注意这里是有序的，所以容斥的时候要乘C(m-1,\ i)$<br>$因为选出1个盒子放最大的，最后插到m-1个盒子里有m种可能$<br>$对于n个球放进m个不同的盒子可以为空用隔板法来求，即calc(n,\ m)=C(n+m-1,\ m-1)$<br>$ans=m\sum_{x} E_x =m\sum_{x}\sum_{i=0}^{m-1} (-1)^i \cdot C(m-1,\ i) \cdot calc(m-1-x-i\times x,\ m-1)$<br>$阶乘预处理一下组合数，时间复杂度O(nm)$</p>
+<p>$容斥原理套路题，枚举最多球的个数x，令事件A_i:=i号盒子\ge x的解的方法数$<br>$显然E_x=$<img src="https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/16-9-21_99036938.jpg" alt><br>$所以容斥一波就好了，注意这里是有序的，所以容斥的时候要乘C(m-1,\ i)$<br>$因为选出1个盒子放最大的，最后插到m-1个盒子里有m种可能$<br>$对于n个球放进m个不同的盒子可以为空用隔板法来求，即calc(n,\ m)=C(n+m-1,\ m-1)$<br>$ans=m\sum_{x} E_x =m\sum_{x}\sum_{i=0}^{m-1} (-1)^i \cdot C(m-1,\ i) \cdot calc(m-1-x-i\times x,\ m-1)$<br>$阶乘预处理一下组合数，时间复杂度O(nm)$</p>
 </blockquote>
 <p>$代码：$</p>
 <pre><code class="cpp">//
@@ -959,6 +972,9 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
+
+    <!-- Busuanzi -->
+    <script src="https://cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js"></script>
 
 
 

@@ -23,6 +23,8 @@
 
 
 
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+
 
 
 
@@ -254,7 +256,7 @@ $N，Q\le 10^5，给定N个点的一棵树，边权C_i \le 100$$Q次操作一个
 
     
         <meta property="article:published_time" content="Tue Apr 26 2016 22:44:10 GMT+0800">
-        <meta property="article:modified_time" content="Sun Mar 22 2026 12:40:10 GMT+0000">
+        <meta property="article:modified_time" content="Sun Mar 22 2026 12:56:58 GMT+0000">
     
 
     <!-- The Twitter Card protocol -->
@@ -277,7 +279,7 @@ $N，Q\le 10^5，给定N个点的一棵树，边权C_i \le 100$$Q次操作一个
     "mainEntityOfPage": "https://blog.taoai.site/2016-04-26/HDU 5296 Annoying problem（LCA）/index.html",
     "headline": "HDU 5296 Annoying problem（LCA）",
     "datePublished": "Tue Apr 26 2016 22:44:10 GMT+0800",
-    "dateModified": "Sun Mar 22 2026 12:40:10 GMT+0000",
+    "dateModified": "Sun Mar 22 2026 12:56:58 GMT+0000",
     "author": {
         "@type": "Person",
         "name": "TaoSama",
@@ -444,6 +446,17 @@ $N，Q\le 10^5，给定N个点的一棵树，边权C_i \le 100$$Q次操作一个
     
 
     
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;Views
+                    </span>
+                </li>
+            </a>
+        
+    
 
     <!-- Share Weibo -->
     
@@ -506,7 +519,7 @@ $N，Q\le 10^5，给定N个点的一棵树，边权C_i \le 100$$Q次操作一个
 <a id="more"></a>
 <p>分析：</p>
 <blockquote>
-<p>$手玩一下可以发现，其实就是加入点或者删除点到最近的一条链的边权和$<br>$然后如何找呢，详细看这个博客吧，讲得很清楚：$<a href="http://blog.csdn.net/u014679804/article/details/48930481" target="_blank" rel="noopener">传送门</a><br>$根据dfs序来确定选择的链，如果集合中的dfs序比当前点u都大或者小，就取dfs最大点和最小点$<br>$反之，就选大于它的dfs序的第一个点和小于它的最大的那个点$<br>$点到链的最短距离：$<br><img src="/images/16-4-27_7110843.jpg" alt></p>
+<p>$手玩一下可以发现，其实就是加入点或者删除点到最近的一条链的边权和$<br>$然后如何找呢，详细看这个博客吧，讲得很清楚：$<a href="http://blog.csdn.net/u014679804/article/details/48930481" target="_blank" rel="noopener">传送门</a><br>$根据dfs序来确定选择的链，如果集合中的dfs序比当前点u都大或者小，就取dfs最大点和最小点$<br>$反之，就选大于它的dfs序的第一个点和小于它的最大的那个点$<br>$点到链的最短距离：$<br><img src="https://raw.githubusercontent.com/TaoSama/TaoSama.github.io/master/source/images/16-4-27_7110843.jpg" alt></p>
 </blockquote>
 <p>代码：</p>
 <pre><code class="cpp">//
@@ -1001,6 +1014,9 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
+
+    <!-- Busuanzi -->
+    <script src="https://cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js"></script>
 
 
 
