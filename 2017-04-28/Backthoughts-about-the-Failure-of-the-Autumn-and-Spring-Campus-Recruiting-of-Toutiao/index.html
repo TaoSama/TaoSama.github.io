@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="en">
+    <head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            头条秋招春招失败的思考 | 
+        
+        TaoSama&#39;s Blog
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content="毕设交了一波初稿，总算回来填坑了。回头想想，不得不说头条面试反映了我的心境变化。">
+    <meta name="keywords" content="null">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.en.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="TaoSama&#39;s Blog">
+    <meta name="msapplication-starturl" content="https://blog.taoai.site/2017-04-28/Backthoughts-about-the-Failure-of-the-Autumn-and-Spring-Campus-Recruiting-of-Toutiao/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="TaoSama&#39;s Blog">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://blog.taoai.site/2017-04-28/Backthoughts-about-the-Failure-of-the-Autumn-and-Spring-Campus-Recruiting-of-Toutiao/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="头条秋招春招失败的思考 | TaoSama&#39;s Blog">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="毕设交了一波初稿，总算回来填坑了。回头想想，不得不说头条面试反映了我的心境变化。">
+    
+
+    
+        <meta property="article:published_time" content="Fri Apr 28 2017 17:20:10 GMT+0800">
+        <meta property="article:modified_time" content="Sun Mar 22 2026 12:04:50 GMT+0000">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://blog.taoai.site/2017-04-28/Backthoughts-about-the-Failure-of-the-Autumn-and-Spring-Campus-Recruiting-of-Toutiao/index.html">
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://blog.taoai.site/2017-04-28/Backthoughts-about-the-Failure-of-the-Autumn-and-Spring-Campus-Recruiting-of-Toutiao/index.html",
+    "headline": "头条秋招春招失败的思考",
+    "datePublished": "Fri Apr 28 2017 17:20:10 GMT+0800",
+    "dateModified": "Sun Mar 22 2026 12:04:50 GMT+0000",
+    "author": {
+        "@type": "Person",
+        "name": "TaoSama",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "TaoSama&#39;s Blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": "null",
+    "description": "毕设交了一波初稿，总算回来填坑了。回头想想，不得不说头条面试反映了我的心境变化。",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#秋招后台岗"><span class="post-toc-number">1.</span> <span class="post-toc-text">秋招后台岗</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一面"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">一面</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#数组中乘积最大连续子数组"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">数组中乘积最大连续子数组</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#二面"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">二面</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#写个类似单调栈的玩意儿"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">写个类似单调栈的玩意儿</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#微信怎么拉取朋友圈信息"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">微信怎么拉取朋友圈信息</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#服务器很少，流量很大，怎么负载均衡啊"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">服务器很少，流量很大，怎么负载均衡啊</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#三面"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">三面</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#然后就没然后了啊"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">然后就没然后了啊</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#春招算法岗"><span class="post-toc-number">2.</span> <span class="post-toc-text">春招算法岗</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一面-1"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">一面</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#二叉树最长路径长度"><span class="post-toc-number">2.1.1.</span> <span class="post-toc-text">二叉树最长路径长度</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#脑筋急转弯"><span class="post-toc-number">2.1.2.</span> <span class="post-toc-text">脑筋急转弯</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#二面-1"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">二面</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#复杂链表的复制"><span class="post-toc-number">2.2.1.</span> <span class="post-toc-text">复杂链表的复制</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#机器学习"><span class="post-toc-number">2.2.2.</span> <span class="post-toc-text">机器学习</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#一个奇怪的题"><span class="post-toc-number">2.2.3.</span> <span class="post-toc-text">一个奇怪的题</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#三面-1"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">三面</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#24点游戏"><span class="post-toc-number">2.3.1.</span> <span class="post-toc-text">24点游戏</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#然后就又没然后了啊"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">然后就又没然后了啊</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#后记"><span class="post-toc-number">3.</span> <span class="post-toc-text">后记</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                头条秋招春招失败的思考
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>TaoSama</strong>
+        <span>Apr 28, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=头条秋招春招失败的思考&url=https://blog.taoai.site/2017-04-28/Backthoughts-about-the-Failure-of-the-Autumn-and-Spring-Campus-Recruiting-of-Toutiao/index.html&pic=https://blog.taoai.site/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Weibo
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=头条秋招春招失败的思考&url=https://blog.taoai.site/2017-04-28/Backthoughts-about-the-Failure-of-the-Autumn-and-Spring-Campus-Recruiting-of-Toutiao/index.html&via=TaoSama" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.taoai.site/2017-04-28/Backthoughts-about-the-Failure-of-the-Autumn-and-Spring-Campus-Recruiting-of-Toutiao/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://blog.taoai.site/2017-04-28/Backthoughts-about-the-Failure-of-the-Autumn-and-Spring-Campus-Recruiting-of-Toutiao/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>毕设交了一波初稿，总算回来填坑了。回头想想，不得不说头条面试反映了我的心境变化。</p>
+<a id="more"></a>
+<h2 id="秋招后台岗"><a href="#秋招后台岗" class="headerlink" title="秋招后台岗"></a>秋招后台岗</h2><h3 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h3><p>记得有2个题，其中一个应该非常水的题，没啥印象了。</p>
+<h4 id="数组中乘积最大连续子数组"><a href="#数组中乘积最大连续子数组" class="headerlink" title="数组中乘积最大连续子数组"></a>数组中乘积最大连续子数组</h4><p>这个现在就是一眼的dp，只怪刷了那么多题的我还是刷题太少了。</p>
+<ul>
+<li>Old Solution<br>直接暴力是$O(n^3)$的，所以就显然的前缀积优化到$O(n^2)$<br>蓝儿因为有$0$，这里就会有些问题，为了避免除$0$要做一些处理<br>不过实际上只要乘了$0$这一段乘积就是$0$了，所以把所有$0$的位置抠出来就可以了<br>然后枚举每一段，就不会有事了，答案初始化为$0$就可以了，前提是有一个$0$。。</li>
+<li>New Solution<br>很简单的dp啊，，$f[i][0/1]:$=到$i$这个位置的连续乘积最大值/最小值<br>就是套用最大连续子段和的套路，这破题我还被问过两遍<br>$HR$又做了一个更复杂的的树形的，不过那个时候我一眼秒了。。<br>就因为有负数嘛，所以就简单的维护下最小值就好了。。</li>
+</ul>
+<h3 id="二面"><a href="#二面" class="headerlink" title="二面"></a>二面</h3><h4 id="写个类似单调栈的玩意儿"><a href="#写个类似单调栈的玩意儿" class="headerlink" title="写个类似单调栈的玩意儿"></a>写个类似单调栈的玩意儿</h4><p>印象中应该让写了一个支持<code>push</code>,<code>pop</code>,<code>getMin</code>的栈，所有操作$O(1)$</p>
+<ul>
+<li>Solution<br>这东西也很简单啊，就维护数字栈的之后再顺手维护一个单调栈，细节注意一下就好了<br>我当时并没有想到单调栈，可能平时用的不多。不过还是有脑子的，随便一想就想到了。<br>我记得这个破题剑指offer上有吧，虽然一直没注意。</li>
+</ul>
+<h4 id="微信怎么拉取朋友圈信息"><a href="#微信怎么拉取朋友圈信息" class="headerlink" title="微信怎么拉取朋友圈信息"></a>微信怎么拉取朋友圈信息</h4><p>这东西我真不会啊，就xjb说了一下，本地存个跟帐号有关的hashvalue表示已经拉取了多少<br>每次拉取的时候，服务器也生成一个，比对一下，不适最新的就拉取就好了。<br>当然你问我什么别人点赞评论啥的，我真的不会啊。。</p>
+<h4 id="服务器很少，流量很大，怎么负载均衡啊"><a href="#服务器很少，流量很大，怎么负载均衡啊" class="headerlink" title="服务器很少，流量很大，怎么负载均衡啊"></a>服务器很少，流量很大，怎么负载均衡啊</h4><p>不会啊，xjb扯淡啊，就随手说了一下缓存服务器，Nginx啥的(这东西我tm就听过名字。<br><del>讲道理啊，为啥不买设备啊喂！(大雾</del></p>
+<h3 id="三面"><a href="#三面" class="headerlink" title="三面"></a>三面</h3><p>哇，这面跑不了啊，直接就问我后台技术栈啥的。<br>骗不过去了啊。然后就不知道啊。有点绝望啊。<br>意识不清醒了啊，打完比赛找不到工作一同交织在一起啊。<br>然后面试官问我读不读研啊。然后脑子一抽说想读啊。<br>然后我还耿直的去问头条有没有quit工作去读研啊<br><del>没见过比我更sb的人了</del><br>主要还是比赛打炸了，心态太差了。几个月都没调好。</p>
+<h3 id="然后就没然后了啊"><a href="#然后就没然后了啊" class="headerlink" title="然后就没然后了啊"></a>然后就没然后了啊</h3><h2 id="春招算法岗"><a href="#春招算法岗" class="headerlink" title="春招算法岗"></a>春招算法岗</h2><h3 id="一面-1"><a href="#一面-1" class="headerlink" title="一面"></a>一面</h3><p>扯扯淡啊，自我介绍啥的啊，ACM打的怎么样啊。。</p>
+<h4 id="二叉树最长路径长度"><a href="#二叉树最长路径长度" class="headerlink" title="二叉树最长路径长度"></a>二叉树最长路径长度</h4><p>一看就当普通树做了啊，然后就无脑说两次dfs求直径就好了啊。<br>他说能不能一次啊，那就无脑dp求一下直径啊。<br>他说还能不能再简单一点啊。 <del>(dp还不简单啊</del><br>哇 我又看了一下题，发现二叉树。<br>然后我就说那简化一下啊。</p>
+<ul>
+<li>Code</li>
+</ul>
+<pre><code class="cpp">struct Node{
+    Node* ls, *rs;
+};
+
+const int INF = INT_MAX / 2;
+
+int maxd = -INF;
+int dfs(Node* cur){
+    if(cur == nullptr) return 0;
+    int ldep = dfs(cur-&gt;ls);
+    int rdep = dfs(cur-&gt;rs);
+       maxd = max(maxd, ldep + rdep + 1);
+    return max(ldep, rdep) + 1;
+}
+</code></pre>
+<h4 id="脑筋急转弯"><a href="#脑筋急转弯" class="headerlink" title="脑筋急转弯"></a>脑筋急转弯</h4><p>有25个人，跑道一次只能跑5个人，问最少跑几次能得到冠亚季军啊。</p>
+<ul>
+<li>Solution<br>一眼看穿是多路归并啊，然后算了一下是8啊。。</li>
+</ul>
+<h3 id="二面-1"><a href="#二面-1" class="headerlink" title="二面"></a>二面</h3><p>不记得问了啥啊，就扔了一个题，然后问了点儿机器学习的东西</p>
+<h4 id="复杂链表的复制"><a href="#复杂链表的复制" class="headerlink" title="复杂链表的复制"></a>复杂链表的复制</h4><ul>
+<li><p>Description<br>有一个链表L,其每个节点有2个指针，一个指针next指向链表的下个节点，另一个random随机指向链表中的任一个节点，可能是自己或者为空，写一个程序，复制这个链表</p>
+</li>
+<li><p>Solution<br>剑指offer上有啊，看了一眼思路啊当时就，然后很慌啊。<br>不过面了那么多面试啊，一下子就冷静了啊。然后就会了啊。<br>就后面拷贝一份搞一搞啊。</p>
+</li>
+<li><p>Code</p>
+</li>
+</ul>
+<pre><code class="cpp">struct Node{
+    int val;
+    Node *nxt, *random;
+    Node(){}
+    Node(int val, Node *nxt, Node *random): val(val), nxt(nxt), random(random){}
+
+};
+
+Node* copyComplexList(Node *head){
+    if(head == nullptr) return nullptr;
+
+    for(Node *cur = head; cur != nullptr; cur = cur-&gt;nxt-&gt;nxt){
+        Node *copied = new Node(cur-&gt;val, cur-&gt;nxt, cur-&gt;random);
+        cur-&gt;nxt = copied;
+    }
+    for(Node *cur = head-&gt;nxt; cur != nullptr; cur = cur-&gt;nxt-&gt;nxt){
+        cur-&gt;random = cur-&gt;random-&gt;nxt;
+    }
+
+    Node *nHead = head-&gt;nxt;
+    for(Node *cur = head; cur != nullptr; cur = cur-&gt;nxt){
+        Node *copied = cur-&gt;nxt;
+        Node *copiedNxt = copied-&gt;nxt-&gt;nxt;
+        Node *curNxt = cur-&gt;nxt-&gt;nxt;
+        cur-&gt;nxt = curNxt;
+        copied-&gt;nxt = copiedNxt;
+    }
+    return nHead;
+}
+</code></pre>
+<h4 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a>机器学习</h4><ul>
+<li>手推一下LR吧<br>就直接把Hypothesis Function，Cost Function写一写，Gradient Decent推一推啊。<br>然后我就推了一下啊，sigmoid函数的导数差点不会推啊。。有惊无险啊</li>
+<li>正则参数$\lambda$选取的影响啊<br>大了会overfitting啊，小了会underfitting啊。</li>
+</ul>
+<h4 id="一个奇怪的题"><a href="#一个奇怪的题" class="headerlink" title="一个奇怪的题"></a>一个奇怪的题</h4><ul>
+<li><p>Description<br>对一个数组，有n个数据，找一个索引的位置k，使前k个数的方差var(k)和后面n-k个数的方差var(n-k)之和最小。</p>
+</li>
+<li><p>Solution<br>不知道能不能$O(1)$啊，不会做啊，就暴力展开了一下方差啊<br>然后$O(n)$枚举$k$，$O(1)$算答案，总复杂度$O(n)$</p>
+</li>
+<li><p>Code</p>
+</li>
+</ul>
+<pre><code class="cpp">/*
+var = \sum_{i=1}^n (x_i - avg)^2 
+= \sum_{i=1}^n (x_i ^ 2 + avg^2 - 2*x_i*avg)
+= \sum_{i=1}^n (x_i ^ 2 + (sum / n)^2 - 2 * x_i * (sum / n))
+= \sum_{i=1}^n x_i^2 + sum^2 /n - 2*sum^2/n= \sum_{i=1}^n x_i^2 - sum^2/n
+*/
+
+int findIndex(const vector&lt;int&gt;&amp; v){
+    int preSqSum = 0, totSqSum = 0;
+    int preSum = 0, totSum = 0;
+    pair&lt;double, int&gt; varAndIdx = {-1, -1};
+    for(int i = 0; i &lt; v.size(); ++i){
+        totSqSum += v[i] * v[i];
+        totSum += v[i];
+    }
+    for(int i = 0; i &lt; v.size(); ++i){
+        preSum += v[i];
+        preSqSum += v[i] * v[i];
+        int sufSqSum = totSqSum - preSqSum;
+        int sufSum = totSum - preSum;
+        double preVar = preSqSum - 1.0 * preSum * preSum / (i + 1);
+        double sufVar = sufSqSum - 1.0 * sufSum * sufSum/ (v.size() - i - 1);
+        varAndIdx = max(varAndIdx, {preVar + sufVar, i});
+    }
+    return varAndIdx.second;
+}
+</code></pre>
+<h3 id="三面-1"><a href="#三面-1" class="headerlink" title="三面"></a>三面</h3><h4 id="24点游戏"><a href="#24点游戏" class="headerlink" title="24点游戏"></a>24点游戏</h4><ul>
+<li><p>Description<br>给定4个整数0～9，给出是否能计算得到24，加减乘除括号，普通算术运算。精度他说<code>1e-5</code></p>
+</li>
+<li><p>Solution<br>以前写过啊，蓝儿没脑子了啊，连面了两面。<br>就选择写暴力搜索所有表达式啊。<br>然后就因为<code>string v = &quot;&quot; + toChar(a) + toChar(b) + toChar(c) + toChar(d);</code><br>这个垃圾代码不CE挂了啊。。我以为会CE的啊。结果最后半天才反应到这里。<br>写了半个多小时，面试官他写了一个都写完了啊。。难受啊。。<br>我当时好怂啊，不自信啊。。结果面试结束后几分钟就调通了啊。</p>
+</li>
+<li><p>My Code<br>找不到最终版本了，就扔个有点小问题的吧。纪念一下我这个“C++大师”</p>
+</li>
+</ul>
+<pre><code class="cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+const string op = &quot;+-*/&quot;;
+
+int getPriority(char c) {
+    if(c == &#39;+&#39; || c == &#39;-&#39;) return 1;
+    else if(c == &#39;*&#39; || c == &#39;/&#39;) return 2;
+    return 0;
+}
+
+vector&lt;string&gt; inToPost(const string&amp; expr) {
+    stack&lt;char&gt; opr;
+    vector&lt;string&gt; ret;
+    for(int i = 0; i &lt; expr.size(); ++i) {
+        char c = expr[i];
+        if(c == &#39;(&#39;) opr.push(c);
+        else if(c == &#39;)&#39;) {
+            while(true) {
+                char top = opr.top(); opr.pop();
+                if(top == &#39;(&#39;) break;
+                ret.push_back(string(1, top));
+            }
+        } else if(isdigit(c)) {
+            string digit;
+            for(; i &lt; expr.size() &amp;&amp; isdigit(expr[i]); ++i) digit += expr[i];
+            ret.push_back(digit);
+            --i;
+        } else {
+            int curP = getPriority(c);
+            for(; opr.size() &amp;&amp; getPriority(opr.top()) &gt;= curP; opr.pop())
+                ret.push_back(string(1, opr.top()));
+            opr.push(c);
+        }
+    }
+    for(; opr.size(); opr.pop()) ret.push_back(string(1, opr.top()));
+    return ret;
+}
+
+double calc(const vector&lt;string&gt;&amp; post) {
+    stack&lt;double&gt; opd;
+    for(const auto&amp; s : post) {
+        if(isdigit(s[0])) opd.push(stod(s));
+        else {
+            assert(opd.size());
+            double y = opd.top(); opd.pop();
+            assert(opd.size());
+            double x = opd.top(); opd.pop();
+            if(s[0] == &#39;+&#39;) opd.push(x + y);
+            else if(s[0] == &#39;-&#39;) opd.push(x - y);
+            else if(s[0] == &#39;*&#39;) opd.push(x * y);
+            else opd.push(x / y);
+        }
+    }
+    return opd.top();
+}
+
+
+bool check(int dep, bool lftBracketed, string s) {
+    if(dep == s.size()) {
+        if(lftBracketed) s += &#39;)&#39;;
+//        cout &lt;&lt; s &lt;&lt; endl;
+        if(abs(calc(inToPost(s)) - 24) &lt; 1e-5) return true;
+        return false;
+    }
+    if(isdigit(s[dep])) {
+        if(dep &gt; 0) {
+            for(int i = 0; i &lt; 4; ++i) {
+                string ns = s;
+                ns.insert(dep, 1, op[i]);
+                if(check(dep + 2, lftBracketed, ns)) return true;
+                if(lftBracketed) {
+                    ns.insert(dep + 2, 1, &#39;)&#39;);
+                    if(check(dep + 3, 0, ns)) return true;
+                } else {
+                    ns.insert(dep + 1, 1, &#39;(&#39;);
+                    if(check(dep + 3, 1, ns)) return true;
+                }
+            }
+        } else if(check(dep + 1, lftBracketed, s)) return true;
+    } else if(check(dep + 1, lftBracketed, s)) return true;
+    return false;
+}
+
+bool twentyFour(int a, int b, int c, int d) {
+    auto toChar = [](int x) {return char(&#39;0&#39; + x);};
+    string v = string(&quot;&quot;) + toChar(a) + toChar(b) + toChar(c) + toChar(d);
+    sort(v.begin(), v.end());
+
+    bool ok = false;
+    do {
+        ok |= check(0, 0, v);
+    } while(!ok &amp;&amp; next_permutation(v.begin(), v.end()));
+    return ok;
+}
+
+int main() {
+    string test = &quot;5*5-5/5&quot;;
+    //cout &lt;&lt; calc(test) &lt;&lt; endl;
+    cout &lt;&lt; (calc(inToPost(test))) &lt;&lt; endl;
+    cout &lt;&lt; twentyFour(5, 5, 5, 5) &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre>
+<ul>
+<li>Interviewer’s Code<br>没仔细读这个代码啊，改天研究一下正确性，写一个bugfree的24点感觉不容易啊。。</li>
+</ul>
+<pre><code class="python">import itertools
+def isEqual(v0, v1):
+    return abs(v0 - v1) &lt; 1e-6
+def expresssion(code, v0, v1):
+    if code == 0:
+        return v0 + v1
+    elif code == 1:
+        return v0 - v1
+    elif code == 2:
+        return v1 - v0
+    elif code == 3:
+        return v0 * v1
+    elif code == 4:
+        if isEqual(v1, 0):
+            return float(&#39;NaN&#39;)
+        return float(v0)/v1
+    elif code == 5:
+        if isEqual(v0, 0):
+            return float(&#39;NaN&#39;)
+        return float(v1)/v0
+def printExpr(code, v0, v1):
+    if code == 0:
+        print &#39;%s+%s&#39; %(v0, v1)
+    if code == 1:
+        print &#39;%s-%s&#39; %(v0, v1)
+    if code == 2:
+        print &#39;%s-%s&#39; % (v1, v0)
+    if code == 3:
+        print &#39;%s*%s&#39; % (v0, v1)
+    if code == 4:
+        print &#39;%s/%s&#39; % (v0, v1)
+    if code == 5:
+        print &#39;%s/%s&#39; %(v1, v0)
+def search(a, v):
+    if len(a) == 1:
+        return isEqual(a[0], v)
+    elif len(a) == 2:
+        for code in range(6):
+            if isEqual(expresssion(code, a[0], a[1]), v):
+                printExpr(code, a[0], a[1])
+                return True
+        return False
+    elif len(a) == 3:
+        for b in itertools.permutations(a):
+            for code in range(6):
+                if search([expresssion(code, b[0], b[1]), b[2]], v):
+                    printExpr(code, b[0], b[1])
+                    return True
+        return False
+    elif len(a) == 4:
+        for b in itertools.permutations(a):
+            for code in range(6):
+                if search([expresssion(code, b[0], b[1]), b[2], b[3]], v):
+                    printExpr(code, b[0], b[1])
+                    return True
+        return False
+    elif len(a) == 4:
+        for b in itertools.permutations(a):
+            for code in range(6):
+                if search([expresssion(code, b[0], b[1]), b[2], b[3]], v):
+                    printExpr(code, b[0], b[1])
+                    return True
+        return False
+print search([3, 3, 8, 8], 24)
+</code></pre>
+<h3 id="然后就又没然后了啊"><a href="#然后就又没然后了啊" class="headerlink" title="然后就又没然后了啊"></a>然后就又没然后了啊</h3><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>好好学习辣！然后要自信！失败了并不会失去什么。</p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2017-04-28/Backthoughts-during-These-Days/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Newer
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017-04-28/WAPS-Interview/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="TaoSama's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        youremail@email.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                Home
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    Archives
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2018/08/">August 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">March 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/10/">October 2017<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/09/">September 2017<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/08/">August 2017<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">July 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/06/">June 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/05/">May 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">April 2017<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">March 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/02/">February 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">November 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">September 2016<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">August 2016<span class="sidebar_archives-count">42</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">July 2016<span class="sidebar_archives-count">12</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">June 2016<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/05/">May 2016<span class="sidebar_archives-count">24</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/04/">April 2016<span class="sidebar_archives-count">41</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/03/">March 2016<span class="sidebar_archives-count">42</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            Theme - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>TaoSama's Blog
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
