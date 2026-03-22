@@ -21,7 +21,7 @@ toc: true
 搞了半天，研究了`jacman，next，...`，最后发现还是自带的`landscape`挺好的，然后就用了`landscape-plus`
 准备在此基础上改改，借鉴了[这个人](http://shijiajie.com/2015/08/29/hexo-theme-landscape-plus-optimize/)的修改姿势，并自己添加了一些东西
 * 修改归档挂件的时间格式：（左边为原图，右边为效果图）
-![](http://7xru22.com1.z0.glb.clouddn.com/16-3-14/80562236.jpg)
+![](/images/16-3-14_80562236.jpg)
 
    * 路径: `\themes\landscape-plus\layout\_widget\archive.ejs` 第`5`行
    ```
@@ -30,7 +30,7 @@ toc: true
    ```
 ---
 * 修改归档页面的时间格式：（左边为原图，右边为效果图）
-![](http://7xru22.com1.z0.glb.clouddn.com/16-3-14/97283281.jpg)
+![](/images/16-3-14_97283281.jpg)
 
    * 路径：`\themes\landscape-plus\layout\_partial\archive-post.ejs` 第`4`行
    ```
@@ -38,7 +38,7 @@ toc: true
    ```
 ---
 * 添加新挂件，推荐文章：
-![](http://7xru22.com1.z0.glb.clouddn.com/16-3-14/51498733.jpg)
+![](/images/16-3-14_51498733.jpg)
 
   * 路径：`\themes\landscape-plus\layout\_widget\archive\recent_comments.ejs` 新文件
   ```
@@ -67,7 +67,7 @@ toc: true
 ```
 ---
 * 添加新挂件，最近评论：
-![](http://7xru22.com1.z0.glb.clouddn.com/16-3-14/28683113.jpg)
+![](/images/16-3-14_28683113.jpg)
 
   * 路径：`\themes\landscape-plus\layout\_widget\archive\recent_comments.ejs` 新文件
   ```
@@ -105,7 +105,7 @@ toc: true
 ```
 ---
 * 文章结尾增加声明文字：
-![](http://7xru22.com1.z0.glb.clouddn.com/16-3-14/82348825.jpg)
+![](/images/16-3-14_82348825.jpg)
 
  * 路径：`\themes\landscape-plus\layout\_partial\post\statement.ejs` 新文件
  ```
@@ -132,7 +132,7 @@ toc: true
 ```
 ---
 * 页脚中添加访问统计、为超链接添加target="_blank"属性：
-![](http://7xru22.com1.z0.glb.clouddn.com/16-3-14/55063221.jpg)
+![](/images/16-3-14_55063221.jpg)
 
    * 路径：`\themes\landscape-plus-bak\layout\_partial\footer.ejs` 修改为
 ```
@@ -169,7 +169,7 @@ toc: true
 ```
 ---
 * 文章添加生成目录开关
-![](http://7xru22.com1.z0.glb.clouddn.com/16-3-14/29113644.jpg)
+![](/images/16-3-14_29113644.jpg)
 
    * 路径：`\themes\landscape-plus\layout\_partial\article.ejs` 搜索`<%- post.content %>`前面添加
 ```
@@ -215,7 +215,7 @@ toc: true
    color-link = #E32D40
    ```
 * 文章标题添加一条灰色分割线
-![](http://7xru22.com1.z0.glb.clouddn.com/16-3-14/4653222.jpg)
+![](/images/16-3-14_4653222.jpg)
 
  * 路径：`\themes\landscape-plus\source\css\_partial\article.styl` 第`26`行
  ```

@@ -23,11 +23,11 @@ The **Controller** is responsible for processing user requests and building an a
 
 * Original MVC
 
-![](http://7xru22.com1.z0.glb.clouddn.com/18-3-9/69812105.jpg)
+![](/images/18-3-9_69812105.jpg)
     
 * Spring MVC
 
-![](http://7xru22.com1.z0.glb.clouddn.com/18-3-9/74224334.jpg)
+![](/images/18-3-9_74224334.jpg)
 
 
 ### Dependency Injection (DI)

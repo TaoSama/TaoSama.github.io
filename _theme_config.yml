@@ -29,7 +29,7 @@ scheme: Paradox
 
 # UI & UX: slogan, color, effect
 uiux:
-    slogan: "Reborn and Be Together"
+    slogan: "Forward and Never Step Back"
     theme_color: "#0097A7"
     theme_sub_color: "#00838F"
     hyperlink_color: "#00838F"
@@ -112,11 +112,11 @@ toc:
 
 # SNS Menu
 sns:
-    email:
-    facebook:
+    email: lwt1367@qq.com
+    facebook: "https://www.facebook.com/lwt1367"
     twitter:
     googleplus:
-    weibo:
+    weibo: "https://weibo.com/u/3863360617"
     instagram:
     tumblr:
     github: "https://github.com/TaoSama"
@@ -140,7 +140,7 @@ sns_share:
 sidebar:
     dropdown:
         Email Me:
-            link: "#"
+            link: "mailto:lwt1367@qq.com"
             icon: email
     homepage:
         use: true
@@ -224,9 +224,9 @@ leancloud:
 
 # Busuanzi Views
 busuanzi:
-    enable: true
-    all_site_uv: true
-    post_pv: true
+    enable: false
+    all_site_uv: false
+    post_pv: false
     busuanzi_pure_mini_js: "https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"
 
 # Files Vendors
