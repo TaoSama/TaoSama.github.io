@@ -1,2 +1,7 @@
-* Material
-commit 6fd8fe99d5ad69ac41b82e1bed947e2ddeca58c3 (HEAD -> master, tag: 1.5.2, origin/master, origin/HEAD)
+# TaoSama's Blog
+
+Personal blog built with [Hexo](https://hexo.io/) and [Material](https://github.com/viosey/hexo-theme-material) theme.
+
+- **Site**: [blog.taoai.site](https://blog.taoai.site)
+- **Branch**: `master` (source), `gh-pages` (deploy)
+- **Deploy**: Push to `master` triggers GitHub Actions auto build & deploy
